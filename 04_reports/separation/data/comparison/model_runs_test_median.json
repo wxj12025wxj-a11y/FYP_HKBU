@@ -1,0 +1,95 @@
+{
+  "rows": [
+    {
+      "model": "oracle",
+      "n_songs": 1,
+      "med_vocals": 2.836,
+      "med_drums": 9.685,
+      "med_bass": 9.936,
+      "med_other": 7.523,
+      "med_mean": 7.495,
+      "rtf_median": 0.008
+    },
+    {
+      "model": "mdx",
+      "n_songs": 1,
+      "med_vocals": 2.095,
+      "med_drums": 10.351,
+      "med_bass": 8.407,
+      "med_other": 5.399,
+      "med_mean": 6.563,
+      "rtf_median": 0.1704
+    },
+    {
+      "model": "umx",
+      "n_songs": 2,
+      "med_vocals": 4.483,
+      "med_drums": 6.728,
+      "med_bass": 7.723,
+      "med_other": 5.08,
+      "med_mean": 6.003,
+      "rtf_median": 0.0314
+    },
+    {
+      "model": "bsrnn_simo",
+      "n_songs": 1,
+      "med_vocals": 0.767,
+      "med_drums": 10.34,
+      "med_bass": 5.921,
+      "med_other": 2.189,
+      "med_mean": 4.804,
+      "rtf_median": 0.3412
+    },
+    {
+      "model": "bsrnn_all",
+      "n_songs": 1,
+      "med_vocals": 0.813,
+      "med_drums": 10.101,
+      "med_bass": 0.083,
+      "med_other": 2.716,
+      "med_mean": 3.428,
+      "rtf_median": 3.0639
+    },
+    {
+      "model": "convtasnet",
+      "n_songs": 1,
+      "med_vocals": 0.027,
+      "med_drums": 7.778,
+      "med_bass": 4.367,
+      "med_other": 0.198,
+      "med_mean": 3.092,
+      "rtf_median": 0.157
+    },
+    {
+      "model": "demucs",
+      "n_songs": 1,
+      "med_vocals": 0.529,
+      "med_drums": 8.781,
+      "med_bass": 0.377,
+      "med_other": 1.246,
+      "med_mean": 2.733,
+      "rtf_median": 0.0297
+    },
+    {
+      "model": "mmdenselstm",
+      "n_songs": 1,
+      "med_vocals": -0.088,
+      "med_drums": 7.09,
+      "med_bass": 1.575,
+      "med_other": 0.274,
+      "med_mean": 2.213,
+      "rtf_median": 0.1177
+    },
+    {
+      "model": "bsroformer_l12",
+      "n_songs": 1,
+      "med_vocals": 1.823,
+      "med_drums": null,
+      "med_bass": null,
+      "med_other": null,
+      "med_mean": 1.823,
+      "rtf_median": 0.2654
+    }
+  ],
+  "updated": "2026-09-19 12:29:23"
+}

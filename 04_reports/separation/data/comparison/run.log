@@ -1,0 +1,184 @@
+C:\Users\jerry\.workbuddy\binaries\python\envs\fyp_audio\Lib\site-packages\sklearn\decomposition\_nmf.py:1723: ConvergenceWarning: Maximum number of iterations 250 reached. Increase it to improve convergence.
+  warnings.warn(
+C:\Users\jerry\.workbuddy\binaries\python\envs\fyp_audio\Lib\site-packages\sklearn\decomposition\_nmf.py:1723: ConvergenceWarning: Maximum number of iterations 250 reached. Increase it to improve convergence.
+  warnings.warn(
+指标口径: museval (BSSEval v4)
+
+==============================================================================
+[1/10] A Classic Education - NightOwl  (前 30 秒, sr=44100)
+==============================================================================
+mixture: (1323000,) | vocals: (1323000,) | drums: (1323000,)
+  [Baseline: mixture (no separation) -> vocals] SDR=  -9.16 ISR=  24.80 SAR=  -9.18 SI-SDR= -10.93 (0.0s)
+  [Baseline: mixture (no separation) -> drums] SDR= -17.93 ISR=  14.90 SAR= -17.95 SI-SDR= -18.01 (0.0s)
+  [ICA (FastICA, best of 2) -> vocals] SDR= -26.44 ISR= -15.69 SAR=  -9.29 SI-SDR= -11.00 (0.39s)
+  [NMF (unsupervised, k=50) -> vocals] SDR=  -8.56 ISR=  25.38 SAR=  -8.58 SI-SDR=  -9.95 (18.6s)
+  [NMF (oracle grouping) -> vocals] SDR=  -8.56 ISR=  25.38 SAR=  -8.58 SI-SDR=  -9.95 (3.96s)
+  [RPCA (Inexact ALM) -> vocals] SDR=  -1.21 ISR=   7.88 SAR=  -4.38 SI-SDR=  -6.73 (155.06s)
+  [HPSS (percussive) -> drums] SDR=  -3.55 ISR=   3.46 SAR= -10.31 SI-SDR= -11.81 (2.44s)
+  [HPSS (harmonic) -> vocals] SDR=  -8.33 ISR=  12.47 SAR= -10.75 SI-SDR= -12.37 (2.25s)
+  [Open-Unmix umxhq (vocals) -> vocals] SDR=   6.55 ISR=  13.01 SAR=   6.04 SI-SDR=   6.71 (8.88s)
+  [Open-Unmix umxhq (drums) -> drums] SDR=   1.93 ISR=   2.77 SAR=   1.68 SI-SDR=  -2.55 (0.05s)
+
+==============================================================================
+[2/10] ANiMAL - Clinic A  (前 30 秒, sr=44100)
+==============================================================================
+mixture: (1323000,) | vocals: (1323000,) | drums: (1323000,)
+  [Baseline: mixture (no separation) -> vocals] SDR=  -2.86 ISR=  29.50 SAR=  -2.80 SI-SDR=  -3.04 (0.0s)
+  [Baseline: mixture (no separation) -> drums] SDR=  -9.01 ISR=  22.44 SAR=  -9.09 SI-SDR=  -8.80 (0.0s)
+  [ICA (FastICA, best of 2) -> vocals] SDR= -25.79 ISR= -20.59 SAR=  -2.84 SI-SDR=  -3.08 (0.15s)
+  [NMF (unsupervised, k=50) -> vocals] SDR=   0.77 ISR=   1.05 SAR=   1.13 SI-SDR=  -6.09 (2.85s)
+  [NMF (oracle grouping) -> vocals] SDR=  -3.05 ISR=  11.80 SAR=  -3.97 SI-SDR=  -4.62 (1.32s)
+  [RPCA (Inexact ALM) -> vocals] SDR=   1.74 ISR=   9.32 SAR=  -0.84 SI-SDR=  -1.48 (76.32s)
+  [HPSS (percussive) -> drums] SDR=  -2.99 ISR=   3.36 SAR= -11.01 SI-SDR= -11.83 (2.03s)
+  [HPSS (harmonic) -> vocals] SDR=  -1.07 ISR=   6.25 SAR=  -5.42 SI-SDR=  -6.02 (2.07s)
+  [Open-Unmix umxhq (vocals) -> vocals] SDR=   5.92 ISR=  10.35 SAR=   6.61 SI-SDR=   5.30 (3.43s)
+  [Open-Unmix umxhq (drums) -> drums] SDR=   6.90 ISR=  10.52 SAR=   7.68 SI-SDR=   6.23 (0.05s)
+
+==============================================================================
+[3/10] ANiMAL - Easy Tiger  (前 30 秒, sr=44100)
+==============================================================================
+mixture: (1323000,) | vocals: (1323000,) | drums: (1323000,)
+  [Baseline: mixture (no separation) -> vocals] SDR= -21.10 ISR=  18.15 SAR= -20.80 SI-SDR=  -9.87 (0.0s)
+  [Baseline: mixture (no separation) -> drums] SDR=  -0.90 ISR=  31.48 SAR=  -0.93 SI-SDR=  -0.71 (0.0s)
+  [ICA (FastICA, best of 2) -> vocals] SDR= -41.72 ISR= -21.29 SAR= -20.93 SI-SDR= -10.01 (0.44s)
+  [NMF (unsupervised, k=50) -> vocals] SDR= -14.33 ISR=   0.50 SAR= -27.94 SI-SDR= -23.17 (4.1s)
+  [NMF (oracle grouping) -> vocals] SDR= -19.14 ISR=  14.23 SAR= -19.77 SI-SDR=  -9.24 (1.31s)
+  [RPCA (Inexact ALM) -> vocals] SDR= -14.67 ISR=  11.54 SAR= -17.54 SI-SDR=  -6.83 (247.81s)
+  [HPSS (percussive) -> drums] SDR=   3.44 ISR=   4.92 SAR=   3.77 SI-SDR=  -0.45 (3.16s)
+  [HPSS (harmonic) -> vocals] SDR= -18.34 ISR=   6.24 SAR= -23.51 SI-SDR= -13.30 (3.2s)
+  [Open-Unmix umxhq (vocals) -> vocals] SDR=   3.14 ISR=  15.79 SAR=   3.26 SI-SDR=   9.36 (22.27s)
+  [Open-Unmix umxhq (drums) -> drums] SDR=   5.98 ISR=  10.26 SAR=   7.85 SI-SDR=   5.89 (0.07s)
+
+==============================================================================
+[4/10] ANiMAL - Rockshow  (前 30 秒, sr=44100)
+==============================================================================
+mixture: (1323000,) | vocals: (1323000,) | drums: (1323000,)
+  [Baseline: mixture (no separation) -> vocals] SDR=  -6.03 ISR=  26.30 SAR=  -6.03 SI-SDR=  -7.83 (0.0s)
+  [Baseline: mixture (no separation) -> drums] SDR=  -2.94 ISR=  30.15 SAR=  -2.97 SI-SDR=  -3.10 (0.0s)
+  [ICA (FastICA, best of 2) -> vocals] SDR= -26.15 ISR= -19.89 SAR=  -5.99 SI-SDR=  -7.81 (0.32s)
+  [NMF (unsupervised, k=50) -> vocals] SDR=  -2.72 ISR=  27.52 SAR=  -2.79 SI-SDR=  -3.90 (13.1s)
+  [NMF (oracle grouping) -> vocals] SDR=  -2.72 ISR=  27.52 SAR=  -2.79 SI-SDR=  -3.90 (3.96s)
+  [RPCA (Inexact ALM) -> vocals] SDR=  -0.29 ISR=   9.25 SAR=  -3.04 SI-SDR=  -4.86 (229.41s)
+  [HPSS (percussive) -> drums] SDR=   1.59 ISR=   5.43 SAR=  -2.11 SI-SDR=  -2.61 (2.06s)
+  [HPSS (harmonic) -> vocals] SDR=  -2.84 ISR=   5.17 SAR=  -8.42 SI-SDR= -11.65 (2.05s)
+  [Open-Unmix umxhq (vocals) -> vocals] SDR=   4.95 ISR=  20.21 SAR=   4.60 SI-SDR=   3.69 (3.47s)
+  [Open-Unmix umxhq (drums) -> drums] SDR=   5.72 ISR=  11.36 SAR=   4.50 SI-SDR=   4.35 (0.05s)
+
+==============================================================================
+[5/10] Actions - Devil's Words  (前 30 秒, sr=44100)
+==============================================================================
+mixture: (1323000,) | vocals: (1323000,) | drums: (1323000,)
+  [Baseline: mixture (no separation) -> vocals] SDR=  -4.43 ISR=  16.16 SAR=  -4.35 SI-SDR=  -9.78 (0.0s)
+  [Baseline: mixture (no separation) -> drums] SDR=  -1.55 ISR=  34.35 SAR=  -1.56 SI-SDR=  -1.74 (0.0s)
+  [ICA (FastICA, best of 2) -> vocals] SDR= -24.71 ISR= -19.67 SAR=  -4.35 SI-SDR=  -9.78 (0.14s)
+  [NMF (unsupervised, k=50) -> vocals] SDR=   0.11 ISR=  28.61 SAR=  -0.00 SI-SDR=  -6.32 (3.06s)
+  [NMF (oracle grouping) -> vocals] SDR=   0.11 ISR=  28.61 SAR=  -0.00 SI-SDR=  -6.32 (1.32s)
+  [RPCA (Inexact ALM) -> vocals] SDR=   0.25 ISR=  12.21 SAR=  -1.60 SI-SDR=  -5.56 (61.41s)
+  [HPSS (percussive) -> drums] SDR=   2.46 ISR=   4.29 SAR=  -0.02 SI-SDR=  -0.71 (1.97s)
+  [HPSS (harmonic) -> vocals] SDR=  -2.43 ISR=  10.48 SAR=  -3.73 SI-SDR=  -8.28 (1.99s)
+  [Open-Unmix umxhq (vocals) -> vocals] SDR=  10.21 ISR=  19.57 SAR=  11.07 SI-SDR=  12.57 (3.15s)
+  [Open-Unmix umxhq (drums) -> drums] SDR=   6.40 ISR=  12.41 SAR=   6.35 SI-SDR=   5.73 (0.04s)
+
+==============================================================================
+[6/10] Actions - One Minute Smile  (前 30 秒, sr=44100)
+==============================================================================
+mixture: (1323000,) | vocals: (1323000,) | drums: (1323000,)
+  [Baseline: mixture (no separation) -> vocals] SDR=  -3.72 ISR=  28.25 SAR=  -3.79 SI-SDR=  -3.66 (0.0s)
+  [Baseline: mixture (no separation) -> drums] SDR=  -5.57 ISR=  27.17 SAR=  -5.60 SI-SDR=  -5.44 (0.0s)
+  [ICA (FastICA, best of 2) -> vocals] SDR= -23.64 ISR= -19.08 SAR=  -3.76 SI-SDR=  -3.67 (0.14s)
+  [NMF (unsupervised, k=50) -> vocals] SDR=  -2.71 ISR=  29.72 SAR=  -2.80 SI-SDR=  -2.45 (3.15s)
+  [NMF (oracle grouping) -> vocals] SDR=  -2.71 ISR=  29.72 SAR=  -2.80 SI-SDR=  -2.45 (1.34s)
+  [RPCA (Inexact ALM) -> vocals] SDR=   1.28 ISR=   8.40 SAR=  -1.92 SI-SDR=  -1.63 (84.4s)
+  [HPSS (percussive) -> drums] SDR=   0.56 ISR=   4.27 SAR=  -4.87 SI-SDR=  -4.90 (1.97s)
+  [HPSS (harmonic) -> vocals] SDR=  -1.57 ISR=   9.75 SAR=  -3.90 SI-SDR=  -3.73 (2.01s)
+  [Open-Unmix umxhq (vocals) -> vocals] SDR=   4.62 ISR=   9.23 SAR=   5.90 SI-SDR=   3.19 (3.29s)
+  [Open-Unmix umxhq (drums) -> drums] SDR=   2.26 ISR=   8.88 SAR=   2.34 SI-SDR=   0.62 (0.05s)
+
+==============================================================================
+[7/10] Actions - South Of The Water  (前 30 秒, sr=44100)
+==============================================================================
+mixture: (1323000,) | vocals: (1323000,) | drums: (1323000,)
+  [Baseline: mixture (no separation) -> vocals] SDR=  -8.95 ISR=  27.42 SAR=  -9.01 SI-SDR=  -9.03 (0.0s)
+  [Baseline: mixture (no separation) -> drums] SDR=  -6.70 ISR=  24.67 SAR=  -6.81 SI-SDR=  -8.54 (0.0s)
+  [ICA (FastICA, best of 2) -> vocals] SDR= -31.81 ISR= -22.93 SAR=  -9.01 SI-SDR=  -9.03 (0.17s)
+  [NMF (unsupervised, k=50) -> vocals] SDR=  -3.20 ISR=   0.01 SAR= -38.09 SI-SDR= -58.43 (9.73s)C:\Users\jerry\.workbuddy\binaries\python\envs\fyp_audio\Lib\site-packages\sklearn\decomposition\_nmf.py:1723: ConvergenceWarning: Maximum number of iterations 250 reached. Increase it to improve convergence.
+  warnings.warn(
+C:\Users\jerry\.workbuddy\binaries\python\envs\fyp_audio\Lib\site-packages\sklearn\decomposition\_nmf.py:1723: ConvergenceWarning: Maximum number of iterations 250 reached. Increase it to improve convergence.
+  warnings.warn(
+C:\Users\jerry\.workbuddy\binaries\python\envs\fyp_audio\Lib\site-packages\sklearn\decomposition\_nmf.py:1723: ConvergenceWarning: Maximum number of iterations 250 reached. Increase it to improve convergence.
+  warnings.warn(
+
+  [NMF (oracle grouping) -> vocals] SDR=  -7.30 ISR=  28.90 SAR=  -7.40 SI-SDR=  -7.10 (5.26s)
+  [RPCA (Inexact ALM) -> vocals] SDR=  -3.05 ISR=   7.97 SAR=  -6.94 SI-SDR=  -7.86 (90.98s)
+  [HPSS (percussive) -> drums] SDR=   1.60 ISR=   3.67 SAR=  -1.09 SI-SDR=  -3.38 (2.09s)
+  [HPSS (harmonic) -> vocals] SDR=  -7.30 ISR=  13.06 SAR=  -9.12 SI-SDR=  -9.72 (2.08s)
+  [Open-Unmix umxhq (vocals) -> vocals] SDR=  -7.22 ISR=   0.22 SAR=  -3.46 SI-SDR=  -7.82 (3.9s)
+  [Open-Unmix umxhq (drums) -> drums] SDR=  -0.23 ISR=   4.44 SAR=   1.88 SI-SDR=  -1.75 (0.05s)
+
+==============================================================================
+[8/10] Aimee Norwich - Child  (前 30 秒, sr=44100)
+==============================================================================
+mixture: (1323000,) | vocals: (1323000,) | drums: (1323000,)
+  [Baseline: mixture (no separation) -> vocals] SDR=-103.83 ISR= -10.46 SAR= -93.43 SI-SDR= -19.49 (0.0s)
+  [Baseline: mixture (no separation) -> drums] SDR=  -4.81 ISR=  32.69 SAR=  -4.87 SI-SDR=  -3.25 (0.0s)
+  [ICA (FastICA, best of 2) -> vocals] SDR=-121.77 ISR= -28.89 SAR= -93.31 SI-SDR= -19.43 (0.17s)
+  [NMF (unsupervised, k=50) -> vocals] SDR=-100.59 ISR=  -4.02 SAR= -95.49 SI-SDR= -14.58 (3.83s)
+  [NMF (oracle grouping) -> vocals] SDR=-100.59 ISR=  -4.02 SAR= -95.49 SI-SDR= -14.58 (1.34s)
+  [RPCA (Inexact ALM) -> vocals] SDR= -97.60 ISR=  -1.58 SAR= -97.05 SI-SDR= -17.60 (51.1s)
+  [HPSS (percussive) -> drums] SDR=   2.00 ISR=   4.00 SAR=   0.01 SI-SDR=  -0.55 (2.09s)
+  [HPSS (harmonic) -> vocals] SDR=-100.89 ISR=  -8.24 SAR= -92.52 SI-SDR= -18.99 (2.09s)
+  [Open-Unmix umxhq (vocals) -> vocals] SDR= -49.77 ISR=   2.13 SAR= -52.09 SI-SDR=   1.04 (4.57s)
+  [Open-Unmix umxhq (drums) -> drums] SDR=   5.53 ISR=  15.95 SAR=   5.16 SI-SDR=   5.85 (0.05s)
+
+==============================================================================
+[9/10] Alexander Ross - Goodbye Bolero  (前 30 秒, sr=44100)
+==============================================================================
+mixture: (1323000,) | vocals: (1323000,) | drums: (1323000,)
+  [Baseline: mixture (no separation) -> vocals] SDR=  -2.52 ISR=  32.09 SAR=  -2.54 SI-SDR=  -4.66 (0.0s)
+  [Baseline: mixture (no separation) -> drums] SDR=  -6.14 ISR=  26.51 SAR=  -6.02 SI-SDR=  -6.22 (0.0s)
+  [ICA (FastICA, best of 2) -> vocals] SDR= -26.07 ISR= -21.08 SAR=  -2.55 SI-SDR=  -4.67 (0.16s)
+  [NMF (unsupervised, k=50) -> vocals] SDR=  -1.23 ISR=  31.36 SAR=  -1.29 SI-SDR=  -3.24 (3.94s)
+  [NMF (oracle grouping) -> vocals] SDR=  -1.23 ISR=  31.36 SAR=  -1.29 SI-SDR=  -3.24 (1.35s)
+  [RPCA (Inexact ALM) -> vocals] SDR=   3.41 ISR=   9.82 SAR=   1.70 SI-SDR=  -1.20 (91.4s)
+  [HPSS (percussive) -> drums] SDR=  -0.42 ISR=   3.85 SAR=  -5.75 SI-SDR=  -6.41 (2.01s)
+  [HPSS (harmonic) -> vocals] SDR=  -0.53 ISR=   8.93 SAR=  -3.18 SI-SDR=  -5.77 (2.01s)
+  [Open-Unmix umxhq (vocals) -> vocals] SDR=  10.28 ISR=  20.22 SAR=  10.37 SI-SDR=  10.39 (3.84s)
+  [Open-Unmix umxhq (drums) -> drums] SDR=   3.73 ISR=  11.36 SAR=   2.88 SI-SDR=   3.23 (0.05s)
+
+==============================================================================
+[10/10] Alexander Ross - Velvet Curtain  (前 30 秒, sr=44100)
+==============================================================================
+mixture: (1323000,) | vocals: (1323000,) | drums: (1323000,)
+  [Baseline: mixture (no separation) -> vocals] SDR=   3.95 ISR=  37.71 SAR=   3.98 SI-SDR=   2.74 (0.0s)
+    [WARN] museval 失败: All the reference sources should be non-silent (not all-zeros), but at least one of the reference sources is all 0s, which introduces ambiguity to the evaluation. (Otherwise we can add infinitely many all-zero sources.)
+  [Baseline: mixture (no separation) -> drums] SDR=    n/a ISR=    n/a SAR=    n/a SI-SDR=-127.48 (0.0s)
+  [ICA (FastICA, best of 2) -> vocals] SDR= -35.15 ISR= -34.07 SAR=   5.73 SI-SDR=   4.34 (0.19s)
+  [NMF (unsupervised, k=50) -> vocals] SDR=   5.70 ISR=   7.37 SAR=  10.36 SI-SDR=   4.76 (3.94s)
+  [NMF (oracle grouping) -> vocals] SDR=   5.70 ISR=   7.37 SAR=  10.36 SI-SDR=   4.76 (1.41s)
+  [RPCA (Inexact ALM) -> vocals] SDR=   6.41 ISR=  10.16 SAR=   5.52 SI-SDR=   4.81 (63.84s)
+    [WARN] museval 失败: All the reference sources should be non-silent (not all-zeros), but at least one of the reference sources is all 0s, which introduces ambiguity to the evaluation. (Otherwise we can add infinitely many all-zero sources.)
+  [HPSS (percussive) -> drums] SDR=    n/a ISR=    n/a SAR=    n/a SI-SDR=-115.36 (2.05s)
+  [HPSS (harmonic) -> vocals] SDR=   4.02 ISR=  13.31 SAR=   3.07 SI-SDR=   1.54 (2.08s)
+  [Open-Unmix umxhq (vocals) -> vocals] SDR=  14.63 ISR=  19.00 SAR=  16.72 SI-SDR=  15.85 (4.34s)
+    [WARN] museval 失败: All the reference sources should be non-silent (not all-zeros), but at least one of the reference sources is all 0s, which introduces ambiguity to the evaluation. (Otherwise we can add infinitely many all-zero sources.)
+  [Open-Unmix umxhq (drums) -> drums] SDR=    n/a ISR=    n/a SAR=    n/a SI-SDR=-101.52 (0.05s)
+
+==============================================================================
+汇总表
+==============================================================================
+方法                                目标              SDR(mean±sd)   ΔSDR(mean)      耗时s
+------------------------------------------------------------------------------------
+Baseline: mixture (no separation) vocals        -15.86 ± 29.95         0.00      0.0
+Baseline: mixture (no separation) drums          -6.17 ±  4.81         0.00      0.0
+ICA (FastICA, best of 2)          vocals        -38.33 ± 28.33       -22.46      0.2
+NMF (unsupervised, k=50)          vocals        -12.68 ± 29.75         3.19      6.6
+NMF (oracle grouping)             vocals        -13.95 ± 29.54         1.91      2.3
+RPCA (Inexact ALM)                vocals        -10.37 ± 29.55         5.49    115.2
+HPSS (percussive)                 drums           0.52 ±  2.27         6.69      2.2
+HPSS (harmonic)                   vocals        -13.93 ± 29.55         1.93      2.2
+Open-Unmix umxhq (vocals)         vocals          0.33 ± 17.57        16.19      6.1
+Open-Unmix umxhq (drums)          drums           4.25 ±  2.31        10.42      0.1
+[OK] 对比图 -> E:\FYP_HKBU\outputs\comparison\fig_compare_dsdr.png
+
+各模型产出 -> E:\FYP_HKBU\outputs\<模型>\
+跨模型对比 -> E:\FYP_HKBU\outputs\comparison

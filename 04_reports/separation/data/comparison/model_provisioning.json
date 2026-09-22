@@ -1,0 +1,494 @@
+{
+  "weights_root": "E:\\FYP_HKBU\\weights",
+  "models": [
+    {
+      "key": "rpca",
+      "name": "RPCA",
+      "family": "古典 / 低秩稀疏分解",
+      "open_source": "yes",
+      "repos": [],
+      "license": "-",
+      "code_note": "算法本身公开，本仓库自研实现 `tools/compare_separation_methods.py::_rpca_ialm`",
+      "weights_status": "no_weights",
+      "weights": [],
+      "notes": "IALM 求解；已知 P2 性能问题（每轮全秩 SVD）",
+      "provision_state": "no_weights"
+    },
+    {
+      "key": "rpca_drnn",
+      "name": "RPCA+DRNN",
+      "family": "混合（古典 + 深度）",
+      "open_source": "no",
+      "repos": [],
+      "license": "-",
+      "code_note": "**未公开代码**。Lai & Wang, EURASIP JASMP 2022:4, DOI 10.1186/s13636-022-00236-9（CC-BY 4.0），仅放出分离音频附件",
+      "weights_status": "reimplement",
+      "weights": [],
+      "notes": "原论文为**单声道 2 源**（人声/伴奏）歌唱分离，非 4-stem；须自研复现，且不可与 4-stem 方法直接横比",
+      "provision_state": "reimplement"
+    },
+    {
+      "key": "conv_tasnet",
+      "name": "Conv-TasNet",
+      "family": "时域深度学习",
+      "open_source": "yes",
+      "repos": [
+        {
+          "name": "kaituoxu/Conv-TasNet",
+          "license": "MIT",
+          "local": "third_party/Conv-TasNet"
+        },
+        {
+          "name": "tky823/DNN-based_source_separation",
+          "license": "NONE(无 LICENSE 文件)",
+          "local": "third_party/DNN-based_source_separation"
+        }
+      ],
+      "license": "MIT / 无许可证（见 repos）",
+      "code_note": "两套独立实现；权重来自 tky823 仓库（可 `ConvTasNet.build_from_pretrained(task='musdb18')`）",
+      "weights_status": "available",
+      "weights": [
+        {
+          "name": "Conv-TasNet MUSDB18 4sec_L20",
+          "path": "DNN-based_source_separation/ConvTasNet/musdb18/sr44100/4sec_L20/model/vocals/best.pth",
+          "source": "Google Drive (tky823)",
+          "url": "https://drive.google.com/uc?id=1A6dIofHZJQCUkyq-vxZ6KbPmEHLcf4WK",
+          "size": null,
+          "md5": null,
+          "note": "zip 内含 4 目标 × {best,last}.pth",
+          "local_path": "E:\\FYP_HKBU\\weights\\DNN-based_source_separation\\ConvTasNet\\musdb18\\sr44100\\4sec_L20\\model\\vocals\\best.pth",
+          "present": false,
+          "actual_size": null,
+          "size_match": null,
+          "md5_actual": null,
+          "md5_match": null
+        },
+        {
+          "name": "Conv-TasNet MUSDB18 8sec_L20",
+          "path": "DNN-based_source_separation/ConvTasNet/musdb18/sr44100/8sec_L20/model/vocals/best.pth",
+          "source": "Google Drive (tky823)",
+          "url": "https://drive.google.com/uc?id=1C4uv2z0w1s4rudIMaErLyEccNprJQWSZ",
+          "size": null,
+          "md5": null,
+          "note": "",
+          "local_path": "E:\\FYP_HKBU\\weights\\DNN-based_source_separation\\ConvTasNet\\musdb18\\sr44100\\8sec_L20\\model\\vocals\\best.pth",
+          "present": false,
+          "actual_size": null,
+          "size_match": null,
+          "md5_actual": null,
+          "md5_match": null
+        },
+        {
+          "name": "Conv-TasNet MUSDB18 8sec_L64",
+          "path": "DNN-based_source_separation/ConvTasNet/musdb18/sr44100/8sec_L64/model/vocals/best.pth",
+          "source": "Google Drive (tky823)",
+          "url": "https://drive.google.com/uc?id=1paXNGgH8m0kiJTQnn1WH-jEIurCKXwtw",
+          "size": null,
+          "md5": null,
+          "note": "",
+          "local_path": "E:\\FYP_HKBU\\weights\\DNN-based_source_separation\\ConvTasNet\\musdb18\\sr44100\\8sec_L64\\model\\vocals\\best.pth",
+          "present": false,
+          "actual_size": null,
+          "size_match": null,
+          "md5_actual": null,
+          "md5_match": null
+        }
+      ],
+      "notes": "",
+      "n_weights": 3,
+      "n_weights_ok": 0,
+      "provision_state": "partial(0/3)"
+    },
+    {
+      "key": "dprnn",
+      "name": "DPRNN (DPRNN-TasNet)",
+      "family": "时域深度学习",
+      "open_source": "yes",
+      "repos": [
+        {
+          "name": "JusperLee/Dual-Path-RNN-Pytorch",
+          "license": "Apache-2.0",
+          "local": "third_party/Dual-Path-RNN-Pytorch"
+        },
+        {
+          "name": "tky823/DNN-based_source_separation",
+          "license": "NONE(无 LICENSE 文件)",
+          "local": "third_party/DNN-based_source_separation"
+        }
+      ],
+      "license": "Apache-2.0 / 无许可证（见 repos）",
+      "code_note": "tky823 提供 `DPRNNTasNet`，但其 `pretrained_model_ids` **只有 wsj0-mix / librispeech，没有 musdb18**",
+      "weights_status": "custom_weights",
+      "weights": [],
+      "notes": "**无 MUSDB18 预训练权重** → 按既定方案自训 MUSDB18 版（有界预算 ≤3h）",
+      "provision_state": "custom_weights"
+    },
+    {
+      "key": "mmdenselstm",
+      "name": "MMDenseLSTM",
+      "family": "频域深度学习",
+      "open_source": "yes",
+      "repos": [
+        {
+          "name": "tky823/DNN-based_source_separation",
+          "license": "NONE(无 LICENSE 文件)",
+          "local": "third_party/DNN-based_source_separation"
+        }
+      ],
+      "license": "无许可证（仓库无 LICENSE 文件）",
+      "code_note": "官方论文（Takahashi et al.）未放代码，社区实现为 tky823 仓库；可 `MMDenseLSTM.build_from_pretrained(task='musdb18')`",
+      "weights_status": "available",
+      "weights": [
+        {
+          "name": "MMDenseLSTM MUSDB18 (paper)",
+          "path": "DNN-based_source_separation/MMDenseLSTM/musdb18/sr44100/paper/model/vocals/best.pth",
+          "source": "Google Drive (tky823)",
+          "url": "https://drive.google.com/uc?id=1-2JGWMgVBdSj5zF9hl27jKhyX7GN-cOV",
+          "size": 5813829,
+          "md5": null,
+          "note": "4 目标 × {best,last}.pth，每份约 5.8MB",
+          "local_path": "E:\\FYP_HKBU\\weights\\DNN-based_source_separation\\MMDenseLSTM\\musdb18\\sr44100\\paper\\model\\vocals\\best.pth",
+          "actual_size": 5813829,
+          "present": true,
+          "size_match": true,
+          "md5_actual": null,
+          "md5_match": null
+        }
+      ],
+      "notes": "⚠️ 权重体积偏小（5.8MB/目标），与论文 MMDenseLSTM 规模可能不一致，载入时需核对参数量",
+      "n_weights": 1,
+      "n_weights_ok": 1,
+      "provision_state": "downloaded"
+    },
+    {
+      "key": "bs_roformer_l12",
+      "name": "BS-RoFormer L12",
+      "family": "频域 Transformer（Band-Split RoPE）",
+      "open_source": "yes",
+      "repos": [
+        {
+          "name": "lucidrains/BS-RoFormer",
+          "license": "MIT",
+          "local": "third_party/BS-RoFormer"
+        },
+        {
+          "name": "ZFTurbo/Music-Source-Separation-Training",
+          "license": "MIT",
+          "local": "third_party/Music-Source-Separation-Training"
+        }
+      ],
+      "license": "MIT",
+      "code_note": "lucidrains 为架构实现；ZFTurbo 为训练/推理框架并携带 viperx 配置",
+      "weights_status": "available",
+      "weights": [
+        {
+          "name": "BS-RoFormer ep_317 (SDR 12.9755)",
+          "path": "BS-RoFormer/model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+          "source": "GitHub TRvlvr/model_repo releases",
+          "url": "https://github.com/TRvlvr/model_repo/releases/download/all_public_uvr_models/model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+          "size": 639331213,
+          "md5": null,
+          "note": "config dim=512 depth=12 dim_f=1024 → 本清单记为 L12",
+          "local_path": "E:\\FYP_HKBU\\weights\\BS-RoFormer\\model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+          "actual_size": 639331213,
+          "present": true,
+          "size_match": true,
+          "md5_actual": null,
+          "md5_match": null
+        },
+        {
+          "name": "ep_317 配置",
+          "path": "BS-RoFormer/configs/model_bs_roformer_ep_317_sdr_12.9755.yaml",
+          "source": "ZFTurbo/MSS-Training configs/viperx",
+          "url": "(本地副本)",
+          "size": 2006,
+          "md5": null,
+          "note": "",
+          "local_path": "E:\\FYP_HKBU\\weights\\BS-RoFormer\\configs\\model_bs_roformer_ep_317_sdr_12.9755.yaml",
+          "actual_size": 2006,
+          "present": true,
+          "size_match": true,
+          "md5_actual": null,
+          "md5_match": null
+        }
+      ],
+      "notes": "",
+      "n_weights": 2,
+      "n_weights_ok": 2,
+      "provision_state": "downloaded"
+    },
+    {
+      "key": "bs_roformer_l6",
+      "name": "BS-RoFormer L6",
+      "family": "频域 Transformer（Band-Split RoPE）",
+      "open_source": "yes",
+      "repos": [
+        {
+          "name": "lucidrains/BS-RoFormer",
+          "license": "MIT",
+          "local": "third_party/BS-RoFormer"
+        },
+        {
+          "name": "ZFTurbo/Music-Source-Separation-Training",
+          "license": "MIT",
+          "local": "third_party/Music-Source-Separation-Training"
+        }
+      ],
+      "license": "MIT",
+      "code_note": "同 L12，权重与配置不同",
+      "weights_status": "available",
+      "weights": [
+        {
+          "name": "BS-RoFormer ep_937 (SDR 10.5309)",
+          "path": "BS-RoFormer/model_bs_roformer_ep_937_sdr_10.5309.ckpt",
+          "source": "GitHub TRvlvr/model_repo releases",
+          "url": "https://github.com/TRvlvr/model_repo/releases/download/all_public_uvr_models/model_bs_roformer_ep_937_sdr_10.5309.ckpt",
+          "size": 393068365,
+          "md5": null,
+          "note": "config dim=384 depth=12 dim_f=1024 → 本清单记为 L6",
+          "local_path": "E:\\FYP_HKBU\\weights\\BS-RoFormer\\model_bs_roformer_ep_937_sdr_10.5309.ckpt",
+          "actual_size": 283336704,
+          "present": true,
+          "size_match": false,
+          "md5_actual": null,
+          "md5_match": null
+        },
+        {
+          "name": "ep_937 配置",
+          "path": "BS-RoFormer/configs/model_bs_roformer_ep_937_sdr_10.5309.yaml",
+          "source": "ZFTurbo/MSS-Training configs/viperx",
+          "url": "(本地副本)",
+          "size": 2488,
+          "md5": null,
+          "note": "",
+          "local_path": "E:\\FYP_HKBU\\weights\\BS-RoFormer\\configs\\model_bs_roformer_ep_937_sdr_10.5309.yaml",
+          "actual_size": 2488,
+          "present": true,
+          "size_match": true,
+          "md5_actual": null,
+          "md5_match": null
+        }
+      ],
+      "notes": "",
+      "n_weights": 2,
+      "n_weights_ok": 1,
+      "provision_state": "partial(1/2)"
+    },
+    {
+      "key": "bsrnn",
+      "name": "Band-Split RNN (BSRNN)",
+      "family": "频域 RNN",
+      "open_source": "yes",
+      "repos": [
+        {
+          "name": "magronp/bsrnn",
+          "license": "MIT",
+          "local": "third_party/bsrnn"
+        }
+      ],
+      "license": "MIT",
+      "code_note": "作者官方实现（PyTorch Lightning + Hydra）；权重为作者自称 unofficial 的自训版本",
+      "weights_status": "available",
+      "weights": [
+        {
+          "name": "bsrnn-opt",
+          "path": "BSRNN/bsrnn-opt.zip",
+          "source": "Zenodo 17516442",
+          "url": "https://zenodo.org/api/records/17516442/files/bsrnn-opt.zip/content",
+          "size": 1827060285,
+          "md5": "89075aac776f82295a074a56d0428a18",
+          "note": "优化版，4 个单源 checkpoint",
+          "local_path": "E:\\FYP_HKBU\\weights\\BSRNN\\bsrnn-opt.zip",
+          "actual_size": 67448832,
+          "present": true,
+          "size_match": false,
+          "md5_actual": "97ae98bd61c2ef05e206dd5ccc7949e8",
+          "md5_match": false
+        },
+        {
+          "name": "bsrnn-large",
+          "path": "BSRNN/bsrnn-large.zip",
+          "source": "Zenodo 17516442",
+          "url": "https://zenodo.org/api/records/17516442/files/bsrnn-large.zip/content",
+          "size": 1627580581,
+          "md5": "0d1e298e725bf45577a4f61e0a30c2b1",
+          "note": "对齐原论文规模，4 个单源 checkpoint",
+          "local_path": "E:\\FYP_HKBU\\weights\\BSRNN\\bsrnn-large.zip",
+          "actual_size": 63369216,
+          "present": true,
+          "size_match": false,
+          "md5_actual": "eb8aadf0ea57d5c1be051346a16d4a2b",
+          "md5_match": false
+        },
+        {
+          "name": "simo-bsrnn-opt",
+          "path": "BSRNN/simo-bsrnn-opt.zip",
+          "source": "Zenodo 17516442",
+          "url": "https://zenodo.org/api/records/17516442/files/simo-bsrnn-opt.zip/content",
+          "size": 1213413202,
+          "md5": "817e8ce4bcd17c38bd3812167e97db58",
+          "note": "SIMO 变体，单 checkpoint 出 4 源（性能最好、最轻）",
+          "local_path": "E:\\FYP_HKBU\\weights\\BSRNN\\simo-bsrnn-opt.zip",
+          "actual_size": 53813248,
+          "present": true,
+          "size_match": false,
+          "md5_actual": "56d348c316822e4926dcfe8051bca30e",
+          "md5_match": false
+        }
+      ],
+      "notes": "",
+      "n_weights": 3,
+      "n_weights_ok": 0,
+      "provision_state": "partial(0/3)"
+    },
+    {
+      "key": "irm_ibm_oracle",
+      "name": "IRM / IBM oracle",
+      "family": "oracle 掩码（上界参考）",
+      "open_source": "yes",
+      "repos": [
+        {
+          "name": "sigsep/sigsep-mus-oracle",
+          "license": "MIT",
+          "local": "third_party/sigsep-mus-oracle"
+        }
+      ],
+      "license": "MIT",
+      "code_note": "提供 IBM.py / IRM.py / MWF.py / MIX.py / GT.py；本仓库亦有自研解析实现（`benchmark_model_universal.py::_oracle_irm/_oracle_ibm`）",
+      "weights_status": "no_weights",
+      "weights": [],
+      "notes": "用户原述 “IRN oracle” 经澄清为 IRM/IBM 笔误；oracle 由 GT 直接计算掩码，无需任何权重",
+      "provision_state": "no_weights"
+    },
+    {
+      "key": "mdx_net",
+      "name": "MDX-Net",
+      "family": "混合时频双流网络",
+      "open_source": "yes",
+      "repos": [
+        {
+          "name": "kuielab/mdx-net",
+          "license": "MIT",
+          "local": "third_party/mdx-net"
+        },
+        {
+          "name": "mdx-net-submission",
+          "license": "MIT",
+          "local": "third_party/mdx-net-submission"
+        }
+      ],
+      "license": "MIT",
+      "code_note": "官方训练代码；onnx 权重来自 Zenodo；另可经 Demucs 的 `mdx_extra` bag 直接跑 4 模型集成",
+      "weights_status": "available",
+      "weights": [
+        {
+          "name": "KUIELab-MDX-Net Track A (onnx_A.zip)",
+          "path": "MDX-Net/onnx_A.zip",
+          "source": "Zenodo 5717356",
+          "url": "https://zenodo.org/api/records/5717356/files/onnx_A.zip/content",
+          "size": 110359032,
+          "md5": "72605d3722ebef18c353f831abdbfc07",
+          "note": "MDX Challenge 2021 Track A",
+          "local_path": "E:\\FYP_HKBU\\weights\\MDX-Net\\onnx_A.zip",
+          "actual_size": 38671876,
+          "present": true,
+          "size_match": false,
+          "md5_actual": "bcf0a21a0d24185e95a1d91cd985e72a",
+          "md5_match": false
+        },
+        {
+          "name": "mixer.ckpt",
+          "path": "MDX-Net/mixer.ckpt",
+          "source": "Zenodo 5717356",
+          "url": "https://zenodo.org/api/records/5717356/files/mixer.ckpt/content",
+          "size": 1208,
+          "md5": "485113a7e20a0dc5ccc47e7645464aed",
+          "note": "两流混合权重",
+          "local_path": "E:\\FYP_HKBU\\weights\\MDX-Net\\mixer.ckpt",
+          "actual_size": 1208,
+          "present": true,
+          "size_match": true,
+          "md5_actual": "485113a7e20a0dc5ccc47e7645464aed",
+          "md5_match": true
+        },
+        {
+          "name": "mdx_extra/e51eebcc",
+          "path": "MDX-Net/mdx_extra/e51eebcc-c1b80bdd.th",
+          "source": "dl.fbaipublicfiles.com (Demucs mdx_final)",
+          "url": "https://dl.fbaipublicfiles.com/demucs/mdx_final/e51eebcc-c1b80bdd.th",
+          "size": null,
+          "md5": null,
+          "note": "Demucs mdx_extra bag 成员",
+          "local_path": "E:\\FYP_HKBU\\weights\\MDX-Net\\mdx_extra\\e51eebcc-c1b80bdd.th",
+          "present": false,
+          "actual_size": null,
+          "size_match": null,
+          "md5_actual": null,
+          "md5_match": null
+        },
+        {
+          "name": "mdx_extra/a1d90b5c",
+          "path": "MDX-Net/mdx_extra/a1d90b5c-ae9d2452.th",
+          "source": "dl.fbaipublicfiles.com (Demucs mdx_final)",
+          "url": "https://dl.fbaipublicfiles.com/demucs/mdx_final/a1d90b5c-ae9d2452.th",
+          "size": null,
+          "md5": null,
+          "note": "",
+          "local_path": "E:\\FYP_HKBU\\weights\\MDX-Net\\mdx_extra\\a1d90b5c-ae9d2452.th",
+          "present": false,
+          "actual_size": null,
+          "size_match": null,
+          "md5_actual": null,
+          "md5_match": null
+        },
+        {
+          "name": "mdx_extra/5d2d6c55",
+          "path": "MDX-Net/mdx_extra/5d2d6c55-db83574e.th",
+          "source": "dl.fbaipublicfiles.com (Demucs mdx_final)",
+          "url": "https://dl.fbaipublicfiles.com/demucs/mdx_final/5d2d6c55-db83574e.th",
+          "size": null,
+          "md5": null,
+          "note": "",
+          "local_path": "E:\\FYP_HKBU\\weights\\MDX-Net\\mdx_extra\\5d2d6c55-db83574e.th",
+          "present": false,
+          "actual_size": null,
+          "size_match": null,
+          "md5_actual": null,
+          "md5_match": null
+        },
+        {
+          "name": "mdx_extra/cfa93e08",
+          "path": "MDX-Net/mdx_extra/cfa93e08-61801ae1.th",
+          "source": "dl.fbaipublicfiles.com (Demucs mdx_final)",
+          "url": "https://dl.fbaipublicfiles.com/demucs/mdx_final/cfa93e08-61801ae1.th",
+          "size": null,
+          "md5": null,
+          "note": "",
+          "local_path": "E:\\FYP_HKBU\\weights\\MDX-Net\\mdx_extra\\cfa93e08-61801ae1.th",
+          "present": false,
+          "actual_size": null,
+          "size_match": null,
+          "md5_actual": null,
+          "md5_match": null
+        }
+      ],
+      "notes": "onnx 路线需额外安装 onnxruntime（当前环境未装）",
+      "n_weights": 6,
+      "n_weights_ok": 1,
+      "provision_state": "partial(1/6)"
+    },
+    {
+      "key": "pac_hubert_sep",
+      "name": "Pac-HuBERT-SEP",
+      "family": "自监督预训练 + Res-U-Net",
+      "open_source": "no",
+      "repos": [],
+      "license": "-",
+      "code_note": "**无公开代码/权重**。Ke Chen, Gordon Wichern, François Germain, Jonathan Le Roux (MERL) + UCSD, arXiv:2304.02160；MERL 官方下载页未列出该模型",
+      "weights_status": "unavailable",
+      "weights": [],
+      "notes": "用户原述 “PaG-HuBERT-SEP” 经确认为 Pac-HuBERT 笔误。不可得 → 只能引用论文数字，或在报告中明确标注为不可复现",
+      "provision_state": "unavailable"
+    }
+  ]
+}

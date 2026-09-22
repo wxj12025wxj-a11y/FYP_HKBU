@@ -1,0 +1,11047 @@
+{
+ "model_key": "convtasnet",
+ "label": "Conv-TasNet (musdb18)",
+ "group": "4-stem",
+ "kind": "deep",
+ "status": "OK",
+ "params_M": 13.395,
+ "params_M_source": "model_profile.csv",
+ "n_roots": 1,
+ "roots": [
+  {
+   "cls": "ConvTasNet",
+   "params_M": 13.3945
+  }
+ ],
+ "traced_params_M": 13.3945,
+ "traced_vs_csv_ratio": 1.0,
+ "attribution_reconciles": true,
+ "n_aliased_paths": 0,
+ "hooked_root_cls": "ConvTasNet",
+ "hooked_root_params_M": 13.3945,
+ "n_targets": "4",
+ "native_sr": "44100",
+ "n_modules_total": 502,
+ "n_modules_fired": 497,
+ "load_s": 0.212,
+ "capture_s": 1.97,
+ "note": "",
+ "exec_order": [
+  {
+   "path": "encoder.conv1d",
+   "parent": "encoder",
+   "cls": "Conv1d",
+   "params": 10240,
+   "in_shapes": [
+    [
+     1,
+     2,
+     441000
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 10240,
+   "role": "leaf"
+  },
+  {
+   "path": "encoder.nonlinear1d",
+   "parent": "encoder",
+   "cls": "ReLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "encoder",
+   "parent": "<root>",
+   "cls": "Encoder",
+   "params": 10240,
+   "in_shapes": [
+    [
+     1,
+     2,
+     441000
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.norm1d.norm",
+   "parent": "separator.norm1d",
+   "cls": "GroupNorm",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.norm1d",
+   "parent": "separator",
+   "cls": "GlobalLayerNorm",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.bottleneck_conv1d",
+   "parent": "separator",
+   "cls": "Conv1d",
+   "params": 65792,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65792,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.0.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.0.net.0",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.0.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.0",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.0.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.0.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.0.norm1d",
+   "parent": "separator.tdcn.net.0.net.0",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.0.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.0.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44101
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.0.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.0.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.0.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.0.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.0.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.0.net.0.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.0.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.0.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.0.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.0.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.0.separable_conv1d",
+   "parent": "separator.tdcn.net.0.net.0",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44101
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.0",
+   "parent": "separator.tdcn.net.0.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.1.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.0.net.1",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.1.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.1",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.1.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.1.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.1.norm1d",
+   "parent": "separator.tdcn.net.0.net.1",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.1.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.1.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44103
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.1.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.1.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.1.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.1.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.1.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.0.net.1.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.1.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.1.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.1.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.1.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.1.separable_conv1d",
+   "parent": "separator.tdcn.net.0.net.1",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44103
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.1",
+   "parent": "separator.tdcn.net.0.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.2.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.0.net.2",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.2.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.2",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.2.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.2.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.2.norm1d",
+   "parent": "separator.tdcn.net.0.net.2",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.2.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.2.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44107
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.2.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.2.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.2.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.2.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.2.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.0.net.2.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.2.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.2.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.2.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.2.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.2.separable_conv1d",
+   "parent": "separator.tdcn.net.0.net.2",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44107
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.2",
+   "parent": "separator.tdcn.net.0.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.3.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.0.net.3",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.3.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.3",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.3.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.3.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.3.norm1d",
+   "parent": "separator.tdcn.net.0.net.3",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.3.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.3.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44115
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.3.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.3.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.3.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.3.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.3.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.0.net.3.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.3.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.3.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.3.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.3.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.3.separable_conv1d",
+   "parent": "separator.tdcn.net.0.net.3",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44115
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.3",
+   "parent": "separator.tdcn.net.0.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.4.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.0.net.4",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.4.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.4",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.4.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.4.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.4.norm1d",
+   "parent": "separator.tdcn.net.0.net.4",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.4.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.4.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44131
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.4.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.4.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.4.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.4.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.4.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.0.net.4.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.4.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.4.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.4.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.4.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.4.separable_conv1d",
+   "parent": "separator.tdcn.net.0.net.4",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44131
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.4",
+   "parent": "separator.tdcn.net.0.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.5.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.0.net.5",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.5.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.5",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.5.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.5.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.5.norm1d",
+   "parent": "separator.tdcn.net.0.net.5",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.5.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.5.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44163
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.5.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.5.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.5.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.5.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.5.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.0.net.5.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.5.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.5.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.5.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.5.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.5.separable_conv1d",
+   "parent": "separator.tdcn.net.0.net.5",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44163
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.5",
+   "parent": "separator.tdcn.net.0.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.6.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.0.net.6",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.6.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.6",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.6.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.6.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.6.norm1d",
+   "parent": "separator.tdcn.net.0.net.6",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.6.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.6.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44227
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.6.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.6.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.6.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.6.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.6.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.0.net.6.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.6.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.6.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.6.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.6.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.6.separable_conv1d",
+   "parent": "separator.tdcn.net.0.net.6",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44227
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.6",
+   "parent": "separator.tdcn.net.0.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.7.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.0.net.7",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.7.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.7",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.7.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.7.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.7.norm1d",
+   "parent": "separator.tdcn.net.0.net.7",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.7.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.7.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44355
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.7.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.7.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.7.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.7.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.7.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.0.net.7.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.7.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.7.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.7.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.7.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.7.separable_conv1d",
+   "parent": "separator.tdcn.net.0.net.7",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44355
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.7",
+   "parent": "separator.tdcn.net.0.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.8.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.0.net.8",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.8.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.8",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.8.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.8.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.8.norm1d",
+   "parent": "separator.tdcn.net.0.net.8",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.8.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.8.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44611
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.8.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.8.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.8.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.8.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.8.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.0.net.8.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.8.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.8.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.8.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.8.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.8.separable_conv1d",
+   "parent": "separator.tdcn.net.0.net.8",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44611
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.8",
+   "parent": "separator.tdcn.net.0.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.9.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.0.net.9",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.9.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.9",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.9.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.9.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.9.norm1d",
+   "parent": "separator.tdcn.net.0.net.9",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.9.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.9.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     45123
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.9.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.0.net.9.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.9.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.0.net.9.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.9.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.0.net.9.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.9.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.9.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.9.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.0.net.9.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.9.separable_conv1d",
+   "parent": "separator.tdcn.net.0.net.9",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     45123
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0.net.9",
+   "parent": "separator.tdcn.net.0.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.0",
+   "parent": "separator.tdcn.net",
+   "cls": "TimeDilatedConvBlock1d",
+   "params": 3326740,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.0.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.1.net.0",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.0.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.0",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.0.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.0.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.0.norm1d",
+   "parent": "separator.tdcn.net.1.net.0",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.0.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.0.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44101
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.0.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.0.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.0.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.0.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.0.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.1.net.0.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.0.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.0.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.0.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.0.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.0.separable_conv1d",
+   "parent": "separator.tdcn.net.1.net.0",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44101
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.0",
+   "parent": "separator.tdcn.net.1.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.1.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.1.net.1",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.1.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.1",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.1.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.1.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.1.norm1d",
+   "parent": "separator.tdcn.net.1.net.1",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.1.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.1.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44103
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.1.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.1.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.1.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.1.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.1.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.1.net.1.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.1.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.1.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.1.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.1.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.1.separable_conv1d",
+   "parent": "separator.tdcn.net.1.net.1",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44103
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.1",
+   "parent": "separator.tdcn.net.1.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.2.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.1.net.2",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.2.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.2",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.2.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.2.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.2.norm1d",
+   "parent": "separator.tdcn.net.1.net.2",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.2.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.2.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44107
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.2.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.2.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.2.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.2.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.2.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.1.net.2.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.2.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.2.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.2.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.2.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.2.separable_conv1d",
+   "parent": "separator.tdcn.net.1.net.2",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44107
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.2",
+   "parent": "separator.tdcn.net.1.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.3.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.1.net.3",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.3.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.3",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.3.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.3.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.3.norm1d",
+   "parent": "separator.tdcn.net.1.net.3",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.3.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.3.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44115
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.3.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.3.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.3.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.3.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.3.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.1.net.3.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.3.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.3.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.3.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.3.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.3.separable_conv1d",
+   "parent": "separator.tdcn.net.1.net.3",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44115
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.3",
+   "parent": "separator.tdcn.net.1.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.4.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.1.net.4",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.4.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.4",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.4.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.4.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.4.norm1d",
+   "parent": "separator.tdcn.net.1.net.4",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.4.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.4.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44131
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.4.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.4.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.4.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.4.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.4.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.1.net.4.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.4.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.4.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.4.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.4.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.4.separable_conv1d",
+   "parent": "separator.tdcn.net.1.net.4",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44131
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.4",
+   "parent": "separator.tdcn.net.1.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.5.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.1.net.5",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.5.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.5",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.5.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.5.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.5.norm1d",
+   "parent": "separator.tdcn.net.1.net.5",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.5.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.5.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44163
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.5.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.5.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.5.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.5.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.5.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.1.net.5.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.5.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.5.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.5.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.5.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.5.separable_conv1d",
+   "parent": "separator.tdcn.net.1.net.5",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44163
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.5",
+   "parent": "separator.tdcn.net.1.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.6.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.1.net.6",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.6.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.6",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.6.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.6.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.6.norm1d",
+   "parent": "separator.tdcn.net.1.net.6",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.6.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.6.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44227
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.6.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.6.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.6.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.6.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.6.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.1.net.6.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.6.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.6.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.6.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.6.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.6.separable_conv1d",
+   "parent": "separator.tdcn.net.1.net.6",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44227
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.6",
+   "parent": "separator.tdcn.net.1.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.7.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.1.net.7",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.7.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.7",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.7.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.7.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.7.norm1d",
+   "parent": "separator.tdcn.net.1.net.7",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.7.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.7.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44355
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.7.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.7.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.7.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.7.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.7.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.1.net.7.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.7.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.7.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.7.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.7.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.7.separable_conv1d",
+   "parent": "separator.tdcn.net.1.net.7",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44355
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.7",
+   "parent": "separator.tdcn.net.1.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.8.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.1.net.8",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.8.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.8",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.8.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.8.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.8.norm1d",
+   "parent": "separator.tdcn.net.1.net.8",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.8.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.8.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44611
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.8.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.8.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.8.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.8.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.8.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.1.net.8.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.8.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.8.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.8.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.8.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.8.separable_conv1d",
+   "parent": "separator.tdcn.net.1.net.8",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44611
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.8",
+   "parent": "separator.tdcn.net.1.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.9.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.1.net.9",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.9.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.9",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.9.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.9.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.9.norm1d",
+   "parent": "separator.tdcn.net.1.net.9",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.9.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.9.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     45123
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.9.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.1.net.9.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.9.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.1.net.9.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.9.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.1.net.9.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.9.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.9.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.9.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.1.net.9.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.9.separable_conv1d",
+   "parent": "separator.tdcn.net.1.net.9",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     45123
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1.net.9",
+   "parent": "separator.tdcn.net.1.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.1",
+   "parent": "separator.tdcn.net",
+   "cls": "TimeDilatedConvBlock1d",
+   "params": 3326740,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.0.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.2.net.0",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.0.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.0",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.0.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.0.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.0.norm1d",
+   "parent": "separator.tdcn.net.2.net.0",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.0.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.0.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44101
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.0.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.0.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.0.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.0.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.0.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.2.net.0.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.0.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.0.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.0.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.0.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.0.separable_conv1d",
+   "parent": "separator.tdcn.net.2.net.0",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44101
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.0",
+   "parent": "separator.tdcn.net.2.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.1.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.2.net.1",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.1.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.1",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.1.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.1.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.1.norm1d",
+   "parent": "separator.tdcn.net.2.net.1",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.1.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.1.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44103
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.1.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.1.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.1.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.1.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.1.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.2.net.1.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.1.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.1.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.1.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.1.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.1.separable_conv1d",
+   "parent": "separator.tdcn.net.2.net.1",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44103
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.1",
+   "parent": "separator.tdcn.net.2.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.2.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.2.net.2",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.2.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.2",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.2.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.2.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.2.norm1d",
+   "parent": "separator.tdcn.net.2.net.2",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.2.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.2.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44107
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.2.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.2.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.2.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.2.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.2.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.2.net.2.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.2.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.2.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.2.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.2.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.2.separable_conv1d",
+   "parent": "separator.tdcn.net.2.net.2",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44107
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.2",
+   "parent": "separator.tdcn.net.2.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.3.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.2.net.3",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.3.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.3",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.3.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.3.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.3.norm1d",
+   "parent": "separator.tdcn.net.2.net.3",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.3.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.3.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44115
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.3.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.3.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.3.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.3.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.3.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.2.net.3.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.3.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.3.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.3.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.3.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.3.separable_conv1d",
+   "parent": "separator.tdcn.net.2.net.3",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44115
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.3",
+   "parent": "separator.tdcn.net.2.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.4.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.2.net.4",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.4.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.4",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.4.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.4.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.4.norm1d",
+   "parent": "separator.tdcn.net.2.net.4",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.4.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.4.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44131
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.4.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.4.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.4.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.4.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.4.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.2.net.4.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.4.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.4.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.4.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.4.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.4.separable_conv1d",
+   "parent": "separator.tdcn.net.2.net.4",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44131
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.4",
+   "parent": "separator.tdcn.net.2.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.5.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.2.net.5",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.5.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.5",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.5.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.5.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.5.norm1d",
+   "parent": "separator.tdcn.net.2.net.5",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.5.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.5.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44163
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.5.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.5.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.5.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.5.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.5.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.2.net.5.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.5.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.5.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.5.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.5.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.5.separable_conv1d",
+   "parent": "separator.tdcn.net.2.net.5",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44163
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.5",
+   "parent": "separator.tdcn.net.2.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.6.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.2.net.6",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.6.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.6",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.6.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.6.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.6.norm1d",
+   "parent": "separator.tdcn.net.2.net.6",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.6.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.6.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44227
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.6.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.6.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.6.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.6.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.6.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.2.net.6.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.6.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.6.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.6.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.6.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.6.separable_conv1d",
+   "parent": "separator.tdcn.net.2.net.6",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44227
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.6",
+   "parent": "separator.tdcn.net.2.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.7.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.2.net.7",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.7.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.7",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.7.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.7.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.7.norm1d",
+   "parent": "separator.tdcn.net.2.net.7",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.7.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.7.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44355
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.7.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.7.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.7.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.7.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.7.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.2.net.7.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.7.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.7.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.7.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.7.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.7.separable_conv1d",
+   "parent": "separator.tdcn.net.2.net.7",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44355
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.7",
+   "parent": "separator.tdcn.net.2.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.8.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.2.net.8",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.8.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.8",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.8.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.8.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.8.norm1d",
+   "parent": "separator.tdcn.net.2.net.8",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.8.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.8.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44611
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.8.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.8.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.8.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.8.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.8.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.2.net.8.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.8.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.8.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.8.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.8.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.8.separable_conv1d",
+   "parent": "separator.tdcn.net.2.net.8",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44611
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.8",
+   "parent": "separator.tdcn.net.2.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.9.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.2.net.9",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.9.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.9",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.9.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.9.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.9.norm1d",
+   "parent": "separator.tdcn.net.2.net.9",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.9.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.9.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     45123
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.9.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.2.net.9.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.9.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.2.net.9.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.9.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.2.net.9.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.9.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.9.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.9.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.2.net.9.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.9.separable_conv1d",
+   "parent": "separator.tdcn.net.2.net.9",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     45123
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2.net.9",
+   "parent": "separator.tdcn.net.2.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.2",
+   "parent": "separator.tdcn.net",
+   "cls": "TimeDilatedConvBlock1d",
+   "params": 3326740,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.0.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.3.net.0",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.0.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.0",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.0.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.0.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.0.norm1d",
+   "parent": "separator.tdcn.net.3.net.0",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.0.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.0.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44101
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.0.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.0.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.0.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.0.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.0.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.3.net.0.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.0.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.0.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.0.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.0.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.0.separable_conv1d",
+   "parent": "separator.tdcn.net.3.net.0",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44101
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.0",
+   "parent": "separator.tdcn.net.3.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.1.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.3.net.1",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.1.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.1",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.1.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.1.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.1.norm1d",
+   "parent": "separator.tdcn.net.3.net.1",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.1.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.1.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44103
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.1.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.1.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.1.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.1.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.1.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.3.net.1.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.1.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.1.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.1.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.1.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.1.separable_conv1d",
+   "parent": "separator.tdcn.net.3.net.1",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44103
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.1",
+   "parent": "separator.tdcn.net.3.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.2.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.3.net.2",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.2.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.2",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.2.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.2.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.2.norm1d",
+   "parent": "separator.tdcn.net.3.net.2",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.2.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.2.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44107
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.2.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.2.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.2.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.2.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.2.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.3.net.2.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.2.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.2.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.2.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.2.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.2.separable_conv1d",
+   "parent": "separator.tdcn.net.3.net.2",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44107
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.2",
+   "parent": "separator.tdcn.net.3.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.3.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.3.net.3",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.3.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.3",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.3.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.3.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.3.norm1d",
+   "parent": "separator.tdcn.net.3.net.3",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.3.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.3.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44115
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.3.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.3.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.3.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.3.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.3.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.3.net.3.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.3.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.3.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.3.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.3.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.3.separable_conv1d",
+   "parent": "separator.tdcn.net.3.net.3",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44115
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.3",
+   "parent": "separator.tdcn.net.3.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.4.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.3.net.4",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.4.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.4",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.4.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.4.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.4.norm1d",
+   "parent": "separator.tdcn.net.3.net.4",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.4.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.4.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44131
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.4.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.4.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.4.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.4.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.4.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.3.net.4.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.4.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.4.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.4.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.4.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.4.separable_conv1d",
+   "parent": "separator.tdcn.net.3.net.4",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44131
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.4",
+   "parent": "separator.tdcn.net.3.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.5.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.3.net.5",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.5.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.5",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.5.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.5.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.5.norm1d",
+   "parent": "separator.tdcn.net.3.net.5",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.5.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.5.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44163
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.5.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.5.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.5.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.5.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.5.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.3.net.5.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.5.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.5.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.5.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.5.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.5.separable_conv1d",
+   "parent": "separator.tdcn.net.3.net.5",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44163
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.5",
+   "parent": "separator.tdcn.net.3.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.6.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.3.net.6",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.6.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.6",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.6.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.6.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.6.norm1d",
+   "parent": "separator.tdcn.net.3.net.6",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.6.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.6.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44227
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.6.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.6.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.6.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.6.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.6.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.3.net.6.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.6.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.6.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.6.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.6.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.6.separable_conv1d",
+   "parent": "separator.tdcn.net.3.net.6",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44227
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.6",
+   "parent": "separator.tdcn.net.3.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.7.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.3.net.7",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.7.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.7",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.7.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.7.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.7.norm1d",
+   "parent": "separator.tdcn.net.3.net.7",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.7.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.7.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44355
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.7.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.7.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.7.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.7.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.7.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.3.net.7.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.7.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.7.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.7.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.7.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.7.separable_conv1d",
+   "parent": "separator.tdcn.net.3.net.7",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44355
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.7",
+   "parent": "separator.tdcn.net.3.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.8.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.3.net.8",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.8.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.8",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.8.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.8.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.8.norm1d",
+   "parent": "separator.tdcn.net.3.net.8",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.8.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.8.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44611
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.8.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.8.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.8.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.8.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.8.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.3.net.8.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.8.separable_conv1d.output_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.8.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 131328,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131328,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.8.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.8.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.8.separable_conv1d",
+   "parent": "separator.tdcn.net.3.net.8",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 200065,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44611
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.8",
+   "parent": "separator.tdcn.net.3.net",
+   "cls": "ResidualBlock1d",
+   "params": 332674,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     256,
+     44099
+    ],
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.9.bottleneck_conv1d",
+   "parent": "separator.tdcn.net.3.net.9",
+   "cls": "Conv1d",
+   "params": 131584,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 131584,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.9.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.9",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.9.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.9.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.9.norm1d",
+   "parent": "separator.tdcn.net.3.net.9",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.9.separable_conv1d.depthwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.9.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 2048,
+   "in_shapes": [
+    [
+     1,
+     512,
+     45123
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 2048,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.9.separable_conv1d.nonlinear1d",
+   "parent": "separator.tdcn.net.3.net.9.separable_conv1d",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.9.separable_conv1d.norm1d.norm",
+   "parent": "separator.tdcn.net.3.net.9.separable_conv1d.norm1d",
+   "cls": "GroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.9.separable_conv1d.norm1d",
+   "parent": "separator.tdcn.net.3.net.9.separable_conv1d",
+   "cls": "GlobalLayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.9.separable_conv1d.skip_pointwise_conv1d",
+   "parent": "separator.tdcn.net.3.net.9.separable_conv1d",
+   "cls": "Conv1d",
+   "params": 65664,
+   "in_shapes": [
+    [
+     1,
+     512,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 65664,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.9.separable_conv1d",
+   "parent": "separator.tdcn.net.3.net.9",
+   "cls": "DepthwiseSeparableConv1d",
+   "params": 68737,
+   "in_shapes": [
+    [
+     1,
+     512,
+     45123
+    ]
+   ],
+   "out_shapes": [
+    null,
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3.net.9",
+   "parent": "separator.tdcn.net.3.net",
+   "cls": "ResidualBlock1d",
+   "params": 201346,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    null,
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn.net.3",
+   "parent": "separator.tdcn.net",
+   "cls": "TimeDilatedConvBlock1d",
+   "params": 3195412,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    null,
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.tdcn",
+   "parent": "separator",
+   "cls": "TimeDilatedConvNet",
+   "params": 13175632,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator.prelu",
+   "parent": "separator",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.mask_conv1d",
+   "parent": "separator",
+   "cls": "Conv1d",
+   "params": 132096,
+   "in_shapes": [
+    [
+     1,
+     128,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1024,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 132096,
+   "role": "leaf"
+  },
+  {
+   "path": "separator.mask_nonlinear",
+   "parent": "separator",
+   "cls": "Sigmoid",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1024,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1024,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separator",
+   "parent": "<root>",
+   "cls": "Separator",
+   "params": 13374033,
+   "in_shapes": [
+    [
+     1,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    1,
+    4,
+    256,
+    44099
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "decoder.conv_transpose1d",
+   "parent": "decoder",
+   "cls": "ConvTranspose1d",
+   "params": 10240,
+   "in_shapes": [
+    [
+     4,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    4,
+    2,
+    441000
+   ],
+   "calls": 1,
+   "params_attr": 10240,
+   "role": "leaf"
+  },
+  {
+   "path": "decoder",
+   "parent": "<root>",
+   "cls": "Decoder",
+   "params": 10240,
+   "in_shapes": [
+    [
+     4,
+     256,
+     44099
+    ]
+   ],
+   "out_shapes": [
+    4,
+    2,
+    441000
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "<root>",
+   "parent": "",
+   "cls": "ConvTasNet",
+   "params": 13394513,
+   "in_shapes": [
+    [
+     1,
+     1,
+     2,
+     441000
+    ]
+   ],
+   "out_shapes": [
+    1,
+    4,
+    2,
+    441000
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  }
+ ]
+}

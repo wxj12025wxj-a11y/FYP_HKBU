@@ -1,0 +1,804 @@
+{
+  "runs": {
+    "oracle": {
+      "PR - Oh No": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 0.153,
+        "rtf": 0.0076,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 5.311,
+          "drums": 8.119,
+          "bass": 17.909,
+          "other": 8.606
+        },
+        "si_sdr": {
+          "vocals": 5.644,
+          "drums": 8.677,
+          "bass": 14.255,
+          "other": 9.273
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:50:23",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_probe_tmp\\PR - Oh No",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    },
+    "rpca": {
+      "PR - Oh No": {
+        "model": "rpca",
+        "label": "RPCA (Inexact-ALM)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": null,
+        "load_s": 0.014,
+        "infer_s": 31.971,
+        "rtf": 1.5985,
+        "targets": [
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": null
+        },
+        "si_sdr": {
+          "vocals": -18.003
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:50:26",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\rpca_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\RPCA\\_probe_tmp\\PR - Oh No",
+        "info": {
+          "kind": "classical",
+          "targets": [
+            "vocals"
+          ]
+        },
+        "cross_stem": {
+          "vocals": {
+            "vocals": {
+              "si_sdr": -18.003,
+              "corr": 0.1249
+            },
+            "drums": {
+              "si_sdr": -4.441,
+              "corr": 0.5143
+            },
+            "bass": {
+              "si_sdr": -1.194,
+              "corr": 0.657
+            },
+            "other": {
+              "si_sdr": -13.478,
+              "corr": 0.2073
+            }
+          }
+        },
+        "best_match": {
+          "vocals": {
+            "stem": "bass",
+            "si_sdr": -1.194,
+            "corr": 0.657
+          }
+        },
+        "ref_used": {
+          "vocals": "(cross-stem; 见 cross_stem)"
+        }
+      }
+    },
+    "umx": {
+      "PR - Oh No": {
+        "model": "umx",
+        "label": "Open-Unmix (umxhq)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.294,
+        "infer_s": 0.981,
+        "rtf": 0.049,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 0.353,
+          "drums": 5.6,
+          "bass": 4.757,
+          "other": -1.668
+        },
+        "si_sdr": {
+          "vocals": -1.137,
+          "drums": 4.184,
+          "bass": 3.224,
+          "other": -7.091
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:50:59",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\umx_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Open-Unmix\\_probe_tmp\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    },
+    "mdx": {
+      "PR - Oh No": {
+        "model": "mdx",
+        "label": "MDX-Net (mdx_extra)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 2.56,
+        "infer_s": 1.917,
+        "rtf": 0.0959,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "drums": 8.114,
+          "bass": 16.952,
+          "other": 6.679,
+          "vocals": 3.395
+        },
+        "si_sdr": {
+          "drums": 9.061,
+          "bass": 16.925,
+          "other": 5.504,
+          "vocals": 3.861
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:51:03",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\mdx_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\MDX-Net\\_probe_tmp\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "bag": "mdx_extra",
+          "weights_src": "local:E:\\FYP_HKBU\\01_models\\_weights\\MDX-Net\\mdx_extra"
+        },
+        "ref_used": {
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      }
+    },
+    "convtasnet": {
+      "PR - Oh No": {
+        "model": "convtasnet",
+        "label": "Conv-TasNet (musdb18)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.198,
+        "infer_s": 3.229,
+        "rtf": 0.1615,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "bass": 6.238,
+          "drums": 6.265,
+          "other": -0.841,
+          "vocals": 0.043
+        },
+        "si_sdr": {
+          "bass": 5.659,
+          "drums": 7.196,
+          "other": -6.522,
+          "vocals": -4.764
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:51:12",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\convtasnet_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Conv-TasNet\\_probe_tmp\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "repo": "tky823",
+          "config": "4sec_L20",
+          "params": 13394513,
+          "sources": [
+            "bass",
+            "drums",
+            "other",
+            "vocals"
+          ]
+        },
+        "ref_used": {
+          "bass": "bass",
+          "drums": "drums",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      }
+    },
+    "mmdenselstm": {
+      "PR - Oh No": {
+        "model": "mmdenselstm",
+        "label": "MMDenseLSTM (musdb18)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.486,
+        "infer_s": 0.909,
+        "rtf": 0.0454,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "bass": 5.148,
+          "drums": 6.344,
+          "other": -1.812,
+          "vocals": 0.321
+        },
+        "si_sdr": {
+          "bass": 3.133,
+          "drums": 5.177,
+          "other": -5.29,
+          "vocals": -2.914
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:51:18",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\mmdenselstm_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\MMDenseLSTM\\_probe_tmp\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "repo": "tky823",
+          "config": "paper",
+          "params": 5483136,
+          "sources": [
+            "bass",
+            "drums",
+            "other",
+            "vocals"
+          ],
+          "n_fft": 4096,
+          "hop_length": 1024
+        },
+        "ref_used": {
+          "bass": "bass",
+          "drums": "drums",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      }
+    },
+    "bsroformer_l12": {
+      "PR - Oh No": {
+        "model": "bsroformer_l12",
+        "label": "BS-RoFormer L12 (ep_317, vocals)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 3.344,
+        "infer_s": 38.211,
+        "rtf": 1.9105,
+        "targets": [
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 2.428
+        },
+        "si_sdr": {
+          "vocals": -1.238
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:51:24",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l12_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L12\\_probe_tmp\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "repo": "ZFTurbo/MSS-Training",
+          "ckpt": "model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+          "params": 159758092,
+          "normalize": false,
+          "targets": [
+            "vocals"
+          ],
+          "script": "bs_roformer",
+          "dim": 512,
+          "depth": 12,
+          "librosa_stub": true
+        },
+        "ref_used": {
+          "vocals": "vocals"
+        }
+      }
+    },
+    "bsroformer_l6": {
+      "PR - Oh No": {
+        "model": "bsroformer_l6",
+        "label": "BS-RoFormer L6 (ep_937, vocals+other)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.987,
+        "infer_s": 3.851,
+        "rtf": 0.1925,
+        "targets": [
+          "vocals+other"
+        ],
+        "sdr": {
+          "vocals+other": -5.758
+        },
+        "si_sdr": {
+          "vocals+other": -8.324
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:52:07",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l6_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L6\\_probe_tmp\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "repo": "ZFTurbo/MSS-Training",
+          "ckpt": "model_bs_roformer_ep_937_sdr_10.5309.ckpt",
+          "params": 98194828,
+          "normalize": false,
+          "targets": [
+            "other"
+          ],
+          "script": "bs_roformer",
+          "dim": 384,
+          "depth": 12,
+          "librosa_stub": false
+        },
+        "ref_used": {
+          "vocals+other": "vocals+other"
+        }
+      }
+    },
+    "bsrnn": {
+      "PR - Oh No": {
+        "model": "bsrnn",
+        "label": "BSRNN (oBSRNN, vocals)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 1.368,
+        "infer_s": 17.133,
+        "rtf": 0.8566,
+        "targets": [
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 0.446
+        },
+        "si_sdr": {
+          "vocals": -5.983
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:52:12",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-opt\\_probe_tmp\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "bsrnn-opt",
+          "ckpt": "vocals.ckpt",
+          "params": 40777192,
+          "targets": [
+            "vocals"
+          ],
+          "build_targets": [
+            "vocals"
+          ],
+          "ckpt_targets": [
+            "vocals"
+          ],
+          "stubbed": [
+            "lightning.pytorch",
+            "helpers.data",
+            "helpers.eval"
+          ],
+          "ckpt_wrapper": "state_dict",
+          "n_missing_keys": 0,
+          "n_unexpected_keys": 0
+        },
+        "ref_used": {
+          "vocals": "vocals"
+        }
+      }
+    },
+    "bsrnn_all": {
+      "PR - Oh No": {
+        "model": "bsrnn_all",
+        "label": "BSRNN (oBSRNN, 4-stem)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "FAIL",
+        "weights_downloaded": true,
+        "load_s": null,
+        "infer_s": null,
+        "rtf": null,
+        "targets": [],
+        "sdr": {},
+        "si_sdr": {},
+        "error": "RuntimeError: cuDNN error: CUDNN_STATUS_INTERNAL_ERROR_HOST_ALLOCATION_FAILED",
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:52:32",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_all_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-opt\\_probe_tmp\\PR - Oh No",
+        "traceback": "ddy\\binaries\\python\\envs\\fyp_audio\\Lib\\site-packages\\torch\\nn\\modules\\container.py\", line 259, in forward\n    input = module(input)\n  File \"C:\\Users\\jerry\\.workbuddy\\binaries\\python\\envs\\fyp_audio\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1783, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jerry\\.workbuddy\\binaries\\python\\envs\\fyp_audio\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1794, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"E:\\FYP_HKBU\\01_models\\_third_party\\bsrnn\\models\\bs.py\", line 216, in forward\n    band_output = self.time_net(input)  # [BH*K, N/H, T]\n  File \"C:\\Users\\jerry\\.workbuddy\\binaries\\python\\envs\\fyp_audio\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1783, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jerry\\.workbuddy\\binaries\\python\\envs\\fyp_audio\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1794, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"E:\\FYP_HKBU\\01_models\\_third_party\\bsrnn\\models\\bs.py\", line 127, in forward\n    output, _ = self.main_layer(output)  # [B, seq_len, hidden_size]\n                ~~~~~~~~~~~~~~~^^^^^^^^\n  File \"C:\\Users\\jerry\\.workbuddy\\binaries\\python\\envs\\fyp_audio\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1783, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jerry\\.workbuddy\\binaries\\python\\envs\\fyp_audio\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1794, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"C:\\Users\\jerry\\.workbuddy\\binaries\\python\\envs\\fyp_audio\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py\", line 1164, in forward\n    result = _VF.lstm(\n        input,\n    ...<7 lines>...\n        self.batch_first,\n    )\nRuntimeError: cuDNN error: CUDNN_STATUS_INTERNAL_ERROR_HOST_ALLOCATION_FAILED\n"
+      }
+    },
+    "bsrnn_large": {
+      "PR - Oh No": {
+        "model": "bsrnn_large",
+        "label": "BSRNN large (vocals)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 1.016,
+        "infer_s": 1.998,
+        "rtf": 0.0999,
+        "targets": [
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 0.782
+        },
+        "si_sdr": {
+          "vocals": -6.247
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:54:48",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_large_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-large\\_probe_tmp\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "bsrnn-large",
+          "ckpt": "vocals.ckpt",
+          "params": 36417160,
+          "targets": [
+            "vocals"
+          ],
+          "build_targets": [
+            "vocals"
+          ],
+          "ckpt_targets": [
+            "v",
+            "o",
+            "c",
+            "a",
+            "l",
+            "s"
+          ],
+          "stubbed": [
+            "lightning.pytorch",
+            "helpers.data",
+            "helpers.eval"
+          ],
+          "ckpt_wrapper": "state_dict",
+          "n_missing_keys": 0,
+          "n_unexpected_keys": 0
+        },
+        "audio_format": "flac",
+        "ref_used": {
+          "vocals": "vocals"
+        }
+      }
+    },
+    "bsrnn_large_all": {
+      "PR - Oh No": {
+        "model": "bsrnn_large_all",
+        "label": "BSRNN large (4-stem)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "FAIL",
+        "weights_downloaded": true,
+        "load_s": null,
+        "infer_s": null,
+        "rtf": null,
+        "targets": [],
+        "sdr": {},
+        "si_sdr": {},
+        "error": "AcceleratorError: CUDA error: out of memory\nSearch for `cudaErrorMemoryAllocation' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\n",
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:53:31",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_large_all_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-large\\_probe_tmp\\PR - Oh No",
+        "traceback": "HKBU\\tools\\benchmark_model_universal.py\", line 887, in run_one\n    stems = run_fn(mix)\n  File \"E:\\FYP_HKBU\\tools\\_bsrnn_loader.py\", line 315, in run\n    final, _loss = model._apply_model_to_track(x, None, comp_loss=False)\n                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\FYP_HKBU\\01_models\\_third_party\\bsrnn\\models\\pl_module.py\", line 178, in _apply_model_to_track\n    output_sig = self._apply_model_to_track_fader(\n        mix, true_sources, comp_loss=comp_loss\n    )\n  File \"E:\\FYP_HKBU\\01_models\\_third_party\\bsrnn\\models\\pl_module.py\", line 302, in _apply_model_to_track_fader\n    self.to(self.eval_device)\n    ~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jerry\\.workbuddy\\binaries\\python\\envs\\fyp_audio\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1388, in to\n    return self._apply(convert)\n           ~~~~~~~~~~~^^^^^^^^^\n  File \"C:\\Users\\jerry\\.workbuddy\\binaries\\python\\envs\\fyp_audio\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 933, in _apply\n    module._apply(fn)\n    ~~~~~~~~~~~~~^^^^\n  File \"C:\\Users\\jerry\\.workbuddy\\binaries\\python\\envs\\fyp_audio\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 933, in _apply\n    module._apply(fn)\n    ~~~~~~~~~~~~~^^^^\n  File \"C:\\Users\\jerry\\.workbuddy\\binaries\\python\\envs\\fyp_audio\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1036, in _apply\n    self._buffers[key] = fn(buf)\n                         ~~^^^^^\n  File \"C:\\Users\\jerry\\.workbuddy\\binaries\\python\\envs\\fyp_audio\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1374, in convert\n    return t.to(\n           ~~~~^\n        device,\n        ^^^^^^^\n        dtype if t.is_floating_point() or t.is_complex() else None,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        non_blocking,\n        ^^^^^^^^^^^^^\n    )\n    ^\ntorch.AcceleratorError: CUDA error: out of memory\nSearch for `cudaErrorMemoryAllocation' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\n\n"
+      }
+    },
+    "bsrnn_simo": {
+      "PR - Oh No": {
+        "model": "bsrnn_simo",
+        "label": "BSRNN SIMO (4-stem)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 2.399,
+        "infer_s": 3.428,
+        "rtf": 0.1714,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 0.641,
+          "drums": 6.817,
+          "bass": 15.171,
+          "other": 6.806
+        },
+        "si_sdr": {
+          "vocals": -5.294,
+          "drums": 8.102,
+          "bass": 11.559,
+          "other": 2.016
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:54:34",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_simo_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-SIMO\\_probe_tmp\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "simo-bsrnn-opt",
+          "ckpt": "separator.ckpt",
+          "params": 108727540,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "build_targets": [
+            "vocals",
+            "bass",
+            "drums",
+            "other"
+          ],
+          "ckpt_targets": [
+            "vocals",
+            "bass",
+            "drums",
+            "other"
+          ],
+          "stubbed": [
+            "lightning.pytorch",
+            "helpers.data",
+            "helpers.eval"
+          ],
+          "ckpt_wrapper": "state_dict",
+          "n_missing_keys": 0,
+          "n_unexpected_keys": 0
+        },
+        "audio_format": "flac",
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    },
+    "demucs": {
+      "PR - Oh No": {
+        "model": "demucs",
+        "label": "Demucs (htdemucs)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.323,
+        "infer_s": 1.014,
+        "rtf": 0.0507,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "drums": 7.546,
+          "bass": 16.034,
+          "other": 5.737,
+          "vocals": 0.27
+        },
+        "si_sdr": {
+          "drums": 9.822,
+          "bass": 15.055,
+          "other": 3.99,
+          "vocals": -5.925
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:54:23",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\demucs_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Demucs\\_probe_tmp\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "model": "htdemucs",
+          "params_m": 41.98,
+          "sources": [
+            "drums",
+            "bass",
+            "other",
+            "vocals"
+          ]
+        },
+        "audio_format": "flac",
+        "ref_used": {
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      }
+    },
+    "dprnn": {
+      "PR - Oh No": {
+        "model": "dprnn",
+        "label": "DPRNN (自训, 4-stem)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": 20,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.186,
+        "infer_s": 0.452,
+        "rtf": 0.0226,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": -21.994,
+          "drums": 0.103,
+          "bass": 1.919,
+          "other": -5.235
+        },
+        "si_sdr": {
+          "vocals": -14.563,
+          "drums": 1.482,
+          "bass": 1.207,
+          "other": -13.29
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:54:57",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\dprnn_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\DPRNN\\_probe_tmp\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "repo": "Dual-Path-RNN-Pytorch (自训 ckpt)",
+          "params": 3685761,
+          "sources": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "native_sr": 11025,
+          "ckpt": "best.pt",
+          "train_step": 31700,
+          "train_val_sisdr": 2.7449101707958983,
+          "note": "原生 11025 Hz 自训；升采样回 44100 Hz 评测，带宽损失计入 SDR"
+        },
+        "audio_format": "flac",
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    }
+  },
+  "updated": "2026-09-21T00:55:00",
+  "subset": "test"
+}

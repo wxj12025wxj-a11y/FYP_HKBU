@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "created": "2026-09-15T19:31:26",
+    "subset": "train",
+    "songs": [
+      "A Classic Education - NightOwl",
+      "ANiMAL - Clinic A",
+      "ANiMAL - Easy Tiger",
+      "ANiMAL - Rockshow",
+      "Actions - Devil's Words",
+      "Actions - One Minute Smile",
+      "Actions - South Of The Water",
+      "Aimee Norwich - Child",
+      "Alexander Ross - Goodbye Bolero",
+      "Alexander Ross - Velvet Curtain"
+    ],
+    "duration": 30,
+    "device": "cpu",
+    "sr": 44100,
+    "warmup_seconds": 3.0,
+    "note": "模型加载/预热单独计; 每首仅跑一次完整 4 轨分离; 墙钟时间",
+    "grand_total_seconds": 201.33
+  },
+  "openunmix": {
+    "model": "Open-Unmix (umxhq, 4 targets)",
+    "model_load_seconds": 0.21,
+    "warmup_seconds": 0.43,
+    "n_songs": 10,
+    "audio_seconds_per_song": 30,
+    "audio_seconds_total": 300,
+    "inference_total_seconds": 41.98,
+    "inference_mean_seconds": 4.198,
+    "inference_median_seconds": 4.263,
+    "inference_min_seconds": 3.793,
+    "inference_max_seconds": 4.746,
+    "inference_std_seconds": 0.274,
+    "rtf_mean": 0.1399,
+    "rtf_median": 0.1421,
+    "real_time_capable": true,
+    "wall_clock_including_load_seconds": 42.62,
+    "per_song": [
+      {
+        "song": "A Classic Education - NightOwl",
+        "index": 1,
+        "audio_seconds": 30,
+        "inference_seconds": 3.945,
+        "rtf": 0.1315,
+        "sdr_vocals": 6.978,
+        "sdr_drums": 1.918,
+        "note": ""
+      },
+      {
+        "song": "ANiMAL - Clinic A",
+        "index": 2,
+        "audio_seconds": 30,
+        "inference_seconds": 4.074,
+        "rtf": 0.1358,
+        "sdr_vocals": 7.298,
+        "sdr_drums": 7.051,
+        "note": ""
+      },
+      {
+        "song": "ANiMAL - Easy Tiger",
+        "index": 3,
+        "audio_seconds": 30,
+        "inference_seconds": 4.395,
+        "rtf": 0.1465,
+        "sdr_vocals": 3.176,
+        "sdr_drums": 11.013,
+        "note": ""
+      },
+      {
+        "song": "ANiMAL - Rockshow",
+        "index": 4,
+        "audio_seconds": 30,
+        "inference_seconds": 4.237,
+        "rtf": 0.1412,
+        "sdr_vocals": 4.985,
+        "sdr_drums": 6.106,
+        "note": ""
+      },
+      {
+        "song": "Actions - Devil's Words",
+        "index": 5,
+        "audio_seconds": 30,
+        "inference_seconds": 3.793,
+        "rtf": 0.1264,
+        "sdr_vocals": 10.233,
+        "sdr_drums": 8.0,
+        "note": ""
+      },
+      {
+        "song": "Actions - One Minute Smile",
+        "index": 6,
+        "audio_seconds": 30,
+        "inference_seconds": 3.843,
+        "rtf": 0.1281,
+        "sdr_vocals": 8.251,
+        "sdr_drums": 6.472,
+        "note": ""
+      },
+      {
+        "song": "Actions - South Of The Water",
+        "index": 7,
+        "audio_seconds": 30,
+        "inference_seconds": 4.35,
+        "rtf": 0.145,
+        "sdr_vocals": 11.462,
+        "sdr_drums": 7.062,
+        "note": ""
+      },
+      {
+        "song": "Aimee Norwich - Child",
+        "index": 8,
+        "audio_seconds": 30,
+        "inference_seconds": 4.289,
+        "rtf": 0.143,
+        "sdr_vocals": -47.668,
+        "sdr_drums": 5.652,
+        "note": ""
+      },
+      {
+        "song": "Alexander Ross - Goodbye Bolero",
+        "index": 9,
+        "audio_seconds": 30,
+        "inference_seconds": 4.307,
+        "rtf": 0.1436,
+        "sdr_vocals": 10.819,
+        "sdr_drums": 4.565,
+        "note": ""
+      },
+      {
+        "song": "Alexander Ross - Velvet Curtain",
+        "index": 10,
+        "audio_seconds": 30,
+        "inference_seconds": 4.746,
+        "rtf": 0.1582,
+        "sdr_vocals": 14.419,
+        "sdr_drums": null,
+        "note": ""
+      }
+    ]
+  },
+  "demucs": {
+    "model": "Demucs (htdemucs, 4 stems)",
+    "model_load_seconds": 0.35,
+    "warmup_seconds": 2.88,
+    "n_songs": 10,
+    "audio_seconds_per_song": 30,
+    "audio_seconds_total": 300,
+    "inference_total_seconds": 113.27,
+    "inference_mean_seconds": 11.326,
+    "inference_median_seconds": 11.38,
+    "inference_min_seconds": 10.249,
+    "inference_max_seconds": 11.775,
+    "inference_std_seconds": 0.425,
+    "rtf_mean": 0.3775,
+    "rtf_median": 0.3793,
+    "real_time_capable": true,
+    "wall_clock_including_load_seconds": 116.5,
+    "per_song": [
+      {
+        "song": "A Classic Education - NightOwl",
+        "index": 1,
+        "audio_seconds": 30,
+        "inference_seconds": 11.004,
+        "rtf": 0.3668,
+        "sdr_vocals": 8.502,
+        "sdr_drums": 4.484,
+        "note": ""
+      },
+      {
+        "song": "ANiMAL - Clinic A",
+        "index": 2,
+        "audio_seconds": 30,
+        "inference_seconds": 11.752,
+        "rtf": 0.3917,
+        "sdr_vocals": 9.776,
+        "sdr_drums": 9.43,
+        "note": ""
+      },
+      {
+        "song": "ANiMAL - Easy Tiger",
+        "index": 3,
+        "audio_seconds": 30,
+        "inference_seconds": 11.651,
+        "rtf": 0.3884,
+        "sdr_vocals": 6.846,
+        "sdr_drums": 15.004,
+        "note": ""
+      },
+      {
+        "song": "ANiMAL - Rockshow",
+        "index": 4,
+        "audio_seconds": 30,
+        "inference_seconds": 11.22,
+        "rtf": 0.374,
+        "sdr_vocals": 5.809,
+        "sdr_drums": 10.014,
+        "note": ""
+      },
+      {
+        "song": "Actions - Devil's Words",
+        "index": 5,
+        "audio_seconds": 30,
+        "inference_seconds": 11.327,
+        "rtf": 0.3776,
+        "sdr_vocals": 13.714,
+        "sdr_drums": 11.052,
+        "note": ""
+      },
+      {
+        "song": "Actions - One Minute Smile",
+        "index": 6,
+        "audio_seconds": 30,
+        "inference_seconds": 11.39,
+        "rtf": 0.3797,
+        "sdr_vocals": 9.278,
+        "sdr_drums": 9.257,
+        "note": ""
+      },
+      {
+        "song": "Actions - South Of The Water",
+        "index": 7,
+        "audio_seconds": 30,
+        "inference_seconds": 11.527,
+        "rtf": 0.3842,
+        "sdr_vocals": 11.586,
+        "sdr_drums": 14.149,
+        "note": ""
+      },
+      {
+        "song": "Aimee Norwich - Child",
+        "index": 8,
+        "audio_seconds": 30,
+        "inference_seconds": 11.37,
+        "rtf": 0.379,
+        "sdr_vocals": -60.453,
+        "sdr_drums": 10.148,
+        "note": ""
+      },
+      {
+        "song": "Alexander Ross - Goodbye Bolero",
+        "index": 9,
+        "audio_seconds": 30,
+        "inference_seconds": 10.249,
+        "rtf": 0.3416,
+        "sdr_vocals": 13.074,
+        "sdr_drums": 9.84,
+        "note": ""
+      },
+      {
+        "song": "Alexander Ross - Velvet Curtain",
+        "index": 10,
+        "audio_seconds": 30,
+        "inference_seconds": 11.775,
+        "rtf": 0.3925,
+        "sdr_vocals": 19.609,
+        "sdr_drums": null,
+        "note": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+ "tol_pct": 5.0,
+ "units": "thop_G = 2*MACs",
+ "n_models": 22,
+ "cases": {
+  "oracle": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "no nn.Module (analytic/classical) - thop N/A by construction"
+  },
+  "rpca": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "no nn.Module (analytic/classical) - thop N/A by construction"
+  },
+  "umx": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (ValueError:not enough values to unpack (expected 3, got 2)); FlopCounterMode lower bound stands"
+  },
+  "mdx": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (NotImplementedError:Call `apply_model` on this.); FlopCounterMode lower bound stands"
+  },
+  "convtasnet": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (ValueError:Not support 2 dimension input); FlopCounterMode lower bound stands"
+  },
+  "mmdenselstm": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (AssertionError:input is expected 4D input.); FlopCounterMode lower bound stands"
+  },
+  "bsroformer_l12": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (AssertionError:stereo needs to be set to True if passing in audio signal th); FlopCounterMode lower bound stands"
+  },
+  "bsroformer_l6": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (AssertionError:stereo needs to be set to True if passing in audio signal th); FlopCounterMode lower bound stands"
+  },
+  "bsrnn": {
+   "thop_G": 3428.841,
+   "dev_pct": 258.86,
+   "note": "BSRNN @ 1,C,T; thop=2xMACs  [FLAG: dev>5% -> count coverage differs]"
+  },
+  "bsrnn_all": {
+   "thop_G": 4596.885,
+   "dev_pct": "",
+   "note": "BSRNN @ 1,C,T; thop=2xMACs; AGGREGATED loader (4 nets) -> thop saw 1 net only, deviation NOT comparable"
+  },
+  "bsrnn_large": {
+   "thop_G": 2972.845,
+   "dev_pct": 973.93,
+   "note": "BSRNN @ 1,C,T; thop=2xMACs  [FLAG: dev>5% -> count coverage differs]"
+  },
+  "bsrnn_large_all": {
+   "thop_G": 3985.182,
+   "dev_pct": "",
+   "note": "BSRNN @ 1,C,T; thop=2xMACs; AGGREGATED loader (4 nets) -> thop saw 1 net only, deviation NOT comparable"
+  },
+  "bsrnn_simo": {
+   "thop_G": 4978.665,
+   "dev_pct": 223.27,
+   "note": "BSRNN @ 1,C,T; thop=2xMACs  [FLAG: dev>5% -> count coverage differs]"
+  },
+  "demucs": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (NotImplementedError:Call `apply_model` on this.); FlopCounterMode lower bound stands"
+  },
+  "dprnn": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (RuntimeError:Calculated padded input size per channel: (2). Kernel size: ); FlopCounterMode lower bound stands"
+  },
+  "mel_roformer_denoise": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (AssertionError:stereo needs to be set to True if passing in audio signal th); FlopCounterMode lower bound stands"
+  },
+  "mel_roformer_denoise_aggr": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (AssertionError:stereo needs to be set to True if passing in audio signal th); FlopCounterMode lower bound stands"
+  },
+  "mel_roformer_dereverb": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (AssertionError:stereo needs to be set to True if passing in audio signal th); FlopCounterMode lower bound stands"
+  },
+  "mel_roformer_dereverb_echo": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (AssertionError:stereo needs to be set to True if passing in audio signal th); FlopCounterMode lower bound stands"
+  },
+  "denoiser_dns48": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (RuntimeError:Input type (torch.FloatTensor) and weight type (torch.cuda.F); FlopCounterMode lower bound stands"
+  },
+  "denoiser_dns64": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (RuntimeError:Input type (torch.FloatTensor) and weight type (torch.cuda.F); FlopCounterMode lower bound stands"
+  },
+  "denoiser_master64": {
+   "thop_G": "",
+   "dev_pct": "",
+   "note": "thop cannot profile this model (RuntimeError:Input type (torch.FloatTensor) and weight type (torch.cuda.F); FlopCounterMode lower bound stands"
+  }
+ }
+}

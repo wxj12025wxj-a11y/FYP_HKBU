@@ -1,0 +1,3476 @@
+{
+  "attempts": {
+    "oracle": {
+      "PR - Oh No": {
+        "status": "PASS",
+        "seconds": 12.9,
+        "at": "2026-09-21 00:55:24"
+      },
+      "AM Contra - Heart Peripheral": {
+        "status": "PASS",
+        "seconds": 34.3,
+        "at": "2026-09-21 13:34:26"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "PASS",
+        "seconds": 27.2,
+        "at": "2026-09-21 13:52:10"
+      },
+      "Angels In Amplifiers - I'm Alright": {
+        "status": "PASS",
+        "seconds": 36.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:05:55"
+      },
+      "Arise - Run Run Run": {
+        "status": "PASS",
+        "seconds": 51.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:16:37"
+      },
+      "BKS - Bulldozer": {
+        "status": "PASS",
+        "seconds": 61.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:30:15"
+      },
+      "BKS - Too Much": {
+        "status": "PASS",
+        "seconds": 48.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:47:28"
+      },
+      "Ben Carrigan - We'll Talk About It All Tonight": {
+        "status": "PASS",
+        "seconds": 50.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:01:01"
+      },
+      "Bobby Nobody - Stitch Up": {
+        "status": "PASS",
+        "seconds": 51.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:15:15"
+      },
+      "Buitraker - Revo X": {
+        "status": "PASS",
+        "seconds": 54.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:29:03"
+      },
+      "Carlos Gonzalez - A Place For Us": {
+        "status": "PASS",
+        "seconds": 55.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:44:25"
+      },
+      "Cristina Vane - So Easy": {
+        "status": "PASS",
+        "seconds": 55.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:59:04"
+      },
+      "Detsky Sad - Walkie Talkie": {
+        "status": "PASS",
+        "seconds": 45.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:13:28"
+      },
+      "Enda Reilly - Cur An Long Ag Seol": {
+        "status": "PASS",
+        "seconds": 38.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:25:29"
+      },
+      "Forkupines - Semantics": {
+        "status": "PASS",
+        "seconds": 54.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:36:29"
+      },
+      "Georgia Wonder - Siren": {
+        "status": "PASS",
+        "seconds": 92.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:51:58"
+      },
+      "Girls Under Glass - We Feel Alright": {
+        "status": "PASS",
+        "seconds": 56.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:14:02"
+      },
+      "Hollow Ground - Ill Fate": {
+        "status": "PASS",
+        "seconds": 32.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:30:14"
+      },
+      "James Elder & Mark M Thompson - The English Actor": {
+        "status": "PASS",
+        "seconds": 48.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:37:52"
+      },
+      "Juliet's Rescue - Heartbeats": {
+        "status": "PASS",
+        "seconds": 55.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:48:26"
+      },
+      "Little Chicago's Finest - My Own": {
+        "status": "PASS",
+        "seconds": 57.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:00:40"
+      },
+      "Louis Cressy Band - Good Time": {
+        "status": "PASS",
+        "seconds": 54.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:13:30"
+      },
+      "Lyndsey Ollard - Catching Up": {
+        "status": "PASS",
+        "seconds": 50.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:26:25"
+      },
+      "M.E.R.C. Music - Knockout": {
+        "status": "PASS",
+        "seconds": 52.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:37:39"
+      },
+      "Moosmusic - Big Dummy Shake": {
+        "status": "PASS",
+        "seconds": 47.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:49:46"
+      },
+      "Motor Tapes - Shore": {
+        "status": "PASS",
+        "seconds": 52.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:00:13"
+      },
+      "Mu - Too Bright": {
+        "status": "PASS",
+        "seconds": 53.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:11:49"
+      },
+      "Nerve 9 - Pray For The Rain": {
+        "status": "PASS",
+        "seconds": 63.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:24:28"
+      },
+      "PR - Happy Daze": {
+        "status": "PASS",
+        "seconds": 34.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:38:31"
+      },
+      "Punkdisco - Oral Hygiene": {
+        "status": "PASS",
+        "seconds": 48.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:51:06"
+      },
+      "Raft Monk - Tiring": {
+        "status": "PASS",
+        "seconds": 49.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:02:04"
+      },
+      "Sambasevam Shanmugam - Kaathaadi": {
+        "status": "PASS",
+        "seconds": 57.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:12:54"
+      },
+      "Secretariat - Borderline": {
+        "status": "PASS",
+        "seconds": 56.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:26:19"
+      },
+      "Secretariat - Over The Top": {
+        "status": "PASS",
+        "seconds": 52.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:39:06"
+      },
+      "Side Effects Project - Sing With Me": {
+        "status": "PASS",
+        "seconds": 51.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:50:43"
+      },
+      "Signe Jakobsen - What Have You Done To Me": {
+        "status": "PASS",
+        "seconds": 36.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:02:04"
+      },
+      "Skelpolu - Resurrection": {
+        "status": "PASS",
+        "seconds": 86.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:11:26"
+      },
+      "Speak Softly - Broken Man": {
+        "status": "PASS",
+        "seconds": 52.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:29:20"
+      },
+      "Speak Softly - Like Horses": {
+        "status": "PASS",
+        "seconds": 57.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:41:08"
+      },
+      "The Doppler Shift - Atrophy": {
+        "status": "PASS",
+        "seconds": 62.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:54:37"
+      },
+      "The Easton Ellises (Baumi) - SDRNR": {
+        "status": "PASS",
+        "seconds": 50.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:08:34"
+      },
+      "The Easton Ellises - Falcon 69": {
+        "status": "PASS",
+        "seconds": 52.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:20:13"
+      },
+      "The Long Wait - Dark Horses": {
+        "status": "PASS",
+        "seconds": 56.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:31:56"
+      },
+      "The Mountaineering Club - Mallory": {
+        "status": "PASS",
+        "seconds": 49.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:45:02"
+      },
+      "The Sunshine Garcia Band - For I Am The Moon": {
+        "status": "PASS",
+        "seconds": 59.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:56:39"
+      },
+      "Timboz - Pony": {
+        "status": "PASS",
+        "seconds": 54.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:10:29"
+      },
+      "Tom McKenzie - Directions": {
+        "status": "PASS",
+        "seconds": 35.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:22:05"
+      },
+      "Triviul feat. The Fiend - Widow": {
+        "status": "PASS",
+        "seconds": 50.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:30:49"
+      },
+      "We Fell From The Sky - Not You": {
+        "status": "PASS",
+        "seconds": 49.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:42:12"
+      },
+      "Zeno - Signs": {
+        "status": "PASS",
+        "seconds": 51.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:52:40"
+      }
+    },
+    "demucs": {
+      "PR - Oh No": {
+        "status": "PASS",
+        "seconds": 15.7,
+        "at": "2026-09-21 00:55:39"
+      },
+      "AM Contra - Heart Peripheral": {
+        "status": "PASS",
+        "seconds": 31.6,
+        "at": "2026-09-21 13:51:36"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "PASS",
+        "seconds": 55.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:04:28"
+      },
+      "Angels In Amplifiers - I'm Alright": {
+        "status": "PASS",
+        "seconds": 40.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:15:08"
+      },
+      "Arise - Run Run Run": {
+        "status": "PASS",
+        "seconds": 56.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:28:22"
+      },
+      "BKS - Bulldozer": {
+        "status": "PASS",
+        "seconds": 67.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:45:37"
+      },
+      "BKS - Too Much": {
+        "status": "PASS",
+        "seconds": 56.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:59:20"
+      },
+      "Ben Carrigan - We'll Talk About It All Tonight": {
+        "status": "PASS",
+        "seconds": 56.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:13:33"
+      },
+      "Bobby Nobody - Stitch Up": {
+        "status": "PASS",
+        "seconds": 57.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:27:17"
+      },
+      "Buitraker - Revo X": {
+        "status": "PASS",
+        "seconds": 61.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:42:34"
+      },
+      "Carlos Gonzalez - A Place For Us": {
+        "status": "PASS",
+        "seconds": 58.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:57:16"
+      },
+      "Cristina Vane - So Easy": {
+        "status": "PASS",
+        "seconds": 58.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:11:48"
+      },
+      "Detsky Sad - Walkie Talkie": {
+        "status": "PASS",
+        "seconds": 52.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:24:04"
+      },
+      "Enda Reilly - Cur An Long Ag Seol": {
+        "status": "PASS",
+        "seconds": 41.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:34:56"
+      },
+      "Forkupines - Semantics": {
+        "status": "PASS",
+        "seconds": 59.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:49:32"
+      },
+      "Georgia Wonder - Siren": {
+        "status": "PASS",
+        "seconds": 96.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:11:38"
+      },
+      "Girls Under Glass - We Feel Alright": {
+        "status": "PASS",
+        "seconds": 63.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:28:45"
+      },
+      "Hollow Ground - Ill Fate": {
+        "status": "PASS",
+        "seconds": 35.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:36:31"
+      },
+      "James Elder & Mark M Thompson - The English Actor": {
+        "status": "PASS",
+        "seconds": 52.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:46:44"
+      },
+      "Juliet's Rescue - Heartbeats": {
+        "status": "PASS",
+        "seconds": 58.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:58:49"
+      },
+      "Little Chicago's Finest - My Own": {
+        "status": "PASS",
+        "seconds": 61.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:11:42"
+      },
+      "Louis Cressy Band - Good Time": {
+        "status": "PASS",
+        "seconds": 61.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:24:40"
+      },
+      "Lyndsey Ollard - Catching Up": {
+        "status": "PASS",
+        "seconds": 56.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:35:56"
+      },
+      "M.E.R.C. Music - Knockout": {
+        "status": "PASS",
+        "seconds": 58.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:48:05"
+      },
+      "Moosmusic - Big Dummy Shake": {
+        "status": "PASS",
+        "seconds": 52.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:58:33"
+      },
+      "Motor Tapes - Shore": {
+        "status": "PASS",
+        "seconds": 55.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:10:05"
+      },
+      "Mu - Too Bright": {
+        "status": "PASS",
+        "seconds": 58.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:22:21"
+      },
+      "Nerve 9 - Pray For The Rain": {
+        "status": "PASS",
+        "seconds": 66.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:36:59"
+      },
+      "PR - Happy Daze": {
+        "status": "PASS",
+        "seconds": 38.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:45:26"
+      },
+      "Punkdisco - Oral Hygiene": {
+        "status": "PASS",
+        "seconds": 54.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:00:26"
+      },
+      "Raft Monk - Tiring": {
+        "status": "PASS",
+        "seconds": 52.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:11:07"
+      },
+      "Sambasevam Shanmugam - Kaathaadi": {
+        "status": "PASS",
+        "seconds": 63.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:24:28"
+      },
+      "Secretariat - Borderline": {
+        "status": "PASS",
+        "seconds": 61.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:37:19"
+      },
+      "Secretariat - Over The Top": {
+        "status": "PASS",
+        "seconds": 58.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:49:02"
+      },
+      "Side Effects Project - Sing With Me": {
+        "status": "PASS",
+        "seconds": 56.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:00:35"
+      },
+      "Signe Jakobsen - What Have You Done To Me": {
+        "status": "PASS",
+        "seconds": 41.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:09:23"
+      },
+      "Skelpolu - Resurrection": {
+        "status": "PASS",
+        "seconds": 93.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:27:08"
+      },
+      "Speak Softly - Broken Man": {
+        "status": "PASS",
+        "seconds": 56.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:39:17"
+      },
+      "Speak Softly - Like Horses": {
+        "status": "PASS",
+        "seconds": 64.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:52:38"
+      },
+      "The Doppler Shift - Atrophy": {
+        "status": "PASS",
+        "seconds": 67.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:06:45"
+      },
+      "The Easton Ellises (Baumi) - SDRNR": {
+        "status": "PASS",
+        "seconds": 55.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:18:27"
+      },
+      "The Easton Ellises - Falcon 69": {
+        "status": "PASS",
+        "seconds": 58.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:30:09"
+      },
+      "The Long Wait - Dark Horses": {
+        "status": "PASS",
+        "seconds": 63.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:43:16"
+      },
+      "The Mountaineering Club - Mallory": {
+        "status": "PASS",
+        "seconds": 57.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:54:49"
+      },
+      "The Sunshine Garcia Band - For I Am The Moon": {
+        "status": "PASS",
+        "seconds": 64.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:08:34"
+      },
+      "Timboz - Pony": {
+        "status": "PASS",
+        "seconds": 57.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:20:37"
+      },
+      "Tom McKenzie - Directions": {
+        "status": "PASS",
+        "seconds": 38.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:29:24"
+      },
+      "Triviul feat. The Fiend - Widow": {
+        "status": "PASS",
+        "seconds": 54.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:40:31"
+      },
+      "We Fell From The Sky - Not You": {
+        "status": "PASS",
+        "seconds": 53.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:51:00"
+      },
+      "Zeno - Signs": {
+        "status": "PASS",
+        "seconds": 57.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 10:02:30"
+      }
+    },
+    "bsrnn_simo": {
+      "The Easton Ellises - Falcon 69": {
+        "status": "PASS",
+        "seconds": 103.6,
+        "at": "2026-09-21 01:00:20"
+      },
+      "AM Contra - Heart Peripheral": {
+        "status": "PASS",
+        "seconds": 103.2,
+        "at": "2026-09-21 13:51:04"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "PASS",
+        "seconds": 148.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:03:32"
+      },
+      "Angels In Amplifiers - I'm Alright": {
+        "status": "PASS",
+        "seconds": 110.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:14:28"
+      },
+      "Arise - Run Run Run": {
+        "status": "PASS",
+        "seconds": 141.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:27:26"
+      },
+      "BKS - Bulldozer": {
+        "status": "TIMEOUT",
+        "seconds": 182.0,
+        "json_status": null,
+        "at": "2026-09-22 00:44:29"
+      },
+      "BKS - Too Much": {
+        "status": "PASS",
+        "seconds": 144.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:58:24"
+      },
+      "Ben Carrigan - We'll Talk About It All Tonight": {
+        "status": "PASS",
+        "seconds": 152.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:12:36"
+      },
+      "Bobby Nobody - Stitch Up": {
+        "status": "PASS",
+        "seconds": 145.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:26:20"
+      },
+      "Buitraker - Revo X": {
+        "status": "PASS",
+        "seconds": 165.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:41:33"
+      },
+      "Carlos Gonzalez - A Place For Us": {
+        "status": "PASS",
+        "seconds": 161.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:56:18"
+      },
+      "Cristina Vane - So Easy": {
+        "status": "PASS",
+        "seconds": 157.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:10:49"
+      },
+      "Detsky Sad - Walkie Talkie": {
+        "status": "PASS",
+        "seconds": 130.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:23:11"
+      },
+      "Enda Reilly - Cur An Long Ag Seol": {
+        "status": "PASS",
+        "seconds": 116.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:34:14"
+      },
+      "Forkupines - Semantics": {
+        "status": "PASS",
+        "seconds": 157.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:48:32"
+      },
+      "Georgia Wonder - Siren": {
+        "status": "TIMEOUT",
+        "seconds": 180.5,
+        "json_status": null,
+        "at": "2026-09-22 03:10:02"
+      },
+      "Girls Under Glass - We Feel Alright": {
+        "status": "TIMEOUT",
+        "seconds": 181.5,
+        "json_status": null,
+        "at": "2026-09-22 03:27:42"
+      }
+    },
+    "rpca": {
+      "AM Contra - Heart Peripheral": {
+        "status": "TIMEOUT",
+        "seconds": 181.7,
+        "json_status": null,
+        "at": "2026-09-21 22:08:17"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "TIMEOUT",
+        "seconds": 181.6,
+        "json_status": null,
+        "at": "2026-09-21 22:17:20"
+      }
+    },
+    "umx": {
+      "AM Contra - Heart Peripheral": {
+        "status": "PASS",
+        "seconds": 30.6,
+        "at": "2026-09-21 13:37:59"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "PASS",
+        "seconds": 31.3,
+        "json_status": "PASS",
+        "at": "2026-09-21 22:04:17"
+      },
+      "Angels In Amplifiers - I'm Alright": {
+        "status": "PASS",
+        "seconds": 48.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:06:44"
+      },
+      "Arise - Run Run Run": {
+        "status": "PASS",
+        "seconds": 62.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:17:39"
+      },
+      "BKS - Bulldozer": {
+        "status": "PASS",
+        "seconds": 83.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:31:38"
+      },
+      "BKS - Too Much": {
+        "status": "PASS",
+        "seconds": 62.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:48:31"
+      },
+      "Ben Carrigan - We'll Talk About It All Tonight": {
+        "status": "PASS",
+        "seconds": 66.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:02:07"
+      },
+      "Bobby Nobody - Stitch Up": {
+        "status": "PASS",
+        "seconds": 63.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:16:18"
+      },
+      "Buitraker - Revo X": {
+        "status": "PASS",
+        "seconds": 71.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:30:14"
+      },
+      "Carlos Gonzalez - A Place For Us": {
+        "status": "PASS",
+        "seconds": 66.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:45:31"
+      },
+      "Cristina Vane - So Easy": {
+        "status": "PASS",
+        "seconds": 67.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:00:12"
+      },
+      "Detsky Sad - Walkie Talkie": {
+        "status": "PASS",
+        "seconds": 57.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:14:26"
+      },
+      "Enda Reilly - Cur An Long Ag Seol": {
+        "status": "PASS",
+        "seconds": 47.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:26:17"
+      },
+      "Forkupines - Semantics": {
+        "status": "PASS",
+        "seconds": 67.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:37:37"
+      },
+      "Georgia Wonder - Siren": {
+        "status": "PASS",
+        "seconds": 111.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:53:49"
+      },
+      "Girls Under Glass - We Feel Alright": {
+        "status": "PASS",
+        "seconds": 73.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:15:15"
+      },
+      "Hollow Ground - Ill Fate": {
+        "status": "PASS",
+        "seconds": 40.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:30:55"
+      },
+      "James Elder & Mark M Thompson - The English Actor": {
+        "status": "PASS",
+        "seconds": 59.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:38:52"
+      },
+      "Juliet's Rescue - Heartbeats": {
+        "status": "PASS",
+        "seconds": 67.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:49:33"
+      },
+      "Little Chicago's Finest - My Own": {
+        "status": "PASS",
+        "seconds": 69.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:01:50"
+      },
+      "Louis Cressy Band - Good Time": {
+        "status": "PASS",
+        "seconds": 70.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:14:41"
+      },
+      "Lyndsey Ollard - Catching Up": {
+        "status": "PASS",
+        "seconds": 64.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:27:29"
+      },
+      "M.E.R.C. Music - Knockout": {
+        "status": "PASS",
+        "seconds": 67.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:38:47"
+      },
+      "Moosmusic - Big Dummy Shake": {
+        "status": "PASS",
+        "seconds": 58.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:50:44"
+      },
+      "Motor Tapes - Shore": {
+        "status": "PASS",
+        "seconds": 64.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:01:18"
+      },
+      "Mu - Too Bright": {
+        "status": "PASS",
+        "seconds": 67.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:12:56"
+      },
+      "Nerve 9 - Pray For The Rain": {
+        "status": "PASS",
+        "seconds": 80.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:25:49"
+      },
+      "PR - Happy Daze": {
+        "status": "PASS",
+        "seconds": 44.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:39:16"
+      },
+      "PR - Oh No": {
+        "status": "PASS",
+        "seconds": 27.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:46:28"
+      },
+      "Punkdisco - Oral Hygiene": {
+        "status": "PASS",
+        "seconds": 61.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:52:07"
+      },
+      "Raft Monk - Tiring": {
+        "status": "PASS",
+        "seconds": 59.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:03:04"
+      },
+      "Sambasevam Shanmugam - Kaathaadi": {
+        "status": "PASS",
+        "seconds": 72.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:14:06"
+      },
+      "Secretariat - Borderline": {
+        "status": "PASS",
+        "seconds": 71.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:27:30"
+      },
+      "Secretariat - Over The Top": {
+        "status": "PASS",
+        "seconds": 63.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:40:09"
+      },
+      "Side Effects Project - Sing With Me": {
+        "status": "PASS",
+        "seconds": 66.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:51:50"
+      },
+      "Signe Jakobsen - What Have You Done To Me": {
+        "status": "PASS",
+        "seconds": 47.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:02:51"
+      },
+      "Skelpolu - Resurrection": {
+        "status": "PASS",
+        "seconds": 104.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:13:11"
+      },
+      "Speak Softly - Broken Man": {
+        "status": "PASS",
+        "seconds": 64.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:30:25"
+      },
+      "Speak Softly - Like Horses": {
+        "status": "PASS",
+        "seconds": 74.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:42:22"
+      },
+      "The Doppler Shift - Atrophy": {
+        "status": "PASS",
+        "seconds": 78.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:55:55"
+      },
+      "The Easton Ellises (Baumi) - SDRNR": {
+        "status": "PASS",
+        "seconds": 62.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:09:37"
+      },
+      "The Easton Ellises - Falcon 69": {
+        "status": "PASS",
+        "seconds": 65.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:21:18"
+      },
+      "The Long Wait - Dark Horses": {
+        "status": "PASS",
+        "seconds": 73.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:33:10"
+      },
+      "The Mountaineering Club - Mallory": {
+        "status": "PASS",
+        "seconds": 63.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:46:06"
+      },
+      "The Sunshine Garcia Band - For I Am The Moon": {
+        "status": "PASS",
+        "seconds": 77.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:57:56"
+      },
+      "Timboz - Pony": {
+        "status": "PASS",
+        "seconds": 67.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:11:36"
+      },
+      "Tom McKenzie - Directions": {
+        "status": "PASS",
+        "seconds": 55.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:23:00"
+      },
+      "Triviul feat. The Fiend - Widow": {
+        "status": "PASS",
+        "seconds": 64.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:31:54"
+      },
+      "We Fell From The Sky - Not You": {
+        "status": "PASS",
+        "seconds": 58.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:43:11"
+      },
+      "Zeno - Signs": {
+        "status": "PASS",
+        "seconds": 66.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:53:46"
+      }
+    },
+    "mdx": {
+      "AM Contra - Heart Peripheral": {
+        "status": "PASS",
+        "seconds": 39.9,
+        "at": "2026-09-21 13:38:39"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "PASS",
+        "seconds": 38.3,
+        "json_status": "PASS",
+        "at": "2026-09-21 22:17:59"
+      },
+      "Angels In Amplifiers - I'm Alright": {
+        "status": "PASS",
+        "seconds": 52.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:07:36"
+      },
+      "Arise - Run Run Run": {
+        "status": "PASS",
+        "seconds": 65.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:18:44"
+      },
+      "BKS - Bulldozer": {
+        "status": "PASS",
+        "seconds": 81.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:33:00"
+      },
+      "BKS - Too Much": {
+        "status": "PASS",
+        "seconds": 65.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:49:37"
+      },
+      "Ben Carrigan - We'll Talk About It All Tonight": {
+        "status": "PASS",
+        "seconds": 68.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:03:16"
+      },
+      "Bobby Nobody - Stitch Up": {
+        "status": "PASS",
+        "seconds": 66.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:17:25"
+      },
+      "Buitraker - Revo X": {
+        "status": "PASS",
+        "seconds": 74.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:31:28"
+      },
+      "Carlos Gonzalez - A Place For Us": {
+        "status": "PASS",
+        "seconds": 72.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:46:44"
+      },
+      "Cristina Vane - So Easy": {
+        "status": "PASS",
+        "seconds": 70.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:01:22"
+      },
+      "Detsky Sad - Walkie Talkie": {
+        "status": "PASS",
+        "seconds": 61.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:15:28"
+      },
+      "Enda Reilly - Cur An Long Ag Seol": {
+        "status": "PASS",
+        "seconds": 53.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:27:10"
+      },
+      "Forkupines - Semantics": {
+        "status": "PASS",
+        "seconds": 72.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:38:49"
+      },
+      "Georgia Wonder - Siren": {
+        "status": "PASS",
+        "seconds": 112.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:55:42"
+      },
+      "Girls Under Glass - We Feel Alright": {
+        "status": "PASS",
+        "seconds": 75.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:16:31"
+      },
+      "Hollow Ground - Ill Fate": {
+        "status": "PASS",
+        "seconds": 44.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:31:39"
+      },
+      "James Elder & Mark M Thompson - The English Actor": {
+        "status": "PASS",
+        "seconds": 63.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:39:56"
+      },
+      "Juliet's Rescue - Heartbeats": {
+        "status": "PASS",
+        "seconds": 70.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:50:44"
+      },
+      "Little Chicago's Finest - My Own": {
+        "status": "PASS",
+        "seconds": 73.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:03:03"
+      },
+      "Louis Cressy Band - Good Time": {
+        "status": "PASS",
+        "seconds": 74.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:15:55"
+      },
+      "Lyndsey Ollard - Catching Up": {
+        "status": "PASS",
+        "seconds": 65.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:28:34"
+      },
+      "M.E.R.C. Music - Knockout": {
+        "status": "PASS",
+        "seconds": 70.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:39:57"
+      },
+      "Moosmusic - Big Dummy Shake": {
+        "status": "PASS",
+        "seconds": 63.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:51:47"
+      },
+      "Motor Tapes - Shore": {
+        "status": "PASS",
+        "seconds": 69.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:02:27"
+      },
+      "Mu - Too Bright": {
+        "status": "PASS",
+        "seconds": 68.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:14:05"
+      },
+      "Nerve 9 - Pray For The Rain": {
+        "status": "PASS",
+        "seconds": 82.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:27:11"
+      },
+      "PR - Happy Daze": {
+        "status": "PASS",
+        "seconds": 47.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:40:03"
+      },
+      "PR - Oh No": {
+        "status": "PASS",
+        "seconds": 42.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:47:10"
+      },
+      "Punkdisco - Oral Hygiene": {
+        "status": "PASS",
+        "seconds": 63.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:53:10"
+      },
+      "Raft Monk - Tiring": {
+        "status": "PASS",
+        "seconds": 64.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:04:08"
+      },
+      "Sambasevam Shanmugam - Kaathaadi": {
+        "status": "PASS",
+        "seconds": 77.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:15:23"
+      },
+      "Secretariat - Borderline": {
+        "status": "PASS",
+        "seconds": 74.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:28:45"
+      },
+      "Secretariat - Over The Top": {
+        "status": "PASS",
+        "seconds": 70.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:41:20"
+      },
+      "Side Effects Project - Sing With Me": {
+        "status": "PASS",
+        "seconds": 69.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:52:59"
+      },
+      "Signe Jakobsen - What Have You Done To Me": {
+        "status": "PASS",
+        "seconds": 50.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:03:41"
+      },
+      "Skelpolu - Resurrection": {
+        "status": "PASS",
+        "seconds": 112.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:15:03"
+      },
+      "Speak Softly - Broken Man": {
+        "status": "PASS",
+        "seconds": 67.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:31:33"
+      },
+      "Speak Softly - Like Horses": {
+        "status": "PASS",
+        "seconds": 75.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:43:38"
+      },
+      "The Doppler Shift - Atrophy": {
+        "status": "PASS",
+        "seconds": 81.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:57:17"
+      },
+      "The Easton Ellises (Baumi) - SDRNR": {
+        "status": "PASS",
+        "seconds": 68.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:10:45"
+      },
+      "The Easton Ellises - Falcon 69": {
+        "status": "PASS",
+        "seconds": 68.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:22:27"
+      },
+      "The Long Wait - Dark Horses": {
+        "status": "PASS",
+        "seconds": 74.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:34:24"
+      },
+      "The Mountaineering Club - Mallory": {
+        "status": "PASS",
+        "seconds": 68.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:47:15"
+      },
+      "The Sunshine Garcia Band - For I Am The Moon": {
+        "status": "PASS",
+        "seconds": 80.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:59:16"
+      },
+      "Timboz - Pony": {
+        "status": "PASS",
+        "seconds": 71.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:12:48"
+      },
+      "Tom McKenzie - Directions": {
+        "status": "PASS",
+        "seconds": 48.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:23:49"
+      },
+      "Triviul feat. The Fiend - Widow": {
+        "status": "PASS",
+        "seconds": 67.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:33:01"
+      },
+      "We Fell From The Sky - Not You": {
+        "status": "PASS",
+        "seconds": 64.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:44:15"
+      },
+      "Zeno - Signs": {
+        "status": "PASS",
+        "seconds": 68.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:54:54"
+      }
+    },
+    "convtasnet": {
+      "AM Contra - Heart Peripheral": {
+        "status": "PASS",
+        "seconds": 57.7,
+        "at": "2026-09-21 13:39:36"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "PASS",
+        "seconds": 54.5,
+        "json_status": "PASS",
+        "at": "2026-09-21 22:18:53"
+      },
+      "Angels In Amplifiers - I'm Alright": {
+        "status": "PASS",
+        "seconds": 63.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:08:40"
+      },
+      "Arise - Run Run Run": {
+        "status": "PASS",
+        "seconds": 85.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:20:09"
+      },
+      "BKS - Bulldozer": {
+        "status": "PASS",
+        "seconds": 112.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:34:52"
+      },
+      "BKS - Too Much": {
+        "status": "PASS",
+        "seconds": 87.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:51:04"
+      },
+      "Ben Carrigan - We'll Talk About It All Tonight": {
+        "status": "PASS",
+        "seconds": 89.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:04:46"
+      },
+      "Bobby Nobody - Stitch Up": {
+        "status": "PASS",
+        "seconds": 85.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:18:50"
+      },
+      "Buitraker - Revo X": {
+        "status": "PASS",
+        "seconds": 98.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:33:06"
+      },
+      "Carlos Gonzalez - A Place For Us": {
+        "status": "PASS",
+        "seconds": 91.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:48:15"
+      },
+      "Cristina Vane - So Easy": {
+        "status": "PASS",
+        "seconds": 90.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:02:52"
+      },
+      "Detsky Sad - Walkie Talkie": {
+        "status": "PASS",
+        "seconds": 74.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:16:42"
+      },
+      "Enda Reilly - Cur An Long Ag Seol": {
+        "status": "PASS",
+        "seconds": 66.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:28:17"
+      },
+      "Forkupines - Semantics": {
+        "status": "PASS",
+        "seconds": 94.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:40:24"
+      },
+      "Georgia Wonder - Siren": {
+        "status": "PASS",
+        "seconds": 152.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:58:14"
+      },
+      "Girls Under Glass - We Feel Alright": {
+        "status": "PASS",
+        "seconds": 103.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:18:14"
+      },
+      "Hollow Ground - Ill Fate": {
+        "status": "PASS",
+        "seconds": 53.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:32:33"
+      },
+      "James Elder & Mark M Thompson - The English Actor": {
+        "status": "PASS",
+        "seconds": 79.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:41:15"
+      },
+      "Juliet's Rescue - Heartbeats": {
+        "status": "PASS",
+        "seconds": 92.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:52:16"
+      },
+      "Little Chicago's Finest - My Own": {
+        "status": "PASS",
+        "seconds": 102.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:04:45"
+      },
+      "Louis Cressy Band - Good Time": {
+        "status": "PASS",
+        "seconds": 105.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:17:40"
+      },
+      "Lyndsey Ollard - Catching Up": {
+        "status": "PASS",
+        "seconds": 86.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:30:00"
+      },
+      "M.E.R.C. Music - Knockout": {
+        "status": "PASS",
+        "seconds": 92.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:41:29"
+      },
+      "Moosmusic - Big Dummy Shake": {
+        "status": "PASS",
+        "seconds": 77.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:53:04"
+      },
+      "Motor Tapes - Shore": {
+        "status": "PASS",
+        "seconds": 87.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:03:55"
+      },
+      "Mu - Too Bright": {
+        "status": "PASS",
+        "seconds": 96.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:15:41"
+      },
+      "Nerve 9 - Pray For The Rain": {
+        "status": "PASS",
+        "seconds": 111.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:29:03"
+      },
+      "PR - Happy Daze": {
+        "status": "PASS",
+        "seconds": 61.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:41:04"
+      },
+      "PR - Oh No": {
+        "status": "PASS",
+        "seconds": 33.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:47:44"
+      },
+      "Punkdisco - Oral Hygiene": {
+        "status": "PASS",
+        "seconds": 82.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:54:32"
+      },
+      "Raft Monk - Tiring": {
+        "status": "PASS",
+        "seconds": 82.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:05:31"
+      },
+      "Sambasevam Shanmugam - Kaathaadi": {
+        "status": "PASS",
+        "seconds": 104.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:17:08"
+      },
+      "Secretariat - Borderline": {
+        "status": "PASS",
+        "seconds": 106.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:30:31"
+      },
+      "Secretariat - Over The Top": {
+        "status": "PASS",
+        "seconds": 88.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:42:49"
+      },
+      "Side Effects Project - Sing With Me": {
+        "status": "PASS",
+        "seconds": 87.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:54:27"
+      },
+      "Signe Jakobsen - What Have You Done To Me": {
+        "status": "PASS",
+        "seconds": 67.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:04:49"
+      },
+      "Skelpolu - Resurrection": {
+        "status": "PASS",
+        "seconds": 145.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:17:28"
+      },
+      "Speak Softly - Broken Man": {
+        "status": "PASS",
+        "seconds": 89.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:33:02"
+      },
+      "Speak Softly - Like Horses": {
+        "status": "PASS",
+        "seconds": 101.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:45:19"
+      },
+      "The Doppler Shift - Atrophy": {
+        "status": "PASS",
+        "seconds": 111.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:59:09"
+      },
+      "The Easton Ellises (Baumi) - SDRNR": {
+        "status": "PASS",
+        "seconds": 92.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:12:18"
+      },
+      "The Easton Ellises - Falcon 69": {
+        "status": "PASS",
+        "seconds": 88.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:23:56"
+      },
+      "The Long Wait - Dark Horses": {
+        "status": "PASS",
+        "seconds": 102.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:36:07"
+      },
+      "The Mountaineering Club - Mallory": {
+        "status": "PASS",
+        "seconds": 87.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:48:42"
+      },
+      "The Sunshine Garcia Band - For I Am The Moon": {
+        "status": "PASS",
+        "seconds": 104.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:01:01"
+      },
+      "Timboz - Pony": {
+        "status": "PASS",
+        "seconds": 90.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:14:18"
+      },
+      "Tom McKenzie - Directions": {
+        "status": "PASS",
+        "seconds": 66.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:24:55"
+      },
+      "Triviul feat. The Fiend - Widow": {
+        "status": "PASS",
+        "seconds": 91.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:34:33"
+      },
+      "We Fell From The Sky - Not You": {
+        "status": "PASS",
+        "seconds": 77.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:45:32"
+      },
+      "Zeno - Signs": {
+        "status": "PASS",
+        "seconds": 93.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:56:27"
+      }
+    },
+    "mmdenselstm": {
+      "AM Contra - Heart Peripheral": {
+        "status": "PASS",
+        "seconds": 36.4,
+        "at": "2026-09-21 13:40:13"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "PASS",
+        "seconds": 35.1,
+        "json_status": "PASS",
+        "at": "2026-09-21 22:19:28"
+      },
+      "Angels In Amplifiers - I'm Alright": {
+        "status": "PASS",
+        "seconds": 47.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:09:28"
+      },
+      "Arise - Run Run Run": {
+        "status": "PASS",
+        "seconds": 66.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:21:16"
+      },
+      "BKS - Bulldozer": {
+        "status": "PASS",
+        "seconds": 79.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:36:11"
+      },
+      "BKS - Too Much": {
+        "status": "PASS",
+        "seconds": 66.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:52:10"
+      },
+      "Ben Carrigan - We'll Talk About It All Tonight": {
+        "status": "PASS",
+        "seconds": 64.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:05:51"
+      },
+      "Bobby Nobody - Stitch Up": {
+        "status": "PASS",
+        "seconds": 63.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:19:53"
+      },
+      "Buitraker - Revo X": {
+        "status": "PASS",
+        "seconds": 69.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:34:16"
+      },
+      "Carlos Gonzalez - A Place For Us": {
+        "status": "PASS",
+        "seconds": 66.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:49:21"
+      },
+      "Cristina Vane - So Easy": {
+        "status": "PASS",
+        "seconds": 65.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:03:58"
+      },
+      "Detsky Sad - Walkie Talkie": {
+        "status": "PASS",
+        "seconds": 57.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:17:40"
+      },
+      "Enda Reilly - Cur An Long Ag Seol": {
+        "status": "PASS",
+        "seconds": 47.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:29:04"
+      },
+      "Forkupines - Semantics": {
+        "status": "PASS",
+        "seconds": 67.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:41:31"
+      },
+      "Georgia Wonder - Siren": {
+        "status": "PASS",
+        "seconds": 113.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:00:07"
+      },
+      "Girls Under Glass - We Feel Alright": {
+        "status": "PASS",
+        "seconds": 73.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:19:28"
+      },
+      "Hollow Ground - Ill Fate": {
+        "status": "PASS",
+        "seconds": 40.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:33:14"
+      },
+      "James Elder & Mark M Thompson - The English Actor": {
+        "status": "PASS",
+        "seconds": 59.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:42:14"
+      },
+      "Juliet's Rescue - Heartbeats": {
+        "status": "PASS",
+        "seconds": 67.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:53:24"
+      },
+      "Little Chicago's Finest - My Own": {
+        "status": "PASS",
+        "seconds": 76.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:06:01"
+      },
+      "Louis Cressy Band - Good Time": {
+        "status": "PASS",
+        "seconds": 74.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:18:55"
+      },
+      "Lyndsey Ollard - Catching Up": {
+        "status": "PASS",
+        "seconds": 65.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:31:06"
+      },
+      "M.E.R.C. Music - Knockout": {
+        "status": "PASS",
+        "seconds": 67.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:42:37"
+      },
+      "Moosmusic - Big Dummy Shake": {
+        "status": "PASS",
+        "seconds": 59.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:54:03"
+      },
+      "Motor Tapes - Shore": {
+        "status": "PASS",
+        "seconds": 65.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:05:00"
+      },
+      "Mu - Too Bright": {
+        "status": "PASS",
+        "seconds": 68.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:16:49"
+      },
+      "Nerve 9 - Pray For The Rain": {
+        "status": "PASS",
+        "seconds": 84.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:30:28"
+      },
+      "PR - Happy Daze": {
+        "status": "PASS",
+        "seconds": 46.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:41:50"
+      },
+      "PR - Oh No": {
+        "status": "PASS",
+        "seconds": 33.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:48:17"
+      },
+      "Punkdisco - Oral Hygiene": {
+        "status": "PASS",
+        "seconds": 66.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:55:39"
+      },
+      "Raft Monk - Tiring": {
+        "status": "PASS",
+        "seconds": 60.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:06:32"
+      },
+      "Sambasevam Shanmugam - Kaathaadi": {
+        "status": "PASS",
+        "seconds": 73.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:18:22"
+      },
+      "Secretariat - Borderline": {
+        "status": "PASS",
+        "seconds": 73.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:31:44"
+      },
+      "Secretariat - Over The Top": {
+        "status": "PASS",
+        "seconds": 65.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:43:54"
+      },
+      "Side Effects Project - Sing With Me": {
+        "status": "PASS",
+        "seconds": 66.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:55:33"
+      },
+      "Signe Jakobsen - What Have You Done To Me": {
+        "status": "PASS",
+        "seconds": 51.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:05:40"
+      },
+      "Skelpolu - Resurrection": {
+        "status": "PASS",
+        "seconds": 106.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:19:15"
+      },
+      "Speak Softly - Broken Man": {
+        "status": "PASS",
+        "seconds": 65.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:34:07"
+      },
+      "Speak Softly - Like Horses": {
+        "status": "PASS",
+        "seconds": 75.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:46:35"
+      },
+      "The Doppler Shift - Atrophy": {
+        "status": "PASS",
+        "seconds": 77.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:00:26"
+      },
+      "The Easton Ellises (Baumi) - SDRNR": {
+        "status": "PASS",
+        "seconds": 69.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:13:28"
+      },
+      "The Easton Ellises - Falcon 69": {
+        "status": "PASS",
+        "seconds": 64.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:25:00"
+      },
+      "The Long Wait - Dark Horses": {
+        "status": "PASS",
+        "seconds": 74.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:37:21"
+      },
+      "The Mountaineering Club - Mallory": {
+        "status": "PASS",
+        "seconds": 65.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:49:47"
+      },
+      "The Sunshine Garcia Band - For I Am The Moon": {
+        "status": "PASS",
+        "seconds": 77.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:02:19"
+      },
+      "Timboz - Pony": {
+        "status": "PASS",
+        "seconds": 67.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:15:26"
+      },
+      "Tom McKenzie - Directions": {
+        "status": "PASS",
+        "seconds": 50.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:25:46"
+      },
+      "Triviul feat. The Fiend - Widow": {
+        "status": "PASS",
+        "seconds": 68.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:35:42"
+      },
+      "We Fell From The Sky - Not You": {
+        "status": "PASS",
+        "seconds": 58.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:46:31"
+      },
+      "Zeno - Signs": {
+        "status": "PASS",
+        "seconds": 69.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:57:37"
+      }
+    },
+    "bsroformer_l12": {
+      "AM Contra - Heart Peripheral": {
+        "status": "PASS",
+        "seconds": 67.9,
+        "at": "2026-09-21 13:41:21"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "PASS",
+        "seconds": 66.1,
+        "json_status": "PASS",
+        "at": "2026-09-21 22:20:35"
+      },
+      "Angels In Amplifiers - I'm Alright": {
+        "status": "PASS",
+        "seconds": 63.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:10:31"
+      },
+      "Arise - Run Run Run": {
+        "status": "PASS",
+        "seconds": 76.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:22:32"
+      },
+      "BKS - Bulldozer": {
+        "status": "PASS",
+        "seconds": 109.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:38:01"
+      },
+      "BKS - Too Much": {
+        "status": "PASS",
+        "seconds": 76.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:53:26"
+      },
+      "Ben Carrigan - We'll Talk About It All Tonight": {
+        "status": "PASS",
+        "seconds": 86.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:07:17"
+      },
+      "Bobby Nobody - Stitch Up": {
+        "status": "PASS",
+        "seconds": 77.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:21:11"
+      },
+      "Buitraker - Revo X": {
+        "status": "PASS",
+        "seconds": 92.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:35:48"
+      },
+      "Carlos Gonzalez - A Place For Us": {
+        "status": "PASS",
+        "seconds": 85.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:50:46"
+      },
+      "Cristina Vane - So Easy": {
+        "status": "PASS",
+        "seconds": 87.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:05:25"
+      },
+      "Detsky Sad - Walkie Talkie": {
+        "status": "PASS",
+        "seconds": 67.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:18:47"
+      },
+      "Enda Reilly - Cur An Long Ag Seol": {
+        "status": "PASS",
+        "seconds": 63.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:30:08"
+      },
+      "Forkupines - Semantics": {
+        "status": "PASS",
+        "seconds": 91.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:43:03"
+      },
+      "Georgia Wonder - Siren": {
+        "status": "PASS",
+        "seconds": 140.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:02:28"
+      },
+      "Girls Under Glass - We Feel Alright": {
+        "status": "PASS",
+        "seconds": 102.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:21:11"
+      },
+      "Hollow Ground - Ill Fate": {
+        "status": "PASS",
+        "seconds": 52.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:34:06"
+      },
+      "James Elder & Mark M Thompson - The English Actor": {
+        "status": "PASS",
+        "seconds": 73.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:43:27"
+      },
+      "Juliet's Rescue - Heartbeats": {
+        "status": "PASS",
+        "seconds": 90.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:54:54"
+      },
+      "Little Chicago's Finest - My Own": {
+        "status": "PASS",
+        "seconds": 94.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:07:36"
+      },
+      "Louis Cressy Band - Good Time": {
+        "status": "PASS",
+        "seconds": 95.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:20:30"
+      },
+      "Lyndsey Ollard - Catching Up": {
+        "status": "PASS",
+        "seconds": 78.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:32:25"
+      },
+      "M.E.R.C. Music - Knockout": {
+        "status": "PASS",
+        "seconds": 91.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:44:08"
+      },
+      "Moosmusic - Big Dummy Shake": {
+        "status": "PASS",
+        "seconds": 71.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:55:15"
+      },
+      "Motor Tapes - Shore": {
+        "status": "PASS",
+        "seconds": 82.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:06:23"
+      },
+      "Mu - Too Bright": {
+        "status": "PASS",
+        "seconds": 92.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:18:21"
+      },
+      "Nerve 9 - Pray For The Rain": {
+        "status": "PASS",
+        "seconds": 110.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:32:18"
+      },
+      "PR - Happy Daze": {
+        "status": "PASS",
+        "seconds": 57.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:42:47"
+      },
+      "PR - Oh No": {
+        "status": "PASS",
+        "seconds": 31.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:48:49"
+      },
+      "Punkdisco - Oral Hygiene": {
+        "status": "PASS",
+        "seconds": 76.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:56:56"
+      },
+      "Raft Monk - Tiring": {
+        "status": "PASS",
+        "seconds": 75.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:07:47"
+      },
+      "Sambasevam Shanmugam - Kaathaadi": {
+        "status": "PASS",
+        "seconds": 103.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:20:05"
+      },
+      "Secretariat - Borderline": {
+        "status": "PASS",
+        "seconds": 94.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:33:19"
+      },
+      "Secretariat - Over The Top": {
+        "status": "PASS",
+        "seconds": 85.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:45:20"
+      },
+      "Side Effects Project - Sing With Me": {
+        "status": "PASS",
+        "seconds": 82.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:56:55"
+      },
+      "Signe Jakobsen - What Have You Done To Me": {
+        "status": "PASS",
+        "seconds": 61.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:06:42"
+      },
+      "Skelpolu - Resurrection": {
+        "status": "PASS",
+        "seconds": 128.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:21:23"
+      },
+      "Speak Softly - Broken Man": {
+        "status": "PASS",
+        "seconds": 87.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:35:35"
+      },
+      "Speak Softly - Like Horses": {
+        "status": "PASS",
+        "seconds": 103.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:48:18"
+      },
+      "The Doppler Shift - Atrophy": {
+        "status": "PASS",
+        "seconds": 108.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:02:14"
+      },
+      "The Easton Ellises (Baumi) - SDRNR": {
+        "status": "PASS",
+        "seconds": 80.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:14:49"
+      },
+      "The Easton Ellises - Falcon 69": {
+        "status": "PASS",
+        "seconds": 83.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:26:23"
+      },
+      "The Long Wait - Dark Horses": {
+        "status": "PASS",
+        "seconds": 99.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:39:00"
+      },
+      "The Mountaineering Club - Mallory": {
+        "status": "PASS",
+        "seconds": 82.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:51:09"
+      },
+      "The Sunshine Garcia Band - For I Am The Moon": {
+        "status": "PASS",
+        "seconds": 106.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:04:05"
+      },
+      "Timboz - Pony": {
+        "status": "PASS",
+        "seconds": 87.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:16:53"
+      },
+      "Tom McKenzie - Directions": {
+        "status": "PASS",
+        "seconds": 61.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:26:47"
+      },
+      "Triviul feat. The Fiend - Widow": {
+        "status": "PASS",
+        "seconds": 80.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:37:02"
+      },
+      "We Fell From The Sky - Not You": {
+        "status": "PASS",
+        "seconds": 72.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:47:43"
+      },
+      "Zeno - Signs": {
+        "status": "PASS",
+        "seconds": 79.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:58:57"
+      }
+    },
+    "bsroformer_l6": {
+      "AM Contra - Heart Peripheral": {
+        "status": "PASS",
+        "seconds": 49.0,
+        "at": "2026-09-21 13:42:10"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "PASS",
+        "seconds": 46.3,
+        "json_status": "PASS",
+        "at": "2026-09-21 22:21:21"
+      },
+      "Angels In Amplifiers - I'm Alright": {
+        "status": "PASS",
+        "seconds": 47.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:11:18"
+      },
+      "Arise - Run Run Run": {
+        "status": "PASS",
+        "seconds": 57.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:23:30"
+      },
+      "BKS - Bulldozer": {
+        "status": "PASS",
+        "seconds": 80.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:39:21"
+      },
+      "BKS - Too Much": {
+        "status": "PASS",
+        "seconds": 57.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:54:24"
+      },
+      "Ben Carrigan - We'll Talk About It All Tonight": {
+        "status": "PASS",
+        "seconds": 64.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:08:22"
+      },
+      "Bobby Nobody - Stitch Up": {
+        "status": "PASS",
+        "seconds": 58.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:22:09"
+      },
+      "Buitraker - Revo X": {
+        "status": "PASS",
+        "seconds": 69.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:36:57"
+      },
+      "Carlos Gonzalez - A Place For Us": {
+        "status": "PASS",
+        "seconds": 63.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:51:50"
+      },
+      "Cristina Vane - So Easy": {
+        "status": "PASS",
+        "seconds": 64.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:06:30"
+      },
+      "Detsky Sad - Walkie Talkie": {
+        "status": "PASS",
+        "seconds": 51.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:19:39"
+      },
+      "Enda Reilly - Cur An Long Ag Seol": {
+        "status": "PASS",
+        "seconds": 49.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:30:57"
+      },
+      "Forkupines - Semantics": {
+        "status": "PASS",
+        "seconds": 68.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:44:11"
+      },
+      "Georgia Wonder - Siren": {
+        "status": "PASS",
+        "seconds": 104.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:04:12"
+      },
+      "Girls Under Glass - We Feel Alright": {
+        "status": "PASS",
+        "seconds": 79.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:22:31"
+      },
+      "Hollow Ground - Ill Fate": {
+        "status": "PASS",
+        "seconds": 39.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:34:45"
+      },
+      "James Elder & Mark M Thompson - The English Actor": {
+        "status": "PASS",
+        "seconds": 54.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:44:22"
+      },
+      "Juliet's Rescue - Heartbeats": {
+        "status": "PASS",
+        "seconds": 67.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:56:01"
+      },
+      "Little Chicago's Finest - My Own": {
+        "status": "PASS",
+        "seconds": 68.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:08:45"
+      },
+      "Louis Cressy Band - Good Time": {
+        "status": "PASS",
+        "seconds": 70.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:21:41"
+      },
+      "Lyndsey Ollard - Catching Up": {
+        "status": "PASS",
+        "seconds": 59.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:33:24"
+      },
+      "M.E.R.C. Music - Knockout": {
+        "status": "PASS",
+        "seconds": 64.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:45:13"
+      },
+      "Moosmusic - Big Dummy Shake": {
+        "status": "PASS",
+        "seconds": 52.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:56:08"
+      },
+      "Motor Tapes - Shore": {
+        "status": "PASS",
+        "seconds": 62.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:07:26"
+      },
+      "Mu - Too Bright": {
+        "status": "PASS",
+        "seconds": 67.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:19:29"
+      },
+      "Nerve 9 - Pray For The Rain": {
+        "status": "PASS",
+        "seconds": 82.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:33:40"
+      },
+      "PR - Happy Daze": {
+        "status": "PASS",
+        "seconds": 43.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:43:31"
+      },
+      "PR - Oh No": {
+        "status": "PASS",
+        "seconds": 24.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:49:13"
+      },
+      "Punkdisco - Oral Hygiene": {
+        "status": "PASS",
+        "seconds": 57.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:57:54"
+      },
+      "Raft Monk - Tiring": {
+        "status": "PASS",
+        "seconds": 55.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:08:43"
+      },
+      "Sambasevam Shanmugam - Kaathaadi": {
+        "status": "PASS",
+        "seconds": 76.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:21:22"
+      },
+      "Secretariat - Borderline": {
+        "status": "PASS",
+        "seconds": 70.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:34:30"
+      },
+      "Secretariat - Over The Top": {
+        "status": "PASS",
+        "seconds": 64.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:46:24"
+      },
+      "Side Effects Project - Sing With Me": {
+        "status": "PASS",
+        "seconds": 62.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:57:57"
+      },
+      "Signe Jakobsen - What Have You Done To Me": {
+        "status": "PASS",
+        "seconds": 45.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:07:27"
+      },
+      "Skelpolu - Resurrection": {
+        "status": "PASS",
+        "seconds": 101.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:23:04"
+      },
+      "Speak Softly - Broken Man": {
+        "status": "PASS",
+        "seconds": 64.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:36:39"
+      },
+      "Speak Softly - Like Horses": {
+        "status": "PASS",
+        "seconds": 76.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:49:34"
+      },
+      "The Doppler Shift - Atrophy": {
+        "status": "PASS",
+        "seconds": 79.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:03:34"
+      },
+      "The Easton Ellises (Baumi) - SDRNR": {
+        "status": "PASS",
+        "seconds": 59.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:15:49"
+      },
+      "The Easton Ellises - Falcon 69": {
+        "status": "PASS",
+        "seconds": 62.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:27:26"
+      },
+      "The Long Wait - Dark Horses": {
+        "status": "PASS",
+        "seconds": 74.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:40:15"
+      },
+      "The Mountaineering Club - Mallory": {
+        "status": "PASS",
+        "seconds": 62.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:52:12"
+      },
+      "The Sunshine Garcia Band - For I Am The Moon": {
+        "status": "PASS",
+        "seconds": 77.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:05:23"
+      },
+      "Timboz - Pony": {
+        "status": "PASS",
+        "seconds": 63.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:17:57"
+      },
+      "Tom McKenzie - Directions": {
+        "status": "PASS",
+        "seconds": 45.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:27:33"
+      },
+      "Triviul feat. The Fiend - Widow": {
+        "status": "PASS",
+        "seconds": 59.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:38:02"
+      },
+      "We Fell From The Sky - Not You": {
+        "status": "PASS",
+        "seconds": 55.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:48:39"
+      },
+      "Zeno - Signs": {
+        "status": "PASS",
+        "seconds": 60.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:59:58"
+      }
+    },
+    "bsrnn": {
+      "AM Contra - Heart Peripheral": {
+        "status": "PASS",
+        "seconds": 37.6,
+        "at": "2026-09-21 13:42:47"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "PASS",
+        "seconds": 32.6,
+        "json_status": "PASS",
+        "at": "2026-09-21 22:21:54"
+      },
+      "Angels In Amplifiers - I'm Alright": {
+        "status": "PASS",
+        "seconds": 42.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:12:00"
+      },
+      "Arise - Run Run Run": {
+        "status": "PASS",
+        "seconds": 50.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:24:20"
+      },
+      "BKS - Bulldozer": {
+        "status": "PASS",
+        "seconds": 66.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:40:28"
+      },
+      "BKS - Too Much": {
+        "status": "PASS",
+        "seconds": 50.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:55:14"
+      },
+      "Ben Carrigan - We'll Talk About It All Tonight": {
+        "status": "PASS",
+        "seconds": 55.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:09:17"
+      },
+      "Bobby Nobody - Stitch Up": {
+        "status": "PASS",
+        "seconds": 60.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:23:09"
+      },
+      "Buitraker - Revo X": {
+        "status": "PASS",
+        "seconds": 59.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:37:56"
+      },
+      "Carlos Gonzalez - A Place For Us": {
+        "status": "PASS",
+        "seconds": 57.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:52:48"
+      },
+      "Cristina Vane - So Easy": {
+        "status": "PASS",
+        "seconds": 54.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:07:25"
+      },
+      "Detsky Sad - Walkie Talkie": {
+        "status": "PASS",
+        "seconds": 44.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:20:23"
+      },
+      "Enda Reilly - Cur An Long Ag Seol": {
+        "status": "PASS",
+        "seconds": 43.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:31:40"
+      },
+      "Forkupines - Semantics": {
+        "status": "PASS",
+        "seconds": 55.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:45:07"
+      },
+      "Georgia Wonder - Siren": {
+        "status": "PASS",
+        "seconds": 90.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:05:43"
+      },
+      "Girls Under Glass - We Feel Alright": {
+        "status": "PASS",
+        "seconds": 72.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:23:43"
+      },
+      "Hollow Ground - Ill Fate": {
+        "status": "PASS",
+        "seconds": 37.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:35:23"
+      },
+      "James Elder & Mark M Thompson - The English Actor": {
+        "status": "PASS",
+        "seconds": 47.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:45:10"
+      },
+      "Juliet's Rescue - Heartbeats": {
+        "status": "PASS",
+        "seconds": 58.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:57:00"
+      },
+      "Little Chicago's Finest - My Own": {
+        "status": "PASS",
+        "seconds": 61.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:09:46"
+      },
+      "Louis Cressy Band - Good Time": {
+        "status": "PASS",
+        "seconds": 63.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:22:45"
+      },
+      "Lyndsey Ollard - Catching Up": {
+        "status": "PASS",
+        "seconds": 51.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:34:15"
+      },
+      "M.E.R.C. Music - Knockout": {
+        "status": "PASS",
+        "seconds": 60.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:46:13"
+      },
+      "Moosmusic - Big Dummy Shake": {
+        "status": "PASS",
+        "seconds": 49.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:56:57"
+      },
+      "Motor Tapes - Shore": {
+        "status": "PASS",
+        "seconds": 54.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:08:21"
+      },
+      "Mu - Too Bright": {
+        "status": "PASS",
+        "seconds": 61.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:20:31"
+      },
+      "Nerve 9 - Pray For The Rain": {
+        "status": "PASS",
+        "seconds": 72.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:34:52"
+      },
+      "PR - Happy Daze": {
+        "status": "PASS",
+        "seconds": 40.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:44:12"
+      },
+      "PR - Oh No": {
+        "status": "PASS",
+        "seconds": 22.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:49:35"
+      },
+      "Punkdisco - Oral Hygiene": {
+        "status": "PASS",
+        "seconds": 52.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:58:46"
+      },
+      "Raft Monk - Tiring": {
+        "status": "PASS",
+        "seconds": 48.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:09:32"
+      },
+      "Sambasevam Shanmugam - Kaathaadi": {
+        "status": "PASS",
+        "seconds": 66.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:22:29"
+      },
+      "Secretariat - Borderline": {
+        "status": "PASS",
+        "seconds": 57.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:35:27"
+      },
+      "Secretariat - Over The Top": {
+        "status": "PASS",
+        "seconds": 52.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:47:17"
+      },
+      "Side Effects Project - Sing With Me": {
+        "status": "PASS",
+        "seconds": 54.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:58:52"
+      },
+      "Signe Jakobsen - What Have You Done To Me": {
+        "status": "PASS",
+        "seconds": 40.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:08:07"
+      },
+      "Skelpolu - Resurrection": {
+        "status": "PASS",
+        "seconds": 81.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:24:26"
+      },
+      "Speak Softly - Broken Man": {
+        "status": "PASS",
+        "seconds": 53.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:37:33"
+      },
+      "Speak Softly - Like Horses": {
+        "status": "PASS",
+        "seconds": 64.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:50:38"
+      },
+      "The Doppler Shift - Atrophy": {
+        "status": "PASS",
+        "seconds": 67.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:04:41"
+      },
+      "The Easton Ellises (Baumi) - SDRNR": {
+        "status": "PASS",
+        "seconds": 56.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:16:45"
+      },
+      "The Easton Ellises - Falcon 69": {
+        "status": "PASS",
+        "seconds": 55.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:28:22"
+      },
+      "The Long Wait - Dark Horses": {
+        "status": "PASS",
+        "seconds": 61.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:41:17"
+      },
+      "The Mountaineering Club - Mallory": {
+        "status": "PASS",
+        "seconds": 53.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:53:06"
+      },
+      "The Sunshine Garcia Band - For I Am The Moon": {
+        "status": "PASS",
+        "seconds": 68.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:06:31"
+      },
+      "Timboz - Pony": {
+        "status": "PASS",
+        "seconds": 56.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:18:53"
+      },
+      "Tom McKenzie - Directions": {
+        "status": "PASS",
+        "seconds": 39.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:28:12"
+      },
+      "Triviul feat. The Fiend - Widow": {
+        "status": "PASS",
+        "seconds": 50.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:38:52"
+      },
+      "We Fell From The Sky - Not You": {
+        "status": "PASS",
+        "seconds": 47.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:49:26"
+      },
+      "Zeno - Signs": {
+        "status": "PASS",
+        "seconds": 51.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 10:00:49"
+      }
+    },
+    "bsrnn_all": {
+      "AM Contra - Heart Peripheral": {
+        "status": "TIMEOUT",
+        "seconds": 181.0,
+        "json_status": null,
+        "at": "2026-09-21 22:11:18"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "TIMEOUT",
+        "seconds": 181.0,
+        "json_status": null,
+        "at": "2026-09-21 22:24:55"
+      }
+    },
+    "bsrnn_large": {
+      "AM Contra - Heart Peripheral": {
+        "status": "PASS",
+        "seconds": 31.4,
+        "at": "2026-09-21 13:46:20"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "PASS",
+        "seconds": 26.5,
+        "json_status": "PASS",
+        "at": "2026-09-21 22:25:21"
+      },
+      "Angels In Amplifiers - I'm Alright": {
+        "status": "PASS",
+        "seconds": 37.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:12:37"
+      },
+      "Arise - Run Run Run": {
+        "status": "PASS",
+        "seconds": 44.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:25:04"
+      },
+      "BKS - Bulldozer": {
+        "status": "PASS",
+        "seconds": 59.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:41:27"
+      },
+      "BKS - Too Much": {
+        "status": "PASS",
+        "seconds": 45.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:55:59"
+      },
+      "Ben Carrigan - We'll Talk About It All Tonight": {
+        "status": "PASS",
+        "seconds": 46.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:10:03"
+      },
+      "Bobby Nobody - Stitch Up": {
+        "status": "PASS",
+        "seconds": 45.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:23:55"
+      },
+      "Buitraker - Revo X": {
+        "status": "PASS",
+        "seconds": 51.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:38:48"
+      },
+      "Carlos Gonzalez - A Place For Us": {
+        "status": "PASS",
+        "seconds": 48.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:53:36"
+      },
+      "Cristina Vane - So Easy": {
+        "status": "PASS",
+        "seconds": 47.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:08:12"
+      },
+      "Detsky Sad - Walkie Talkie": {
+        "status": "PASS",
+        "seconds": 36.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:21:00"
+      },
+      "Enda Reilly - Cur An Long Ag Seol": {
+        "status": "PASS",
+        "seconds": 37.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:32:18"
+      },
+      "Forkupines - Semantics": {
+        "status": "PASS",
+        "seconds": 47.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:45:54"
+      },
+      "Georgia Wonder - Siren": {
+        "status": "PASS",
+        "seconds": 78.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:07:01"
+      },
+      "Girls Under Glass - We Feel Alright": {
+        "status": "PASS",
+        "seconds": 57.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:24:40"
+      },
+      "Hollow Ground - Ill Fate": {
+        "status": "PASS",
+        "seconds": 32.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:35:55"
+      },
+      "James Elder & Mark M Thompson - The English Actor": {
+        "status": "PASS",
+        "seconds": 41.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:45:51"
+      },
+      "Juliet's Rescue - Heartbeats": {
+        "status": "PASS",
+        "seconds": 50.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:57:51"
+      },
+      "Little Chicago's Finest - My Own": {
+        "status": "PASS",
+        "seconds": 54.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:10:40"
+      },
+      "Louis Cressy Band - Good Time": {
+        "status": "PASS",
+        "seconds": 54.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:23:39"
+      },
+      "Lyndsey Ollard - Catching Up": {
+        "status": "PASS",
+        "seconds": 44.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:35:00"
+      },
+      "M.E.R.C. Music - Knockout": {
+        "status": "PASS",
+        "seconds": 52.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:47:06"
+      },
+      "Moosmusic - Big Dummy Shake": {
+        "status": "PASS",
+        "seconds": 43.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:57:40"
+      },
+      "Motor Tapes - Shore": {
+        "status": "PASS",
+        "seconds": 48.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:09:09"
+      },
+      "Mu - Too Bright": {
+        "status": "PASS",
+        "seconds": 51.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:21:23"
+      },
+      "Nerve 9 - Pray For The Rain": {
+        "status": "PASS",
+        "seconds": 60.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:35:53"
+      },
+      "PR - Happy Daze": {
+        "status": "PASS",
+        "seconds": 35.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:44:47"
+      },
+      "PR - Oh No": {
+        "status": "PASS",
+        "seconds": 19.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:49:55"
+      },
+      "Punkdisco - Oral Hygiene": {
+        "status": "PASS",
+        "seconds": 45.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:59:31"
+      },
+      "Raft Monk - Tiring": {
+        "status": "PASS",
+        "seconds": 42.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:10:15"
+      },
+      "Sambasevam Shanmugam - Kaathaadi": {
+        "status": "PASS",
+        "seconds": 56.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:23:25"
+      },
+      "Secretariat - Borderline": {
+        "status": "PASS",
+        "seconds": 51.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:36:18"
+      },
+      "Secretariat - Over The Top": {
+        "status": "PASS",
+        "seconds": 46.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:48:03"
+      },
+      "Side Effects Project - Sing With Me": {
+        "status": "PASS",
+        "seconds": 46.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:59:39"
+      },
+      "Signe Jakobsen - What Have You Done To Me": {
+        "status": "PASS",
+        "seconds": 35.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:08:42"
+      },
+      "Skelpolu - Resurrection": {
+        "status": "PASS",
+        "seconds": 68.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:25:35"
+      },
+      "Speak Softly - Broken Man": {
+        "status": "PASS",
+        "seconds": 47.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:38:21"
+      },
+      "Speak Softly - Like Horses": {
+        "status": "PASS",
+        "seconds": 54.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:51:33"
+      },
+      "The Doppler Shift - Atrophy": {
+        "status": "PASS",
+        "seconds": 56.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:05:38"
+      },
+      "The Easton Ellises (Baumi) - SDRNR": {
+        "status": "PASS",
+        "seconds": 46.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:17:32"
+      },
+      "The Easton Ellises - Falcon 69": {
+        "status": "PASS",
+        "seconds": 48.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:29:11"
+      },
+      "The Long Wait - Dark Horses": {
+        "status": "PASS",
+        "seconds": 54.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:42:12"
+      },
+      "The Mountaineering Club - Mallory": {
+        "status": "PASS",
+        "seconds": 45.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:53:52"
+      },
+      "The Sunshine Garcia Band - For I Am The Moon": {
+        "status": "PASS",
+        "seconds": 58.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:07:30"
+      },
+      "Timboz - Pony": {
+        "status": "PASS",
+        "seconds": 47.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:19:40"
+      },
+      "Tom McKenzie - Directions": {
+        "status": "PASS",
+        "seconds": 33.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:28:45"
+      },
+      "Triviul feat. The Fiend - Widow": {
+        "status": "PASS",
+        "seconds": 43.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:39:36"
+      },
+      "We Fell From The Sky - Not You": {
+        "status": "PASS",
+        "seconds": 41.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:50:07"
+      },
+      "Zeno - Signs": {
+        "status": "PASS",
+        "seconds": 43.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 10:01:33"
+      }
+    },
+    "bsrnn_large_all": {
+      "AM Contra - Heart Peripheral": {
+        "status": "TIMEOUT",
+        "seconds": 181.2,
+        "json_status": null,
+        "at": "2026-09-22 00:01:03"
+      }
+    },
+    "dprnn": {
+      "AM Contra - Heart Peripheral": {
+        "status": "FAIL",
+        "seconds": 6.8,
+        "at": "2026-09-21 13:51:42",
+        "json_status": "FAIL",
+        "note": "原判 PASS 系返回码误判；实测 JSON=FAIL（stereo broadcast bug）"
+      },
+      "Al James - Schoolboy Facination": {
+        "status": "PASS",
+        "seconds": 50.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:05:18"
+      },
+      "Angels In Amplifiers - I'm Alright": {
+        "status": "PASS",
+        "seconds": 36.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:15:45"
+      },
+      "Arise - Run Run Run": {
+        "status": "PASS",
+        "seconds": 50.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:29:13"
+      },
+      "BKS - Bulldozer": {
+        "status": "PASS",
+        "seconds": 62.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 00:46:39"
+      },
+      "BKS - Too Much": {
+        "status": "PASS",
+        "seconds": 50.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:00:10"
+      },
+      "Ben Carrigan - We'll Talk About It All Tonight": {
+        "status": "PASS",
+        "seconds": 50.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:14:23"
+      },
+      "Bobby Nobody - Stitch Up": {
+        "status": "PASS",
+        "seconds": 51.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:28:08"
+      },
+      "Buitraker - Revo X": {
+        "status": "PASS",
+        "seconds": 54.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:43:29"
+      },
+      "Carlos Gonzalez - A Place For Us": {
+        "status": "PASS",
+        "seconds": 52.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 01:58:09"
+      },
+      "Cristina Vane - So Easy": {
+        "status": "PASS",
+        "seconds": 55.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:12:43"
+      },
+      "Detsky Sad - Walkie Talkie": {
+        "status": "PASS",
+        "seconds": 47.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:24:51"
+      },
+      "Enda Reilly - Cur An Long Ag Seol": {
+        "status": "PASS",
+        "seconds": 38.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:35:34"
+      },
+      "Forkupines - Semantics": {
+        "status": "PASS",
+        "seconds": 53.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 02:50:25"
+      },
+      "Georgia Wonder - Siren": {
+        "status": "PASS",
+        "seconds": 87.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:13:06"
+      },
+      "Girls Under Glass - We Feel Alright": {
+        "status": "PASS",
+        "seconds": 56.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:29:41"
+      },
+      "Hollow Ground - Ill Fate": {
+        "status": "PASS",
+        "seconds": 32.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:37:04"
+      },
+      "James Elder & Mark M Thompson - The English Actor": {
+        "status": "PASS",
+        "seconds": 47.4,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:47:31"
+      },
+      "Juliet's Rescue - Heartbeats": {
+        "status": "PASS",
+        "seconds": 53.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 03:59:43"
+      },
+      "Little Chicago's Finest - My Own": {
+        "status": "PASS",
+        "seconds": 54.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:12:36"
+      },
+      "Louis Cressy Band - Good Time": {
+        "status": "PASS",
+        "seconds": 53.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:25:34"
+      },
+      "Lyndsey Ollard - Catching Up": {
+        "status": "PASS",
+        "seconds": 51.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:36:47"
+      },
+      "M.E.R.C. Music - Knockout": {
+        "status": "PASS",
+        "seconds": 53.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:48:58"
+      },
+      "Moosmusic - Big Dummy Shake": {
+        "status": "PASS",
+        "seconds": 47.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 04:59:20"
+      },
+      "Motor Tapes - Shore": {
+        "status": "PASS",
+        "seconds": 50.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:10:56"
+      },
+      "Mu - Too Bright": {
+        "status": "PASS",
+        "seconds": 63.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:23:25"
+      },
+      "Nerve 9 - Pray For The Rain": {
+        "status": "PASS",
+        "seconds": 57.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:37:56"
+      },
+      "PR - Happy Daze": {
+        "status": "PASS",
+        "seconds": 34.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:46:00"
+      },
+      "PR - Oh No": {
+        "status": "PASS",
+        "seconds": 22.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 05:50:17"
+      },
+      "Punkdisco - Oral Hygiene": {
+        "status": "PASS",
+        "seconds": 48.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:01:15"
+      },
+      "Raft Monk - Tiring": {
+        "status": "PASS",
+        "seconds": 49.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:11:57"
+      },
+      "Sambasevam Shanmugam - Kaathaadi": {
+        "status": "PASS",
+        "seconds": 54.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:25:23"
+      },
+      "Secretariat - Borderline": {
+        "status": "PASS",
+        "seconds": 53.9,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:38:13"
+      },
+      "Secretariat - Over The Top": {
+        "status": "PASS",
+        "seconds": 50.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 06:49:52"
+      },
+      "Side Effects Project - Sing With Me": {
+        "status": "PASS",
+        "seconds": 51.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:01:27"
+      },
+      "Signe Jakobsen - What Have You Done To Me": {
+        "status": "PASS",
+        "seconds": 36.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:10:00"
+      },
+      "Skelpolu - Resurrection": {
+        "status": "PASS",
+        "seconds": 80.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:28:28"
+      },
+      "Speak Softly - Broken Man": {
+        "status": "PASS",
+        "seconds": 52.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:40:10"
+      },
+      "Speak Softly - Like Horses": {
+        "status": "PASS",
+        "seconds": 56.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 07:53:34"
+      },
+      "The Doppler Shift - Atrophy": {
+        "status": "PASS",
+        "seconds": 59.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:07:44"
+      },
+      "The Easton Ellises (Baumi) - SDRNR": {
+        "status": "PASS",
+        "seconds": 53.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:19:20"
+      },
+      "The Easton Ellises - Falcon 69": {
+        "status": "PASS",
+        "seconds": 51.0,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:31:00"
+      },
+      "The Long Wait - Dark Horses": {
+        "status": "PASS",
+        "seconds": 56.8,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:44:13"
+      },
+      "The Mountaineering Club - Mallory": {
+        "status": "PASS",
+        "seconds": 50.6,
+        "json_status": "PASS",
+        "at": "2026-09-22 08:55:40"
+      },
+      "The Sunshine Garcia Band - For I Am The Moon": {
+        "status": "PASS",
+        "seconds": 59.5,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:09:34"
+      },
+      "Timboz - Pony": {
+        "status": "PASS",
+        "seconds": 52.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:21:30"
+      },
+      "Tom McKenzie - Directions": {
+        "status": "PASS",
+        "seconds": 34.7,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:29:59"
+      },
+      "Triviul feat. The Fiend - Widow": {
+        "status": "PASS",
+        "seconds": 51.1,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:41:22"
+      },
+      "We Fell From The Sky - Not You": {
+        "status": "PASS",
+        "seconds": 48.2,
+        "json_status": "PASS",
+        "at": "2026-09-22 09:51:48"
+      },
+      "Zeno - Signs": {
+        "status": "PASS",
+        "seconds": 51.3,
+        "json_status": "PASS",
+        "at": "2026-09-22 10:03:22"
+      }
+    }
+  },
+  "timeouts": {
+    "oracle": 0,
+    "demucs": 0,
+    "bsrnn_simo": 3,
+    "rpca": 3,
+    "umx": 0,
+    "mdx": 0,
+    "convtasnet": 0,
+    "mmdenselstm": 0,
+    "bsroformer_l12": 0,
+    "bsroformer_l6": 0,
+    "bsrnn": 0,
+    "bsrnn_all": 3,
+    "bsrnn_large": 0,
+    "bsrnn_large_all": 3,
+    "dprnn": 0
+  },
+  "disabled": [
+    "rpca",
+    "bsrnn_all",
+    "bsrnn_large_all",
+    "bsrnn_simo"
+  ],
+  "updated": "2026-09-22 10:03:22"
+}

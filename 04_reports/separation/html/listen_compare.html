@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MUSDB18 test 三首样本 · 逐模型人耳聆听对比</title>
+<style>
+:root{
+  --bg:#eef1f6; --panel:#fff; --ink:#0f172a; --muted:#64748b; --line:#dde3ec;
+  --accent:#2563eb; --g4:#2563eb; --g2:#7c3aed; --g1:#b45309; --ref:#0f766e;
+  --warn:#b91c1c; --ok:#15803d; --soft:#f3f6fb;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:14px/1.6 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+a{color:var(--accent)}
+header.top{background:linear-gradient(120deg,#101a2e,#1e3a8a 60%,#0f766e);color:#fff;
+  padding:26px 30px 22px}
+header.top h1{margin:0 0 6px;font-size:23px;letter-spacing:.3px}
+header.top p{margin:4px 0 0;color:#c7d2e4;font-size:13px;max-width:1000px}
+header.top .kpis{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+header.top .kpi{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
+  border-radius:10px;padding:7px 12px;font-size:12.5px}
+header.top .kpi b{font-size:15px;display:block;line-height:1.3}
+.wrap{max-width:1200px;margin:0 auto;padding:18px 22px 80px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 6px}
+.tab{border:1px solid var(--line);background:var(--panel);border-radius:999px;
+  padding:8px 16px;cursor:pointer;font-size:13.5px;color:var(--ink);transition:.15s}
+.tab:hover{border-color:#c3cddd}
+.tab.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tab small{opacity:.7;margin-left:6px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:16px 18px;margin:12px 0;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+h2.sec{font-size:17px;margin:22px 0 4px}
+p.lead{margin:4px 0 10px;color:var(--muted);font-size:13.5px}
+.note{background:#f8fafc;border-left:3px solid var(--accent);border-radius:0 8px 8px 0;
+  padding:10px 14px;margin:10px 0;font-size:13px;color:#334155}
+.note.warn{background:#fef2f2;border-color:var(--warn)}
+.note.ok{background:#f0fdf4;border-color:var(--ok)}
+.note ul{margin:6px 0 0;padding-left:18px}
+.note li{margin:3px 0}
+details.help{border:1px solid var(--line);border-radius:12px;background:var(--panel);
+  padding:10px 16px;margin:12px 0}
+details.help>summary{cursor:pointer;font-weight:600;font-size:14px}
+kbd{background:#f1f5f9;border:1px solid var(--line);border-bottom-width:2px;
+  border-radius:5px;padding:1px 6px;font-size:12px;font-family:ui-monospace,Consolas,monospace}
+.badge{display:inline-block;border-radius:6px;padding:1px 7px;font-size:11.5px;
+  vertical-align:middle;margin-left:6px;border:1px solid transparent}
+.b-mix{background:#ccfbf1;color:#0f766e;border-color:#99f6e4}
+.b-gt{background:#e0f2fe;color:#075985;border-color:#bae6fd}
+.b-oracle{background:#fef9c3;color:#854d0e;border-color:#fde68a}
+.b-warn{background:#fee2e2;color:#991b1b;border-color:#fecaca}
+.b-plain{background:var(--soft);color:var(--muted);border-color:var(--line)}
+
+/* ---------- transport ---------- */
+.transport{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:10px;
+  flex-wrap:wrap;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);
+  border:1px solid var(--line);border-radius:12px;padding:9px 12px;margin:10px 0 14px;
+  box-shadow:0 4px 14px rgba(15,23,42,.07)}
+.tbtn{border:1px solid var(--line);background:var(--panel);border-radius:9px;
+  padding:6px 12px;cursor:pointer;font-size:13px}
+.tbtn:hover{border-color:#c3cddd}
+.tbtn.primary{background:var(--accent);color:#fff;border-color:var(--accent);min-width:92px}
+.tbtn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.seek{flex:1;min-width:190px;height:22px;display:flex;align-items:center;cursor:pointer}
+.seek .rail{position:relative;width:100%;height:6px;border-radius:3px;background:#e2e8f0}
+.seek .rail i{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:3px;background:var(--accent)}
+.seek .rail b{position:absolute;top:-4px;width:3px;height:14px;border-radius:2px;background:#0f172a;
+  transform:translateX(-1.5px)}
+.time{font:12.5px ui-monospace,Consolas,monospace;color:var(--muted);min-width:96px;text-align:center}
+
+/* ---------- model card ---------- */
+.mgroup{margin:16px 0 6px;display:flex;align-items:baseline;gap:10px}
+.mgroup .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.mgroup h3{margin:0;font-size:15px}
+.mgroup .gn{color:var(--muted);font-size:12.5px}
+.mcard{border:1px solid var(--line);border-left-width:4px;border-radius:12px;
+  background:var(--panel);margin:10px 0;overflow:hidden}
+.mcard.g4{border-left-color:var(--g4)} .mcard.g2{border-left-color:var(--g2)}
+.mcard.g1{border-left-color:var(--g1)} .mcard.missing{border-left-color:#cbd5e1;opacity:.72}
+.mhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 14px;
+  background:var(--soft);border-bottom:1px solid var(--line)}
+.idx{width:24px;height:24px;border-radius:7px;background:var(--ink);color:#fff;
+  display:grid;place-items:center;font-size:12.5px;font-weight:700}
+.realname{font-weight:700;font-size:14.5px}
+.codename{font-weight:700;font-size:14.5px;display:none;font-family:ui-monospace,Consolas,monospace;
+  color:#0f766e}
+body.blind .realname{display:none} body.blind .codename{display:inline}
+body.blind .chip.sdr,body.blind .chip.sdrmean{visibility:hidden}
+body.blind .macts{visibility:hidden}
+.chip{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1px 7px;
+  font-size:11.5px;color:#475569}
+.chip.sdr{background:#eef2ff;border-color:#c7d2fe;color:#3730a3}
+.chip.sdrmean{background:#1e293b;border-color:#1e293b;color:#fff;font-weight:700}
+.macts{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.act{border:1px solid var(--line);background:#fff;border-radius:8px;padding:4px 10px;
+  font-size:12.3px;cursor:pointer}
+.act:hover{border-color:#93c5fd;background:#eff6ff}
+.mnote{padding:4px 14px 0;font-size:12.3px;color:var(--muted)}
+
+/* ---------- track rows ---------- */
+.row{display:flex;align-items:center;gap:10px;padding:7px 14px;border-top:1px solid #f1f5f9}
+.row:hover{background:#fafcff}
+.row.playing{background:#eff6ff}
+.row .pl{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:#fff;
+  cursor:pointer;font-size:12px;display:grid;place-items:center;flex:0 0 auto}
+.row .pl:hover{border-color:#93c5fd}
+.row.on .pl{background:var(--accent);color:#fff;border-color:var(--accent)}
+.row .nm{min-width:196px;font-size:13.2px}
+.row .nm .sub{display:block;color:var(--muted);font-size:11.3px;line-height:1.35}
+.row .bar{flex:1;height:20px;display:flex;align-items:center;cursor:pointer;min-width:110px}
+.row .bar .rail{position:relative;width:100%;height:5px;border-radius:3px;background:#e6ebf3}
+.row .bar .rail i{position:absolute;inset:0 auto 0 0;width:0;border-radius:3px;background:#60a5fa}
+.row.on .bar .rail i{background:var(--accent)}
+.row .tm{font:11.5px ui-monospace,Consolas,monospace;color:var(--muted);min-width:84px;
+  text-align:right}
+.row input[type=range]{width:74px;accent-color:var(--accent)}
+.row .solo{border:1px solid var(--line);background:#fff;border-radius:7px;padding:3px 8px;
+  font-size:11.5px;cursor:pointer}
+.row.on .solo{background:#0f766e;color:#fff;border-color:#0f766e}
+.derived{color:#b45309}
+
+/* ---------- blind table ---------- */
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{border-bottom:1px solid var(--line);padding:7px 9px;text-align:left}
+th{background:var(--soft);font-weight:600;color:#334155;position:relative}
+tbody tr:hover{background:#fafcff}
+.hidden{display:none!important}
+footer{color:var(--muted);font-size:12.3px;margin-top:26px;text-align:center}
+#toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:#0f172a;
+  color:#fff;padding:9px 16px;border-radius:9px;font-size:13px;opacity:0;pointer-events:none;
+  transition:.25s;z-index:99}
+#toast.show{opacity:1}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>MUSDB18-HQ test · 三首样本逐模型聆听对比</h1>
+  <p>每首歌都提供<b>源混音</b>、<b>官方 GT 四轨</b>与<b>每个模型在本机的全部产出</b>。
+     音频全部来自本机磁盘，未使用任何网络数据。播放器支持任意拖动定位、
+     多轨同时播放（叠听）与盲听模式 —— 用耳朵判断，而不是只看分数。</p>
+  <div class="kpis" id="kpis"></div>
+</header>
+
+<div class="wrap">
+
+<details class="help" open>
+  <summary>怎么用这一页（30 秒读完）</summary>
+  <div class="note">
+    <ul>
+      <li><b>切歌</b>：上方标签页。切歌会停止所有播放。</li>
+      <li><b>单轨试听</b>：点某一行左侧的 ▶，只有它出声，并且<b>从当前播放头继续</b>——
+          所以连着点几行，听到的是同一秒的不同模型，这才是公平的 A/B。</li>
+      <li><b>叠听</b>：打开工具栏的「叠听」后，可以同时点亮多行，它们会自动对齐着一起播。
+          把某个模型的 4 条轨全点亮，听到的就是<b>它重建的整曲</b>，直接和「源混音」比对。
+          把「GT 四轨」全点亮，应该和源混音几乎一模一样（这是校准用）。</li>
+      <li><b>音量</b>：每行独立。四轨叠听时若明显比源混音轻/闷，说明该模型有能量泄漏或相位问题。</li>
+      <li><b>快捷键</b>：<kbd>空格</kbd> 播放/暂停 · <kbd>←</kbd><kbd>→</kbd> 前后 5 秒 ·
+          <kbd>1</kbd>–<kbd>9</kbd> 在「叠听」下点亮第 N 个模型 · <kbd>0</kbd> 全停。</li>
+      <li><b>盲听</b>：工具栏「盲听」会把模型名换成随机代号并打乱顺序，听完再点「揭晓对照表」。</li>
+    </ul>
+  </div>
+</details>
+
+<div class="tabs" id="tabs"></div>
+<div class="transport">
+  <button class="tbtn primary" id="pp">▶ 播放</button>
+  <button class="tbtn" id="back">-5s</button>
+  <button class="tbtn" id="fwd">+5s</button>
+  <button class="tbtn" id="stop">■ 全停</button>
+  <div class="seek" id="seek"><div class="rail"><i></i><b></b></div></div>
+  <span class="time" id="time">0:00 / 0:00</span>
+  <button class="tbtn" id="loop" title="播完自动回到开头">↻ 循环</button>
+  <button class="tbtn" id="mode" title="允许多行同时播放">叠听：关</button>
+  <button class="tbtn" id="blind">👁 盲听：关</button>
+  <button class="tbtn" id="reveal">揭晓对照表</button>
+</div>
+
+<div id="songmeta"></div>
+<div id="content"></div>
+
+<div class="card hidden" id="revealbox">
+  <h2 class="sec" style="margin-top:0">盲听对照表（听完了再看）</h2>
+  <p class="lead">按当前歌曲展开。代号随机分配，与排名无关。</p>
+  <div id="revealtable"></div>
+</div>
+
+<footer id="foot"></footer>
+</div>
+<div id="toast"></div>
+
+<script>
+/* Any unexpected script error must be visible, never a silently blank page. */
+window.addEventListener("error", function(e){
+  var b = document.getElementById("errbar");
+  if(!b){
+    b = document.createElement("div"); b.id = "errbar";
+    b.style.cssText = "position:fixed;left:0;right:0;top:0;z-index:999;background:#b91c1c;"
+      + "color:#fff;padding:8px 14px;font:13px/1.5 system-ui,sans-serif";
+    document.body.appendChild(b);
+  }
+  b.textContent = "页面脚本出错：" + (e.message || e);
+});
+const DB = {"root": "E:\\FYP_HKBU", "generated_by": "_build_listen_page.py", "songs": [{"key": "Georgia Wonder - Siren", "why": "指定样本 1 · 50 首里最长的曲目（430.4 s），四位四轨模型在此拉开最大差距", "slug": "georgia-wonder---siren", "ref": [{"target": "mixture", "label": "源混音 mixture（原始输入）", "src": "../../02_databases/MUSDB18-HQ/test/Georgia%20Wonder%20-%20Siren/mixture.wav", "mb": 75.9, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": null, "role": "mixture", "peak": 1.0, "rms": 0.123377, "clip_frac": 5.3e-08, "clipped": 0}, {"target": "vocals", "label": "GT 人声", "src": "../../02_databases/MUSDB18-HQ/test/Georgia%20Wonder%20-%20Siren/vocals.wav", "mb": 75.9, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": null, "role": "gt", "peak": 0.47464, "rms": 0.051402, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "GT 鼓", "src": "../../02_databases/MUSDB18-HQ/test/Georgia%20Wonder%20-%20Siren/drums.wav", "mb": 75.9, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": null, "role": "gt", "peak": 0.565491, "rms": 0.065488, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "GT 贝斯", "src": "../../02_databases/MUSDB18-HQ/test/Georgia%20Wonder%20-%20Siren/bass.wav", "mb": 75.9, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": null, "role": "gt", "peak": 0.308838, "rms": 0.065624, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "GT 其他乐器", "src": "../../02_databases/MUSDB18-HQ/test/Georgia%20Wonder%20-%20Siren/other.wav", "mb": 75.9, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": null, "role": "gt", "peak": 0.609985, "rms": 0.065277, "clip_frac": 0.0, "clipped": 0}], "models": [{"key": "bsroformer_l12", "label": "BS-RoFormer-L12", "grp": "G1", "note": "人声单轨 SDR 最强的模型", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BS-RoFormer-L12/Georgia Wonder - Siren", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/BS-RoFormer-L12/Georgia%20Wonder%20-%20Siren/vocals.flac", "mb": 23.5, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 9.582, "peak": 0.483002, "rms": 0.048803, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 140.8, "infer_s": 113.09, "overhead_s": 27.71, "out_mb": 23.54, "sdr_mean": 9.582, "sdr_vocals": 9.582, "sdr_drums": null, "sdr_bass": null, "sdr_other": null, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "bsrnn", "label": "BSRNN-opt", "grp": "G1", "note": "人声单轨", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BSRNN-opt/Georgia Wonder - Siren", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/BSRNN-opt/Georgia%20Wonder%20-%20Siren/vocals.flac", "mb": 22.0, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 7.935, "peak": 0.461914, "rms": 0.045495, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 90.9, "infer_s": 61.855, "overhead_s": 29.05, "out_mb": 22.0, "sdr_mean": 7.935, "sdr_vocals": 7.935, "sdr_drums": null, "sdr_bass": null, "sdr_other": null, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "bsrnn_large", "label": "BSRNN-large", "grp": "G1", "note": "人声单轨，本机单首耗时最低", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BSRNN-large/Georgia Wonder - Siren", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/BSRNN-large/Georgia%20Wonder%20-%20Siren/vocals.flac", "mb": 22.7, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 7.839, "peak": 0.472717, "rms": 0.047952, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 78.3, "infer_s": 52.06, "overhead_s": 26.24, "out_mb": 22.71, "sdr_mean": 7.839, "sdr_vocals": 7.839, "sdr_drums": null, "sdr_bass": null, "sdr_other": null, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "bsroformer_l6", "label": "BS-RoFormer-L6", "grp": "G2", "note": "只输出人声+其他总线", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BS-RoFormer-L6/Georgia Wonder - Siren", "tracks": [{"target": "vocals+other", "label": "人声+其他（单总线）", "src": "../../03_outputs/_test_run/BS-RoFormer-L6/Georgia%20Wonder%20-%20Siren/vocals+other.flac", "mb": 38.2, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 11.735, "peak": 0.748322, "rms": 0.079228, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 104.4, "infer_s": 75.983, "overhead_s": 28.42, "out_mb": 38.24, "sdr_mean": 11.735, "sdr_vocals": null, "sdr_drums": null, "sdr_bass": null, "sdr_other": null, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "mdx", "label": "MDX-Net", "grp": "G4", "note": "四轨同台里“快 + 准”折中最优", "dir": "E:/FYP_HKBU/03_outputs/_test_run/MDX-Net/Georgia Wonder - Siren", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/MDX-Net/Georgia%20Wonder%20-%20Siren/vocals.flac", "mb": 29.3, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 7.794, "peak": 0.508453, "rms": 0.045867, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/MDX-Net/Georgia%20Wonder%20-%20Siren/drums.flac", "mb": 44.1, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 11.838, "peak": 0.734009, "rms": 0.062602, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/MDX-Net/Georgia%20Wonder%20-%20Siren/bass.flac", "mb": 23.0, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 15.097, "peak": 0.323669, "rms": 0.06491, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/MDX-Net/Georgia%20Wonder%20-%20Siren/other.flac", "mb": 37.1, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 8.544, "peak": 0.616211, "rms": 0.059126, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 112.9, "infer_s": 26.69, "overhead_s": 86.21, "out_mb": 133.41, "sdr_mean": 10.818, "sdr_vocals": 7.794, "sdr_drums": 11.838, "sdr_bass": 15.097, "sdr_other": 8.544, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "demucs", "label": "Demucs", "grp": "G4", "note": "波形域 U-Net", "dir": "E:/FYP_HKBU/03_outputs/_test_run/Demucs/Georgia Wonder - Siren", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/Demucs/Georgia%20Wonder%20-%20Siren/vocals.flac", "mb": 30.6, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 7.02, "peak": 0.495422, "rms": 0.046595, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/Demucs/Georgia%20Wonder%20-%20Siren/drums.flac", "mb": 44.0, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 11.356, "peak": 0.739685, "rms": 0.062695, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/Demucs/Georgia%20Wonder%20-%20Siren/bass.flac", "mb": 20.3, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 12.809, "peak": 0.362, "rms": 0.063612, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/Demucs/Georgia%20Wonder%20-%20Siren/other.flac", "mb": 38.3, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 7.426, "peak": 0.664215, "rms": 0.058968, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 96.4, "infer_s": 13.426, "overhead_s": 82.97, "out_mb": 133.24, "sdr_mean": 9.653, "sdr_vocals": 7.02, "sdr_drums": 11.356, "sdr_bass": 12.809, "sdr_other": 7.426, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "oracle", "label": "Oracle-IRM", "grp": "G4", "note": "理想掩码上界，不是可部署模型", "dir": "E:/FYP_HKBU/03_outputs/_test_run/Oracle-IRM/Georgia Wonder - Siren", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/Oracle-IRM/Georgia%20Wonder%20-%20Siren/vocals.flac", "mb": 11.3, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 8.185, "peak": 0.411865, "rms": 0.039608, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/Oracle-IRM/Georgia%20Wonder%20-%20Siren/drums.flac", "mb": 20.8, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 8.922, "peak": 0.643585, "rms": 0.052709, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/Oracle-IRM/Georgia%20Wonder%20-%20Siren/bass.flac", "mb": 4.1, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 8.079, "peak": 0.295807, "rms": 0.057224, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/Oracle-IRM/Georgia%20Wonder%20-%20Siren/other.flac", "mb": 17.6, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 7.932, "peak": 0.492584, "rms": 0.048307, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 92.5, "infer_s": 6.845, "overhead_s": 85.66, "out_mb": 53.79, "sdr_mean": 8.28, "sdr_vocals": 8.185, "sdr_drums": 8.922, "sdr_bass": 8.079, "sdr_other": 7.932, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "convtasnet", "label": "Conv-TasNet", "grp": "G4", "note": "端到端时域分离", "dir": "E:/FYP_HKBU/03_outputs/_test_run/Conv-TasNet/Georgia Wonder - Siren", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/Conv-TasNet/Georgia%20Wonder%20-%20Siren/vocals.flac", "mb": 31.4, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 4.417, "peak": 0.43512, "rms": 0.04165, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/Conv-TasNet/Georgia%20Wonder%20-%20Siren/drums.flac", "mb": 45.4, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 8.162, "peak": 0.879791, "rms": 0.06193, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/Conv-TasNet/Georgia%20Wonder%20-%20Siren/bass.flac", "mb": 24.5, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 8.683, "peak": 0.408722, "rms": 0.061176, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/Conv-TasNet/Georgia%20Wonder%20-%20Siren/other.flac", "mb": 38.2, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 5.069, "peak": 0.550323, "rms": 0.051512, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 152.0, "infer_s": 69.032, "overhead_s": 82.97, "out_mb": 139.59, "sdr_mean": 6.583, "sdr_vocals": 4.417, "sdr_drums": 8.162, "sdr_bass": 8.683, "sdr_other": 5.069, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "umx", "label": "Open-Unmix", "grp": "G4", "note": "频谱域基线", "dir": "E:/FYP_HKBU/03_outputs/_test_run/Open-Unmix/Georgia Wonder - Siren", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/Open-Unmix/Georgia%20Wonder%20-%20Siren/vocals.flac", "mb": 30.4, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 4.483, "peak": 0.463928, "rms": 0.047792, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/Open-Unmix/Georgia%20Wonder%20-%20Siren/drums.flac", "mb": 46.1, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 6.714, "peak": 0.808716, "rms": 0.056225, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/Open-Unmix/Georgia%20Wonder%20-%20Siren/bass.flac", "mb": 9.8, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 7.723, "peak": 0.372955, "rms": 0.059829, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/Open-Unmix/Georgia%20Wonder%20-%20Siren/other.flac", "mb": 27.9, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 5.08, "peak": 0.517731, "rms": 0.054611, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 111.0, "infer_s": 28.954, "overhead_s": 82.05, "out_mb": 114.14, "sdr_mean": 6.0, "sdr_vocals": 4.483, "sdr_drums": 6.714, "sdr_bass": 7.723, "sdr_other": 5.08, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "mmdenselstm", "label": "MMDenseLSTM", "grp": "G4", "note": "多通道 LSTM 系", "dir": "E:/FYP_HKBU/03_outputs/_test_run/MMDenseLSTM/Georgia Wonder - Siren", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/MMDenseLSTM/Georgia%20Wonder%20-%20Siren/vocals.flac", "mb": 31.5, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 4.704, "peak": 0.529388, "rms": 0.053316, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/MMDenseLSTM/Georgia%20Wonder%20-%20Siren/drums.flac", "mb": 44.5, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 6.687, "peak": 0.689545, "rms": 0.057643, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/MMDenseLSTM/Georgia%20Wonder%20-%20Siren/bass.flac", "mb": 11.2, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 7.597, "peak": 0.337463, "rms": 0.061121, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/MMDenseLSTM/Georgia%20Wonder%20-%20Siren/other.flac", "mb": 28.5, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": 4.855, "peak": 0.584534, "rms": 0.050509, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 113.2, "infer_s": 26.196, "overhead_s": 87.0, "out_mb": 115.73, "sdr_mean": 5.961, "sdr_vocals": 4.704, "sdr_drums": 6.687, "sdr_bass": 7.597, "sdr_other": 4.855, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "dprnn", "label": "DPRNN（自训）", "grp": "G4", "note": "自训权重，SDR 为负，仅作负面证据", "dir": "E:/FYP_HKBU/03_outputs/_test_run/DPRNN/Georgia Wonder - Siren", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/DPRNN/Georgia%20Wonder%20-%20Siren/vocals.flac", "mb": 11.0, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": -2.105, "peak": 0.873962, "rms": 0.085846, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/DPRNN/Georgia%20Wonder%20-%20Siren/drums.flac", "mb": 9.6, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": -0.124, "peak": 1.0, "rms": 0.090111, "clip_frac": 0.000151848, "clipped": 1}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/DPRNN/Georgia%20Wonder%20-%20Siren/bass.flac", "mb": 9.5, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": -0.724, "peak": 0.840759, "rms": 0.113125, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/DPRNN/Georgia%20Wonder%20-%20Siren/other.flac", "mb": 12.3, "sr": 44100, "ch": 2, "dur": 430.38, "sub": "PCM_16", "sdr": -0.544, "peak": 0.819733, "rms": 0.086127, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 87.5, "infer_s": 7.296, "overhead_s": 80.2, "out_mb": 42.36, "sdr_mean": -0.874, "sdr_vocals": -2.105, "sdr_drums": -0.124, "sdr_bass": -0.724, "sdr_other": -0.544, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "bsrnn_simo", "label": "BSRNN-SIMO", "grp": "G4", "note": "全量 SDR 最高，但本机 180 s 超时上限使这 3 首未产出", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BSRNN-SIMO/Georgia Wonder - Siren", "tracks": [], "chips": {}, "status": "MISSING", "reason": "被超时熔断禁用，本曲未运行；目录内残留 1 个未完成文件（vocals.flac 5.7MB），已忽略"}], "dur_s": 430.38, "missing": ["BSRNN-SIMO"], "excluded": ["BSRNN-SIMO：被超时熔断禁用，本曲未运行；目录内残留 1 个未完成文件（vocals.flac 5.7MB），已忽略"]}, {"key": "PR - Oh No", "why": "指定样本 2 · 50 首里最短的曲目（76.2 s），几乎全部模型都在这里出现退化", "slug": "pr---oh-no", "ref": [{"target": "mixture", "label": "源混音 mixture（原始输入）", "src": "../../02_databases/MUSDB18-HQ/test/PR%20-%20Oh%20No/mixture.wav", "mb": 13.4, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": null, "role": "mixture", "peak": 0.948975, "rms": 0.127603, "clip_frac": 0.0, "clipped": 0}, {"target": "vocals", "label": "GT 人声", "src": "../../02_databases/MUSDB18-HQ/test/PR%20-%20Oh%20No/vocals.wav", "mb": 13.4, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": null, "role": "gt", "peak": 0.481598, "rms": 0.017811, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "GT 鼓", "src": "../../02_databases/MUSDB18-HQ/test/PR%20-%20Oh%20No/drums.wav", "mb": 13.4, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": null, "role": "gt", "peak": 0.70401, "rms": 0.11912, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "GT 贝斯", "src": "../../02_databases/MUSDB18-HQ/test/PR%20-%20Oh%20No/bass.wav", "mb": 13.4, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": null, "role": "gt", "peak": 0.4216, "rms": 0.074359, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "GT 其他乐器", "src": "../../02_databases/MUSDB18-HQ/test/PR%20-%20Oh%20No/other.wav", "mb": 13.4, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": null, "role": "gt", "peak": 0.4758, "rms": 0.047668, "clip_frac": 0.0, "clipped": 0}], "models": [{"key": "bsroformer_l12", "label": "BS-RoFormer-L12", "grp": "G1", "note": "人声单轨 SDR 最强的模型", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BS-RoFormer-L12/PR - Oh No", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/BS-RoFormer-L12/PR%20-%20Oh%20No/vocals.flac", "mb": 1.2, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 1.823, "peak": 0.175262, "rms": 0.006667, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 31.9, "infer_s": 20.474, "overhead_s": 11.43, "out_mb": 1.24, "sdr_mean": 1.823, "sdr_vocals": 1.823, "sdr_drums": null, "sdr_bass": null, "sdr_other": null, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "bsrnn_large", "label": "BSRNN-large", "grp": "G1", "note": "人声单轨，本机单首耗时最低", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BSRNN-large/PR - Oh No", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/BSRNN-large/PR%20-%20Oh%20No/vocals.flac", "mb": 1.4, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 1.05, "peak": 0.242523, "rms": 0.009095, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 19.5, "infer_s": 9.302, "overhead_s": 10.2, "out_mb": 1.44, "sdr_mean": 1.05, "sdr_vocals": 1.05, "sdr_drums": null, "sdr_bass": null, "sdr_other": null, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "bsrnn", "label": "BSRNN-opt", "grp": "G1", "note": "人声单轨", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BSRNN-opt/PR - Oh No", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/BSRNN-opt/PR%20-%20Oh%20No/vocals.flac", "mb": 1.1, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 0.813, "peak": 0.26004, "rms": 0.008932, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 22.5, "infer_s": 12.258, "overhead_s": 10.24, "out_mb": 1.11, "sdr_mean": 0.813, "sdr_vocals": 0.813, "sdr_drums": null, "sdr_bass": null, "sdr_other": null, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "bsroformer_l6", "label": "BS-RoFormer-L6", "grp": "G2", "note": "只输出人声+其他总线", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BS-RoFormer-L6/PR - Oh No", "tracks": [{"target": "vocals+other", "label": "人声+其他（单总线）", "src": "../../03_outputs/_test_run/BS-RoFormer-L6/PR%20-%20Oh%20No/vocals+other.flac", "mb": 3.8, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": -0.149, "peak": 0.86496, "rms": 0.076149, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 24.0, "infer_s": 13.696, "overhead_s": 10.3, "out_mb": 3.83, "sdr_mean": -0.149, "sdr_vocals": null, "sdr_drums": null, "sdr_bass": null, "sdr_other": null, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "oracle", "label": "Oracle-IRM", "grp": "G4", "note": "理想掩码上界，不是可部署模型", "dir": "E:/FYP_HKBU/03_outputs/_test_run/Oracle-IRM/PR - Oh No", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/Oracle-IRM/PR%20-%20Oh%20No/vocals.flac", "mb": 1.1, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 2.836, "peak": 0.315704, "rms": 0.010712, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/Oracle-IRM/PR%20-%20Oh%20No/drums.flac", "mb": 3.3, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 9.685, "peak": 0.486572, "rms": 0.088169, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/Oracle-IRM/PR%20-%20Oh%20No/bass.flac", "mb": 1.1, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 9.936, "peak": 0.417694, "rms": 0.064634, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/Oracle-IRM/PR%20-%20Oh%20No/other.flac", "mb": 1.1, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 7.523, "peak": 0.311005, "rms": 0.030978, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 12.9, "infer_s": 0.728, "overhead_s": 12.17, "out_mb": 6.62, "sdr_mean": 7.495, "sdr_vocals": 2.836, "sdr_drums": 9.685, "sdr_bass": 9.936, "sdr_other": 7.523, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "mdx", "label": "MDX-Net", "grp": "G4", "note": "四轨同台里“快 + 准”折中最优", "dir": "E:/FYP_HKBU/03_outputs/_test_run/MDX-Net/PR - Oh No", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/MDX-Net/PR%20-%20Oh%20No/vocals.flac", "mb": 3.0, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 2.095, "peak": 0.353302, "rms": 0.011952, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/MDX-Net/PR%20-%20Oh%20No/drums.flac", "mb": 6.7, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 10.364, "peak": 0.692139, "rms": 0.092396, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/MDX-Net/PR%20-%20Oh%20No/bass.flac", "mb": 3.7, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 8.486, "peak": 0.481628, "rms": 0.06684, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/MDX-Net/PR%20-%20Oh%20No/other.flac", "mb": 4.2, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 5.442, "peak": 0.429352, "rms": 0.036023, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 42.2, "infer_s": 15.772, "overhead_s": 26.43, "out_mb": 17.67, "sdr_mean": 6.597, "sdr_vocals": 2.095, "sdr_drums": 10.364, "sdr_bass": 8.486, "sdr_other": 5.442, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "convtasnet", "label": "Conv-TasNet", "grp": "G4", "note": "端到端时域分离", "dir": "E:/FYP_HKBU/03_outputs/_test_run/Conv-TasNet/PR - Oh No", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/Conv-TasNet/PR%20-%20Oh%20No/vocals.flac", "mb": 2.5, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 0.027, "peak": 0.238861, "rms": 0.005486, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/Conv-TasNet/PR%20-%20Oh%20No/drums.flac", "mb": 6.6, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 7.778, "peak": 0.714691, "rms": 0.086057, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/Conv-TasNet/PR%20-%20Oh%20No/bass.flac", "mb": 4.0, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 4.367, "peak": 0.472595, "rms": 0.054207, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/Conv-TasNet/PR%20-%20Oh%20No/other.flac", "mb": 5.5, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 0.198, "peak": 0.608917, "rms": 0.047503, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 33.4, "infer_s": 12.052, "overhead_s": 21.35, "out_mb": 18.52, "sdr_mean": 3.092, "sdr_vocals": 0.027, "sdr_drums": 7.778, "sdr_bass": 4.367, "sdr_other": 0.198, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "demucs", "label": "Demucs", "grp": "G4", "note": "波形域 U-Net", "dir": "E:/FYP_HKBU/03_outputs/_test_run/Demucs/PR - Oh No", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/Demucs/PR%20-%20Oh%20No/vocals.flac", "mb": 2.6, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 0.566, "peak": 0.277557, "rms": 0.008847, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/Demucs/PR%20-%20Oh%20No/drums.flac", "mb": 6.6, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 8.822, "peak": 0.684418, "rms": 0.093894, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/Demucs/PR%20-%20Oh%20No/bass.flac", "mb": 3.1, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 0.227, "peak": 0.490448, "rms": 0.054887, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/Demucs/PR%20-%20Oh%20No/other.flac", "mb": 5.0, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 1.143, "peak": 0.553619, "rms": 0.051536, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 15.7, "infer_s": 2.309, "overhead_s": 13.39, "out_mb": 17.18, "sdr_mean": 2.689, "sdr_vocals": 0.566, "sdr_drums": 8.822, "sdr_bass": 0.227, "sdr_other": 1.143, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "mmdenselstm", "label": "MMDenseLSTM", "grp": "G4", "note": "多通道 LSTM 系", "dir": "E:/FYP_HKBU/03_outputs/_test_run/MMDenseLSTM/PR - Oh No", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/MMDenseLSTM/PR%20-%20Oh%20No/vocals.flac", "mb": 2.6, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": -0.088, "peak": 0.390503, "rms": 0.010301, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/MMDenseLSTM/PR%20-%20Oh%20No/drums.flac", "mb": 5.9, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 7.09, "peak": 0.82663, "rms": 0.099631, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/MMDenseLSTM/PR%20-%20Oh%20No/bass.flac", "mb": 1.6, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 1.575, "peak": 0.409088, "rms": 0.047346, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/MMDenseLSTM/PR%20-%20Oh%20No/other.flac", "mb": 3.3, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 0.274, "peak": 0.568481, "rms": 0.049218, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 33.1, "infer_s": 9.403, "overhead_s": 23.7, "out_mb": 13.4, "sdr_mean": 2.213, "sdr_vocals": -0.088, "sdr_drums": 7.09, "sdr_bass": 1.575, "sdr_other": 0.274, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "umx", "label": "Open-Unmix", "grp": "G4", "note": "频谱域基线", "dir": "E:/FYP_HKBU/03_outputs/_test_run/Open-Unmix/PR - Oh No", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/Open-Unmix/PR%20-%20Oh%20No/vocals.flac", "mb": 4.1, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": -6.301, "peak": 0.374939, "rms": 0.020481, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/Open-Unmix/PR%20-%20Oh%20No/drums.flac", "mb": 5.8, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 6.728, "peak": 0.785492, "rms": 0.095327, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/Open-Unmix/PR%20-%20Oh%20No/bass.flac", "mb": 1.4, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 1.294, "peak": 0.446411, "rms": 0.044758, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/Open-Unmix/PR%20-%20Oh%20No/other.flac", "mb": 3.4, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 0.102, "peak": 0.60498, "rms": 0.052026, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 27.7, "infer_s": 5.639, "overhead_s": 22.06, "out_mb": 14.72, "sdr_mean": 0.456, "sdr_vocals": -6.301, "sdr_drums": 6.728, "sdr_bass": 1.294, "sdr_other": 0.102, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "dprnn", "label": "DPRNN（自训）", "grp": "G4", "note": "自训权重，SDR 为负，仅作负面证据", "dir": "E:/FYP_HKBU/03_outputs/_test_run/DPRNN/PR - Oh No", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/DPRNN/PR%20-%20Oh%20No/vocals.flac", "mb": 1.8, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": -19.859, "peak": 0.849487, "rms": 0.084462, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/DPRNN/PR%20-%20Oh%20No/drums.flac", "mb": 1.9, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 1.856, "peak": 1.0, "rms": 0.17888, "clip_frac": 9.6424e-05, "clipped": 1}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/DPRNN/PR%20-%20Oh%20No/bass.flac", "mb": 1.4, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": 1.382, "peak": 0.453217, "rms": 0.060771, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/DPRNN/PR%20-%20Oh%20No/other.flac", "mb": 1.7, "sr": 44100, "ch": 2, "dur": 76.19, "sub": "PCM_16", "sdr": -1.714, "peak": 0.552704, "rms": 0.048324, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 22.1, "infer_s": 1.537, "overhead_s": 20.56, "out_mb": 6.77, "sdr_mean": -4.584, "sdr_vocals": -19.859, "sdr_drums": 1.856, "sdr_bass": 1.382, "sdr_other": -1.714, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "bsrnn_simo", "label": "BSRNN-SIMO", "grp": "G4", "note": "全量 SDR 最高，但本机 180 s 超时上限使这 3 首未产出", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BSRNN-SIMO/PR - Oh No", "tracks": [], "chips": {}, "status": "MISSING", "reason": "被超时熔断禁用，本曲未运行"}], "dur_s": 76.19, "missing": ["BSRNN-SIMO"], "excluded": ["BSRNN-SIMO：被超时熔断禁用，本曲未运行"]}, {"key": "M.E.R.C. Music - Knockout", "why": "随机取中位 · 按 50 首单曲平均墙钟排序落在第 26/50 位（正中间），即“歌与歌差距”的中位样本，270.0 s", "slug": "m.e.r.c.-music---knockout", "ref": [{"target": "mixture", "label": "源混音 mixture（原始输入）", "src": "../../02_databases/MUSDB18-HQ/test/M.E.R.C.%20Music%20-%20Knockout/mixture.wav", "mb": 47.6, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": null, "role": "mixture", "peak": 0.999969, "rms": 0.101583, "clip_frac": 8.4e-08, "clipped": 0}, {"target": "vocals", "label": "GT 人声", "src": "../../02_databases/MUSDB18-HQ/test/M.E.R.C.%20Music%20-%20Knockout/vocals.wav", "mb": 47.6, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": null, "role": "gt", "peak": 0.733063, "rms": 0.06448, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "GT 鼓", "src": "../../02_databases/MUSDB18-HQ/test/M.E.R.C.%20Music%20-%20Knockout/drums.wav", "mb": 47.6, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": null, "role": "gt", "peak": 0.526855, "rms": 0.052509, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "GT 贝斯", "src": "../../02_databases/MUSDB18-HQ/test/M.E.R.C.%20Music%20-%20Knockout/bass.wav", "mb": 47.6, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": null, "role": "gt", "peak": 0.087524, "rms": 0.033095, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "GT 其他乐器", "src": "../../02_databases/MUSDB18-HQ/test/M.E.R.C.%20Music%20-%20Knockout/other.wav", "mb": 47.6, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": null, "role": "gt", "peak": 0.435486, "rms": 0.048018, "clip_frac": 0.0, "clipped": 0}], "models": [{"key": "bsroformer_l12", "label": "BS-RoFormer-L12", "grp": "G1", "note": "人声单轨 SDR 最强的模型", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BS-RoFormer-L12/M.E.R.C. Music - Knockout", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/BS-RoFormer-L12/M.E.R.C.%20Music%20-%20Knockout/vocals.flac", "mb": 20.9, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 13.838, "peak": 0.741547, "rms": 0.063547, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 91.3, "infer_s": 71.278, "overhead_s": 20.02, "out_mb": 20.92, "sdr_mean": 13.838, "sdr_vocals": 13.838, "sdr_drums": null, "sdr_bass": null, "sdr_other": null, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "bsrnn", "label": "BSRNN-opt", "grp": "G1", "note": "人声单轨", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BSRNN-opt/M.E.R.C. Music - Knockout", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/BSRNN-opt/M.E.R.C.%20Music%20-%20Knockout/vocals.flac", "mb": 20.1, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 11.239, "peak": 0.724426, "rms": 0.060853, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 60.1, "infer_s": 40.406, "overhead_s": 19.69, "out_mb": 20.06, "sdr_mean": 11.239, "sdr_vocals": 11.239, "sdr_drums": null, "sdr_bass": null, "sdr_other": null, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "bsrnn_large", "label": "BSRNN-large", "grp": "G1", "note": "人声单轨，本机单首耗时最低", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BSRNN-large/M.E.R.C. Music - Knockout", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/BSRNN-large/M.E.R.C.%20Music%20-%20Knockout/vocals.flac", "mb": 21.0, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 10.839, "peak": 0.719238, "rms": 0.061035, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 52.8, "infer_s": 33.792, "overhead_s": 19.01, "out_mb": 21.01, "sdr_mean": 10.839, "sdr_vocals": 10.839, "sdr_drums": null, "sdr_bass": null, "sdr_other": null, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "bsroformer_l6", "label": "BS-RoFormer-L6", "grp": "G2", "note": "只输出人声+其他总线", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BS-RoFormer-L6/M.E.R.C. Music - Knockout", "tracks": [{"target": "vocals+other", "label": "人声+其他（单总线）", "src": "../../03_outputs/_test_run/BS-RoFormer-L6/M.E.R.C.%20Music%20-%20Knockout/vocals+other.flac", "mb": 25.3, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 13.914, "peak": 0.811829, "rms": 0.080877, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 64.8, "infer_s": 47.899, "overhead_s": 16.9, "out_mb": 25.34, "sdr_mean": 13.914, "sdr_vocals": null, "sdr_drums": null, "sdr_bass": null, "sdr_other": null, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "mdx", "label": "MDX-Net", "grp": "G4", "note": "四轨同台里“快 + 准”折中最优", "dir": "E:/FYP_HKBU/03_outputs/_test_run/MDX-Net/M.E.R.C. Music - Knockout", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/MDX-Net/M.E.R.C.%20Music%20-%20Knockout/vocals.flac", "mb": 22.1, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 10.552, "peak": 0.715332, "rms": 0.06128, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/MDX-Net/M.E.R.C.%20Music%20-%20Knockout/drums.flac", "mb": 21.2, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 13.113, "peak": 0.575897, "rms": 0.051003, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/MDX-Net/M.E.R.C.%20Music%20-%20Knockout/bass.flac", "mb": 11.7, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 15.624, "peak": 0.1008, "rms": 0.033083, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/MDX-Net/M.E.R.C.%20Music%20-%20Knockout/other.flac", "mb": 22.3, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 8.352, "peak": 0.408691, "rms": 0.042953, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 70.4, "infer_s": 17.143, "overhead_s": 53.26, "out_mb": 77.2, "sdr_mean": 11.91, "sdr_vocals": 10.552, "sdr_drums": 13.113, "sdr_bass": 15.624, "sdr_other": 8.352, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "demucs", "label": "Demucs", "grp": "G4", "note": "波形域 U-Net", "dir": "E:/FYP_HKBU/03_outputs/_test_run/Demucs/M.E.R.C. Music - Knockout", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/Demucs/M.E.R.C.%20Music%20-%20Knockout/vocals.flac", "mb": 21.8, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 10.139, "peak": 0.711731, "rms": 0.061456, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/Demucs/M.E.R.C.%20Music%20-%20Knockout/drums.flac", "mb": 20.9, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 13.06, "peak": 0.560638, "rms": 0.05027, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/Demucs/M.E.R.C.%20Music%20-%20Knockout/bass.flac", "mb": 10.4, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 14.259, "peak": 0.109863, "rms": 0.03376, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/Demucs/M.E.R.C.%20Music%20-%20Knockout/other.flac", "mb": 23.3, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 7.516, "peak": 0.394867, "rms": 0.043197, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 58.5, "infer_s": 8.412, "overhead_s": 50.09, "out_mb": 76.37, "sdr_mean": 11.244, "sdr_vocals": 10.139, "sdr_drums": 13.06, "sdr_bass": 14.259, "sdr_other": 7.516, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "oracle", "label": "Oracle-IRM", "grp": "G4", "note": "理想掩码上界，不是可部署模型", "dir": "E:/FYP_HKBU/03_outputs/_test_run/Oracle-IRM/M.E.R.C. Music - Knockout", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/Oracle-IRM/M.E.R.C.%20Music%20-%20Knockout/vocals.flac", "mb": 10.4, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 11.348, "peak": 0.615265, "rms": 0.048258, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/Oracle-IRM/M.E.R.C.%20Music%20-%20Knockout/drums.flac", "mb": 9.2, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 7.939, "peak": 0.456268, "rms": 0.04465, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/Oracle-IRM/M.E.R.C.%20Music%20-%20Knockout/bass.flac", "mb": 1.6, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 7.279, "peak": 0.099396, "rms": 0.028405, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/Oracle-IRM/M.E.R.C.%20Music%20-%20Knockout/other.flac", "mb": 9.6, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 8.416, "peak": 0.318787, "rms": 0.037726, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 52.0, "infer_s": 3.35, "overhead_s": 48.65, "out_mb": 30.86, "sdr_mean": 8.745, "sdr_vocals": 11.348, "sdr_drums": 7.939, "sdr_bass": 7.279, "sdr_other": 8.416, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "mmdenselstm", "label": "MMDenseLSTM", "grp": "G4", "note": "多通道 LSTM 系", "dir": "E:/FYP_HKBU/03_outputs/_test_run/MMDenseLSTM/M.E.R.C. Music - Knockout", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/MMDenseLSTM/M.E.R.C.%20Music%20-%20Knockout/vocals.flac", "mb": 21.5, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 8.378, "peak": 0.73175, "rms": 0.063658, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/MMDenseLSTM/M.E.R.C.%20Music%20-%20Knockout/drums.flac", "mb": 23.9, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 7.01, "peak": 0.535614, "rms": 0.043072, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/MMDenseLSTM/M.E.R.C.%20Music%20-%20Knockout/bass.flac", "mb": 5.1, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 7.478, "peak": 0.272095, "rms": 0.034035, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/MMDenseLSTM/M.E.R.C.%20Music%20-%20Knockout/other.flac", "mb": 14.5, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 5.358, "peak": 0.384857, "rms": 0.040174, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 67.7, "infer_s": 16.576, "overhead_s": 51.12, "out_mb": 64.99, "sdr_mean": 7.056, "sdr_vocals": 8.378, "sdr_drums": 7.01, "sdr_bass": 7.478, "sdr_other": 5.358, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "convtasnet", "label": "Conv-TasNet", "grp": "G4", "note": "端到端时域分离", "dir": "E:/FYP_HKBU/03_outputs/_test_run/Conv-TasNet/M.E.R.C. Music - Knockout", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/Conv-TasNet/M.E.R.C.%20Music%20-%20Knockout/vocals.flac", "mb": 23.2, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 6.85, "peak": 0.693787, "rms": 0.05333, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/Conv-TasNet/M.E.R.C.%20Music%20-%20Knockout/drums.flac", "mb": 24.5, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 7.023, "peak": 0.551971, "rms": 0.043021, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/Conv-TasNet/M.E.R.C.%20Music%20-%20Knockout/bass.flac", "mb": 13.5, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 7.39, "peak": 0.199585, "rms": 0.033888, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/Conv-TasNet/M.E.R.C.%20Music%20-%20Knockout/other.flac", "mb": 22.2, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 4.274, "peak": 0.615265, "rms": 0.042135, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 92.3, "infer_s": 43.299, "overhead_s": 49.0, "out_mb": 83.35, "sdr_mean": 6.384, "sdr_vocals": 6.85, "sdr_drums": 7.023, "sdr_bass": 7.39, "sdr_other": 4.274, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "umx", "label": "Open-Unmix", "grp": "G4", "note": "频谱域基线", "dir": "E:/FYP_HKBU/03_outputs/_test_run/Open-Unmix/M.E.R.C. Music - Knockout", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/Open-Unmix/M.E.R.C.%20Music%20-%20Knockout/vocals.flac", "mb": 20.9, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 7.861, "peak": 0.731934, "rms": 0.060507, "clip_frac": 0.0, "clipped": 0}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/Open-Unmix/M.E.R.C.%20Music%20-%20Knockout/drums.flac", "mb": 24.8, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 5.042, "peak": 0.526947, "rms": 0.037683, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/Open-Unmix/M.E.R.C.%20Music%20-%20Knockout/bass.flac", "mb": 5.3, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 5.994, "peak": 0.270782, "rms": 0.037179, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/Open-Unmix/M.E.R.C.%20Music%20-%20Knockout/other.flac", "mb": 17.3, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 4.883, "peak": 0.561371, "rms": 0.043843, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 67.5, "infer_s": 18.259, "overhead_s": 49.24, "out_mb": 68.27, "sdr_mean": 5.945, "sdr_vocals": 7.861, "sdr_drums": 5.042, "sdr_bass": 5.994, "sdr_other": 4.883, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "dprnn", "label": "DPRNN（自训）", "grp": "G4", "note": "自训权重，SDR 为负，仅作负面证据", "dir": "E:/FYP_HKBU/03_outputs/_test_run/DPRNN/M.E.R.C. Music - Knockout", "tracks": [{"target": "vocals", "label": "人声", "src": "../../03_outputs/_test_run/DPRNN/M.E.R.C.%20Music%20-%20Knockout/vocals.flac", "mb": 7.0, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": -2.822, "peak": 1.0, "rms": 0.10792, "clip_frac": 2.0996e-05, "clipped": 1}, {"target": "drums", "label": "鼓", "src": "../../03_outputs/_test_run/DPRNN/M.E.R.C.%20Music%20-%20Knockout/drums.flac", "mb": 6.1, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 0.002, "peak": 0.780212, "rms": 0.075347, "clip_frac": 0.0, "clipped": 0}, {"target": "bass", "label": "贝斯", "src": "../../03_outputs/_test_run/DPRNN/M.E.R.C.%20Music%20-%20Knockout/bass.flac", "mb": 5.5, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": -3.494, "peak": 0.352478, "rms": 0.073751, "clip_frac": 0.0, "clipped": 0}, {"target": "other", "label": "其他乐器", "src": "../../03_outputs/_test_run/DPRNN/M.E.R.C.%20Music%20-%20Knockout/other.flac", "mb": 6.8, "sr": 44100, "ch": 2, "dur": 270.0, "sub": "PCM_16", "sdr": 0.263, "peak": 0.46579, "rms": 0.053185, "clip_frac": 0.0, "clipped": 0}], "chips": {"wall_s": 53.1, "infer_s": 4.969, "overhead_s": 48.13, "out_mb": 25.38, "sdr_mean": -1.513, "sdr_vocals": -2.822, "sdr_drums": 0.002, "sdr_bass": -3.494, "sdr_other": 0.263, "ledger_status": "PASS"}, "status": "PASS", "reason": ""}, {"key": "bsrnn_simo", "label": "BSRNN-SIMO", "grp": "G4", "note": "全量 SDR 最高，但本机 180 s 超时上限使这 3 首未产出", "dir": "E:/FYP_HKBU/03_outputs/_test_run/BSRNN-SIMO/M.E.R.C. Music - Knockout", "tracks": [], "chips": {}, "status": "MISSING", "reason": "被超时熔断禁用，本曲未运行"}], "dur_s": 270.0, "missing": ["BSRNN-SIMO"], "excluded": ["BSRNN-SIMO：被超时熔断禁用，本曲未运行"]}], "groups": [{"id": "G4", "title": "四轨全分离", "note": "4 条轨可同时播放 → 叠出来的就是该模型重建的整曲，可直接与源混音对听。", "color": "#2563eb"}, {"id": "G2", "title": "双总线输出", "note": "只给出 1 条总线，其余成分未建模。", "color": "#7c3aed"}, {"id": "G1", "title": "仅人声单轨", "note": "只出人声。SDR 只评 1 条轨，不能与四轨模型的四轨均值直接比较。", "color": "#b45309"}], "problems": []};
+
+/* ------------------------------------------------------------ state --- */
+const S = {cur:null, playing:false, head:0, sync:false, blind:false, loop:false, raf:null,
+           els:new Map(), active:new Set()};
+const $  = (s,r=document)=>r.querySelector(s);
+const $$ = (s,r=document)=>[...r.querySelectorAll(s)];
+const fmt = t => (!isFinite(t)||t<0) ? "0:00"
+  : Math.floor(t/60)+":"+String(Math.floor(t%60)).padStart(2,"0");
+const toast = m => {const t=$("#toast"); t.textContent=m; t.classList.add("show");
+  clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("show"),1600);};
+
+const songOf = k => DB.songs.find(s=>s.key===k);
+const modelsOf = s => s.models.filter(m=>m.tracks.length);
+
+/* ------------------------------------------------------- kpis/header -- */
+(function kpis(){
+  const nModels = new Set(DB.songs.flatMap(s=>modelsOf(s).map(m=>m.key))).size;
+  const nClips  = DB.songs.reduce((a,s)=>a+modelsOf(s).reduce((b,m)=>b+m.tracks.length,0)
+                                    + s.ref.length, 0);
+  const nMB = Math.round(DB.songs.reduce((a,s)=>
+      a + s.ref.reduce((x,r)=>x+r.mb,0)
+        + modelsOf(s).reduce((b,m)=>b+m.tracks.reduce((x,t)=>x+t.mb,0),0), 0));
+  const kpi=[["3","首歌",DB.songs.map(s=>s.key.split(" - ")[0]).join(" / ")],
+             [nModels+" × 3","模型 × 歌曲", "这 3 首上有实际产出的模型数"],
+             [nClips,"个可播音频", "源混音 + GT 四轨 + 各模型产出"],
+             [nMB+" MB","页面引用音频体积", "无损 FLAC / WAV，播放时按需流式读取"]];
+  $("#kpis").innerHTML = kpi.map(([a,b,c])=>`<div class="kpi"><b>${a}</b>${b}<br>${c}</div>`).join("");
+})();
+
+/* -------------------------------------------------------------- tabs -- */
+const tabs = $("#tabs");
+DB.songs.forEach((s,i)=>{
+  const b=document.createElement("button");
+  b.className="tab"; b.dataset.key=s.key;
+  b.innerHTML = `${s.key}<small>${s.dur_s?s.dur_s.toFixed(0)+"s":""}</small>`;
+  b.onclick=()=>select(s.key);
+  tabs.appendChild(b);
+});
+
+/* --------------------------------------------------------- rendering -- */
+function rowHTML(t, ownerKey, songKey, cls=""){
+  const id = `${songKey}|${ownerKey}|${t.target}`;
+  const meta = [t.sr? (t.sr/1000).toFixed(1)+"kHz":"?", t.ch?t.ch+"ch":"?", 
+                t.dur?t.dur.toFixed(1)+"s":"", t.mb+"MB",
+                (t.peak!=null? "峰值 "+t.peak.toFixed(3) : "")].filter(Boolean).join(" · ");
+  const sdr = (t.sdr!=null) ? `<span class="chip sdr">SDR ${t.sdr.toFixed(2)} dB</span>` : "";
+  const clip = (t.clipped>0)
+      ? `<span class="chip" style="background:#fee2e2;border-color:#fecaca;color:#991b1b"
+           title="波形峰值触顶，人耳听到的是失真/爆音，而不是模型本身的分辨力">削波警告</span>` : "";
+  S.els.set(id, null);
+  return `<div class="row ${cls}" data-id="${id}" data-src="${t.src}">
+    <button class="pl" title="播放/暂停这一轨">▶</button>
+    <div class="nm">${t.label} <span class="chip b-plain">${t.target}</span> ${sdr}${clip}
+      <span class="meta">${meta}</span></div>
+    <div class="bar"><div class="rail"><i></i></div></div>
+    <span class="tm">-:-- / ${t.dur?fmt(t.dur):"-:--"}</span>
+    <input type="range" class="vol" min="0" max="100" value="100" title="音量">
+    <button class="solo" title="独奏这一轨">S</button>
+  </div>`;
+}
+
+function chipLine(m){
+  const c=m.chips||{}, out=[];
+  if(c.wall_s!=null) out.push(`本曲墙钟 <b>${c.wall_s.toFixed(0)}s</b>`);
+  if(c.infer_s!=null) out.push(`推理 ${c.infer_s.toFixed(0)}s`);
+  if(c.overhead_s!=null) out.push(`开销 ${c.overhead_s.toFixed(0)}s`);
+  if(c.out_mb) out.push(`产出 ${c.out_mb.toFixed(0)}MB`);
+  if(c.sdr_mean!=null) out.push(`<span class="chip sdrmean">SDR 均 ${c.sdr_mean.toFixed(2)} dB</span>`);
+  return out.join(" · ") || "本曲无实测指标";
+}
+
+function renderSong(sk){
+  const s = songOf(sk), host = $("#content");
+  let h = "";
+
+  h += `<div class="card"><h2 class="sec" style="margin-top:0">${s.key}</h2>
+        <p class="lead">${s.why}　·　时长 ${s.dur_s?s.dur_s.toFixed(1):"?"} s　·　
+        44.1 kHz / 立体声 / 16 bit。${s.missing.length
+          ?`<b style="color:#b45309">本曲未纳入对比：${s.missing.join("、")}</b>`:""}</p>`;
+  if(s.excluded && s.excluded.length){
+    h += `<div class="note warn"><b>为什么有些模型没有播放器</b>（这些产出被完整性校验挡掉了，不放进对比，
+          否则你会听到一段断掉的音频还以为模型很差）：<ul>`
+       + s.excluded.map(e=>`<li>${e}</li>`).join("") + `</ul></div>`;
+  }
+  h += `<div class="mgroup" style="margin-top:6px"><span class="dot" style="background:var(--ref)"></span>
+        <h3>参考：源混音与官方 GT 分轨</h3>
+        <span class="gn">先把这两组听熟，后面的差异才有参照系</span></div>`;
+  h += `<div class="mcard" style="border-left-color:var(--ref)">`;
+  s.ref.forEach(t=>{ h += rowHTML(t, "REF", sk); });
+  h += `<div class="mnote">把「GT 人声/鼓/贝斯/其他」四行在叠听模式下同时点亮，
+        得到的就是源混音本身（可用来校准音量与你的听觉）。</div></div>`;
+
+  for(const g of DB.groups){
+    const ms = s.models.filter(m=>m.grp===g.id);
+    if(!ms.length) continue;
+    h += `<div class="grpwrap" data-g="${g.id}">
+          <div class="mgroup"><span class="dot" style="background:${g.color}"></span>
+          <h3>${g.title}</h3><span class="gn">${g.note}</span></div>`;
+    ms.forEach((m,gi)=>{
+      const miss = m.tracks.length===0;
+      h += `<div class="mcard ${g.id.toLowerCase()} ${miss?"missing":""}" data-model="${m.key}"
+              data-code="${codeFor(sk,m.key)}" data-idx="${gi}">
+        <div class="mhead">
+          <span class="idx">${gi+1}</span>
+          <span class="realname">${m.label}</span>
+          <span class="codename">${codeFor(sk,m.key)}</span>
+          <span class="chip">${m.tracks.length?m.tracks.length+" 轨输出":"无产出"}</span>
+          ${m.note?`<span class="chip">${m.note}</span>`:""}
+          <div class="macts">
+            ${miss?"":`<button class="act" data-a="all" data-m="${m.key}">全轨叠播</button>`}
+            ${m.tracks.some(t=>t.target==="vocals"||t.target==="vocals+other")
+                ?`<button class="act" data-a="voc" data-m="${m.key}">仅人声</button>`:""}
+            ${m.tracks.length>1?`<button class="act" data-a="inst" data-m="${m.key}">仅伴奏</button>`:""}
+          </div>
+        </div>
+        <div class="mnote">${miss? "<b style='color:#b91c1c'>本曲无有效产出</b> —— "+m.reason : chipLine(m)}</div>
+        ${m.tracks.map(t=>rowHTML(t, m.key, sk)).join("")}
+      </div>`;
+    });
+    h += `</div>`;
+  }
+  host.innerHTML = h + "</div>";
+}
+
+function codeFor(sk, mk){
+  /* deterministic per-song shuffle: same load -> same code, but the code and
+     the card order carry no information about the model's identity or score. */
+  const keys = modelsOf(songOf(sk)).map(m=>m.key);
+  let seed = 2166136261;
+  for(const ch of sk) seed = ((seed ^ ch.charCodeAt(0)) * 16777619) >>> 0;
+  const rnd = n => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed % n; };
+  const order = keys.slice();
+  for(let i=order.length-1;i>0;i--){ const j=rnd(i+1); [order[i],order[j]]=[order[j],order[i]]; }
+  const pos = order.indexOf(mk);
+  return "样本 " + (pos<0 ? "?" : String.fromCharCode(65+pos));
+}
+
+/* ----------------------------------------------------------- audio ---- */
+function audioFor(id){
+  let a = S.els.get(id);
+  if(a) return a;
+  const row = $(`.row[data-id="${CSS.escape(id)}"]`);
+  if(!row) return null;
+  a = new Audio();
+  a.preload = "metadata";
+  a.src = row.dataset.src;
+  a.volume = 1;
+  a.addEventListener("loadedmetadata", ()=>{
+    row.querySelector(".tm").textContent = "-:-- / " + fmt(a.duration);
+  });
+  a.addEventListener("error", ()=>{
+    toast("音频加载失败：" + row.dataset.src.split("/").pop() + "（请用 start_listen.bat 打开）");
+    row.querySelector(".nm").insertAdjacentHTML("beforeend",
+      ' <span class="badge b-warn">加载失败</span>');
+  });
+  a.addEventListener("play", ()=>row.classList.add("playing"));
+  a.addEventListener("pause", ()=>row.classList.remove("playing"));
+  S.els.set(id, a);
+  return a;
+}
+
+function activeList(){ return [...S.active].map(id=>({id, a:audioFor(id)})).filter(x=>x.a); }
+
+function ensureRAF(){
+  if(S.raf) return;
+  const tick = ()=>{
+    const live = activeList().filter(x=>!x.a.paused);
+    if(!live.length){ S.raf=null; S.playing=false; paintUI(); return; }
+    const lead = live[0].a;
+    S.head = lead.currentTime;
+    live.forEach(({a})=>{
+      if(a===lead) return;
+      if(Math.abs(a.currentTime - S.head) > 0.12) a.currentTime = S.head;
+    });
+    paintUI();
+    if(S.loop&&lead.duration&&lead.currentTime>=lead.duration-0.06){
+      S.head=0; live.forEach(({a})=>a.currentTime=0);
+    }
+    S.raf = requestAnimationFrame(tick);
+  };
+  S.raf = requestAnimationFrame(tick);
+}
+
+function playActive(){
+  const list = activeList();
+  if(!list.length){ toast("先点亮一首轨（▶ 或 全轨叠播）"); return; }
+  list.forEach(({a})=>{
+    if(Math.abs(a.currentTime - S.head) > 0.15) a.currentTime = S.head;
+    const pr = a.play();
+    if(pr&&pr.catch) pr.catch(()=>{});
+  });
+  S.playing = true; ensureRAF(); paintUI();
+}
+
+function pauseAll(){
+  activeList().forEach(({a})=>a.pause());
+  S.playing=false; if(S.raf){cancelAnimationFrame(S.raf); S.raf=null;} paintUI();
+}
+
+function hardStop(){
+  pauseAll();
+  [...S.els.values()].forEach(a=>{ if(a){ a.pause(); a.currentTime=0; } });
+  S.active.clear(); S.head=0;
+  $$(".row").forEach(r=>{
+    r.classList.remove("on","playing");
+    const f=r.querySelector(".bar .rail i"); if(f) f.style.width="0%";
+  });
+  paintUI();
+}
+
+function toggleRow(id, exclusive){
+  const a = audioFor(id); if(!a) return;
+  if(!S.sync || exclusive){
+    const wasActive = !!S.els.get(id) && S.active.has(id) && !a.paused;
+    S.active.clear();
+    if(wasActive && exclusive){ a.pause(); S.playing=false; syncRows(); paintUI(); return; }
+    S.active.add(id);
+  } else {
+    if(S.active.has(id)){ S.active.delete(id); a.pause(); syncRows(); paintUI();
+      if(!activeList().some(x=>!x.a.paused)) pauseAll(); return; }
+    S.active.add(id);
+  }
+  a.currentTime = S.head;
+  playActive(); syncRows();
+}
+
+function syncRows(){
+  $$(".row").forEach(r=>r.classList.toggle("on", S.active.has(r.dataset.id)));
+}
+
+function paintUI(){
+  const s = songOf(S.cur);
+  const dur = s ? (s.dur_s||0) : 0;
+  $("#time").textContent = fmt(S.head)+" / "+fmt(dur);
+  const pct = dur? (S.head/dur*100) : 0;
+  $$(".seek .rail i").forEach(e=>e.style.width=pct+"%");
+  const k = $(".seek .rail b"); if(k) k.style.left=pct+"%";
+  $("#pp").textContent = S.playing ? "⏸ 暂停" : "▶ 播放";
+  /* per-row bars */
+  activeList().forEach(({id,a})=>{
+    const row=$(`.row[data-id="${CSS.escape(id)}"]`); if(!row) return;
+    const d=a.duration||dur||1;
+    row.querySelector(".bar .rail i").style.width = (a.currentTime/d*100)+"%";
+    row.querySelector(".tm").textContent = fmt(a.currentTime)+" / "+fmt(a.duration||dur);
+  });
+  $("#mode").textContent = (S.sync?"▣ 叠听：开":"▢ 叠听：关");
+  $("#mode").classList.toggle("on", S.sync);
+  $("#loop").classList.toggle("on", S.loop);
+  $("#blind").textContent = (S.blind?"👁 盲听：开":"👁 盲听：关");
+  $("#blind").classList.toggle("on", S.blind);
+}
+
+function seekTo(t){
+  const s=songOf(S.cur); const dur=(s&&s.dur_s)||0;
+  S.head = Math.max(0, Math.min(t, dur? dur-0.05 : t));
+  activeList().forEach(({a})=>{ a.currentTime=S.head; });
+  paintUI();
+}
+
+/* ------------------------------------------------------------ events -- */
+function select(sk){
+  hardStop();
+  S.els.clear(); S.active.clear();
+  S.cur = sk;
+  document.body.classList.toggle("blind", S.blind);
+  $$(".tab").forEach(t=>t.classList.toggle("on", t.dataset.key===sk));
+  renderSong(sk);
+  reorderCards();
+  syncRows(); paintUI();
+  if(S.blind){ renderReveal(); } else { $("#revealbox").classList.add("hidden"); }
+}
+
+$("#content").addEventListener("click", ev=>{
+  const row = ev.target.closest(".row");
+  if(row && (ev.target.closest(".pl")||ev.target.closest(".solo")||ev.target.closest(".nm"))){
+    toggleRow(row.dataset.id, !!ev.target.closest(".solo") || !S.sync); return;
+  }
+  if(row && ev.target.closest(".bar")){
+    const r=ev.target.closest(".bar").getBoundingClientRect();
+    const frac=Math.max(0,Math.min(1,(ev.clientX-r.left)/r.width));
+    const s=songOf(S.cur); seekTo(frac*((s&&s.dur_s)||0)); return;
+  }
+  const act = ev.target.closest(".act");
+  if(act){
+    const m = act.dataset.m, k = act.dataset.a;
+    const rec = songOf(S.cur).models.find(x=>x.key===m); if(!rec) return;
+    let pick = rec.tracks;
+    if(k==="voc") pick = rec.tracks.filter(t=>t.target.includes("vocals"));
+    if(k==="inst") pick = rec.tracks.filter(t=>t.target!=="vocals");
+    if(!S.sync){ S.sync=true; }
+    S.active.clear();
+    pick.forEach(t=>S.active.add(`${S.cur}|${m}|${t.target}`));
+    activeList().forEach(({a})=>a.pause());
+    S.head = Math.max(0, S.head);
+    playActive(); syncRows(); paintUI();
+    return;
+  }
+});
+$("#content").addEventListener("input", ev=>{
+  if(ev.target.classList.contains("vol")){
+    const id = ev.target.closest(".row").dataset.id;
+    const a = audioFor(id); if(a) a.volume = ev.target.value/100;
+  }
+});
+
+$("#pp").onclick = ()=>S.playing? pauseAll() : playActive();
+$("#stop").onclick = ()=>hardStop();
+$("#back").onclick = ()=>seekTo(S.head-5);
+$("#fwd").onclick  = ()=>seekTo(S.head+5);
+$("#loop").onclick = ()=>{S.loop=!S.loop; paintUI();};
+$("#mode").onclick = ()=>{S.sync=!S.sync; if(!S.sync){ pauseAll(); }
+  toast(S.sync?"叠听已开：可同时点亮多行":"叠听已关：一次只播一行"); paintUI();};
+function reorderCards(){
+  $$(".grpwrap").forEach(w=>{
+    const cards=[...$$(".mcard", w)];
+    const keyOf = c => S.blind ? c.dataset.code : String(+c.dataset.idx).padStart(3,"0");
+    cards.sort((a,b)=> keyOf(a).localeCompare(keyOf(b)));
+    cards.forEach(c=>w.appendChild(c));
+    cards.forEach((c,i)=>{ const ix=c.querySelector(".idx"); if(ix) ix.textContent=i+1; });
+  });
+}
+
+$("#blind").onclick = ()=>{
+  S.blind=!S.blind; document.body.classList.toggle("blind", S.blind);
+  hardStop();
+  reorderCards();
+  $("#revealbox").classList.add("hidden");
+  if(S.blind) renderReveal();
+  paintUI();
+  toast(S.blind?"盲听已开：模型名换成代号，组内顺序已打乱":"盲听已关：已恢复模型名与原始顺序");
+};
+$("#reveal").onclick = ()=>{
+  if(!$("#revealtable").innerHTML) renderReveal();
+  $("#revealbox").classList.toggle("hidden");
+};
+function renderReveal(){
+  const s=songOf(S.cur);
+  const rows = modelsOf(s).map(m=>`<tr><td><b>${codeFor(S.cur,m.key)}</b></td>
+      <td>${m.label}</td><td>${m.tracks.length} 轨</td>
+      <td>${m.chips.sdr_mean!=null?m.chips.sdr_mean.toFixed(2)+" dB":"—"}</td></tr>`).join("");
+  $("#revealtable").innerHTML = `<table><thead><tr><th>代号</th><th>模型</th>
+      <th>输出轨数</th><th>本曲 SDR 均</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+
+$("#seek").onclick = ev=>{
+  const r=$("#seek").getBoundingClientRect();
+  const frac=Math.max(0,Math.min(1,(ev.clientX-r.left)/r.width));
+  const s=songOf(S.cur); seekTo(frac*((s&&s.dur_s)||0));
+};
+document.addEventListener("keydown", ev=>{
+  const t = ev.target;
+  if(t && t.tagName && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)) return;
+  if(ev.code==="Space"){ ev.preventDefault(); S.playing?pauseAll():playActive(); }
+  else if(ev.key==="ArrowLeft"){ seekTo(S.head-5); }
+  else if(ev.key==="ArrowRight"){ seekTo(S.head+5); }
+  else if(ev.key==="0"){ hardStop(); }
+  else if(/^[1-9]$/.test(ev.key)){
+    const cards=$$(".mcard").filter(c=>!c.classList.contains("missing"));
+    const c=cards[+ev.key-1]; if(!c) return;
+    const m=c.dataset.model;
+    S.sync=true;
+    S.active.clear();
+    songOf(S.cur).models.find(x=>x.key===m).tracks
+      .forEach(t=>S.active.add(`${S.cur}|${m}|${t.target}`));
+    activeList().forEach(({a})=>a.pause());
+    playActive(); syncRows(); paintUI();
+  }
+});
+
+$("#foot").innerHTML = "数据来源：本机 03_outputs/_test_run/ 与 02_databases/MUSDB18-HQ/test/ 的实测产出 · "
+  + "未使用任何网络数据 · 页面生成于 " + new Date().toLocaleString("zh-CN")
+  + "<br>若音频无法播放，请双击 E:\\FYP_HKBU\\start_listen.bat 后访问 http://127.0.0.1:8123/04_reports/html/listen_compare.html";
+
+select(DB.songs[0].key);
+</script>
+</body>
+</html>

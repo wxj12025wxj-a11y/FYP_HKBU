@@ -1,0 +1,551 @@
+{
+ "oracle": {
+  "label": "IRM/IBM Oracle",
+  "n_clips": 3,
+  "clips": [
+   "ANiMAL - Clinic A",
+   "Creepoid - OldTree",
+   "Dark Ride - Burning Bridges"
+  ],
+  "sdr": {
+   "bass": {
+    "median": 8.548,
+    "n": 3
+   },
+   "drums": {
+    "median": 8.477,
+    "n": 3
+   },
+   "other": {
+    "median": 6.154,
+    "n": 3
+   },
+   "vocals": {
+    "median": 10.033,
+    "n": 3
+   }
+  },
+  "si_sdr": {
+   "bass": {
+    "median": 7.803,
+    "n": 3
+   },
+   "drums": {
+    "median": 7.919,
+    "n": 3
+   },
+   "other": {
+    "median": 4.942,
+    "n": 3
+   },
+   "vocals": {
+    "median": 11.176,
+    "n": 3
+   }
+  },
+  "rtf": 0.0071,
+  "sdr_avg4": 8.303
+ },
+ "mmdenselstm": {
+  "label": "MMDenseLSTM",
+  "n_clips": 3,
+  "clips": [
+   "ANiMAL - Clinic A",
+   "Creepoid - OldTree",
+   "Dark Ride - Burning Bridges"
+  ],
+  "sdr": {
+   "bass": {
+    "median": 7.355,
+    "n": 3
+   },
+   "drums": {
+    "median": 7.147,
+    "n": 3
+   },
+   "other": {
+    "median": 4.956,
+    "n": 3
+   },
+   "vocals": {
+    "median": 5.603,
+    "n": 3
+   }
+  },
+  "si_sdr": {
+   "bass": {
+    "median": 6.623,
+    "n": 3
+   },
+   "drums": {
+    "median": 6.093,
+    "n": 3
+   },
+   "other": {
+    "median": 2.932,
+    "n": 3
+   },
+   "vocals": {
+    "median": 7.129,
+    "n": 3
+   }
+  },
+  "rtf": 0.0822,
+  "sdr_avg4": 6.26525
+ },
+ "rpca": {
+  "label": "RPCA",
+  "n_clips": 3,
+  "clips": [
+   "ANiMAL - Clinic A",
+   "Creepoid - OldTree",
+   "Dark Ride - Burning Bridges"
+  ],
+  "sdr": {
+   "vocals": {
+    "median": null,
+    "n": 0
+   }
+  },
+  "si_sdr": {
+   "vocals": {
+    "median": -3.694,
+    "n": 3
+   }
+  },
+  "rtf": 4.5644,
+  "sdr_avg4": null
+ },
+ "umx": {
+  "label": "Open-Unmix",
+  "n_clips": 3,
+  "clips": [
+   "ANiMAL - Clinic A",
+   "Creepoid - OldTree",
+   "Dark Ride - Burning Bridges"
+  ],
+  "sdr": {
+   "bass": {
+    "median": 8.351,
+    "n": 3
+   },
+   "drums": {
+    "median": 7.31,
+    "n": 3
+   },
+   "other": {
+    "median": 4.903,
+    "n": 3
+   },
+   "vocals": {
+    "median": 6.047,
+    "n": 3
+   }
+  },
+  "si_sdr": {
+   "bass": {
+    "median": 7.447,
+    "n": 3
+   },
+   "drums": {
+    "median": 7.087,
+    "n": 3
+   },
+   "other": {
+    "median": 2.802,
+    "n": 3
+   },
+   "vocals": {
+    "median": 7.548,
+    "n": 3
+   }
+  },
+  "rtf": 0.0588,
+  "sdr_avg4": 6.65275
+ },
+ "mdx": {
+  "label": "MDX-Net",
+  "n_clips": 3,
+  "clips": [
+   "ANiMAL - Clinic A",
+   "Creepoid - OldTree",
+   "Dark Ride - Burning Bridges"
+  ],
+  "sdr": {
+   "bass": {
+    "median": 12.977,
+    "n": 3
+   },
+   "drums": {
+    "median": 8.649,
+    "n": 3
+   },
+   "other": {
+    "median": 6.262,
+    "n": 3
+   },
+   "vocals": {
+    "median": 7.966,
+    "n": 3
+   }
+  },
+  "si_sdr": {
+   "bass": {
+    "median": 12.333,
+    "n": 3
+   },
+   "drums": {
+    "median": 7.89,
+    "n": 3
+   },
+   "other": {
+    "median": 4.637,
+    "n": 3
+   },
+   "vocals": {
+    "median": 8.462,
+    "n": 3
+   }
+  },
+  "rtf": 0.1374,
+  "sdr_avg4": 8.9635
+ },
+ "convtasnet": {
+  "label": "Conv-TasNet",
+  "n_clips": 3,
+  "clips": [
+   "ANiMAL - Clinic A",
+   "Creepoid - OldTree",
+   "Dark Ride - Burning Bridges"
+  ],
+  "sdr": {
+   "bass": {
+    "median": 9.294,
+    "n": 3
+   },
+   "drums": {
+    "median": 7.776,
+    "n": 3
+   },
+   "other": {
+    "median": 1.656,
+    "n": 3
+   },
+   "vocals": {
+    "median": 4.998,
+    "n": 3
+   }
+  },
+  "si_sdr": {
+   "bass": {
+    "median": 8.247,
+    "n": 3
+   },
+   "drums": {
+    "median": 7.175,
+    "n": 3
+   },
+   "other": {
+    "median": -1.139,
+    "n": 3
+   },
+   "vocals": {
+    "median": 4.063,
+    "n": 3
+   }
+  },
+  "rtf": 0.1763,
+  "sdr_avg4": 5.931
+ },
+ "bsroformer_l12": {
+  "label": "BS-RoFormer L12",
+  "n_clips": 3,
+  "clips": [
+   "ANiMAL - Clinic A",
+   "Creepoid - OldTree",
+   "Dark Ride - Burning Bridges"
+  ],
+  "sdr": {
+   "vocals": {
+    "median": 9.689,
+    "n": 3
+   }
+  },
+  "si_sdr": {
+   "vocals": {
+    "median": 9.17,
+    "n": 3
+   }
+  },
+  "rtf": 0.4942,
+  "sdr_avg4": null,
+  "single_target": {
+   "name": "vocals",
+   "sdr_median": 9.689,
+   "si_sdr_median": 9.17
+  }
+ },
+ "bsroformer_l6": {
+  "label": "BS-RoFormer L6",
+  "n_clips": 3,
+  "clips": [
+   "ANiMAL - Clinic A",
+   "Creepoid - OldTree",
+   "Dark Ride - Burning Bridges"
+  ],
+  "sdr": {
+   "vocals+other": {
+    "median": 10.064,
+    "n": 3
+   }
+  },
+  "si_sdr": {
+   "vocals+other": {
+    "median": 8.679,
+    "n": 3
+   }
+  },
+  "rtf": 0.227,
+  "sdr_avg4": null,
+  "single_target": {
+   "name": "vocals+other",
+   "sdr_median": 10.064,
+   "si_sdr_median": 8.679
+  }
+ },
+ "bsrnn_all": {
+  "label": "oBSRNN (4 ckpt)",
+  "n_clips": 3,
+  "clips": [
+   "ANiMAL - Clinic A",
+   "Creepoid - OldTree",
+   "Dark Ride - Burning Bridges"
+  ],
+  "sdr": {
+   "bass": {
+    "median": 11.917,
+    "n": 3
+   },
+   "drums": {
+    "median": 9.193,
+    "n": 3
+   },
+   "other": {
+    "median": 6.367,
+    "n": 3
+   },
+   "vocals": {
+    "median": 9.168,
+    "n": 3
+   }
+  },
+  "si_sdr": {
+   "bass": {
+    "median": 10.738,
+    "n": 3
+   },
+   "drums": {
+    "median": 8.97,
+    "n": 3
+   },
+   "other": {
+    "median": 4.667,
+    "n": 3
+   },
+   "vocals": {
+    "median": 8.674,
+    "n": 3
+   }
+  },
+  "rtf": 0.4182,
+  "sdr_avg4": 9.161249999999999
+ },
+ "bsrnn_large_all": {
+  "label": "BSRNN large (4 ckpt)",
+  "n_clips": 3,
+  "clips": [
+   "ANiMAL - Clinic A",
+   "Creepoid - OldTree",
+   "Dark Ride - Burning Bridges"
+  ],
+  "sdr": {
+   "bass": {
+    "median": 10.66,
+    "n": 3
+   },
+   "drums": {
+    "median": 9.242,
+    "n": 3
+   },
+   "other": {
+    "median": 5.494,
+    "n": 3
+   },
+   "vocals": {
+    "median": 8.28,
+    "n": 3
+   }
+  },
+  "si_sdr": {
+   "bass": {
+    "median": 9.27,
+    "n": 3
+   },
+   "drums": {
+    "median": 9.266,
+    "n": 3
+   },
+   "other": {
+    "median": 3.784,
+    "n": 3
+   },
+   "vocals": {
+    "median": 8.524,
+    "n": 3
+   }
+  },
+  "rtf": 0.3209,
+  "sdr_avg4": 8.419
+ },
+ "bsrnn_simo": {
+  "label": "oBSRNN-SIMO",
+  "n_clips": 3,
+  "clips": [
+   "ANiMAL - Clinic A",
+   "Creepoid - OldTree",
+   "Dark Ride - Burning Bridges"
+  ],
+  "sdr": {
+   "bass": {
+    "median": 11.722,
+    "n": 3
+   },
+   "drums": {
+    "median": 9.661,
+    "n": 3
+   },
+   "other": {
+    "median": 7.032,
+    "n": 3
+   },
+   "vocals": {
+    "median": 8.651,
+    "n": 3
+   }
+  },
+  "si_sdr": {
+   "bass": {
+    "median": 10.475,
+    "n": 3
+   },
+   "drums": {
+    "median": 9.784,
+    "n": 3
+   },
+   "other": {
+    "median": 5.474,
+    "n": 3
+   },
+   "vocals": {
+    "median": 8.977,
+    "n": 3
+   }
+  },
+  "rtf": 0.1914,
+  "sdr_avg4": 9.2665
+ },
+ "demucs": {
+  "label": "Demucs (htdemucs)",
+  "n_clips": 3,
+  "clips": [
+   "ANiMAL - Clinic A",
+   "Creepoid - OldTree",
+   "Dark Ride - Burning Bridges"
+  ],
+  "sdr": {
+   "bass": {
+    "median": 10.869,
+    "n": 3
+   },
+   "drums": {
+    "median": 8.964,
+    "n": 3
+   },
+   "other": {
+    "median": 5.494,
+    "n": 3
+   },
+   "vocals": {
+    "median": 7.108,
+    "n": 3
+   }
+  },
+  "si_sdr": {
+   "bass": {
+    "median": 9.881,
+    "n": 3
+   },
+   "drums": {
+    "median": 8.73,
+    "n": 3
+   },
+   "other": {
+    "median": 3.495,
+    "n": 3
+   },
+   "vocals": {
+    "median": 8.172,
+    "n": 3
+   }
+  },
+  "rtf": 0.0278,
+  "sdr_avg4": 8.10875
+ },
+ "dprnn": {
+  "label": "DPRNN (自训, 4-stem)",
+  "n_clips": 3,
+  "clips": [
+   "ANiMAL - Clinic A",
+   "Creepoid - OldTree",
+   "Dark Ride - Burning Bridges"
+  ],
+  "sdr": {
+   "bass": {
+    "median": -0.823,
+    "n": 3
+   },
+   "drums": {
+    "median": -1.86,
+    "n": 3
+   },
+   "other": {
+    "median": -2.024,
+    "n": 3
+   },
+   "vocals": {
+    "median": -2.178,
+    "n": 3
+   }
+  },
+  "si_sdr": {
+   "bass": {
+    "median": 5.051,
+    "n": 3
+   },
+   "drums": {
+    "median": 4.779,
+    "n": 3
+   },
+   "other": {
+    "median": -2.989,
+    "n": 3
+   },
+   "vocals": {
+    "median": 3.342,
+    "n": 3
+   }
+  },
+  "rtf": 0.031,
+  "sdr_avg4": -1.72125
+ }
+}

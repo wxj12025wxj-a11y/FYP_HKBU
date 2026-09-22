@@ -1,0 +1,6 @@
+{
+ "model_key": "rpca",
+ "status": "NO_MODULE",
+ "note": "analytic / classical: no nn.Module in the loader closure",
+ "load_s": 0.104
+}

@@ -1,0 +1,1001 @@
+{
+ "../../02_databases/MUSDB18-HQ/test/Georgia%20Wonder%20-%20Siren/mixture.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.123377,
+  "peak": 1.0,
+  "clipped": 1
+ },
+ "../../02_databases/MUSDB18-HQ/test/Georgia%20Wonder%20-%20Siren/vocals.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.051402,
+  "peak": 0.47464,
+  "clipped": 0
+ },
+ "../../02_databases/MUSDB18-HQ/test/Georgia%20Wonder%20-%20Siren/drums.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.065488,
+  "peak": 0.565491,
+  "clipped": 0
+ },
+ "../../02_databases/MUSDB18-HQ/test/Georgia%20Wonder%20-%20Siren/bass.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.065624,
+  "peak": 0.308838,
+  "clipped": 0
+ },
+ "../../02_databases/MUSDB18-HQ/test/Georgia%20Wonder%20-%20Siren/other.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.065277,
+  "peak": 0.609985,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/BS-RoFormer-L12/Georgia%20Wonder%20-%20Siren/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.048803,
+  "peak": 0.483002,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/BSRNN-opt/Georgia%20Wonder%20-%20Siren/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.045495,
+  "peak": 0.461914,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/BSRNN-large/Georgia%20Wonder%20-%20Siren/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.047952,
+  "peak": 0.472717,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/BS-RoFormer-L6/Georgia%20Wonder%20-%20Siren/vocals+other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.079228,
+  "peak": 0.748322,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MDX-Net/Georgia%20Wonder%20-%20Siren/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.045867,
+  "peak": 0.508453,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MDX-Net/Georgia%20Wonder%20-%20Siren/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.062602,
+  "peak": 0.734009,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MDX-Net/Georgia%20Wonder%20-%20Siren/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.06491,
+  "peak": 0.323669,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MDX-Net/Georgia%20Wonder%20-%20Siren/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.059126,
+  "peak": 0.616211,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Demucs/Georgia%20Wonder%20-%20Siren/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.046595,
+  "peak": 0.495422,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Demucs/Georgia%20Wonder%20-%20Siren/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.062695,
+  "peak": 0.739685,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Demucs/Georgia%20Wonder%20-%20Siren/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.063612,
+  "peak": 0.362,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Demucs/Georgia%20Wonder%20-%20Siren/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.058968,
+  "peak": 0.664215,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Oracle-IRM/Georgia%20Wonder%20-%20Siren/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.039608,
+  "peak": 0.411865,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Oracle-IRM/Georgia%20Wonder%20-%20Siren/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.052709,
+  "peak": 0.643585,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Oracle-IRM/Georgia%20Wonder%20-%20Siren/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.057224,
+  "peak": 0.295807,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Oracle-IRM/Georgia%20Wonder%20-%20Siren/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.048307,
+  "peak": 0.492584,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Conv-TasNet/Georgia%20Wonder%20-%20Siren/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.04165,
+  "peak": 0.43512,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Conv-TasNet/Georgia%20Wonder%20-%20Siren/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.06193,
+  "peak": 0.879791,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Conv-TasNet/Georgia%20Wonder%20-%20Siren/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.061176,
+  "peak": 0.408722,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Conv-TasNet/Georgia%20Wonder%20-%20Siren/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.051512,
+  "peak": 0.550323,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Open-Unmix/Georgia%20Wonder%20-%20Siren/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.047792,
+  "peak": 0.463928,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Open-Unmix/Georgia%20Wonder%20-%20Siren/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.056225,
+  "peak": 0.808716,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Open-Unmix/Georgia%20Wonder%20-%20Siren/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.059829,
+  "peak": 0.372955,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Open-Unmix/Georgia%20Wonder%20-%20Siren/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.054611,
+  "peak": 0.517731,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MMDenseLSTM/Georgia%20Wonder%20-%20Siren/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.053316,
+  "peak": 0.529388,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MMDenseLSTM/Georgia%20Wonder%20-%20Siren/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.057643,
+  "peak": 0.689545,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MMDenseLSTM/Georgia%20Wonder%20-%20Siren/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.061121,
+  "peak": 0.337463,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MMDenseLSTM/Georgia%20Wonder%20-%20Siren/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.050509,
+  "peak": 0.584534,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/DPRNN/Georgia%20Wonder%20-%20Siren/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.085846,
+  "peak": 0.873962,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/DPRNN/Georgia%20Wonder%20-%20Siren/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.090111,
+  "peak": 1.0,
+  "clipped": 2882
+ },
+ "../../03_outputs/_test_run/DPRNN/Georgia%20Wonder%20-%20Siren/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.113125,
+  "peak": 0.840759,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/DPRNN/Georgia%20Wonder%20-%20Siren/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 430.375,
+  "rms": 0.086127,
+  "peak": 0.819733,
+  "clipped": 0
+ },
+ "../../02_databases/MUSDB18-HQ/test/PR%20-%20Oh%20No/mixture.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.127603,
+  "peak": 0.948975,
+  "clipped": 0
+ },
+ "../../02_databases/MUSDB18-HQ/test/PR%20-%20Oh%20No/vocals.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.017811,
+  "peak": 0.481598,
+  "clipped": 0
+ },
+ "../../02_databases/MUSDB18-HQ/test/PR%20-%20Oh%20No/drums.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.11912,
+  "peak": 0.70401,
+  "clipped": 0
+ },
+ "../../02_databases/MUSDB18-HQ/test/PR%20-%20Oh%20No/bass.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.074359,
+  "peak": 0.4216,
+  "clipped": 0
+ },
+ "../../02_databases/MUSDB18-HQ/test/PR%20-%20Oh%20No/other.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.047668,
+  "peak": 0.4758,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/BS-RoFormer-L12/PR%20-%20Oh%20No/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.006667,
+  "peak": 0.175262,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/BSRNN-large/PR%20-%20Oh%20No/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.009095,
+  "peak": 0.242523,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/BSRNN-opt/PR%20-%20Oh%20No/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.008932,
+  "peak": 0.26004,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/BS-RoFormer-L6/PR%20-%20Oh%20No/vocals+other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.076149,
+  "peak": 0.86496,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Oracle-IRM/PR%20-%20Oh%20No/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.010712,
+  "peak": 0.315704,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Oracle-IRM/PR%20-%20Oh%20No/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.088169,
+  "peak": 0.486572,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Oracle-IRM/PR%20-%20Oh%20No/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.064634,
+  "peak": 0.417694,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Oracle-IRM/PR%20-%20Oh%20No/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.030978,
+  "peak": 0.311005,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MDX-Net/PR%20-%20Oh%20No/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.011952,
+  "peak": 0.353302,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MDX-Net/PR%20-%20Oh%20No/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.092396,
+  "peak": 0.692139,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MDX-Net/PR%20-%20Oh%20No/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.06684,
+  "peak": 0.481628,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MDX-Net/PR%20-%20Oh%20No/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.036023,
+  "peak": 0.429352,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Conv-TasNet/PR%20-%20Oh%20No/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.005486,
+  "peak": 0.238861,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Conv-TasNet/PR%20-%20Oh%20No/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.086057,
+  "peak": 0.714691,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Conv-TasNet/PR%20-%20Oh%20No/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.054207,
+  "peak": 0.472595,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Conv-TasNet/PR%20-%20Oh%20No/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.047503,
+  "peak": 0.608917,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Demucs/PR%20-%20Oh%20No/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.008847,
+  "peak": 0.277557,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Demucs/PR%20-%20Oh%20No/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.093894,
+  "peak": 0.684418,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Demucs/PR%20-%20Oh%20No/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.054887,
+  "peak": 0.490448,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Demucs/PR%20-%20Oh%20No/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.051536,
+  "peak": 0.553619,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MMDenseLSTM/PR%20-%20Oh%20No/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.010301,
+  "peak": 0.390503,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MMDenseLSTM/PR%20-%20Oh%20No/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.099631,
+  "peak": 0.82663,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MMDenseLSTM/PR%20-%20Oh%20No/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.047346,
+  "peak": 0.409088,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MMDenseLSTM/PR%20-%20Oh%20No/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.049218,
+  "peak": 0.568481,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Open-Unmix/PR%20-%20Oh%20No/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.020481,
+  "peak": 0.374939,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Open-Unmix/PR%20-%20Oh%20No/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.095327,
+  "peak": 0.785492,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Open-Unmix/PR%20-%20Oh%20No/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.044758,
+  "peak": 0.446411,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Open-Unmix/PR%20-%20Oh%20No/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.052026,
+  "peak": 0.60498,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/DPRNN/PR%20-%20Oh%20No/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.084462,
+  "peak": 0.849487,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/DPRNN/PR%20-%20Oh%20No/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.17888,
+  "peak": 1.0,
+  "clipped": 324
+ },
+ "../../03_outputs/_test_run/DPRNN/PR%20-%20Oh%20No/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.060771,
+  "peak": 0.453217,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/DPRNN/PR%20-%20Oh%20No/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 76.194,
+  "rms": 0.048324,
+  "peak": 0.552704,
+  "clipped": 0
+ },
+ "../../02_databases/MUSDB18-HQ/test/M.E.R.C.%20Music%20-%20Knockout/mixture.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.101583,
+  "peak": 0.999969,
+  "clipped": 1
+ },
+ "../../02_databases/MUSDB18-HQ/test/M.E.R.C.%20Music%20-%20Knockout/vocals.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.06448,
+  "peak": 0.733063,
+  "clipped": 0
+ },
+ "../../02_databases/MUSDB18-HQ/test/M.E.R.C.%20Music%20-%20Knockout/drums.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.052509,
+  "peak": 0.526855,
+  "clipped": 0
+ },
+ "../../02_databases/MUSDB18-HQ/test/M.E.R.C.%20Music%20-%20Knockout/bass.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.033095,
+  "peak": 0.087524,
+  "clipped": 0
+ },
+ "../../02_databases/MUSDB18-HQ/test/M.E.R.C.%20Music%20-%20Knockout/other.wav": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.048018,
+  "peak": 0.435486,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/BS-RoFormer-L12/M.E.R.C.%20Music%20-%20Knockout/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.063547,
+  "peak": 0.741547,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/BSRNN-opt/M.E.R.C.%20Music%20-%20Knockout/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.060853,
+  "peak": 0.724426,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/BSRNN-large/M.E.R.C.%20Music%20-%20Knockout/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.061035,
+  "peak": 0.719238,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/BS-RoFormer-L6/M.E.R.C.%20Music%20-%20Knockout/vocals+other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.080877,
+  "peak": 0.811829,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MDX-Net/M.E.R.C.%20Music%20-%20Knockout/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.06128,
+  "peak": 0.715332,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MDX-Net/M.E.R.C.%20Music%20-%20Knockout/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.051003,
+  "peak": 0.575897,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MDX-Net/M.E.R.C.%20Music%20-%20Knockout/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.033083,
+  "peak": 0.1008,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MDX-Net/M.E.R.C.%20Music%20-%20Knockout/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.042953,
+  "peak": 0.408691,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Demucs/M.E.R.C.%20Music%20-%20Knockout/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.061456,
+  "peak": 0.711731,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Demucs/M.E.R.C.%20Music%20-%20Knockout/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.05027,
+  "peak": 0.560638,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Demucs/M.E.R.C.%20Music%20-%20Knockout/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.03376,
+  "peak": 0.109863,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Demucs/M.E.R.C.%20Music%20-%20Knockout/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.043197,
+  "peak": 0.394867,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Oracle-IRM/M.E.R.C.%20Music%20-%20Knockout/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.048258,
+  "peak": 0.615265,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Oracle-IRM/M.E.R.C.%20Music%20-%20Knockout/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.04465,
+  "peak": 0.456268,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Oracle-IRM/M.E.R.C.%20Music%20-%20Knockout/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.028405,
+  "peak": 0.099396,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Oracle-IRM/M.E.R.C.%20Music%20-%20Knockout/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.037726,
+  "peak": 0.318787,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MMDenseLSTM/M.E.R.C.%20Music%20-%20Knockout/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.063658,
+  "peak": 0.73175,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MMDenseLSTM/M.E.R.C.%20Music%20-%20Knockout/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.043072,
+  "peak": 0.535614,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MMDenseLSTM/M.E.R.C.%20Music%20-%20Knockout/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.034035,
+  "peak": 0.272095,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/MMDenseLSTM/M.E.R.C.%20Music%20-%20Knockout/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.040174,
+  "peak": 0.384857,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Conv-TasNet/M.E.R.C.%20Music%20-%20Knockout/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.05333,
+  "peak": 0.693787,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Conv-TasNet/M.E.R.C.%20Music%20-%20Knockout/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.043021,
+  "peak": 0.551971,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Conv-TasNet/M.E.R.C.%20Music%20-%20Knockout/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.033888,
+  "peak": 0.199585,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Conv-TasNet/M.E.R.C.%20Music%20-%20Knockout/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.042135,
+  "peak": 0.615265,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Open-Unmix/M.E.R.C.%20Music%20-%20Knockout/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.060507,
+  "peak": 0.731934,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Open-Unmix/M.E.R.C.%20Music%20-%20Knockout/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.037683,
+  "peak": 0.526947,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Open-Unmix/M.E.R.C.%20Music%20-%20Knockout/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.037179,
+  "peak": 0.270782,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/Open-Unmix/M.E.R.C.%20Music%20-%20Knockout/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.043843,
+  "peak": 0.561371,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/DPRNN/M.E.R.C.%20Music%20-%20Knockout/vocals.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.10792,
+  "peak": 1.0,
+  "clipped": 250
+ },
+ "../../03_outputs/_test_run/DPRNN/M.E.R.C.%20Music%20-%20Knockout/drums.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.075347,
+  "peak": 0.780212,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/DPRNN/M.E.R.C.%20Music%20-%20Knockout/bass.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.073751,
+  "peak": 0.352478,
+  "clipped": 0
+ },
+ "../../03_outputs/_test_run/DPRNN/M.E.R.C.%20Music%20-%20Knockout/other.flac": {
+  "ok": true,
+  "sr": 44100,
+  "ch": 2,
+  "dur": 270.0,
+  "rms": 0.053185,
+  "peak": 0.46579,
+  "clipped": 0
+ }
+}

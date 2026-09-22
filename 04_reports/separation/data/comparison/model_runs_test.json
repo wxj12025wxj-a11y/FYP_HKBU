@@ -1,0 +1,2966 @@
+{
+  "runs": {
+    "umx": {
+      "PR - Oh No": {
+        "model": "umx",
+        "label": "Open-Unmix (umxhq)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.205,
+        "infer_s": 2.391,
+        "rtf": 0.0314,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": -6.301,
+          "drums": 6.728,
+          "bass": 1.294,
+          "other": 0.102
+        },
+        "si_sdr": {
+          "vocals": -8.569,
+          "drums": 6.225,
+          "bass": -0.866,
+          "other": -4.071
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:13:58",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\umx_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Open-Unmix\\_musdb18_test\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Georgia Wonder - Siren": {
+        "model": "umx",
+        "label": "Open-Unmix (umxhq)",
+        "song": "Georgia Wonder - Siren",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.216,
+        "infer_s": 10.99,
+        "rtf": 0.0255,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 4.483,
+          "drums": 6.714,
+          "bass": 7.723,
+          "other": 5.08
+        },
+        "si_sdr": {
+          "vocals": 2.065,
+          "drums": 5.538,
+          "bass": 7.696,
+          "other": 3.132
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:14:17",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\umx_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Open-Unmix\\_musdb18_test\\Georgia Wonder - Siren",
+        "info": {
+          "kind": "deep",
+          "device": "cuda"
+        },
+        "chunked": {
+          "n_chunks": 8,
+          "chunk_s": 60.0,
+          "overlap_s": 2.0
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Al James - Schoolboy Facination": {
+        "model": "umx",
+        "label": "Open-Unmix (umxhq)",
+        "song": "Al James - Schoolboy Facination",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.232,
+        "infer_s": 6.486,
+        "rtf": 0.0323,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 7.137,
+          "drums": 4.021,
+          "bass": 5.599,
+          "other": -0.453
+        },
+        "si_sdr": {
+          "vocals": 5.256,
+          "drums": 1.49,
+          "bass": 3.358,
+          "other": -3.64
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T13:02:18",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\umx_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Open-Unmix\\_musdb18_test\\Al James - Schoolboy Facination",
+        "info": {
+          "kind": "deep",
+          "device": "cuda"
+        },
+        "chunked": {
+          "n_chunks": 4,
+          "chunk_s": 60.0,
+          "overlap_s": 2.0
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    },
+    "mdx": {
+      "PR - Oh No": {
+        "model": "mdx",
+        "label": "MDX-Net (mdx_extra)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 2.015,
+        "infer_s": 12.984,
+        "rtf": 0.1704,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "drums": 10.351,
+          "bass": 8.407,
+          "other": 5.399,
+          "vocals": 2.095
+        },
+        "si_sdr": {
+          "drums": 14.583,
+          "bass": 11.448,
+          "other": 4.622,
+          "vocals": 5.137
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:15:45",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\mdx_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\MDX-Net\\_musdb18_test\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "bag": "mdx_extra",
+          "weights_src": "local:E:\\FYP_HKBU\\01_models\\_weights\\MDX-Net\\mdx_extra"
+        },
+        "ref_used": {
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      }
+    },
+    "demucs": {
+      "PR - Oh No": {
+        "model": "demucs",
+        "label": "Demucs (htdemucs)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.309,
+        "infer_s": 2.266,
+        "rtf": 0.0297,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "drums": 8.781,
+          "bass": 0.377,
+          "other": 1.246,
+          "vocals": 0.529
+        },
+        "si_sdr": {
+          "drums": 10.411,
+          "bass": 1.929,
+          "other": -2.118,
+          "vocals": 1.582
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:16:12",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\demucs_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Demucs\\_musdb18_test\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "model": "htdemucs",
+          "params_m": 41.98,
+          "sources": [
+            "drums",
+            "bass",
+            "other",
+            "vocals"
+          ]
+        },
+        "ref_used": {
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      }
+    },
+    "convtasnet": {
+      "PR - Oh No": {
+        "model": "convtasnet",
+        "label": "Conv-TasNet (musdb18)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.174,
+        "infer_s": 11.964,
+        "rtf": 0.157,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "bass": 4.367,
+          "drums": 7.778,
+          "other": 0.198,
+          "vocals": 0.027
+        },
+        "si_sdr": {
+          "bass": 3.277,
+          "drums": 10.226,
+          "other": -4.392,
+          "vocals": -3.443
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:16:25",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\convtasnet_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Conv-TasNet\\_musdb18_test\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "repo": "tky823",
+          "config": "4sec_L20",
+          "params": 13394513,
+          "sources": [
+            "bass",
+            "drums",
+            "other",
+            "vocals"
+          ]
+        },
+        "ref_used": {
+          "bass": "bass",
+          "drums": "drums",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      }
+    },
+    "mmdenselstm": {
+      "PR - Oh No": {
+        "model": "mmdenselstm",
+        "label": "MMDenseLSTM (musdb18)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.426,
+        "infer_s": 8.97,
+        "rtf": 0.1177,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "bass": 1.575,
+          "drums": 7.09,
+          "other": 0.274,
+          "vocals": -0.088
+        },
+        "si_sdr": {
+          "bass": -0.09,
+          "drums": 7.044,
+          "other": -3.716,
+          "vocals": -0.303
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:16:53",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\mmdenselstm_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\MMDenseLSTM\\_musdb18_test\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "repo": "tky823",
+          "config": "paper",
+          "params": 5483136,
+          "sources": [
+            "bass",
+            "drums",
+            "other",
+            "vocals"
+          ],
+          "n_fft": 4096,
+          "hop_length": 1024
+        },
+        "ref_used": {
+          "bass": "bass",
+          "drums": "drums",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      }
+    },
+    "oracle": {
+      "PR - Oh No": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 0.611,
+        "rtf": 0.008,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 2.836,
+          "drums": 9.685,
+          "bass": 9.936,
+          "other": 7.523
+        },
+        "si_sdr": {
+          "vocals": 7.759,
+          "drums": 13.003,
+          "bass": 10.464,
+          "other": 7.141
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:17:27",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\PR - Oh No",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Al James - Schoolboy Facination": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Al James - Schoolboy Facination",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.889,
+        "rtf": 0.0094,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 10.452,
+          "drums": 6.953,
+          "bass": 7.495,
+          "other": 4.49
+        },
+        "si_sdr": {
+          "vocals": 9.958,
+          "drums": 6.181,
+          "bass": 6.792,
+          "other": 2.464
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:42:08",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Al James - Schoolboy Facination",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "AM Contra - Heart Peripheral": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "AM Contra - Heart Peripheral",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.895,
+        "rtf": 0.009,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 13.557,
+          "drums": 7.274,
+          "bass": 2.871,
+          "other": 6.916
+        },
+        "si_sdr": {
+          "vocals": 14.136,
+          "drums": 7.119,
+          "bass": 2.586,
+          "other": 5.144
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:42:41",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\AM Contra - Heart Peripheral",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Angels In Amplifiers - I'm Alright": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Angels In Amplifiers - I'm Alright",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.523,
+        "rtf": 0.0085,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 11.686,
+          "drums": 8.914,
+          "bass": 7.167,
+          "other": 7.813
+        },
+        "si_sdr": {
+          "vocals": 12.32,
+          "drums": 8.29,
+          "bass": 6.035,
+          "other": 7.687
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:43:04",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Angels In Amplifiers - I'm Alright",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Arise - Run Run Run": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Arise - Run Run Run",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.883,
+        "rtf": 0.0086,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 8.992,
+          "drums": 8.957,
+          "bass": 8.902,
+          "other": 9.587
+        },
+        "si_sdr": {
+          "vocals": 10.127,
+          "drums": 8.39,
+          "bass": 8.146,
+          "other": 9.044
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:43:22",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Arise - Run Run Run",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Ben Carrigan - We'll Talk About It All Tonight": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Ben Carrigan - We'll Talk About It All Tonight",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 3.292,
+        "rtf": 0.0129,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 7.249,
+          "drums": 8.786,
+          "bass": 7.742,
+          "other": 7.816
+        },
+        "si_sdr": {
+          "vocals": 7.425,
+          "drums": 8.176,
+          "bass": 7.116,
+          "other": 5.728
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-21T00:21:14",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-21.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Ben Carrigan - We'll Talk About It All Tonight",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "BKS - Bulldozer": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "BKS - Bulldozer",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.923,
+        "rtf": 0.0087,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 7.011,
+          "drums": 11.524,
+          "bass": 8.056,
+          "other": 8.049
+        },
+        "si_sdr": {
+          "vocals": 6.702,
+          "drums": 11.124,
+          "bass": 7.346,
+          "other": 7.374
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:44:10",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\BKS - Bulldozer",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "BKS - Too Much": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "BKS - Too Much",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.842,
+        "rtf": 0.0084,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 12.95,
+          "drums": 8.076,
+          "bass": 9.704,
+          "other": 6.54
+        },
+        "si_sdr": {
+          "vocals": 13.17,
+          "drums": 7.303,
+          "bass": 8.401,
+          "other": 5.771
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:44:38",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\BKS - Too Much",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Bobby Nobody - Stitch Up": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Bobby Nobody - Stitch Up",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.778,
+        "rtf": 0.008,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 10.16,
+          "drums": 7.584,
+          "bass": 6.745,
+          "other": 6.833
+        },
+        "si_sdr": {
+          "vocals": 9.858,
+          "drums": 6.157,
+          "bass": 6.802,
+          "other": 6.426
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:45:01",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Bobby Nobody - Stitch Up",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Buitraker - Revo X": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Buitraker - Revo X",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.251,
+        "rtf": 0.0082,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.282,
+          "drums": 12.132,
+          "bass": 7.584,
+          "other": 6.424
+        },
+        "si_sdr": {
+          "vocals": 8.893,
+          "drums": 11.608,
+          "bass": 6.58,
+          "other": 5.189
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:45:25",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Buitraker - Revo X",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Carlos Gonzalez - A Place For Us": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Carlos Gonzalez - A Place For Us",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.97,
+        "rtf": 0.0079,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.599,
+          "drums": 7.338,
+          "bass": 2.095,
+          "other": 8.296
+        },
+        "si_sdr": {
+          "vocals": 9.536,
+          "drums": 7.353,
+          "bass": 2.428,
+          "other": 7.416
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:45:50",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Carlos Gonzalez - A Place For Us",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Cristina Vane - So Easy": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Cristina Vane - So Easy",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.126,
+        "rtf": 0.0084,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 10.88,
+          "drums": 11.322,
+          "bass": 5.461,
+          "other": 5.871
+        },
+        "si_sdr": {
+          "vocals": 10.887,
+          "drums": 11.218,
+          "bass": 4.088,
+          "other": 5.044
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:46:15",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Cristina Vane - So Easy",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Detsky Sad - Walkie Talkie": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Detsky Sad - Walkie Talkie",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.576,
+        "rtf": 0.0083,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 13.241,
+          "drums": 12.15,
+          "bass": 5.013,
+          "other": 7.119
+        },
+        "si_sdr": {
+          "vocals": 12.662,
+          "drums": 11.524,
+          "bass": 3.724,
+          "other": 6.955
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:46:40",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Detsky Sad - Walkie Talkie",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Enda Reilly - Cur An Long Ag Seol": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Enda Reilly - Cur An Long Ag Seol",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.575,
+        "rtf": 0.0084,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 10.856,
+          "drums": 12.167,
+          "bass": 8.329,
+          "other": 8.238
+        },
+        "si_sdr": {
+          "vocals": 11.278,
+          "drums": 10.784,
+          "bass": 8.04,
+          "other": 7.316
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:47:05",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Enda Reilly - Cur An Long Ag Seol",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Forkupines - Semantics": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Forkupines - Semantics",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.349,
+        "rtf": 0.0086,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.649,
+          "drums": 12.468,
+          "bass": 6.7,
+          "other": 8.066
+        },
+        "si_sdr": {
+          "vocals": 9.924,
+          "drums": 12.611,
+          "bass": 5.793,
+          "other": 7.96
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:47:24",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Forkupines - Semantics",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Georgia Wonder - Siren": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Georgia Wonder - Siren",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 4.077,
+        "rtf": 0.0095,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 8.185,
+          "drums": 8.922,
+          "bass": 8.079,
+          "other": 7.932
+        },
+        "si_sdr": {
+          "vocals": 7.719,
+          "drums": 8.263,
+          "bass": 8.399,
+          "other": 7.198
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:47:53",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Georgia Wonder - Siren",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Girls Under Glass - We Feel Alright": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Girls Under Glass - We Feel Alright",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.47,
+        "rtf": 0.0078,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 7.821,
+          "drums": 9.376,
+          "bass": 6.417,
+          "other": 8.71
+        },
+        "si_sdr": {
+          "vocals": 7.571,
+          "drums": 8.884,
+          "bass": 5.58,
+          "other": 7.639
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:48:34",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Girls Under Glass - We Feel Alright",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Hollow Ground - Ill Fate": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Hollow Ground - Ill Fate",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.106,
+        "rtf": 0.0078,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.497,
+          "drums": 5.807,
+          "bass": 3.894,
+          "other": 7.498
+        },
+        "si_sdr": {
+          "vocals": 9.417,
+          "drums": 4.709,
+          "bass": 1.798,
+          "other": 7.695
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:49:00",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Hollow Ground - Ill Fate",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "James Elder & Mark M Thompson - The English Actor": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "James Elder & Mark M Thompson - The English Actor",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.651,
+        "rtf": 0.008,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.887,
+          "drums": 10.705,
+          "bass": 6.256,
+          "other": 8.849
+        },
+        "si_sdr": {
+          "vocals": 10.929,
+          "drums": 9.48,
+          "bass": 6.053,
+          "other": 8.823
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:49:16",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\James Elder & Mark M Thompson - The English Actor",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Juliet's Rescue - Heartbeats": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Juliet's Rescue - Heartbeats",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.105,
+        "rtf": 0.0079,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 10.722,
+          "drums": 15.52,
+          "bass": 4.225,
+          "other": 9.039
+        },
+        "si_sdr": {
+          "vocals": 10.959,
+          "drums": 14.257,
+          "bass": 4.245,
+          "other": 8.09
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:49:38",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Juliet's Rescue - Heartbeats",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Little Chicago's Finest - My Own": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Little Chicago's Finest - My Own",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.211,
+        "rtf": 0.0079,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 15.131,
+          "drums": 13.617,
+          "bass": 8.366,
+          "other": 7.973
+        },
+        "si_sdr": {
+          "vocals": 15.112,
+          "drums": 13.651,
+          "bass": 7.713,
+          "other": 7.214
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:50:03",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Little Chicago's Finest - My Own",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Louis Cressy Band - Good Time": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Louis Cressy Band - Good Time",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.272,
+        "rtf": 0.0078,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 11.906,
+          "drums": 10.815,
+          "bass": 7.877,
+          "other": 9.9
+        },
+        "si_sdr": {
+          "vocals": 12.172,
+          "drums": 10.195,
+          "bass": 6.561,
+          "other": 9.691
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:50:28",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Louis Cressy Band - Good Time",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Lyndsey Ollard - Catching Up": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Lyndsey Ollard - Catching Up",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.779,
+        "rtf": 0.0078,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 15.649,
+          "drums": 8.045,
+          "bass": 8.081,
+          "other": 8.593
+        },
+        "si_sdr": {
+          "vocals": 17.292,
+          "drums": 7.926,
+          "bass": 7.232,
+          "other": 7.595
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:50:53",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Lyndsey Ollard - Catching Up",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "M.E.R.C. Music - Knockout": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "M.E.R.C. Music - Knockout",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.088,
+        "rtf": 0.0077,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 11.348,
+          "drums": 7.939,
+          "bass": 7.279,
+          "other": 8.416
+        },
+        "si_sdr": {
+          "vocals": 11.377,
+          "drums": 8.26,
+          "bass": 6.097,
+          "other": 8.008
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:51:17",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\M.E.R.C. Music - Knockout",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Moosmusic - Big Dummy Shake": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Moosmusic - Big Dummy Shake",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.602,
+        "rtf": 0.0081,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 12.628,
+          "drums": 11.759,
+          "bass": 5.942,
+          "other": 7.359
+        },
+        "si_sdr": {
+          "vocals": 12.566,
+          "drums": 10.592,
+          "bass": 4.858,
+          "other": 6.743
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:51:41",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Moosmusic - Big Dummy Shake",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Motor Tapes - Shore": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Motor Tapes - Shore",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.919,
+        "rtf": 0.0078,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 8.937,
+          "drums": 6.328,
+          "bass": 9.175,
+          "other": 14.12
+        },
+        "si_sdr": {
+          "vocals": 10.814,
+          "drums": 5.473,
+          "bass": 9.207,
+          "other": 11.936
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:52:04",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Motor Tapes - Shore",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Mu - Too Bright": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Mu - Too Bright",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.129,
+        "rtf": 0.0078,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 11.899,
+          "drums": 15.018,
+          "bass": 7.206,
+          "other": 9.088
+        },
+        "si_sdr": {
+          "vocals": 11.951,
+          "drums": 15.093,
+          "bass": 6.58,
+          "other": 8.432
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:52:28",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Mu - Too Bright",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Nerve 9 - Pray For The Rain": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Nerve 9 - Pray For The Rain",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.886,
+        "rtf": 0.0084,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 10.858,
+          "drums": 10.287,
+          "bass": 7.327,
+          "other": 9.244
+        },
+        "si_sdr": {
+          "vocals": 11.348,
+          "drums": 9.833,
+          "bass": 6.295,
+          "other": 8.524
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:52:53",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Nerve 9 - Pray For The Rain",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "PR - Happy Daze": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "PR - Happy Daze",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.23,
+        "rtf": 0.0076,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 1.657,
+          "drums": 24.316,
+          "bass": 17.571,
+          "other": 12.53
+        },
+        "si_sdr": {
+          "vocals": 6.941,
+          "drums": 24.375,
+          "bass": 17.959,
+          "other": 12.326
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:53:21",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\PR - Happy Daze",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Punkdisco - Oral Hygiene": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Punkdisco - Oral Hygiene",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.745,
+        "rtf": 0.0079,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 11.999,
+          "drums": 12.415,
+          "bass": 11.569,
+          "other": 8.138
+        },
+        "si_sdr": {
+          "vocals": 12.15,
+          "drums": 11.155,
+          "bass": 11.808,
+          "other": 8.156
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:53:38",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Punkdisco - Oral Hygiene",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Raft Monk - Tiring": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Raft Monk - Tiring",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.669,
+        "rtf": 0.0079,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 7.297,
+          "drums": 6.647,
+          "bass": 7.306,
+          "other": 6.77
+        },
+        "si_sdr": {
+          "vocals": 6.85,
+          "drums": 5.782,
+          "bass": 6.01,
+          "other": 5.765
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:54:02",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Raft Monk - Tiring",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Sambasevam Shanmugam - Kaathaadi": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Sambasevam Shanmugam - Kaathaadi",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.776,
+        "rtf": 0.0087,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 15.857,
+          "drums": 9.864,
+          "bass": 12.419,
+          "other": 11.655
+        },
+        "si_sdr": {
+          "vocals": 15.889,
+          "drums": 7.942,
+          "bass": 12.046,
+          "other": 11.08
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:54:25",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Sambasevam Shanmugam - Kaathaadi",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Secretariat - Borderline": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Secretariat - Borderline",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.321,
+        "rtf": 0.0081,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 7.727,
+          "drums": 6.172,
+          "bass": 5.657,
+          "other": 9.437
+        },
+        "si_sdr": {
+          "vocals": 8.505,
+          "drums": 5.521,
+          "bass": 3.914,
+          "other": 8.698
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:54:51",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Secretariat - Borderline",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Secretariat - Over The Top": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Secretariat - Over The Top",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.972,
+        "rtf": 0.0079,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.917,
+          "drums": 7.793,
+          "bass": 11.852,
+          "other": 10.128
+        },
+        "si_sdr": {
+          "vocals": 9.991,
+          "drums": 7.49,
+          "bass": 11.524,
+          "other": 9.257
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:55:17",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Secretariat - Over The Top",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Side Effects Project - Sing With Me": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Side Effects Project - Sing With Me",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.878,
+        "rtf": 0.0077,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 15.39,
+          "drums": 14.809,
+          "bass": 8.097,
+          "other": 5.905
+        },
+        "si_sdr": {
+          "vocals": 14.474,
+          "drums": 14.859,
+          "bass": 7.045,
+          "other": 5.443
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:55:42",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Side Effects Project - Sing With Me",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Signe Jakobsen - What Have You Done To Me": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Signe Jakobsen - What Have You Done To Me",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.314,
+        "rtf": 0.0074,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 12.976,
+          "drums": 5.547,
+          "bass": 4.591,
+          "other": 8.026
+        },
+        "si_sdr": {
+          "vocals": 13.063,
+          "drums": 5.208,
+          "bass": 3.669,
+          "other": 6.706
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:56:07",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Signe Jakobsen - What Have You Done To Me",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Skelpolu - Resurrection": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Skelpolu - Resurrection",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 3.628,
+        "rtf": 0.0092,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 6.328,
+          "drums": 7.209,
+          "bass": 10.982,
+          "other": 8.751
+        },
+        "si_sdr": {
+          "vocals": 5.824,
+          "drums": 6.275,
+          "bass": 10.449,
+          "other": 7.197
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:56:24",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Skelpolu - Resurrection",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Speak Softly - Broken Man": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Speak Softly - Broken Man",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.01,
+        "rtf": 0.0079,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 7.322,
+          "drums": 9.136,
+          "bass": 12.496,
+          "other": 10.011
+        },
+        "si_sdr": {
+          "vocals": 6.716,
+          "drums": 7.354,
+          "bass": 12.18,
+          "other": 9.481
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:57:03",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Speak Softly - Broken Man",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Speak Softly - Like Horses": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Speak Softly - Like Horses",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.404,
+        "rtf": 0.0077,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 10.653,
+          "drums": 8.32,
+          "bass": 17.03,
+          "other": 9.485
+        },
+        "si_sdr": {
+          "vocals": 9.934,
+          "drums": 7.364,
+          "bass": 16.452,
+          "other": 8.432
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:57:27",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Speak Softly - Like Horses",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "The Doppler Shift - Atrophy": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "The Doppler Shift - Atrophy",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.613,
+        "rtf": 0.0079,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.5,
+          "drums": 10.026,
+          "bass": 3.766,
+          "other": 8.742
+        },
+        "si_sdr": {
+          "vocals": 11.423,
+          "drums": 10.492,
+          "bass": 1.621,
+          "other": 7.798
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:57:53",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\The Doppler Shift - Atrophy",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "The Easton Ellises (Baumi) - SDRNR": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "The Easton Ellises (Baumi) - SDRNR",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.83,
+        "rtf": 0.0078,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.12,
+          "drums": 13.013,
+          "bass": 8.212,
+          "other": 7.845
+        },
+        "si_sdr": {
+          "vocals": 11.143,
+          "drums": 13.395,
+          "bass": 9.214,
+          "other": 6.795
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:58:21",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\The Easton Ellises (Baumi) - SDRNR",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "The Easton Ellises - Falcon 69": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "The Easton Ellises - Falcon 69",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.957,
+        "rtf": 0.0079,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.523,
+          "drums": 10.024,
+          "bass": 8.059,
+          "other": 7.542
+        },
+        "si_sdr": {
+          "vocals": 9.239,
+          "drums": 9.459,
+          "bass": 7.299,
+          "other": 6.797
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:58:45",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\The Easton Ellises - Falcon 69",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "The Long Wait - Dark Horses": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "The Long Wait - Dark Horses",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.457,
+        "rtf": 0.008,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.68,
+          "drums": 6.978,
+          "bass": 7.604,
+          "other": 7.103
+        },
+        "si_sdr": {
+          "vocals": 9.742,
+          "drums": 6.229,
+          "bass": 6.674,
+          "other": 6.442
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:59:09",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\The Long Wait - Dark Horses",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "The Mountaineering Club - Mallory": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "The Mountaineering Club - Mallory",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.881,
+        "rtf": 0.0077,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 12.41,
+          "drums": 7.441,
+          "bass": 8.495,
+          "other": 8.027
+        },
+        "si_sdr": {
+          "vocals": 12.209,
+          "drums": 6.23,
+          "bass": 7.784,
+          "other": 6.926
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:59:36",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\The Mountaineering Club - Mallory",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "The Sunshine Garcia Band - For I Am The Moon": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "The Sunshine Garcia Band - For I Am The Moon",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 2.666,
+        "rtf": 0.0083,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 15.208,
+          "drums": 10.661,
+          "bass": 9.533,
+          "other": 8.181
+        },
+        "si_sdr": {
+          "vocals": 14.845,
+          "drums": 10.232,
+          "bass": 9.3,
+          "other": 7.664
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:59:59",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\The Sunshine Garcia Band - For I Am The Moon",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Timboz - Pony": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Timboz - Pony",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.925,
+        "rtf": 0.0076,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 7.718,
+          "drums": 6.499,
+          "bass": 3.681,
+          "other": 9.741
+        },
+        "si_sdr": {
+          "vocals": 7.405,
+          "drums": 5.396,
+          "bass": 1.713,
+          "other": 9.371
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T13:00:26",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Timboz - Pony",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Tom McKenzie - Directions": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Tom McKenzie - Directions",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.343,
+        "rtf": 0.0076,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 11.49,
+          "drums": 14.46,
+          "bass": 7.681,
+          "other": 6.346
+        },
+        "si_sdr": {
+          "vocals": 11.548,
+          "drums": 14.434,
+          "bass": 7.021,
+          "other": 5.145
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T13:00:51",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Tom McKenzie - Directions",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Triviul feat. The Fiend - Widow": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Triviul feat. The Fiend - Widow",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.873,
+        "rtf": 0.008,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 13.127,
+          "drums": 7.251,
+          "bass": 11.846,
+          "other": 9.126
+        },
+        "si_sdr": {
+          "vocals": 12.896,
+          "drums": 6.506,
+          "bass": 11.327,
+          "other": 8.489
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T13:01:08",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Triviul feat. The Fiend - Widow",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "We Fell From The Sky - Not You": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "We Fell From The Sky - Not You",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.631,
+        "rtf": 0.0078,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.711,
+          "drums": 12.412,
+          "bass": 3.822,
+          "other": 9.818
+        },
+        "si_sdr": {
+          "vocals": 9.12,
+          "drums": 11.985,
+          "bass": 1.778,
+          "other": 9.35
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T13:01:31",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\We Fell From The Sky - Not You",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Zeno - Signs": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Zeno - Signs",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 1.831,
+        "rtf": 0.0078,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.901,
+          "drums": 9.529,
+          "bass": 4.17,
+          "other": 8.062
+        },
+        "si_sdr": {
+          "vocals": 9.654,
+          "drums": 8.97,
+          "bass": 2.677,
+          "other": 7.435
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T13:01:54",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\_musdb18_test\\Zeno - Signs",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    },
+    "bsrnn_simo": {
+      "PR - Oh No": {
+        "model": "bsrnn_simo",
+        "label": "BSRNN SIMO (4-stem)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 2.642,
+        "infer_s": 25.997,
+        "rtf": 0.3412,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 0.767,
+          "drums": 10.34,
+          "bass": 5.921,
+          "other": 2.189
+        },
+        "si_sdr": {
+          "vocals": 1.259,
+          "drums": 14.004,
+          "bass": 5.405,
+          "other": -0.205
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:17:42",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_simo_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-SIMO\\_musdb18_test\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "simo-bsrnn-opt",
+          "ckpt": "separator.ckpt",
+          "params": 108727540,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "build_targets": [
+            "vocals",
+            "bass",
+            "drums",
+            "other"
+          ],
+          "ckpt_targets": [
+            "vocals",
+            "bass",
+            "drums",
+            "other"
+          ],
+          "stubbed": [
+            "lightning.pytorch",
+            "helpers.data",
+            "helpers.eval"
+          ],
+          "ckpt_wrapper": "state_dict",
+          "n_missing_keys": 0,
+          "n_unexpected_keys": 0
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    },
+    "bsroformer_l12": {
+      "PR - Oh No": {
+        "model": "bsroformer_l12",
+        "label": "BS-RoFormer L12 (ep_317, vocals)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 2.336,
+        "infer_s": 20.224,
+        "rtf": 0.2654,
+        "targets": [
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 1.823
+        },
+        "si_sdr": {
+          "vocals": -0.963
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:18:22",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l12_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L12\\_musdb18_test\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "repo": "ZFTurbo/MSS-Training",
+          "ckpt": "model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+          "params": 159758092,
+          "normalize": false,
+          "targets": [
+            "vocals"
+          ],
+          "script": "bs_roformer",
+          "dim": 512,
+          "depth": 12,
+          "librosa_stub": false
+        },
+        "ref_used": {
+          "vocals": "vocals"
+        }
+      }
+    },
+    "bsroformer_l6": {
+      "PR - Oh No": {
+        "model": "bsroformer_l6",
+        "label": "BS-RoFormer L6 (ep_937, vocals+other)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 4.467,
+        "infer_s": 69.042,
+        "rtf": 0.9061,
+        "targets": [
+          "vocals+other"
+        ],
+        "sdr": {
+          "vocals+other": -0.149
+        },
+        "si_sdr": {
+          "vocals+other": -5.333
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:25:13",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l6_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L6\\_musdb18_test\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "repo": "ZFTurbo/MSS-Training",
+          "ckpt": "model_bs_roformer_ep_937_sdr_10.5309.ckpt",
+          "params": 98194828,
+          "normalize": false,
+          "targets": [
+            "other"
+          ],
+          "script": "bs_roformer",
+          "dim": 384,
+          "depth": 12,
+          "librosa_stub": false
+        },
+        "ref_used": {
+          "vocals+other": "vocals+other"
+        }
+      }
+    },
+    "bsrnn_all": {
+      "PR - Oh No": {
+        "model": "bsrnn_all",
+        "label": "BSRNN (oBSRNN, 4-stem)",
+        "song": "PR - Oh No",
+        "subset": "test",
+        "duration_s": null,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 5.154,
+        "infer_s": 233.454,
+        "rtf": 3.0639,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 0.813,
+          "drums": 10.101,
+          "bass": 0.083,
+          "other": 2.716
+        },
+        "si_sdr": {
+          "vocals": 1.212,
+          "drums": 14.094,
+          "bass": -7.597,
+          "other": -5.725
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-19T12:23:06",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_all_2026-09-19.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-opt\\_musdb18_test\\PR - Oh No",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "bsrnn-opt",
+          "params": 164119072,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "stubbed": [
+            "lightning.pytorch",
+            "helpers.data",
+            "helpers.eval"
+          ],
+          "per_target": {
+            "vocals": {
+              "ckpt": "vocals.ckpt",
+              "params": 40777192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "vocals"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "drums": {
+              "ckpt": "drums.ckpt",
+              "params": 45491944,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "drums"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "bass": {
+              "ckpt": "bass.ckpt",
+              "params": 37072744,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "bass"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "other": {
+              "ckpt": "other.ckpt",
+              "params": 40777192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "other"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            }
+          },
+          "n_models": 4
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    }
+  },
+  "updated": "2026-09-21T00:21:39",
+  "subset": "test"
+}

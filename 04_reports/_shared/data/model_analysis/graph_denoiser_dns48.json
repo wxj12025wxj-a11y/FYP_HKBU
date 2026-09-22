@@ -1,0 +1,963 @@
+{
+ "model_key": "denoiser_dns48",
+ "label": "denoiser dns48 (16 kHz)",
+ "group": "denoise",
+ "kind": "deep",
+ "status": "OK",
+ "params_M": 18.868,
+ "params_M_source": "model_profile.csv",
+ "n_roots": 1,
+ "roots": [
+  {
+   "cls": "Demucs",
+   "params_M": 18.8679
+  }
+ ],
+ "traced_params_M": 18.8679,
+ "traced_vs_csv_ratio": 1.0,
+ "attribution_reconciles": true,
+ "n_aliased_paths": 0,
+ "hooked_root_cls": "Demucs",
+ "hooked_root_params_M": 18.8679,
+ "n_targets": "1",
+ "native_sr": "16000",
+ "n_modules_total": 45,
+ "n_modules_fired": 43,
+ "load_s": 0.165,
+ "capture_s": 0.34,
+ "note": "",
+ "exec_order": [
+  {
+   "path": "encoder.0.0",
+   "parent": "encoder.0",
+   "cls": "Conv1d",
+   "params": 432,
+   "in_shapes": [
+    [
+     1,
+     1,
+     640340
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    160084
+   ],
+   "calls": 1,
+   "params_attr": 432,
+   "role": "leaf"
+  },
+  {
+   "path": "encoder.0.1",
+   "parent": "encoder.0",
+   "cls": "ReLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     48,
+     160084
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    160084
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "encoder.0.2",
+   "parent": "encoder.0",
+   "cls": "Conv1d",
+   "params": 4704,
+   "in_shapes": [
+    [
+     1,
+     48,
+     160084
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    160084
+   ],
+   "calls": 1,
+   "params_attr": 4704,
+   "role": "leaf"
+  },
+  {
+   "path": "encoder.0.3",
+   "parent": "encoder.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     160084
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    160084
+   ],
+   "calls": 10,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "encoder.0",
+   "parent": "encoder",
+   "cls": "Sequential",
+   "params": 5136,
+   "in_shapes": [
+    [
+     1,
+     1,
+     640340
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    160084
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "encoder.1.0",
+   "parent": "encoder.1",
+   "cls": "Conv1d",
+   "params": 36960,
+   "in_shapes": [
+    [
+     1,
+     48,
+     160084
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    40020
+   ],
+   "calls": 1,
+   "params_attr": 36960,
+   "role": "leaf"
+  },
+  {
+   "path": "encoder.1.1",
+   "parent": "encoder.1",
+   "cls": "ReLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     40020
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    40020
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "encoder.1.2",
+   "parent": "encoder.1",
+   "cls": "Conv1d",
+   "params": 18624,
+   "in_shapes": [
+    [
+     1,
+     96,
+     40020
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    40020
+   ],
+   "calls": 1,
+   "params_attr": 18624,
+   "role": "leaf"
+  },
+  {
+   "path": "encoder.1",
+   "parent": "encoder",
+   "cls": "Sequential",
+   "params": 55584,
+   "in_shapes": [
+    [
+     1,
+     48,
+     160084
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    40020
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "encoder.2.0",
+   "parent": "encoder.2",
+   "cls": "Conv1d",
+   "params": 147648,
+   "in_shapes": [
+    [
+     1,
+     96,
+     40020
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    10004
+   ],
+   "calls": 1,
+   "params_attr": 147648,
+   "role": "leaf"
+  },
+  {
+   "path": "encoder.2.1",
+   "parent": "encoder.2",
+   "cls": "ReLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     10004
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    10004
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "encoder.2.2",
+   "parent": "encoder.2",
+   "cls": "Conv1d",
+   "params": 74112,
+   "in_shapes": [
+    [
+     1,
+     192,
+     10004
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    10004
+   ],
+   "calls": 1,
+   "params_attr": 74112,
+   "role": "leaf"
+  },
+  {
+   "path": "encoder.2",
+   "parent": "encoder",
+   "cls": "Sequential",
+   "params": 221760,
+   "in_shapes": [
+    [
+     1,
+     96,
+     40020
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    10004
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "encoder.3.0",
+   "parent": "encoder.3",
+   "cls": "Conv1d",
+   "params": 590208,
+   "in_shapes": [
+    [
+     1,
+     192,
+     10004
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    2500
+   ],
+   "calls": 1,
+   "params_attr": 590208,
+   "role": "leaf"
+  },
+  {
+   "path": "encoder.3.1",
+   "parent": "encoder.3",
+   "cls": "ReLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     384,
+     2500
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    2500
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "encoder.3.2",
+   "parent": "encoder.3",
+   "cls": "Conv1d",
+   "params": 295680,
+   "in_shapes": [
+    [
+     1,
+     384,
+     2500
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    2500
+   ],
+   "calls": 1,
+   "params_attr": 295680,
+   "role": "leaf"
+  },
+  {
+   "path": "encoder.3",
+   "parent": "encoder",
+   "cls": "Sequential",
+   "params": 885888,
+   "in_shapes": [
+    [
+     1,
+     192,
+     10004
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    2500
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "encoder.4.0",
+   "parent": "encoder.4",
+   "cls": "Conv1d",
+   "params": 2360064,
+   "in_shapes": [
+    [
+     1,
+     384,
+     2500
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    624
+   ],
+   "calls": 1,
+   "params_attr": 2360064,
+   "role": "leaf"
+  },
+  {
+   "path": "encoder.4.1",
+   "parent": "encoder.4",
+   "cls": "ReLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     768,
+     624
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    624
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "encoder.4.2",
+   "parent": "encoder.4",
+   "cls": "Conv1d",
+   "params": 1181184,
+   "in_shapes": [
+    [
+     1,
+     768,
+     624
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1536,
+    624
+   ],
+   "calls": 1,
+   "params_attr": 1181184,
+   "role": "leaf"
+  },
+  {
+   "path": "encoder.4",
+   "parent": "encoder",
+   "cls": "Sequential",
+   "params": 3541248,
+   "in_shapes": [
+    [
+     1,
+     384,
+     2500
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    624
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "lstm.lstm",
+   "parent": "lstm",
+   "cls": "LSTM",
+   "params": 9449472,
+   "in_shapes": [
+    [
+     624,
+     1,
+     768
+    ],
+    null
+   ],
+   "out_shapes": [
+    [
+     624,
+     1,
+     768
+    ],
+    [
+     [
+      2,
+      1,
+      768
+     ],
+     [
+      2,
+      1,
+      768
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 9449472,
+   "role": "leaf"
+  },
+  {
+   "path": "lstm",
+   "parent": "<root>",
+   "cls": "BLSTM",
+   "params": 9449472,
+   "in_shapes": [
+    [
+     624,
+     1,
+     768
+    ]
+   ],
+   "out_shapes": [
+    [
+     624,
+     1,
+     768
+    ],
+    [
+     [
+      2,
+      1,
+      768
+     ],
+     [
+      2,
+      1,
+      768
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "decoder.0.0",
+   "parent": "decoder.0",
+   "cls": "Conv1d",
+   "params": 1181184,
+   "in_shapes": [
+    [
+     1,
+     768,
+     624
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1536,
+    624
+   ],
+   "calls": 1,
+   "params_attr": 1181184,
+   "role": "leaf"
+  },
+  {
+   "path": "decoder.0.2",
+   "parent": "decoder.0",
+   "cls": "ConvTranspose1d",
+   "params": 2359680,
+   "in_shapes": [
+    [
+     1,
+     768,
+     624
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    2500
+   ],
+   "calls": 1,
+   "params_attr": 2359680,
+   "role": "leaf"
+  },
+  {
+   "path": "decoder.0.3",
+   "parent": "decoder.0",
+   "cls": "ReLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     384,
+     2500
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    2500
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "decoder.0",
+   "parent": "decoder",
+   "cls": "Sequential",
+   "params": 3540864,
+   "in_shapes": [
+    [
+     1,
+     768,
+     624
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    2500
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "decoder.1.0",
+   "parent": "decoder.1",
+   "cls": "Conv1d",
+   "params": 295680,
+   "in_shapes": [
+    [
+     1,
+     384,
+     2500
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    2500
+   ],
+   "calls": 1,
+   "params_attr": 295680,
+   "role": "leaf"
+  },
+  {
+   "path": "decoder.1.2",
+   "parent": "decoder.1",
+   "cls": "ConvTranspose1d",
+   "params": 590016,
+   "in_shapes": [
+    [
+     1,
+     384,
+     2500
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    10004
+   ],
+   "calls": 1,
+   "params_attr": 590016,
+   "role": "leaf"
+  },
+  {
+   "path": "decoder.1.3",
+   "parent": "decoder.1",
+   "cls": "ReLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     10004
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    10004
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "decoder.1",
+   "parent": "decoder",
+   "cls": "Sequential",
+   "params": 885696,
+   "in_shapes": [
+    [
+     1,
+     384,
+     2500
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    10004
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "decoder.2.0",
+   "parent": "decoder.2",
+   "cls": "Conv1d",
+   "params": 74112,
+   "in_shapes": [
+    [
+     1,
+     192,
+     10004
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    10004
+   ],
+   "calls": 1,
+   "params_attr": 74112,
+   "role": "leaf"
+  },
+  {
+   "path": "decoder.2.2",
+   "parent": "decoder.2",
+   "cls": "ConvTranspose1d",
+   "params": 147552,
+   "in_shapes": [
+    [
+     1,
+     192,
+     10004
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    40020
+   ],
+   "calls": 1,
+   "params_attr": 147552,
+   "role": "leaf"
+  },
+  {
+   "path": "decoder.2.3",
+   "parent": "decoder.2",
+   "cls": "ReLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     40020
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    40020
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "decoder.2",
+   "parent": "decoder",
+   "cls": "Sequential",
+   "params": 221664,
+   "in_shapes": [
+    [
+     1,
+     192,
+     10004
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    40020
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "decoder.3.0",
+   "parent": "decoder.3",
+   "cls": "Conv1d",
+   "params": 18624,
+   "in_shapes": [
+    [
+     1,
+     96,
+     40020
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    40020
+   ],
+   "calls": 1,
+   "params_attr": 18624,
+   "role": "leaf"
+  },
+  {
+   "path": "decoder.3.2",
+   "parent": "decoder.3",
+   "cls": "ConvTranspose1d",
+   "params": 36912,
+   "in_shapes": [
+    [
+     1,
+     96,
+     40020
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    160084
+   ],
+   "calls": 1,
+   "params_attr": 36912,
+   "role": "leaf"
+  },
+  {
+   "path": "decoder.3.3",
+   "parent": "decoder.3",
+   "cls": "ReLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     48,
+     160084
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    160084
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "decoder.3",
+   "parent": "decoder",
+   "cls": "Sequential",
+   "params": 55536,
+   "in_shapes": [
+    [
+     1,
+     96,
+     40020
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    160084
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "decoder.4.0",
+   "parent": "decoder.4",
+   "cls": "Conv1d",
+   "params": 4704,
+   "in_shapes": [
+    [
+     1,
+     48,
+     160084
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    160084
+   ],
+   "calls": 1,
+   "params_attr": 4704,
+   "role": "leaf"
+  },
+  {
+   "path": "decoder.4.2",
+   "parent": "decoder.4",
+   "cls": "ConvTranspose1d",
+   "params": 385,
+   "in_shapes": [
+    [
+     1,
+     48,
+     160084
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1,
+    640340
+   ],
+   "calls": 1,
+   "params_attr": 385,
+   "role": "leaf"
+  },
+  {
+   "path": "decoder.4",
+   "parent": "decoder",
+   "cls": "Sequential",
+   "params": 5089,
+   "in_shapes": [
+    [
+     1,
+     48,
+     160084
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1,
+    640340
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "<root>",
+   "parent": "",
+   "cls": "Demucs",
+   "params": 18867937,
+   "in_shapes": [
+    [
+     1,
+     1,
+     160000
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1,
+    160000
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  }
+ ]
+}

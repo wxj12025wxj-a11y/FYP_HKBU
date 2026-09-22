@@ -1,0 +1,1467 @@
+{
+ "model_key": "dprnn",
+ "label": "DPRNN (自训, 4-stem)",
+ "group": "4-stem",
+ "kind": "deep",
+ "status": "OK",
+ "params_M": 3.686,
+ "params_M_source": "model_profile.csv",
+ "n_roots": 1,
+ "roots": [
+  {
+   "cls": "Dual_RNN_model",
+   "params_M": 3.6858
+  }
+ ],
+ "traced_params_M": 3.6858,
+ "traced_vs_csv_ratio": 0.9999,
+ "attribution_reconciles": true,
+ "n_aliased_paths": 0,
+ "hooked_root_cls": "Dual_RNN_model",
+ "hooked_root_params_M": 3.6858,
+ "n_targets": "4",
+ "native_sr": "44100",
+ "n_modules_total": 60,
+ "n_modules_fired": 59,
+ "load_s": 0.064,
+ "capture_s": 0.86,
+ "note": "",
+ "exec_order": [
+  {
+   "path": "encoder.conv1d",
+   "parent": "encoder",
+   "cls": "Conv1d",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1,
+     110256
+    ]
+   ],
+   "out_shapes": [
+    1,
+    64,
+    13781
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "encoder",
+   "parent": "<root>",
+   "cls": "Encoder",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     110256
+    ]
+   ],
+   "out_shapes": [
+    1,
+    64,
+    13781
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separation.norm",
+   "parent": "separation",
+   "cls": "GroupNorm",
+   "params": 128,
+   "in_shapes": [
+    [
+     1,
+     64,
+     13781
+    ]
+   ],
+   "out_shapes": [
+    1,
+    64,
+    13781
+   ],
+   "calls": 1,
+   "params_attr": 128,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.conv1d",
+   "parent": "separation",
+   "cls": "Conv1d",
+   "params": 8192,
+   "in_shapes": [
+    [
+     1,
+     64,
+     13781
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    13781
+   ],
+   "calls": 1,
+   "params_attr": 8192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.0.intra_rnn",
+   "parent": "separation.dual_rnn.0",
+   "cls": "LSTM",
+   "params": 264192,
+   "in_shapes": [
+    [
+     140,
+     200,
+     128
+    ]
+   ],
+   "out_shapes": [
+    [
+     140,
+     200,
+     256
+    ],
+    [
+     [
+      2,
+      140,
+      128
+     ],
+     [
+      2,
+      140,
+      128
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 264192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.0.intra_linear",
+   "parent": "separation.dual_rnn.0",
+   "cls": "Linear",
+   "params": 32896,
+   "in_shapes": [
+    [
+     28000,
+     256
+    ]
+   ],
+   "out_shapes": [
+    28000,
+    128
+   ],
+   "calls": 1,
+   "params_attr": 32896,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.0.intra_norm",
+   "parent": "separation.dual_rnn.0",
+   "cls": "GroupNorm",
+   "params": 256,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 256,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.0.inter_rnn",
+   "parent": "separation.dual_rnn.0",
+   "cls": "LSTM",
+   "params": 264192,
+   "in_shapes": [
+    [
+     200,
+     140,
+     128
+    ]
+   ],
+   "out_shapes": [
+    [
+     200,
+     140,
+     256
+    ],
+    [
+     [
+      2,
+      200,
+      128
+     ],
+     [
+      2,
+      200,
+      128
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 264192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.0.inter_linear",
+   "parent": "separation.dual_rnn.0",
+   "cls": "Linear",
+   "params": 32896,
+   "in_shapes": [
+    [
+     28000,
+     256
+    ]
+   ],
+   "out_shapes": [
+    28000,
+    128
+   ],
+   "calls": 1,
+   "params_attr": 32896,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.0.inter_norm",
+   "parent": "separation.dual_rnn.0",
+   "cls": "GroupNorm",
+   "params": 256,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 256,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.0",
+   "parent": "separation.dual_rnn",
+   "cls": "Dual_RNN_Block",
+   "params": 594688,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separation.dual_rnn.1.intra_rnn",
+   "parent": "separation.dual_rnn.1",
+   "cls": "LSTM",
+   "params": 264192,
+   "in_shapes": [
+    [
+     140,
+     200,
+     128
+    ]
+   ],
+   "out_shapes": [
+    [
+     140,
+     200,
+     256
+    ],
+    [
+     [
+      2,
+      140,
+      128
+     ],
+     [
+      2,
+      140,
+      128
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 264192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.1.intra_linear",
+   "parent": "separation.dual_rnn.1",
+   "cls": "Linear",
+   "params": 32896,
+   "in_shapes": [
+    [
+     28000,
+     256
+    ]
+   ],
+   "out_shapes": [
+    28000,
+    128
+   ],
+   "calls": 1,
+   "params_attr": 32896,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.1.intra_norm",
+   "parent": "separation.dual_rnn.1",
+   "cls": "GroupNorm",
+   "params": 256,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 256,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.1.inter_rnn",
+   "parent": "separation.dual_rnn.1",
+   "cls": "LSTM",
+   "params": 264192,
+   "in_shapes": [
+    [
+     200,
+     140,
+     128
+    ]
+   ],
+   "out_shapes": [
+    [
+     200,
+     140,
+     256
+    ],
+    [
+     [
+      2,
+      200,
+      128
+     ],
+     [
+      2,
+      200,
+      128
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 264192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.1.inter_linear",
+   "parent": "separation.dual_rnn.1",
+   "cls": "Linear",
+   "params": 32896,
+   "in_shapes": [
+    [
+     28000,
+     256
+    ]
+   ],
+   "out_shapes": [
+    28000,
+    128
+   ],
+   "calls": 1,
+   "params_attr": 32896,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.1.inter_norm",
+   "parent": "separation.dual_rnn.1",
+   "cls": "GroupNorm",
+   "params": 256,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 256,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.1",
+   "parent": "separation.dual_rnn",
+   "cls": "Dual_RNN_Block",
+   "params": 594688,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separation.dual_rnn.2.intra_rnn",
+   "parent": "separation.dual_rnn.2",
+   "cls": "LSTM",
+   "params": 264192,
+   "in_shapes": [
+    [
+     140,
+     200,
+     128
+    ]
+   ],
+   "out_shapes": [
+    [
+     140,
+     200,
+     256
+    ],
+    [
+     [
+      2,
+      140,
+      128
+     ],
+     [
+      2,
+      140,
+      128
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 264192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.2.intra_linear",
+   "parent": "separation.dual_rnn.2",
+   "cls": "Linear",
+   "params": 32896,
+   "in_shapes": [
+    [
+     28000,
+     256
+    ]
+   ],
+   "out_shapes": [
+    28000,
+    128
+   ],
+   "calls": 1,
+   "params_attr": 32896,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.2.intra_norm",
+   "parent": "separation.dual_rnn.2",
+   "cls": "GroupNorm",
+   "params": 256,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 256,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.2.inter_rnn",
+   "parent": "separation.dual_rnn.2",
+   "cls": "LSTM",
+   "params": 264192,
+   "in_shapes": [
+    [
+     200,
+     140,
+     128
+    ]
+   ],
+   "out_shapes": [
+    [
+     200,
+     140,
+     256
+    ],
+    [
+     [
+      2,
+      200,
+      128
+     ],
+     [
+      2,
+      200,
+      128
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 264192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.2.inter_linear",
+   "parent": "separation.dual_rnn.2",
+   "cls": "Linear",
+   "params": 32896,
+   "in_shapes": [
+    [
+     28000,
+     256
+    ]
+   ],
+   "out_shapes": [
+    28000,
+    128
+   ],
+   "calls": 1,
+   "params_attr": 32896,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.2.inter_norm",
+   "parent": "separation.dual_rnn.2",
+   "cls": "GroupNorm",
+   "params": 256,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 256,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.2",
+   "parent": "separation.dual_rnn",
+   "cls": "Dual_RNN_Block",
+   "params": 594688,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separation.dual_rnn.3.intra_rnn",
+   "parent": "separation.dual_rnn.3",
+   "cls": "LSTM",
+   "params": 264192,
+   "in_shapes": [
+    [
+     140,
+     200,
+     128
+    ]
+   ],
+   "out_shapes": [
+    [
+     140,
+     200,
+     256
+    ],
+    [
+     [
+      2,
+      140,
+      128
+     ],
+     [
+      2,
+      140,
+      128
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 264192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.3.intra_linear",
+   "parent": "separation.dual_rnn.3",
+   "cls": "Linear",
+   "params": 32896,
+   "in_shapes": [
+    [
+     28000,
+     256
+    ]
+   ],
+   "out_shapes": [
+    28000,
+    128
+   ],
+   "calls": 1,
+   "params_attr": 32896,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.3.intra_norm",
+   "parent": "separation.dual_rnn.3",
+   "cls": "GroupNorm",
+   "params": 256,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 256,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.3.inter_rnn",
+   "parent": "separation.dual_rnn.3",
+   "cls": "LSTM",
+   "params": 264192,
+   "in_shapes": [
+    [
+     200,
+     140,
+     128
+    ]
+   ],
+   "out_shapes": [
+    [
+     200,
+     140,
+     256
+    ],
+    [
+     [
+      2,
+      200,
+      128
+     ],
+     [
+      2,
+      200,
+      128
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 264192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.3.inter_linear",
+   "parent": "separation.dual_rnn.3",
+   "cls": "Linear",
+   "params": 32896,
+   "in_shapes": [
+    [
+     28000,
+     256
+    ]
+   ],
+   "out_shapes": [
+    28000,
+    128
+   ],
+   "calls": 1,
+   "params_attr": 32896,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.3.inter_norm",
+   "parent": "separation.dual_rnn.3",
+   "cls": "GroupNorm",
+   "params": 256,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 256,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.3",
+   "parent": "separation.dual_rnn",
+   "cls": "Dual_RNN_Block",
+   "params": 594688,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separation.dual_rnn.4.intra_rnn",
+   "parent": "separation.dual_rnn.4",
+   "cls": "LSTM",
+   "params": 264192,
+   "in_shapes": [
+    [
+     140,
+     200,
+     128
+    ]
+   ],
+   "out_shapes": [
+    [
+     140,
+     200,
+     256
+    ],
+    [
+     [
+      2,
+      140,
+      128
+     ],
+     [
+      2,
+      140,
+      128
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 264192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.4.intra_linear",
+   "parent": "separation.dual_rnn.4",
+   "cls": "Linear",
+   "params": 32896,
+   "in_shapes": [
+    [
+     28000,
+     256
+    ]
+   ],
+   "out_shapes": [
+    28000,
+    128
+   ],
+   "calls": 1,
+   "params_attr": 32896,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.4.intra_norm",
+   "parent": "separation.dual_rnn.4",
+   "cls": "GroupNorm",
+   "params": 256,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 256,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.4.inter_rnn",
+   "parent": "separation.dual_rnn.4",
+   "cls": "LSTM",
+   "params": 264192,
+   "in_shapes": [
+    [
+     200,
+     140,
+     128
+    ]
+   ],
+   "out_shapes": [
+    [
+     200,
+     140,
+     256
+    ],
+    [
+     [
+      2,
+      200,
+      128
+     ],
+     [
+      2,
+      200,
+      128
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 264192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.4.inter_linear",
+   "parent": "separation.dual_rnn.4",
+   "cls": "Linear",
+   "params": 32896,
+   "in_shapes": [
+    [
+     28000,
+     256
+    ]
+   ],
+   "out_shapes": [
+    28000,
+    128
+   ],
+   "calls": 1,
+   "params_attr": 32896,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.4.inter_norm",
+   "parent": "separation.dual_rnn.4",
+   "cls": "GroupNorm",
+   "params": 256,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 256,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.4",
+   "parent": "separation.dual_rnn",
+   "cls": "Dual_RNN_Block",
+   "params": 594688,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separation.dual_rnn.5.intra_rnn",
+   "parent": "separation.dual_rnn.5",
+   "cls": "LSTM",
+   "params": 264192,
+   "in_shapes": [
+    [
+     140,
+     200,
+     128
+    ]
+   ],
+   "out_shapes": [
+    [
+     140,
+     200,
+     256
+    ],
+    [
+     [
+      2,
+      140,
+      128
+     ],
+     [
+      2,
+      140,
+      128
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 264192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.5.intra_linear",
+   "parent": "separation.dual_rnn.5",
+   "cls": "Linear",
+   "params": 32896,
+   "in_shapes": [
+    [
+     28000,
+     256
+    ]
+   ],
+   "out_shapes": [
+    28000,
+    128
+   ],
+   "calls": 1,
+   "params_attr": 32896,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.5.intra_norm",
+   "parent": "separation.dual_rnn.5",
+   "cls": "GroupNorm",
+   "params": 256,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 256,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.5.inter_rnn",
+   "parent": "separation.dual_rnn.5",
+   "cls": "LSTM",
+   "params": 264192,
+   "in_shapes": [
+    [
+     200,
+     140,
+     128
+    ]
+   ],
+   "out_shapes": [
+    [
+     200,
+     140,
+     256
+    ],
+    [
+     [
+      2,
+      200,
+      128
+     ],
+     [
+      2,
+      200,
+      128
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 264192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.5.inter_linear",
+   "parent": "separation.dual_rnn.5",
+   "cls": "Linear",
+   "params": 32896,
+   "in_shapes": [
+    [
+     28000,
+     256
+    ]
+   ],
+   "out_shapes": [
+    28000,
+    128
+   ],
+   "calls": 1,
+   "params_attr": 32896,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.5.inter_norm",
+   "parent": "separation.dual_rnn.5",
+   "cls": "GroupNorm",
+   "params": 256,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 256,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.dual_rnn.5",
+   "parent": "separation.dual_rnn",
+   "cls": "Dual_RNN_Block",
+   "params": 594688,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separation.prelu",
+   "parent": "separation",
+   "cls": "PReLU",
+   "params": 1,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    128,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 1,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.conv2d",
+   "parent": "separation",
+   "cls": "Conv2d",
+   "params": 66048,
+   "in_shapes": [
+    [
+     1,
+     128,
+     200,
+     140
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    200,
+    140
+   ],
+   "calls": 1,
+   "params_attr": 66048,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.output.0",
+   "parent": "separation.output",
+   "cls": "Conv1d",
+   "params": 16512,
+   "in_shapes": [
+    [
+     4,
+     128,
+     13781
+    ]
+   ],
+   "out_shapes": [
+    4,
+    128,
+    13781
+   ],
+   "calls": 1,
+   "params_attr": 16512,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.output.1",
+   "parent": "separation.output",
+   "cls": "Tanh",
+   "params": 0,
+   "in_shapes": [
+    [
+     4,
+     128,
+     13781
+    ]
+   ],
+   "out_shapes": [
+    4,
+    128,
+    13781
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separation.output",
+   "parent": "separation",
+   "cls": "Sequential",
+   "params": 16512,
+   "in_shapes": [
+    [
+     4,
+     128,
+     13781
+    ]
+   ],
+   "out_shapes": [
+    4,
+    128,
+    13781
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separation.output_gate.0",
+   "parent": "separation.output_gate",
+   "cls": "Conv1d",
+   "params": 16512,
+   "in_shapes": [
+    [
+     4,
+     128,
+     13781
+    ]
+   ],
+   "out_shapes": [
+    4,
+    128,
+    13781
+   ],
+   "calls": 1,
+   "params_attr": 16512,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.output_gate.1",
+   "parent": "separation.output_gate",
+   "cls": "Sigmoid",
+   "params": 0,
+   "in_shapes": [
+    [
+     4,
+     128,
+     13781
+    ]
+   ],
+   "out_shapes": [
+    4,
+    128,
+    13781
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separation.output_gate",
+   "parent": "separation",
+   "cls": "Sequential",
+   "params": 16512,
+   "in_shapes": [
+    [
+     4,
+     128,
+     13781
+    ]
+   ],
+   "out_shapes": [
+    4,
+    128,
+    13781
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separation.end_conv1x1",
+   "parent": "separation",
+   "cls": "Conv1d",
+   "params": 8192,
+   "in_shapes": [
+    [
+     4,
+     128,
+     13781
+    ]
+   ],
+   "out_shapes": [
+    4,
+    64,
+    13781
+   ],
+   "calls": 1,
+   "params_attr": 8192,
+   "role": "leaf"
+  },
+  {
+   "path": "separation.activation",
+   "parent": "separation",
+   "cls": "ReLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     4,
+     64,
+     13781
+    ]
+   ],
+   "out_shapes": [
+    1,
+    4,
+    64,
+    13781
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "separation",
+   "parent": "<root>",
+   "cls": "Dual_Path_RNN",
+   "params": 3683713,
+   "in_shapes": [
+    [
+     1,
+     64,
+     13781
+    ]
+   ],
+   "out_shapes": [
+    4,
+    1,
+    64,
+    13781
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "decoder",
+   "parent": "<root>",
+   "cls": "Decoder",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     64,
+     13781
+    ]
+   ],
+   "out_shapes": [
+    1,
+    110256
+   ],
+   "calls": 4,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "<root>",
+   "parent": "",
+   "cls": "Dual_RNN_model",
+   "params": 3685761,
+   "in_shapes": [
+    [
+     1,
+     110256
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     110256
+    ],
+    [
+     1,
+     110256
+    ],
+    [
+     1,
+     110256
+    ],
+    [
+     1,
+     110256
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  }
+ ]
+}

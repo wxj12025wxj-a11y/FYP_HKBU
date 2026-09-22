@@ -1,0 +1,57 @@
+
+==============================================================================
+开始: 10 首歌运行时长基准 (CPU 单进程)
+==============================================================================
+  数据集: train | 歌曲数: 10 | 每首 30s | 总音频 300s
+  开始时间: 2026-09-15T19:31:26
+
+==============================================================================
+基准: Open-Unmix (umxhq, 4 targets)  (10 首 x 30s)
+==============================================================================
+[Open-Unmix] umxhq loaded | targets=['vocals', 'drums', 'bass', 'other']
+  [预热] 3s 片段耗时 0.43s (不计入推理)
+  [加载] 模型加载耗时 0.21s
+------------------------------------------------------------------------------
+  歌曲                                     时长s      推理s     RTF   SDR-v   SDR-d
+  A Classic Education - NightOwl          30     3.94   0.131    6.98    1.92
+  ANiMAL - Clinic A                       30     4.07   0.136    7.30    7.05
+  ANiMAL - Easy Tiger                     30     4.39   0.146    3.18   11.01
+  ANiMAL - Rockshow                       30     4.24   0.141    4.98    6.11
+  Actions - Devil's Words                 30     3.79   0.126   10.23    8.00
+  Actions - One Minute Smile              30     3.84   0.128    8.25    6.47
+  Actions - South Of The Water            30     4.35   0.145   11.46    7.06
+  Aimee Norwich - Child                   30     4.29   0.143  -47.67    5.65
+  Alexander Ross - Goodbye Bolero         30     4.31   0.144   10.82    4.56
+    [WARN] museval 失败: All the reference sources should be non-silent (not all-zeros), but at least one of the reference sources is all 0s, which introduces ambiguity to the evaluation. (Otherwise we can add infinitely many all-zero sources.)
+  Alexander Ross - Velvet Curtain         30     4.75   0.158   14.42     n/a
+------------------------------------------------------------------------------
+  合计推理 41.98s | 平均 4.20s/首 | 中位 RTF 0.142 | 实时=是
+
+==============================================================================
+基准: Demucs (htdemucs, 4 stems)  (10 首 x 30s)
+==============================================================================
+[Demucs] htdemucs | sources=['drums', 'bass', 'other', 'vocals'] | sr=44100 | segment=None
+  [预热] 3s 片段耗时 2.88s (不计入推理)
+  [加载] 模型加载耗时 0.35s
+------------------------------------------------------------------------------
+  歌曲                                     时长s      推理s     RTF   SDR-v   SDR-d
+  A Classic Education - NightOwl          30    11.00   0.367    8.50    4.48
+  ANiMAL - Clinic A                       30    11.75   0.392    9.78    9.43
+  ANiMAL - Easy Tiger                     30    11.65   0.388    6.85   15.00
+  ANiMAL - Rockshow                       30    11.22   0.374    5.81   10.01
+  Actions - Devil's Words                 30    11.33   0.378   13.71   11.05
+  Actions - One Minute Smile              30    11.39   0.380    9.28    9.26
+  Actions - South Of The Water            30    11.53   0.384   11.59   14.15
+  Aimee Norwich - Child                   30    11.37   0.379  -60.45   10.15
+  Alexander Ross - Goodbye Bolero         30    10.25   0.342   13.07    9.84
+    [WARN] museval 失败: All the reference sources should be non-silent (not all-zeros), but at least one of the reference sources is all 0s, which introduces ambiguity to the evaluation. (Otherwise we can add infinitely many all-zero sources.)
+  Alexander Ross - Velvet Curtain         30    11.77   0.392   19.61     n/a
+------------------------------------------------------------------------------
+  合计推理 113.27s | 平均 11.33s/首 | 中位 RTF 0.379 | 实时=是
+
+==============================================================================
+完成
+==============================================================================
+  总墙钟: 201.33s
+  JSON: E:\FYP_HKBU\outputs\comparison\bench_10songs.json
+  CSV : E:\FYP_HKBU\outputs\comparison\bench_10songs.csv

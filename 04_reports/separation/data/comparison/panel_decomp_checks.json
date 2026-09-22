@@ -1,0 +1,177 @@
+{
+  "generated": "2026-09-23 02:16:20",
+  "stem": "vocals",
+  "dur": 20.0,
+  "filters_len": 512,
+  "n_fft": 2048,
+  "hop": 512,
+  "metric_source": "museval BSSEval v4 内部实现（与报告 SDR 同源）",
+  "song_selection": {
+    "source": "panel_song_selection.json",
+    "stem": "vocals",
+    "dur_s": 20.0,
+    "windows_per_song": 8,
+    "target_min_pct": 12.0,
+    "min_song_dur_s": 60.0,
+    "rule": "目标轨占比 ≥ target_min 的窗中，取四轨占比最小值最大的窗；歌曲按该分数排序取 Top-N"
+  },
+  "target_min_pct": 12.0,
+  "songs_list": [
+    "The Easton Ellises - Falcon 69",
+    "Bobby Nobody - Stitch Up",
+    "Raft Monk - Tiring"
+  ],
+  "songs": [
+    {
+      "song": "The Easton Ellises - Falcon 69",
+      "offset": 165.0,
+      "dur": 20.0,
+      "min_stem_share_pct": 23.353559491036172,
+      "stem_share_pct": {
+        "vocals": 24.82,
+        "drums": 25.54,
+        "bass": 26.28,
+        "other": 23.35
+      },
+      "models": [
+        "BS-RoFormer-L12",
+        "BSRNN-SIMO",
+        "BSRNN-large",
+        "BSRNN-opt",
+        "Conv-TasNet",
+        "Demucs",
+        "MDX-Net",
+        "MMDenseLSTM",
+        "Open-Unmix",
+        "Oracle-IRM"
+      ],
+      "skipped": [],
+      "degenerate": false,
+      "status": "PASS",
+      "figures": [
+        "E:\\FYP_HKBU\\04_reports\\separation\\figures\\spectrograms\\panel_The_Easton_Ellises_-_Falcon_69_decomp.png",
+        "E:\\FYP_HKBU\\04_reports\\separation\\figures\\spectrograms\\panel_The_Easton_Ellises_-_Falcon_69_multimodel.png",
+        "E:\\FYP_HKBU\\04_reports\\separation\\figures\\spectrograms\\panel_The_Easton_Ellises_-_Falcon_69_mask.png",
+        "E:\\FYP_HKBU\\04_reports\\separation\\figures\\spectrograms\\panel_The_Easton_Ellises_-_Falcon_69_bands.png"
+      ],
+      "checks": {
+        "residual_rel": 3.8586962315355464e-17,
+        "residual_ok": true,
+        "sdr_ours": 4.545755805595256,
+        "sdr_museval_single_window": 4.545755805595256,
+        "sdr_abs_diff": 0.0,
+        "sdr_crosscheck_ok": true,
+        "sir": 13.581522754194314,
+        "sar": 4.968610497696339,
+        "isr": 6.555081266102607,
+        "share_pct": {
+          "s_true": 74.014,
+          "e_spat": 16.361,
+          "e_interf": 1.121,
+          "e_artif": 8.504
+        }
+      }
+    },
+    {
+      "song": "Bobby Nobody - Stitch Up",
+      "offset": 175.0,
+      "dur": 20.0,
+      "min_stem_share_pct": 21.364632983926995,
+      "stem_share_pct": {
+        "vocals": 21.8,
+        "drums": 26.3,
+        "bass": 30.53,
+        "other": 21.36
+      },
+      "models": [
+        "BS-RoFormer-L12",
+        "BSRNN-SIMO",
+        "BSRNN-large",
+        "BSRNN-opt",
+        "Conv-TasNet",
+        "Demucs",
+        "MDX-Net",
+        "MMDenseLSTM",
+        "Open-Unmix",
+        "Oracle-IRM"
+      ],
+      "skipped": [],
+      "degenerate": false,
+      "status": "PASS",
+      "figures": [
+        "E:\\FYP_HKBU\\04_reports\\separation\\figures\\spectrograms\\panel_Bobby_Nobody_-_Stitch_Up_decomp.png",
+        "E:\\FYP_HKBU\\04_reports\\separation\\figures\\spectrograms\\panel_Bobby_Nobody_-_Stitch_Up_multimodel.png",
+        "E:\\FYP_HKBU\\04_reports\\separation\\figures\\spectrograms\\panel_Bobby_Nobody_-_Stitch_Up_mask.png",
+        "E:\\FYP_HKBU\\04_reports\\separation\\figures\\spectrograms\\panel_Bobby_Nobody_-_Stitch_Up_bands.png"
+      ],
+      "checks": {
+        "residual_rel": 1.5397418259851834e-17,
+        "residual_ok": true,
+        "sdr_ours": 9.681894697433602,
+        "sdr_museval_single_window": 9.681894697433602,
+        "sdr_abs_diff": 0.0,
+        "sdr_crosscheck_ok": true,
+        "sir": 17.933944339094076,
+        "sar": 10.160955388225217,
+        "isr": 17.952235629701136,
+        "share_pct": {
+          "s_true": 90.285,
+          "e_spat": 1.447,
+          "e_interf": 1.167,
+          "e_artif": 7.101
+        }
+      }
+    },
+    {
+      "song": "Raft Monk - Tiring",
+      "offset": 150.0,
+      "dur": 20.0,
+      "min_stem_share_pct": 22.75810305987983,
+      "stem_share_pct": {
+        "vocals": 22.76,
+        "drums": 23.74,
+        "bass": 23.42,
+        "other": 30.08
+      },
+      "models": [
+        "BS-RoFormer-L12",
+        "BSRNN-large",
+        "BSRNN-opt",
+        "Conv-TasNet",
+        "Demucs",
+        "MDX-Net",
+        "MMDenseLSTM",
+        "Open-Unmix",
+        "Oracle-IRM"
+      ],
+      "skipped": [],
+      "degenerate": false,
+      "status": "PASS",
+      "figures": [
+        "E:\\FYP_HKBU\\04_reports\\separation\\figures\\spectrograms\\panel_Raft_Monk_-_Tiring_decomp.png",
+        "E:\\FYP_HKBU\\04_reports\\separation\\figures\\spectrograms\\panel_Raft_Monk_-_Tiring_multimodel.png",
+        "E:\\FYP_HKBU\\04_reports\\separation\\figures\\spectrograms\\panel_Raft_Monk_-_Tiring_mask.png",
+        "E:\\FYP_HKBU\\04_reports\\separation\\figures\\spectrograms\\panel_Raft_Monk_-_Tiring_bands.png"
+      ],
+      "checks": {
+        "residual_rel": 3.513461723607078e-17,
+        "residual_ok": true,
+        "sdr_ours": 5.899219512190741,
+        "sdr_museval_single_window": 5.899219512190741,
+        "sdr_abs_diff": 0.0,
+        "sdr_crosscheck_ok": true,
+        "sir": 10.125500109987831,
+        "sar": 7.085128275460849,
+        "isr": 11.548881213076678,
+        "share_pct": {
+          "s_true": 79.549,
+          "e_spat": 5.569,
+          "e_interf": 4.637,
+          "e_artif": 10.245
+        }
+      }
+    }
+  ],
+  "status": "PASS",
+  "elapsed_s": 134.6
+}

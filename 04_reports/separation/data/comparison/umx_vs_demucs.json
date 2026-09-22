@@ -1,0 +1,74 @@
+{
+  "song": "A Classic Education - NightOwl",
+  "duration_s": 30.0,
+  "sr": 44100,
+  "metric": "museval BSSEval v4 (1s win, median, mono) + SI-SDR + PESQ(16k wb) + STOI",
+  "targets": {
+    "vocals": {
+      "Open-Unmix": {
+        "method": "Open-Unmix umxhq",
+        "SDR": 6.55,
+        "delta_SDR": 15.71,
+        "SI_SDR": 6.71,
+        "ISR": 13.01,
+        "SAR": 6.04,
+        "PESQ": 1.5589,
+        "STOI": 0.5793,
+        "baseline_SDR": -9.16,
+        "baseline_PESQ": 1.0689,
+        "baseline_STOI": 0.3396
+      },
+      "Demucs": {
+        "method": "Demucs HTDemucs",
+        "SDR": 8.74,
+        "delta_SDR": 17.91,
+        "SI_SDR": 9.49,
+        "ISR": 18.93,
+        "SAR": 8.52,
+        "PESQ": 2.1584,
+        "STOI": 0.6428,
+        "baseline_SDR": -9.16,
+        "baseline_PESQ": 1.0689,
+        "baseline_STOI": 0.3396
+      }
+    },
+    "drums": {
+      "Open-Unmix": {
+        "method": "Open-Unmix umxhq",
+        "SDR": 1.93,
+        "delta_SDR": 19.86,
+        "SI_SDR": -2.55,
+        "ISR": 2.77,
+        "SAR": 1.68,
+        "PESQ": 1.0396,
+        "STOI": 0.4604,
+        "baseline_SDR": -17.93,
+        "baseline_PESQ": 2.7915,
+        "baseline_STOI": 0.2299
+      },
+      "Demucs": {
+        "method": "Demucs HTDemucs",
+        "SDR": 4.57,
+        "delta_SDR": 22.51,
+        "SI_SDR": 2.55,
+        "ISR": 7.59,
+        "SAR": 3.54,
+        "PESQ": 1.0797,
+        "STOI": 0.6013,
+        "baseline_SDR": -17.93,
+        "baseline_PESQ": 2.7915,
+        "baseline_STOI": 0.2299
+      }
+    }
+  },
+  "complexity_umx": {
+    "params_vocals": 8897444,
+    "params_4targets": 35577488,
+    "input_seconds": 10.0,
+    "flops": 3573121024.0,
+    "gflops": 3.57,
+    "gflops_per_s": 0.36,
+    "flops_2targets_total": 7146242048.0,
+    "impl": "torch.flop_counter (conv/linear/matmul; 复数 STFT 未计入; 输入 10s @44.1kHz)"
+  }
+}

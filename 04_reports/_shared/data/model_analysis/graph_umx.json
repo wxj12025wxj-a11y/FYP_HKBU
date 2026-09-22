@@ -1,0 +1,813 @@
+{
+ "model_key": "umx",
+ "label": "Open-Unmix (umxhq)",
+ "group": "4-stem",
+ "kind": "deep",
+ "status": "OK",
+ "params_M": 35.577,
+ "params_M_source": "model_profile.csv",
+ "n_roots": 1,
+ "roots": [
+  {
+   "cls": "Separator",
+   "params_M": 35.5775
+  }
+ ],
+ "traced_params_M": 35.5775,
+ "traced_vs_csv_ratio": 1.0,
+ "attribution_reconciles": true,
+ "n_aliased_paths": 0,
+ "hooked_root_cls": "Separator",
+ "hooked_root_params_M": 35.5775,
+ "n_targets": "4",
+ "native_sr": "44100",
+ "n_modules_total": 37,
+ "n_modules_fired": 36,
+ "load_s": 0.29,
+ "capture_s": 0.61,
+ "note": "",
+ "exec_order": [
+  {
+   "path": "stft",
+   "parent": "<root>",
+   "cls": "TorchSTFT",
+   "params": 4096,
+   "in_shapes": [
+    [
+     1,
+     2,
+     441000
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2,
+    2049,
+    431,
+    2
+   ],
+   "calls": 1,
+   "params_attr": 4096,
+   "role": "leaf"
+  },
+  {
+   "path": "complexnorm",
+   "parent": "<root>",
+   "cls": "ComplexNorm",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2,
+     2049,
+     431,
+     2
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2,
+    2049,
+    431
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "target_models.vocals.fc1",
+   "parent": "target_models.vocals",
+   "cls": "Linear",
+   "params": 1522688,
+   "in_shapes": [
+    [
+     431,
+     2974
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 1522688,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.vocals.bn1",
+   "parent": "target_models.vocals",
+   "cls": "BatchNorm1d",
+   "params": 1024,
+   "in_shapes": [
+    [
+     431,
+     512
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.vocals.lstm",
+   "parent": "target_models.vocals",
+   "cls": "LSTM",
+   "params": 4730880,
+   "in_shapes": [
+    [
+     431,
+     1,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     431,
+     1,
+     512
+    ],
+    [
+     [
+      6,
+      1,
+      256
+     ],
+     [
+      6,
+      1,
+      256
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 4730880,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.vocals.fc2",
+   "parent": "target_models.vocals",
+   "cls": "Linear",
+   "params": 524288,
+   "in_shapes": [
+    [
+     431,
+     1024
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 524288,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.vocals.bn2",
+   "parent": "target_models.vocals",
+   "cls": "BatchNorm1d",
+   "params": 1024,
+   "in_shapes": [
+    [
+     431,
+     512
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.vocals.fc3",
+   "parent": "target_models.vocals",
+   "cls": "Linear",
+   "params": 2098176,
+   "in_shapes": [
+    [
+     431,
+     512
+    ]
+   ],
+   "out_shapes": [
+    431,
+    4098
+   ],
+   "calls": 1,
+   "params_attr": 2098176,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.vocals.bn3",
+   "parent": "target_models.vocals",
+   "cls": "BatchNorm1d",
+   "params": 8196,
+   "in_shapes": [
+    [
+     431,
+     4098
+    ]
+   ],
+   "out_shapes": [
+    431,
+    4098
+   ],
+   "calls": 1,
+   "params_attr": 8196,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.vocals",
+   "parent": "target_models",
+   "cls": "OpenUnmix",
+   "params": 8893348,
+   "in_shapes": [
+    [
+     1,
+     2,
+     2049,
+     431
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2,
+    2049,
+    431
+   ],
+   "calls": 1,
+   "params_attr": 7072,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.drums.fc1",
+   "parent": "target_models.drums",
+   "cls": "Linear",
+   "params": 1522688,
+   "in_shapes": [
+    [
+     431,
+     2974
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 1522688,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.drums.bn1",
+   "parent": "target_models.drums",
+   "cls": "BatchNorm1d",
+   "params": 1024,
+   "in_shapes": [
+    [
+     431,
+     512
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.drums.lstm",
+   "parent": "target_models.drums",
+   "cls": "LSTM",
+   "params": 4730880,
+   "in_shapes": [
+    [
+     431,
+     1,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     431,
+     1,
+     512
+    ],
+    [
+     [
+      6,
+      1,
+      256
+     ],
+     [
+      6,
+      1,
+      256
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 4730880,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.drums.fc2",
+   "parent": "target_models.drums",
+   "cls": "Linear",
+   "params": 524288,
+   "in_shapes": [
+    [
+     431,
+     1024
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 524288,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.drums.bn2",
+   "parent": "target_models.drums",
+   "cls": "BatchNorm1d",
+   "params": 1024,
+   "in_shapes": [
+    [
+     431,
+     512
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.drums.fc3",
+   "parent": "target_models.drums",
+   "cls": "Linear",
+   "params": 2098176,
+   "in_shapes": [
+    [
+     431,
+     512
+    ]
+   ],
+   "out_shapes": [
+    431,
+    4098
+   ],
+   "calls": 1,
+   "params_attr": 2098176,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.drums.bn3",
+   "parent": "target_models.drums",
+   "cls": "BatchNorm1d",
+   "params": 8196,
+   "in_shapes": [
+    [
+     431,
+     4098
+    ]
+   ],
+   "out_shapes": [
+    431,
+    4098
+   ],
+   "calls": 1,
+   "params_attr": 8196,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.drums",
+   "parent": "target_models",
+   "cls": "OpenUnmix",
+   "params": 8893348,
+   "in_shapes": [
+    [
+     1,
+     2,
+     2049,
+     431
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2,
+    2049,
+    431
+   ],
+   "calls": 1,
+   "params_attr": 7072,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.bass.fc1",
+   "parent": "target_models.bass",
+   "cls": "Linear",
+   "params": 1522688,
+   "in_shapes": [
+    [
+     431,
+     2974
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 1522688,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.bass.bn1",
+   "parent": "target_models.bass",
+   "cls": "BatchNorm1d",
+   "params": 1024,
+   "in_shapes": [
+    [
+     431,
+     512
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.bass.lstm",
+   "parent": "target_models.bass",
+   "cls": "LSTM",
+   "params": 4730880,
+   "in_shapes": [
+    [
+     431,
+     1,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     431,
+     1,
+     512
+    ],
+    [
+     [
+      6,
+      1,
+      256
+     ],
+     [
+      6,
+      1,
+      256
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 4730880,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.bass.fc2",
+   "parent": "target_models.bass",
+   "cls": "Linear",
+   "params": 524288,
+   "in_shapes": [
+    [
+     431,
+     1024
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 524288,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.bass.bn2",
+   "parent": "target_models.bass",
+   "cls": "BatchNorm1d",
+   "params": 1024,
+   "in_shapes": [
+    [
+     431,
+     512
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.bass.fc3",
+   "parent": "target_models.bass",
+   "cls": "Linear",
+   "params": 2098176,
+   "in_shapes": [
+    [
+     431,
+     512
+    ]
+   ],
+   "out_shapes": [
+    431,
+    4098
+   ],
+   "calls": 1,
+   "params_attr": 2098176,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.bass.bn3",
+   "parent": "target_models.bass",
+   "cls": "BatchNorm1d",
+   "params": 8196,
+   "in_shapes": [
+    [
+     431,
+     4098
+    ]
+   ],
+   "out_shapes": [
+    431,
+    4098
+   ],
+   "calls": 1,
+   "params_attr": 8196,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.bass",
+   "parent": "target_models",
+   "cls": "OpenUnmix",
+   "params": 8893348,
+   "in_shapes": [
+    [
+     1,
+     2,
+     2049,
+     431
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2,
+    2049,
+    431
+   ],
+   "calls": 1,
+   "params_attr": 7072,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.other.fc1",
+   "parent": "target_models.other",
+   "cls": "Linear",
+   "params": 1522688,
+   "in_shapes": [
+    [
+     431,
+     2974
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 1522688,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.other.bn1",
+   "parent": "target_models.other",
+   "cls": "BatchNorm1d",
+   "params": 1024,
+   "in_shapes": [
+    [
+     431,
+     512
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.other.lstm",
+   "parent": "target_models.other",
+   "cls": "LSTM",
+   "params": 4730880,
+   "in_shapes": [
+    [
+     431,
+     1,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     431,
+     1,
+     512
+    ],
+    [
+     [
+      6,
+      1,
+      256
+     ],
+     [
+      6,
+      1,
+      256
+     ]
+    ]
+   ],
+   "calls": 1,
+   "params_attr": 4730880,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.other.fc2",
+   "parent": "target_models.other",
+   "cls": "Linear",
+   "params": 524288,
+   "in_shapes": [
+    [
+     431,
+     1024
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 524288,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.other.bn2",
+   "parent": "target_models.other",
+   "cls": "BatchNorm1d",
+   "params": 1024,
+   "in_shapes": [
+    [
+     431,
+     512
+    ]
+   ],
+   "out_shapes": [
+    431,
+    512
+   ],
+   "calls": 1,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.other.fc3",
+   "parent": "target_models.other",
+   "cls": "Linear",
+   "params": 2098176,
+   "in_shapes": [
+    [
+     431,
+     512
+    ]
+   ],
+   "out_shapes": [
+    431,
+    4098
+   ],
+   "calls": 1,
+   "params_attr": 2098176,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.other.bn3",
+   "parent": "target_models.other",
+   "cls": "BatchNorm1d",
+   "params": 8196,
+   "in_shapes": [
+    [
+     431,
+     4098
+    ]
+   ],
+   "out_shapes": [
+    431,
+    4098
+   ],
+   "calls": 1,
+   "params_attr": 8196,
+   "role": "leaf"
+  },
+  {
+   "path": "target_models.other",
+   "parent": "target_models",
+   "cls": "OpenUnmix",
+   "params": 8893348,
+   "in_shapes": [
+    [
+     1,
+     2,
+     2049,
+     431
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2,
+    2049,
+    431
+   ],
+   "calls": 1,
+   "params_attr": 7072,
+   "role": "leaf"
+  },
+  {
+   "path": "istft",
+   "parent": "<root>",
+   "cls": "TorchISTFT",
+   "params": 4096,
+   "in_shapes": [
+    [
+     1,
+     4,
+     2,
+     2049,
+     431,
+     2
+    ]
+   ],
+   "out_shapes": [
+    1,
+    4,
+    2,
+    441000
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "<root>",
+   "parent": "",
+   "cls": "Separator",
+   "params": 35577488,
+   "in_shapes": [
+    [
+     1,
+     2,
+     441000
+    ]
+   ],
+   "out_shapes": [
+    1,
+    4,
+    2,
+    441000
+   ],
+   "calls": 1,
+   "params_attr": 0,
+   "role": "container"
+  }
+ ]
+}

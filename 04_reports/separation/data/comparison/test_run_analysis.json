@@ -1,0 +1,939 @@
+{
+  "n_models_total": 15,
+  "finished": [
+    "oracle",
+    "demucs",
+    "umx",
+    "mdx",
+    "convtasnet",
+    "mmdenselstm",
+    "bsroformer_l12",
+    "bsroformer_l6",
+    "bsrnn",
+    "bsrnn_large",
+    "dprnn"
+  ],
+  "unfinished": [
+    "bsrnn_simo",
+    "rpca",
+    "bsrnn_all",
+    "bsrnn_large_all"
+  ],
+  "disabled": [
+    "rpca",
+    "bsrnn_all",
+    "bsrnn_large_all",
+    "bsrnn_simo"
+  ],
+  "ledger_updated": "2026-09-22 10:03:22",
+  "models": {
+    "oracle": {
+      "label": "Oracle-IRM",
+      "n_attempt": 50,
+      "timeouts": 0,
+      "disabled": false,
+      "status_counts": {
+        "PASS": 50
+      },
+      "ledger_status_counts": {
+        "PASS": 50
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": 50,
+        "mean": 51.03,
+        "median": 51.95,
+        "min": 12.9,
+        "max": 92.5,
+        "stdev": 12.32,
+        "total": 2551.4
+      },
+      "n_pass": 50,
+      "timeout_wait_s": 0.0,
+      "infer_s": {
+        "n": 50,
+        "mean": 3.389,
+        "median": 3.234,
+        "min": 0.728,
+        "max": 6.845,
+        "stdev": 1.094,
+        "total": 169.43
+      },
+      "rtf": {
+        "n": 50,
+        "mean": 0.0134,
+        "median": 0.0135,
+        "min": 0.0093,
+        "max": 0.016,
+        "stdev": 0.0014,
+        "total": 0.6689
+      },
+      "sdr_mean": {
+        "n": 50,
+        "mean": 9.127,
+        "median": 9.017,
+        "min": 6.674,
+        "max": 14.018,
+        "stdev": 1.485,
+        "total": 456.349
+      },
+      "n_tracks": {
+        "4": 50
+      },
+      "out_bytes_total": 1352563039,
+      "out_mb_total": 1352.6,
+      "out_songs": 50,
+      "complete_50": true,
+      "overhead_s_total": 2382.0,
+      "infer_share_pct": 6.6,
+      "overhead_share_pct": 93.4
+    },
+    "demucs": {
+      "label": "Demucs",
+      "n_attempt": 50,
+      "timeouts": 0,
+      "disabled": false,
+      "status_counts": {
+        "PASS": 50
+      },
+      "ledger_status_counts": {
+        "PASS": 50
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": 50,
+        "mean": 56.26,
+        "median": 57.05,
+        "min": 15.7,
+        "max": 96.4,
+        "stdev": 12.5,
+        "total": 2813.2
+      },
+      "n_pass": 50,
+      "timeout_wait_s": 0.0,
+      "infer_s": {
+        "n": 50,
+        "mean": 7.881,
+        "median": 7.877,
+        "min": 2.309,
+        "max": 13.426,
+        "stdev": 1.909,
+        "total": 394.03
+      },
+      "rtf": {
+        "n": 50,
+        "mean": 0.0316,
+        "median": 0.0316,
+        "min": 0.03,
+        "max": 0.0333,
+        "stdev": 0.0006,
+        "total": 1.5822
+      },
+      "sdr_mean": {
+        "n": 50,
+        "mean": 8.695,
+        "median": 9.052,
+        "min": 2.689,
+        "max": 12.319,
+        "stdev": 2.334,
+        "total": 434.744
+      },
+      "n_tracks": {
+        "4": 50
+      },
+      "out_bytes_total": 3272783455,
+      "out_mb_total": 3272.8,
+      "out_songs": 50,
+      "complete_50": true,
+      "overhead_s_total": 2419.2,
+      "infer_share_pct": 14.0,
+      "overhead_share_pct": 86.0
+    },
+    "bsrnn_simo": {
+      "label": "BSRNN-SIMO",
+      "n_attempt": 17,
+      "timeouts": 3,
+      "disabled": true,
+      "status_counts": {
+        "PASS": 14,
+        "TIMEOUT": 3
+      },
+      "ledger_status_counts": {
+        "PASS": 14,
+        "TIMEOUT": 3
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": 14,
+        "mean": 138.5,
+        "median": 144.6,
+        "min": 103.2,
+        "max": 165.4,
+        "stdev": 21.03,
+        "total": 1939.0
+      },
+      "n_pass": 14,
+      "timeout_wait_s": 544.0,
+      "infer_s": {
+        "n": 14,
+        "mean": 88.167,
+        "median": 86.368,
+        "min": 70.69,
+        "max": 106.871,
+        "stdev": 11.388,
+        "total": 1234.341
+      },
+      "rtf": {
+        "n": 14,
+        "mean": 0.3891,
+        "median": 0.3929,
+        "min": 0.3129,
+        "max": 0.429,
+        "stdev": 0.0277,
+        "total": 5.447
+      },
+      "sdr_mean": {
+        "n": 14,
+        "mean": 9.313,
+        "median": 9.374,
+        "min": 5.155,
+        "max": 14.343,
+        "stdev": 2.324,
+        "total": 130.386
+      },
+      "n_tracks": {
+        "4": 14
+      },
+      "out_bytes_total": 674384133,
+      "out_mb_total": 674.4,
+      "out_songs": 17,
+      "complete_50": false,
+      "overhead_s_total": 704.7,
+      "infer_share_pct": 63.7,
+      "overhead_share_pct": 36.3
+    },
+    "rpca": {
+      "label": "RPCA",
+      "n_attempt": 2,
+      "timeouts": 3,
+      "disabled": true,
+      "status_counts": {
+        "TIMEOUT": 2
+      },
+      "ledger_status_counts": {
+        "TIMEOUT": 2
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "max": null,
+        "stdev": null,
+        "total": null
+      },
+      "n_pass": 0,
+      "timeout_wait_s": 363.3,
+      "infer_s": {
+        "n": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "max": null,
+        "stdev": null,
+        "total": null
+      },
+      "rtf": {
+        "n": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "max": null,
+        "stdev": null,
+        "total": null
+      },
+      "sdr_mean": {
+        "n": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "max": null,
+        "stdev": null,
+        "total": null
+      },
+      "n_tracks": {},
+      "out_bytes_total": 0,
+      "out_mb_total": 0.0,
+      "out_songs": 0,
+      "complete_50": false,
+      "overhead_s_total": null
+    },
+    "umx": {
+      "label": "Open-Unmix",
+      "n_attempt": 50,
+      "timeouts": 0,
+      "disabled": false,
+      "status_counts": {
+        "PASS": 50
+      },
+      "ledger_status_counts": {
+        "PASS": 50
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": 50,
+        "mean": 64.2,
+        "median": 65.05,
+        "min": 27.7,
+        "max": 111.0,
+        "stdev": 14.79,
+        "total": 3210.2
+      },
+      "n_pass": 50,
+      "timeout_wait_s": 0.0,
+      "infer_s": {
+        "n": 50,
+        "mean": 16.665,
+        "median": 16.712,
+        "min": 5.639,
+        "max": 28.954,
+        "stdev": 4.569,
+        "total": 833.266
+      },
+      "rtf": {
+        "n": 50,
+        "mean": 0.0668,
+        "median": 0.0676,
+        "min": 0.0286,
+        "max": 0.074,
+        "stdev": 0.008,
+        "total": 3.3406
+      },
+      "sdr_mean": {
+        "n": 50,
+        "mean": 5.356,
+        "median": 5.49,
+        "min": -0.029,
+        "max": 8.13,
+        "stdev": 1.779,
+        "total": 267.801
+      },
+      "n_tracks": {
+        "4": 50
+      },
+      "out_bytes_total": 2782532342,
+      "out_mb_total": 2782.5,
+      "out_songs": 50,
+      "complete_50": true,
+      "overhead_s_total": 2376.9,
+      "infer_share_pct": 26.0,
+      "overhead_share_pct": 74.0
+    },
+    "mdx": {
+      "label": "MDX-Net",
+      "n_attempt": 50,
+      "timeouts": 0,
+      "disabled": false,
+      "status_counts": {
+        "PASS": 50
+      },
+      "ledger_status_counts": {
+        "PASS": 50
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": 50,
+        "mean": 67.9,
+        "median": 68.9,
+        "min": 38.3,
+        "max": 112.9,
+        "stdev": 14.01,
+        "total": 3394.9
+      },
+      "n_pass": 50,
+      "timeout_wait_s": 0.0,
+      "infer_s": {
+        "n": 50,
+        "mean": 15.918,
+        "median": 15.752,
+        "min": 9.675,
+        "max": 26.69,
+        "stdev": 3.388,
+        "total": 795.919
+      },
+      "rtf": {
+        "n": 50,
+        "mean": 0.066,
+        "median": 0.063,
+        "min": 0.0566,
+        "max": 0.207,
+        "stdev": 0.0202,
+        "total": 3.3018
+      },
+      "sdr_mean": {
+        "n": 50,
+        "mean": 9.98,
+        "median": 9.872,
+        "min": 5.156,
+        "max": 14.012,
+        "stdev": 2.149,
+        "total": 498.994
+      },
+      "n_tracks": {
+        "4": 50
+      },
+      "out_bytes_total": 3298985593,
+      "out_mb_total": 3299.0,
+      "out_songs": 50,
+      "complete_50": true,
+      "overhead_s_total": 2599.0,
+      "infer_share_pct": 23.4,
+      "overhead_share_pct": 76.6
+    },
+    "convtasnet": {
+      "label": "Conv-TasNet",
+      "n_attempt": 50,
+      "timeouts": 0,
+      "disabled": false,
+      "status_counts": {
+        "PASS": 50
+      },
+      "ledger_status_counts": {
+        "PASS": 50
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": 50,
+        "mean": 88.98,
+        "median": 89.55,
+        "min": 33.4,
+        "max": 152.0,
+        "stdev": 20.42,
+        "total": 4449.1
+      },
+      "n_pass": 50,
+      "timeout_wait_s": 0.0,
+      "infer_s": {
+        "n": 50,
+        "mean": 40.735,
+        "median": 40.244,
+        "min": 12.052,
+        "max": 69.032,
+        "stdev": 9.945,
+        "total": 2036.745
+      },
+      "rtf": {
+        "n": 50,
+        "mean": 0.1636,
+        "median": 0.1608,
+        "min": 0.1563,
+        "max": 0.1842,
+        "stdev": 0.0063,
+        "total": 8.1793
+      },
+      "sdr_mean": {
+        "n": 50,
+        "mean": 5.41,
+        "median": 5.593,
+        "min": 0.234,
+        "max": 7.975,
+        "stdev": 1.706,
+        "total": 270.496
+      },
+      "n_tracks": {
+        "4": 50
+      },
+      "out_bytes_total": 3658348818,
+      "out_mb_total": 3658.3,
+      "out_songs": 50,
+      "complete_50": true,
+      "overhead_s_total": 2412.4,
+      "infer_share_pct": 45.8,
+      "overhead_share_pct": 54.2
+    },
+    "mmdenselstm": {
+      "label": "MMDenseLSTM",
+      "n_attempt": 50,
+      "timeouts": 0,
+      "disabled": false,
+      "status_counts": {
+        "PASS": 50
+      },
+      "ledger_status_counts": {
+        "PASS": 50
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": 50,
+        "mean": 65.48,
+        "median": 66.05,
+        "min": 33.1,
+        "max": 113.2,
+        "stdev": 14.51,
+        "total": 3273.8
+      },
+      "n_pass": 50,
+      "timeout_wait_s": 0.0,
+      "infer_s": {
+        "n": 50,
+        "mean": 16.238,
+        "median": 15.811,
+        "min": 8.954,
+        "max": 26.196,
+        "stdev": 3.562,
+        "total": 811.88
+      },
+      "rtf": {
+        "n": 50,
+        "mean": 0.0664,
+        "median": 0.0627,
+        "min": 0.055,
+        "max": 0.1234,
+        "stdev": 0.0105,
+        "total": 3.32
+      },
+      "sdr_mean": {
+        "n": 50,
+        "mean": 5.452,
+        "median": 5.646,
+        "min": -3.114,
+        "max": 8.076,
+        "stdev": 2.031,
+        "total": 272.606
+      },
+      "n_tracks": {
+        "4": 50
+      },
+      "out_bytes_total": 2773817939,
+      "out_mb_total": 2773.8,
+      "out_songs": 50,
+      "complete_50": true,
+      "overhead_s_total": 2461.9,
+      "infer_share_pct": 24.8,
+      "overhead_share_pct": 75.2
+    },
+    "bsroformer_l12": {
+      "label": "BS-RoFormer-L12",
+      "n_attempt": 50,
+      "timeouts": 0,
+      "disabled": false,
+      "status_counts": {
+        "PASS": 50
+      },
+      "ledger_status_counts": {
+        "PASS": 50
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": 50,
+        "mean": 84.37,
+        "median": 83.2,
+        "min": 31.9,
+        "max": 140.8,
+        "stdev": 18.72,
+        "total": 4218.3
+      },
+      "n_pass": 50,
+      "timeout_wait_s": 0.0,
+      "infer_s": {
+        "n": 50,
+        "mean": 65.759,
+        "median": 64.114,
+        "min": 20.474,
+        "max": 113.09,
+        "stdev": 16.177,
+        "total": 3287.937
+      },
+      "rtf": {
+        "n": 50,
+        "mean": 0.2639,
+        "median": 0.264,
+        "min": 0.2591,
+        "max": 0.2729,
+        "stdev": 0.003,
+        "total": 13.1974
+      },
+      "sdr_mean": {
+        "n": 50,
+        "mean": 12.471,
+        "median": 13.553,
+        "min": 0.089,
+        "max": 20.868,
+        "stdev": 4.504,
+        "total": 623.558
+      },
+      "n_tracks": {
+        "1": 50
+      },
+      "out_bytes_total": 635467105,
+      "out_mb_total": 635.5,
+      "out_songs": 50,
+      "complete_50": true,
+      "overhead_s_total": 930.4,
+      "infer_share_pct": 77.9,
+      "overhead_share_pct": 22.1
+    },
+    "bsroformer_l6": {
+      "label": "BS-RoFormer-L6",
+      "n_attempt": 50,
+      "timeouts": 0,
+      "disabled": false,
+      "status_counts": {
+        "PASS": 50
+      },
+      "ledger_status_counts": {
+        "PASS": 50
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": 50,
+        "mean": 62.93,
+        "median": 62.85,
+        "min": 24.0,
+        "max": 104.4,
+        "stdev": 14.07,
+        "total": 3146.3
+      },
+      "n_pass": 50,
+      "timeout_wait_s": 0.0,
+      "infer_s": {
+        "n": 50,
+        "mean": 44.293,
+        "median": 44.127,
+        "min": 13.696,
+        "max": 75.983,
+        "stdev": 10.925,
+        "total": 2214.641
+      },
+      "rtf": {
+        "n": 50,
+        "mean": 0.1777,
+        "median": 0.1775,
+        "min": 0.1752,
+        "max": 0.1812,
+        "stdev": 0.0012,
+        "total": 8.8868
+      },
+      "sdr_mean": {
+        "n": 50,
+        "mean": 9.902,
+        "median": 10.461,
+        "min": -0.149,
+        "max": 18.936,
+        "stdev": 4.213,
+        "total": 495.121
+      },
+      "n_tracks": {
+        "1": 50
+      },
+      "out_bytes_total": 1023877729,
+      "out_mb_total": 1023.9,
+      "out_songs": 50,
+      "complete_50": true,
+      "overhead_s_total": 931.7,
+      "infer_share_pct": 70.4,
+      "overhead_share_pct": 29.6
+    },
+    "bsrnn": {
+      "label": "BSRNN-opt",
+      "n_attempt": 50,
+      "timeouts": 0,
+      "disabled": false,
+      "status_counts": {
+        "PASS": 50
+      },
+      "ledger_status_counts": {
+        "PASS": 50
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": 50,
+        "mean": 54.7,
+        "median": 54.8,
+        "min": 22.5,
+        "max": 90.9,
+        "stdev": 11.97,
+        "total": 2735.2
+      },
+      "n_pass": 50,
+      "timeout_wait_s": 0.0,
+      "infer_s": {
+        "n": 50,
+        "mean": 36.53,
+        "median": 36.322,
+        "min": 12.258,
+        "max": 61.855,
+        "stdev": 8.861,
+        "total": 1826.516
+      },
+      "rtf": {
+        "n": 50,
+        "mean": 0.1472,
+        "median": 0.1475,
+        "min": 0.1093,
+        "max": 0.1848,
+        "stdev": 0.011,
+        "total": 7.3597
+      },
+      "sdr_mean": {
+        "n": 50,
+        "mean": 10.111,
+        "median": 10.415,
+        "min": 0.0,
+        "max": 17.504,
+        "stdev": 3.857,
+        "total": 505.546
+      },
+      "n_tracks": {
+        "1": 50
+      },
+      "out_bytes_total": 598255726,
+      "out_mb_total": 598.3,
+      "out_songs": 50,
+      "complete_50": true,
+      "overhead_s_total": 908.7,
+      "infer_share_pct": 66.8,
+      "overhead_share_pct": 33.2
+    },
+    "bsrnn_all": {
+      "label": "BSRNN-all(4ckpt)",
+      "n_attempt": 2,
+      "timeouts": 3,
+      "disabled": true,
+      "status_counts": {
+        "TIMEOUT": 2
+      },
+      "ledger_status_counts": {
+        "TIMEOUT": 2
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "max": null,
+        "stdev": null,
+        "total": null
+      },
+      "n_pass": 0,
+      "timeout_wait_s": 362.0,
+      "infer_s": {
+        "n": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "max": null,
+        "stdev": null,
+        "total": null
+      },
+      "rtf": {
+        "n": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "max": null,
+        "stdev": null,
+        "total": null
+      },
+      "sdr_mean": {
+        "n": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "max": null,
+        "stdev": null,
+        "total": null
+      },
+      "n_tracks": {},
+      "out_bytes_total": 0,
+      "out_mb_total": 0.0,
+      "out_songs": 0,
+      "complete_50": false,
+      "overhead_s_total": null
+    },
+    "bsrnn_large": {
+      "label": "BSRNN-large",
+      "n_attempt": 50,
+      "timeouts": 0,
+      "disabled": false,
+      "status_counts": {
+        "PASS": 50
+      },
+      "ledger_status_counts": {
+        "PASS": 50
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": 50,
+        "mean": 46.91,
+        "median": 46.7,
+        "min": 19.5,
+        "max": 78.3,
+        "stdev": 10.05,
+        "total": 2345.7
+      },
+      "n_pass": 50,
+      "timeout_wait_s": 0.0,
+      "infer_s": {
+        "n": 50,
+        "mean": 29.47,
+        "median": 28.939,
+        "min": 9.302,
+        "max": 52.06,
+        "stdev": 7.288,
+        "total": 1473.488
+      },
+      "rtf": {
+        "n": 50,
+        "mean": 0.1186,
+        "median": 0.1198,
+        "min": 0.0805,
+        "max": 0.1431,
+        "stdev": 0.0089,
+        "total": 5.9294
+      },
+      "sdr_mean": {
+        "n": 50,
+        "mean": 9.622,
+        "median": 10.142,
+        "min": 0.001,
+        "max": 15.983,
+        "stdev": 3.628,
+        "total": 481.109
+      },
+      "n_tracks": {
+        "1": 50
+      },
+      "out_bytes_total": 618685882,
+      "out_mb_total": 618.7,
+      "out_songs": 50,
+      "complete_50": true,
+      "overhead_s_total": 872.2,
+      "infer_share_pct": 62.8,
+      "overhead_share_pct": 37.2
+    },
+    "bsrnn_large_all": {
+      "label": "BSRNN-large-all(4ckpt)",
+      "n_attempt": 1,
+      "timeouts": 3,
+      "disabled": true,
+      "status_counts": {
+        "TIMEOUT": 1
+      },
+      "ledger_status_counts": {
+        "TIMEOUT": 1
+      },
+      "reconciled": [],
+      "wall_s": {
+        "n": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "max": null,
+        "stdev": null,
+        "total": null
+      },
+      "n_pass": 0,
+      "timeout_wait_s": 181.2,
+      "infer_s": {
+        "n": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "max": null,
+        "stdev": null,
+        "total": null
+      },
+      "rtf": {
+        "n": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "max": null,
+        "stdev": null,
+        "total": null
+      },
+      "sdr_mean": {
+        "n": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "max": null,
+        "stdev": null,
+        "total": null
+      },
+      "n_tracks": {},
+      "out_bytes_total": 0,
+      "out_mb_total": 0.0,
+      "out_songs": 0,
+      "complete_50": false,
+      "overhead_s_total": null
+    },
+    "dprnn": {
+      "label": "DPRNN",
+      "n_attempt": 50,
+      "timeouts": 0,
+      "disabled": false,
+      "status_counts": {
+        "PASS": 50
+      },
+      "ledger_status_counts": {
+        "FAIL": 1,
+        "PASS": 49
+      },
+      "reconciled": [
+        "AM Contra - Heart Peripheral"
+      ],
+      "wall_s": {
+        "n": 50,
+        "mean": 50.6,
+        "median": 51.4,
+        "min": 6.8,
+        "max": 87.5,
+        "stdev": 11.95,
+        "total": 2529.8
+      },
+      "n_pass": 50,
+      "timeout_wait_s": 0.0,
+      "infer_s": {
+        "n": 50,
+        "mean": 4.545,
+        "median": 4.471,
+        "min": 1.537,
+        "max": 7.296,
+        "stdev": 1.055,
+        "total": 227.26
+      },
+      "rtf": {
+        "n": 50,
+        "mean": 0.0183,
+        "median": 0.0183,
+        "min": 0.0133,
+        "max": 0.0224,
+        "stdev": 0.0012,
+        "total": 0.9173
+      },
+      "sdr_mean": {
+        "n": 50,
+        "mean": -1.747,
+        "median": -1.51,
+        "min": -7.833,
+        "max": -0.638,
+        "stdev": 1.162,
+        "total": -87.354
+      },
+      "n_tracks": {
+        "4": 50
+      },
+      "out_bytes_total": 1204657004,
+      "out_mb_total": 1204.7,
+      "out_songs": 50,
+      "complete_50": true,
+      "overhead_s_total": 2302.5,
+      "infer_share_pct": 9.0,
+      "overhead_share_pct": 91.0
+    }
+  }
+}

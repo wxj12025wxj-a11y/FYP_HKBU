@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>QA audio probe</title>
+<style>body{font:13px/1.6 monospace;background:#111;color:#eee;padding:12px}</style>
+</head>
+<body>
+<pre id="out">running...</pre>
+<script>
+/* Loads the exact clips the listening page links, in a real Chromium media
+   stack, and reports: decode OK? duration? play() advances? seek works?
+   Result is beaconed back to the local server as an image request, so this
+   works from both http:// and file:// origins. */
+const CASES = [
+  ["mixture.wav (源混音)",       "../../02_databases/MUSDB18-HQ/test/Georgia%20Wonder%20-%20Siren/mixture.wav"],
+  ["Demucs vocals.flac",        "../../03_outputs/_test_run/Demucs/PR%20-%20Oh%20No/vocals.flac"],
+  ["DPRNN vocals.flac",         "../../03_outputs/_test_run/DPRNN/PR%20-%20Oh%20No/vocals.flac"],
+  ["BS-RoFormer-L6 vocals+other","../../03_outputs/_test_run/BS-RoFormer-L6/M.E.R.C.%20Music%20-%20Knockout/vocals+other.flac"],
+  ["GT vocals.wav (Knockout)",  "../../02_databases/MUSDB18-HQ/test/M.E.R.C.%20Music%20-%20Knockout/vocals.wav"]
+];
+
+const results = [];
+const log = t => { document.getElementById("out").textContent += "\n" + t; };
+
+function test([name, src]) {
+  return new Promise(done => {
+    const a = new Audio();
+    a.preload = "auto";
+    const r = { name, src, loaded: false, duration: null, err: null,
+                played: false, advanced: null, seeked: null };
+    const finish = () => { results.push(r); done(); };
+    const timer = setTimeout(() => { r.err = r.err || "timeout"; finish(); }, 12000);
+
+    a.addEventListener("error", () => {
+      r.err = "media error code " + (a.error ? a.error.code : "?");
+      clearTimeout(timer); finish();
+    });
+    a.addEventListener("loadedmetadata", () => {
+      r.loaded = true;
+      r.duration = Math.round(a.duration * 100) / 100;
+      try {
+        const p = a.play();
+        const after = () => setTimeout(() => {
+          r.played = !a.paused;
+          r.advanced = Math.round(a.currentTime * 1000) / 1000;
+          try {
+            const target = Math.max(1, a.duration - 5);
+            a.currentTime = target;
+            setTimeout(() => {
+              r.seeked = Math.round(a.currentTime * 10) / 10;
+              r.seek_ok = Math.abs(a.currentTime - target) < 1.5;
+              a.pause();
+              clearTimeout(timer); finish();
+            }, 900);
+          } catch (e) { r.err = "seek: " + e.message; clearTimeout(timer); finish(); }
+        }, 900);
+        if (p && p.then) p.then(after).catch(e => { r.err = "play(): " + e.message; after(); });
+        else after();
+      } catch (e) { r.err = "play: " + e.message; clearTimeout(timer); finish(); }
+    });
+    log("loading " + name);
+    a.src = src;
+  });
+}
+
+(async () => {
+  await Promise.all(CASES.map(test));
+  const payload = { origin: location.protocol, ua: navigator.userAgent.match(/Chrome\/[\d.]+/)[0], results };
+  const ok = results.filter(r => r.loaded && r.played && r.seek_ok).length;
+  document.getElementById("out").textContent =
+    "OK " + ok + "/" + results.length + "\n" + JSON.stringify(payload, null, 1);
+  log("\nbeaconing...");
+  new Image().src = "http://127.0.0.1:8123/__qa_result?d=" + encodeURIComponent(JSON.stringify(payload));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "song": "A Classic Education - NightOwl",
+  "duration_s": 30,
+  "sr": 44100,
+  "note": "RTF = 耗时/音频时长; <1 表示比实时快",
+  "results": [
+    {
+      "method": "HPSS (percussive)",
+      "seconds": 2.0264,
+      "rtf": 0.0675,
+      "realtime_ok": true,
+      "note": ""
+    },
+    {
+      "method": "ICA (FastICA)",
+      "seconds": 0.1414,
+      "rtf": 0.0047,
+      "realtime_ok": true,
+      "note": ""
+    },
+    {
+      "method": "NMF (unsupervised, k=50)",
+      "seconds": 3.3497,
+      "rtf": 0.1117,
+      "realtime_ok": true,
+      "note": ""
+    },
+    {
+      "method": "RPCA (Inexact ALM)",
+      "seconds": 48.0487,
+      "rtf": 1.6016,
+      "realtime_ok": false,
+      "note": ""
+    },
+    {
+      "method": "Open-Unmix umxhq (4 轨, 冷启动)",
+      "seconds": 3.2037,
+      "rtf": 0.1068,
+      "realtime_ok": true,
+      "note": "含每次调用的权重加载(未常驻内存)"
+    }
+  ]
+}

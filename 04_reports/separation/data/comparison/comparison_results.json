@@ -1,0 +1,1720 @@
+{
+  "songs": [
+    "A Classic Education - NightOwl",
+    "ANiMAL - Clinic A",
+    "ANiMAL - Easy Tiger",
+    "ANiMAL - Rockshow",
+    "Actions - Devil's Words",
+    "Actions - One Minute Smile",
+    "Actions - South Of The Water",
+    "Aimee Norwich - Child",
+    "Alexander Ross - Goodbye Bolero",
+    "Alexander Ross - Velvet Curtain"
+  ],
+  "subset": "train",
+  "duration": 30,
+  "sr": 44100,
+  "metric": "museval BSSEval v4 (1s window, median), mono",
+  "results": [
+    {
+      "song": "A Classic Education - NightOwl",
+      "method": "Baseline: mixture (no separation)",
+      "target": "vocals",
+      "note": "直接拿混音当估计, 用于标定各方法是否真的有效",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -9.1630308925236,
+        "isr": 24.799561512416656,
+        "sir": Infinity,
+        "sar": -9.175675784124945,
+        "si_sdr": -10.934023398240756
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "A Classic Education - NightOwl",
+      "method": "Baseline: mixture (no separation)",
+      "target": "drums",
+      "note": "同上的鼓目标基线",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -17.933059067316538,
+        "isr": 14.899544538901868,
+        "sir": Infinity,
+        "sar": -17.9544868321753,
+        "si_sdr": -18.01324247438206
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "A Classic Education - NightOwl",
+      "method": "ICA (FastICA, best of 2)",
+      "target": "vocals",
+      "note": "盲源分离: 立体声 2ch -> 2 分量",
+      "runtime_s": 0.39,
+      "metrics": {
+        "sdr": -26.4374225378101,
+        "isr": -15.685246364101733,
+        "sir": Infinity,
+        "sar": -9.287496887992257,
+        "si_sdr": -10.995487680569248
+      },
+      "error": null,
+      "sdr_improvement": -17.27,
+      "si_sdr_improvement": -0.06
+    },
+    {
+      "song": "A Classic Education - NightOwl",
+      "method": "NMF (unsupervised, k=50)",
+      "target": "vocals",
+      "note": "分量按时域稀疏度聚 2 组, 取更间歇者为 vocals",
+      "runtime_s": 18.6,
+      "metrics": {
+        "sdr": -8.558731930947424,
+        "isr": 25.378819343212484,
+        "sir": Infinity,
+        "sar": -8.581929493419176,
+        "si_sdr": -9.94625667768672
+      },
+      "error": null,
+      "sdr_improvement": 0.6,
+      "si_sdr_improvement": 0.99
+    },
+    {
+      "song": "A Classic Education - NightOwl",
+      "method": "NMF (oracle grouping)",
+      "target": "vocals",
+      "note": "分组用真值挑选 -> 上界参考",
+      "runtime_s": 3.96,
+      "metrics": {
+        "sdr": -8.558731930947424,
+        "isr": 25.378819343212484,
+        "sir": Infinity,
+        "sar": -8.581929493419176,
+        "si_sdr": -9.94625667768672
+      },
+      "error": null,
+      "sdr_improvement": 0.6,
+      "si_sdr_improvement": 0.99
+    },
+    {
+      "song": "A Classic Education - NightOwl",
+      "method": "RPCA (Inexact ALM)",
+      "target": "vocals",
+      "note": "低秩=伴奏, 稀疏=人声",
+      "runtime_s": 155.06,
+      "metrics": {
+        "sdr": -1.2055552233544238,
+        "isr": 7.875778803966714,
+        "sir": Infinity,
+        "sar": -4.382375120241374,
+        "si_sdr": -6.730622387067657
+      },
+      "error": null,
+      "sdr_improvement": 7.96,
+      "si_sdr_improvement": 4.2
+    },
+    {
+      "song": "A Classic Education - NightOwl",
+      "method": "HPSS (percussive)",
+      "target": "drums",
+      "note": "谐波-打击分离, 取打击分量",
+      "runtime_s": 2.44,
+      "metrics": {
+        "sdr": -3.548973503723693,
+        "isr": 3.457013324563209,
+        "sir": Infinity,
+        "sar": -10.31031960889756,
+        "si_sdr": -11.813269279875943
+      },
+      "error": null,
+      "sdr_improvement": 14.38,
+      "si_sdr_improvement": 6.2
+    },
+    {
+      "song": "A Classic Education - NightOwl",
+      "method": "HPSS (harmonic)",
+      "target": "vocals",
+      "note": "取谐波分量当人声 (对照)",
+      "runtime_s": 2.25,
+      "metrics": {
+        "sdr": -8.33248978581977,
+        "isr": 12.46817986945473,
+        "sir": Infinity,
+        "sar": -10.752273193186975,
+        "si_sdr": -12.370929752591891
+      },
+      "error": null,
+      "sdr_improvement": 0.83,
+      "si_sdr_improvement": -1.44
+    },
+    {
+      "song": "A Classic Education - NightOwl",
+      "method": "Open-Unmix umxhq (vocals)",
+      "target": "vocals",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 8.88,
+      "metrics": {
+        "sdr": 6.546077151541583,
+        "isr": 13.012201130113885,
+        "sir": Infinity,
+        "sar": 6.038096178195559,
+        "si_sdr": 6.712319870367754
+      },
+      "error": null,
+      "sdr_improvement": 15.71,
+      "si_sdr_improvement": 17.65
+    },
+    {
+      "song": "A Classic Education - NightOwl",
+      "method": "Open-Unmix umxhq (drums)",
+      "target": "drums",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 0.05,
+      "metrics": {
+        "sdr": 1.930178849044104,
+        "isr": 2.7700577923090686,
+        "sir": Infinity,
+        "sar": 1.6807375597527017,
+        "si_sdr": -2.547586922332556
+      },
+      "error": null,
+      "sdr_improvement": 19.86,
+      "si_sdr_improvement": 15.47
+    },
+    {
+      "song": "ANiMAL - Clinic A",
+      "method": "Baseline: mixture (no separation)",
+      "target": "vocals",
+      "note": "直接拿混音当估计, 用于标定各方法是否真的有效",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -2.8596925835347218,
+        "isr": 29.50230808516867,
+        "sir": Infinity,
+        "sar": -2.800458424321069,
+        "si_sdr": -3.0445329538380363
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "ANiMAL - Clinic A",
+      "method": "Baseline: mixture (no separation)",
+      "target": "drums",
+      "note": "同上的鼓目标基线",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -9.011610724926564,
+        "isr": 22.439817384123245,
+        "sir": Infinity,
+        "sar": -9.091177627584335,
+        "si_sdr": -8.8012173620698
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "ANiMAL - Clinic A",
+      "method": "ICA (FastICA, best of 2)",
+      "target": "vocals",
+      "note": "盲源分离: 立体声 2ch -> 2 分量",
+      "runtime_s": 0.15,
+      "metrics": {
+        "sdr": -25.793679573110936,
+        "isr": -20.586431840954713,
+        "sir": Infinity,
+        "sar": -2.839440544568432,
+        "si_sdr": -3.0794191193715204
+      },
+      "error": null,
+      "sdr_improvement": -22.93,
+      "si_sdr_improvement": -0.03
+    },
+    {
+      "song": "ANiMAL - Clinic A",
+      "method": "NMF (unsupervised, k=50)",
+      "target": "vocals",
+      "note": "分量按时域稀疏度聚 2 组, 取更间歇者为 vocals",
+      "runtime_s": 2.85,
+      "metrics": {
+        "sdr": 0.7728954950981222,
+        "isr": 1.0491741913473398,
+        "sir": Infinity,
+        "sar": 1.133698656701243,
+        "si_sdr": -6.08675353516243
+      },
+      "error": null,
+      "sdr_improvement": 3.63,
+      "si_sdr_improvement": -3.04
+    },
+    {
+      "song": "ANiMAL - Clinic A",
+      "method": "NMF (oracle grouping)",
+      "target": "vocals",
+      "note": "分组用真值挑选 -> 上界参考",
+      "runtime_s": 1.32,
+      "metrics": {
+        "sdr": -3.050561239211187,
+        "isr": 11.804746894063008,
+        "sir": Infinity,
+        "sar": -3.9695712516589623,
+        "si_sdr": -4.620337264507546
+      },
+      "error": null,
+      "sdr_improvement": -0.19,
+      "si_sdr_improvement": -1.58
+    },
+    {
+      "song": "ANiMAL - Clinic A",
+      "method": "RPCA (Inexact ALM)",
+      "target": "vocals",
+      "note": "低秩=伴奏, 稀疏=人声",
+      "runtime_s": 76.32,
+      "metrics": {
+        "sdr": 1.7443787286165435,
+        "isr": 9.317288185908568,
+        "sir": Infinity,
+        "sar": -0.8352659206371993,
+        "si_sdr": -1.4820744074746757
+      },
+      "error": null,
+      "sdr_improvement": 4.6,
+      "si_sdr_improvement": 1.56
+    },
+    {
+      "song": "ANiMAL - Clinic A",
+      "method": "HPSS (percussive)",
+      "target": "drums",
+      "note": "谐波-打击分离, 取打击分量",
+      "runtime_s": 2.03,
+      "metrics": {
+        "sdr": -2.9880506497656536,
+        "isr": 3.3554360302699617,
+        "sir": Infinity,
+        "sar": -11.010376349670882,
+        "si_sdr": -11.825517652347735
+      },
+      "error": null,
+      "sdr_improvement": 6.02,
+      "si_sdr_improvement": -3.02
+    },
+    {
+      "song": "ANiMAL - Clinic A",
+      "method": "HPSS (harmonic)",
+      "target": "vocals",
+      "note": "取谐波分量当人声 (对照)",
+      "runtime_s": 2.07,
+      "metrics": {
+        "sdr": -1.0689278585844315,
+        "isr": 6.249815527864991,
+        "sir": Infinity,
+        "sar": -5.416998364195752,
+        "si_sdr": -6.018655856446781
+      },
+      "error": null,
+      "sdr_improvement": 1.79,
+      "si_sdr_improvement": -2.97
+    },
+    {
+      "song": "ANiMAL - Clinic A",
+      "method": "Open-Unmix umxhq (vocals)",
+      "target": "vocals",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 3.43,
+      "metrics": {
+        "sdr": 5.916868171522245,
+        "isr": 10.34516567211805,
+        "sir": Infinity,
+        "sar": 6.61473621433532,
+        "si_sdr": 5.296504488582907
+      },
+      "error": null,
+      "sdr_improvement": 8.78,
+      "si_sdr_improvement": 8.34
+    },
+    {
+      "song": "ANiMAL - Clinic A",
+      "method": "Open-Unmix umxhq (drums)",
+      "target": "drums",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 0.05,
+      "metrics": {
+        "sdr": 6.902238734174304,
+        "isr": 10.522142736882289,
+        "sir": Infinity,
+        "sar": 7.679508666305168,
+        "si_sdr": 6.22520994191723
+      },
+      "error": null,
+      "sdr_improvement": 15.91,
+      "si_sdr_improvement": 15.03
+    },
+    {
+      "song": "ANiMAL - Easy Tiger",
+      "method": "Baseline: mixture (no separation)",
+      "target": "vocals",
+      "note": "直接拿混音当估计, 用于标定各方法是否真的有效",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -21.095332471227724,
+        "isr": 18.150191210551046,
+        "sir": Infinity,
+        "sar": -20.80416991855533,
+        "si_sdr": -9.86649365969507
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "ANiMAL - Easy Tiger",
+      "method": "Baseline: mixture (no separation)",
+      "target": "drums",
+      "note": "同上的鼓目标基线",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -0.8962970044754405,
+        "isr": 31.479809722643637,
+        "sir": Infinity,
+        "sar": -0.9333432005487272,
+        "si_sdr": -0.708142169416791
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "ANiMAL - Easy Tiger",
+      "method": "ICA (FastICA, best of 2)",
+      "target": "vocals",
+      "note": "盲源分离: 立体声 2ch -> 2 分量",
+      "runtime_s": 0.44,
+      "metrics": {
+        "sdr": -41.72213811362285,
+        "isr": -21.288027720866506,
+        "sir": Infinity,
+        "sar": -20.92863925898413,
+        "si_sdr": -10.012286364543963
+      },
+      "error": null,
+      "sdr_improvement": -20.63,
+      "si_sdr_improvement": -0.15
+    },
+    {
+      "song": "ANiMAL - Easy Tiger",
+      "method": "NMF (unsupervised, k=50)",
+      "target": "vocals",
+      "note": "分量按时域稀疏度聚 2 组, 取更间歇者为 vocals",
+      "runtime_s": 4.1,
+      "metrics": {
+        "sdr": -14.330400813105058,
+        "isr": 0.5035833314021719,
+        "sir": Infinity,
+        "sar": -27.936474967547777,
+        "si_sdr": -23.16831537188513
+      },
+      "error": null,
+      "sdr_improvement": 6.76,
+      "si_sdr_improvement": -13.3
+    },
+    {
+      "song": "ANiMAL - Easy Tiger",
+      "method": "NMF (oracle grouping)",
+      "target": "vocals",
+      "note": "分组用真值挑选 -> 上界参考",
+      "runtime_s": 1.31,
+      "metrics": {
+        "sdr": -19.140858941505037,
+        "isr": 14.227073879077857,
+        "sir": Infinity,
+        "sar": -19.772715007914663,
+        "si_sdr": -9.241899796714115
+      },
+      "error": null,
+      "sdr_improvement": 1.95,
+      "si_sdr_improvement": 0.62
+    },
+    {
+      "song": "ANiMAL - Easy Tiger",
+      "method": "RPCA (Inexact ALM)",
+      "target": "vocals",
+      "note": "低秩=伴奏, 稀疏=人声",
+      "runtime_s": 247.81,
+      "metrics": {
+        "sdr": -14.671471297373394,
+        "isr": 11.542429845139344,
+        "sir": Infinity,
+        "sar": -17.537841861974165,
+        "si_sdr": -6.8278660070044666
+      },
+      "error": null,
+      "sdr_improvement": 6.42,
+      "si_sdr_improvement": 3.04
+    },
+    {
+      "song": "ANiMAL - Easy Tiger",
+      "method": "HPSS (percussive)",
+      "target": "drums",
+      "note": "谐波-打击分离, 取打击分量",
+      "runtime_s": 3.16,
+      "metrics": {
+        "sdr": 3.4413105009284544,
+        "isr": 4.918487743096055,
+        "sir": Infinity,
+        "sar": 3.766961834269943,
+        "si_sdr": -0.4549110447946672
+      },
+      "error": null,
+      "sdr_improvement": 4.34,
+      "si_sdr_improvement": 0.25
+    },
+    {
+      "song": "ANiMAL - Easy Tiger",
+      "method": "HPSS (harmonic)",
+      "target": "vocals",
+      "note": "取谐波分量当人声 (对照)",
+      "runtime_s": 3.2,
+      "metrics": {
+        "sdr": -18.342041585647728,
+        "isr": 6.235170917525441,
+        "sir": Infinity,
+        "sar": -23.511933615517275,
+        "si_sdr": -13.298391052596205
+      },
+      "error": null,
+      "sdr_improvement": 2.75,
+      "si_sdr_improvement": -3.43
+    },
+    {
+      "song": "ANiMAL - Easy Tiger",
+      "method": "Open-Unmix umxhq (vocals)",
+      "target": "vocals",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 22.27,
+      "metrics": {
+        "sdr": 3.1371094314263894,
+        "isr": 15.793148473203209,
+        "sir": Infinity,
+        "sar": 3.258068515398377,
+        "si_sdr": 9.36268549225358
+      },
+      "error": null,
+      "sdr_improvement": 24.23,
+      "si_sdr_improvement": 19.23
+    },
+    {
+      "song": "ANiMAL - Easy Tiger",
+      "method": "Open-Unmix umxhq (drums)",
+      "target": "drums",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 0.07,
+      "metrics": {
+        "sdr": 5.980498070539398,
+        "isr": 10.263679906329408,
+        "sir": Infinity,
+        "sar": 7.847193232824964,
+        "si_sdr": 5.894752558954039
+      },
+      "error": null,
+      "sdr_improvement": 6.88,
+      "si_sdr_improvement": 6.6
+    },
+    {
+      "song": "ANiMAL - Rockshow",
+      "method": "Baseline: mixture (no separation)",
+      "target": "vocals",
+      "note": "直接拿混音当估计, 用于标定各方法是否真的有效",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -6.025789837040852,
+        "isr": 26.295812601407455,
+        "sir": Infinity,
+        "sar": -6.033586454380991,
+        "si_sdr": -7.830997273571041
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "ANiMAL - Rockshow",
+      "method": "Baseline: mixture (no separation)",
+      "target": "drums",
+      "note": "同上的鼓目标基线",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -2.9434908228225733,
+        "isr": 30.1482583819704,
+        "sir": Infinity,
+        "sar": -2.9737282142728905,
+        "si_sdr": -3.103313196522185
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "ANiMAL - Rockshow",
+      "method": "ICA (FastICA, best of 2)",
+      "target": "vocals",
+      "note": "盲源分离: 立体声 2ch -> 2 分量",
+      "runtime_s": 0.32,
+      "metrics": {
+        "sdr": -26.14799134148894,
+        "isr": -19.886859569644734,
+        "sir": Infinity,
+        "sar": -5.991435280181085,
+        "si_sdr": -7.805520381577923
+      },
+      "error": null,
+      "sdr_improvement": -20.12,
+      "si_sdr_improvement": 0.03
+    },
+    {
+      "song": "ANiMAL - Rockshow",
+      "method": "NMF (unsupervised, k=50)",
+      "target": "vocals",
+      "note": "分量按时域稀疏度聚 2 组, 取更间歇者为 vocals",
+      "runtime_s": 13.1,
+      "metrics": {
+        "sdr": -2.7164997415790415,
+        "isr": 27.51713865068836,
+        "sir": Infinity,
+        "sar": -2.792924398118541,
+        "si_sdr": -3.89780444959344
+      },
+      "error": null,
+      "sdr_improvement": 3.31,
+      "si_sdr_improvement": 3.93
+    },
+    {
+      "song": "ANiMAL - Rockshow",
+      "method": "NMF (oracle grouping)",
+      "target": "vocals",
+      "note": "分组用真值挑选 -> 上界参考",
+      "runtime_s": 3.96,
+      "metrics": {
+        "sdr": -2.7164997415790415,
+        "isr": 27.51713865068836,
+        "sir": Infinity,
+        "sar": -2.792924398118541,
+        "si_sdr": -3.89780444959344
+      },
+      "error": null,
+      "sdr_improvement": 3.31,
+      "si_sdr_improvement": 3.93
+    },
+    {
+      "song": "ANiMAL - Rockshow",
+      "method": "RPCA (Inexact ALM)",
+      "target": "vocals",
+      "note": "低秩=伴奏, 稀疏=人声",
+      "runtime_s": 229.41,
+      "metrics": {
+        "sdr": -0.2870978036492022,
+        "isr": 9.250126347113884,
+        "sir": Infinity,
+        "sar": -3.0408534245521275,
+        "si_sdr": -4.855100255951869
+      },
+      "error": null,
+      "sdr_improvement": 5.74,
+      "si_sdr_improvement": 2.98
+    },
+    {
+      "song": "ANiMAL - Rockshow",
+      "method": "HPSS (percussive)",
+      "target": "drums",
+      "note": "谐波-打击分离, 取打击分量",
+      "runtime_s": 2.06,
+      "metrics": {
+        "sdr": 1.5949567611283235,
+        "isr": 5.433346177156139,
+        "sir": Infinity,
+        "sar": -2.106418978975111,
+        "si_sdr": -2.6054484094805757
+      },
+      "error": null,
+      "sdr_improvement": 4.54,
+      "si_sdr_improvement": 0.5
+    },
+    {
+      "song": "ANiMAL - Rockshow",
+      "method": "HPSS (harmonic)",
+      "target": "vocals",
+      "note": "取谐波分量当人声 (对照)",
+      "runtime_s": 2.05,
+      "metrics": {
+        "sdr": -2.841066906988239,
+        "isr": 5.173665853664499,
+        "sir": Infinity,
+        "sar": -8.419016374660558,
+        "si_sdr": -11.647777124390771
+      },
+      "error": null,
+      "sdr_improvement": 3.18,
+      "si_sdr_improvement": -3.82
+    },
+    {
+      "song": "ANiMAL - Rockshow",
+      "method": "Open-Unmix umxhq (vocals)",
+      "target": "vocals",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 3.47,
+      "metrics": {
+        "sdr": 4.947771149476182,
+        "isr": 20.21433984109123,
+        "sir": Infinity,
+        "sar": 4.600774882956397,
+        "si_sdr": 3.686749392583896
+      },
+      "error": null,
+      "sdr_improvement": 10.97,
+      "si_sdr_improvement": 11.52
+    },
+    {
+      "song": "ANiMAL - Rockshow",
+      "method": "Open-Unmix umxhq (drums)",
+      "target": "drums",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 0.05,
+      "metrics": {
+        "sdr": 5.720842825369957,
+        "isr": 11.362287988194632,
+        "sir": Infinity,
+        "sar": 4.503246878109496,
+        "si_sdr": 4.349218445274518
+      },
+      "error": null,
+      "sdr_improvement": 8.66,
+      "si_sdr_improvement": 7.45
+    },
+    {
+      "song": "Actions - Devil's Words",
+      "method": "Baseline: mixture (no separation)",
+      "target": "vocals",
+      "note": "直接拿混音当估计, 用于标定各方法是否真的有效",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -4.429592380256649,
+        "isr": 16.163052782985375,
+        "sir": Infinity,
+        "sar": -4.349927305249156,
+        "si_sdr": -9.77991774573908
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "Actions - Devil's Words",
+      "method": "Baseline: mixture (no separation)",
+      "target": "drums",
+      "note": "同上的鼓目标基线",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -1.5474018652301182,
+        "isr": 34.349986027652,
+        "sir": Infinity,
+        "sar": -1.5626292868554692,
+        "si_sdr": -1.7353803191611066
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "Actions - Devil's Words",
+      "method": "ICA (FastICA, best of 2)",
+      "target": "vocals",
+      "note": "盲源分离: 立体声 2ch -> 2 分量",
+      "runtime_s": 0.14,
+      "metrics": {
+        "sdr": -24.708125391724927,
+        "isr": -19.670696703536127,
+        "sir": Infinity,
+        "sar": -4.350067663399825,
+        "si_sdr": -9.77554442743967
+      },
+      "error": null,
+      "sdr_improvement": -20.28,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "Actions - Devil's Words",
+      "method": "NMF (unsupervised, k=50)",
+      "target": "vocals",
+      "note": "分量按时域稀疏度聚 2 组, 取更间歇者为 vocals",
+      "runtime_s": 3.06,
+      "metrics": {
+        "sdr": 0.10809199815312474,
+        "isr": 28.60759212662758,
+        "sir": Infinity,
+        "sar": -0.00038629917753732154,
+        "si_sdr": -6.318900666237762
+      },
+      "error": null,
+      "sdr_improvement": 4.54,
+      "si_sdr_improvement": 3.46
+    },
+    {
+      "song": "Actions - Devil's Words",
+      "method": "NMF (oracle grouping)",
+      "target": "vocals",
+      "note": "分组用真值挑选 -> 上界参考",
+      "runtime_s": 1.32,
+      "metrics": {
+        "sdr": 0.10809199815312474,
+        "isr": 28.60759212662758,
+        "sir": Infinity,
+        "sar": -0.00038629917753732154,
+        "si_sdr": -6.318900666237762
+      },
+      "error": null,
+      "sdr_improvement": 4.54,
+      "si_sdr_improvement": 3.46
+    },
+    {
+      "song": "Actions - Devil's Words",
+      "method": "RPCA (Inexact ALM)",
+      "target": "vocals",
+      "note": "低秩=伴奏, 稀疏=人声",
+      "runtime_s": 61.41,
+      "metrics": {
+        "sdr": 0.251670702558565,
+        "isr": 12.205969766427,
+        "sir": Infinity,
+        "sar": -1.5965903620656874,
+        "si_sdr": -5.557870606664565
+      },
+      "error": null,
+      "sdr_improvement": 4.68,
+      "si_sdr_improvement": 4.22
+    },
+    {
+      "song": "Actions - Devil's Words",
+      "method": "HPSS (percussive)",
+      "target": "drums",
+      "note": "谐波-打击分离, 取打击分量",
+      "runtime_s": 1.97,
+      "metrics": {
+        "sdr": 2.46283249947772,
+        "isr": 4.29321856602526,
+        "sir": Infinity,
+        "sar": -0.02491975189679345,
+        "si_sdr": -0.7146431953303988
+      },
+      "error": null,
+      "sdr_improvement": 4.01,
+      "si_sdr_improvement": 1.02
+    },
+    {
+      "song": "Actions - Devil's Words",
+      "method": "HPSS (harmonic)",
+      "target": "vocals",
+      "note": "取谐波分量当人声 (对照)",
+      "runtime_s": 1.99,
+      "metrics": {
+        "sdr": -2.4314649401661854,
+        "isr": 10.482723678917083,
+        "sir": Infinity,
+        "sar": -3.7286755535214184,
+        "si_sdr": -8.278678463205257
+      },
+      "error": null,
+      "sdr_improvement": 2.0,
+      "si_sdr_improvement": 1.5
+    },
+    {
+      "song": "Actions - Devil's Words",
+      "method": "Open-Unmix umxhq (vocals)",
+      "target": "vocals",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 3.15,
+      "metrics": {
+        "sdr": 10.206531473836487,
+        "isr": 19.569565025540317,
+        "sir": Infinity,
+        "sar": 11.068193513408923,
+        "si_sdr": 12.567341393438952
+      },
+      "error": null,
+      "sdr_improvement": 14.64,
+      "si_sdr_improvement": 22.35
+    },
+    {
+      "song": "Actions - Devil's Words",
+      "method": "Open-Unmix umxhq (drums)",
+      "target": "drums",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 0.04,
+      "metrics": {
+        "sdr": 6.40054061477198,
+        "isr": 12.414756107719603,
+        "sir": Infinity,
+        "sar": 6.353293291082959,
+        "si_sdr": 5.7336411885757474
+      },
+      "error": null,
+      "sdr_improvement": 7.95,
+      "si_sdr_improvement": 7.47
+    },
+    {
+      "song": "Actions - One Minute Smile",
+      "method": "Baseline: mixture (no separation)",
+      "target": "vocals",
+      "note": "直接拿混音当估计, 用于标定各方法是否真的有效",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -3.7159122570000336,
+        "isr": 28.246375685949673,
+        "sir": Infinity,
+        "sar": -3.792613066568723,
+        "si_sdr": -3.6589631544319206
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "Actions - One Minute Smile",
+      "method": "Baseline: mixture (no separation)",
+      "target": "drums",
+      "note": "同上的鼓目标基线",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -5.565873379935908,
+        "isr": 27.166853080018,
+        "sir": Infinity,
+        "sar": -5.603620137368593,
+        "si_sdr": -5.444121482708512
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "Actions - One Minute Smile",
+      "method": "ICA (FastICA, best of 2)",
+      "target": "vocals",
+      "note": "盲源分离: 立体声 2ch -> 2 分量",
+      "runtime_s": 0.14,
+      "metrics": {
+        "sdr": -23.644633530987026,
+        "isr": -19.079711967244087,
+        "sir": Infinity,
+        "sar": -3.7637199761459588,
+        "si_sdr": -3.669746193641117
+      },
+      "error": null,
+      "sdr_improvement": -19.93,
+      "si_sdr_improvement": -0.01
+    },
+    {
+      "song": "Actions - One Minute Smile",
+      "method": "NMF (unsupervised, k=50)",
+      "target": "vocals",
+      "note": "分量按时域稀疏度聚 2 组, 取更间歇者为 vocals",
+      "runtime_s": 3.15,
+      "metrics": {
+        "sdr": -2.710514008926962,
+        "isr": 29.721797430245118,
+        "sir": Infinity,
+        "sar": -2.802207263290607,
+        "si_sdr": -2.454298880397719
+      },
+      "error": null,
+      "sdr_improvement": 1.01,
+      "si_sdr_improvement": 1.2
+    },
+    {
+      "song": "Actions - One Minute Smile",
+      "method": "NMF (oracle grouping)",
+      "target": "vocals",
+      "note": "分组用真值挑选 -> 上界参考",
+      "runtime_s": 1.34,
+      "metrics": {
+        "sdr": -2.710514008926962,
+        "isr": 29.721797430245118,
+        "sir": Infinity,
+        "sar": -2.802207263290607,
+        "si_sdr": -2.454298880397719
+      },
+      "error": null,
+      "sdr_improvement": 1.01,
+      "si_sdr_improvement": 1.2
+    },
+    {
+      "song": "Actions - One Minute Smile",
+      "method": "RPCA (Inexact ALM)",
+      "target": "vocals",
+      "note": "低秩=伴奏, 稀疏=人声",
+      "runtime_s": 84.4,
+      "metrics": {
+        "sdr": 1.2821476684997455,
+        "isr": 8.402605173893154,
+        "sir": Infinity,
+        "sar": -1.9185486313141702,
+        "si_sdr": -1.6299643731843203
+      },
+      "error": null,
+      "sdr_improvement": 5.0,
+      "si_sdr_improvement": 2.03
+    },
+    {
+      "song": "Actions - One Minute Smile",
+      "method": "HPSS (percussive)",
+      "target": "drums",
+      "note": "谐波-打击分离, 取打击分量",
+      "runtime_s": 1.97,
+      "metrics": {
+        "sdr": 0.5583637658219458,
+        "isr": 4.26593819626265,
+        "sir": Infinity,
+        "sar": -4.867512969567715,
+        "si_sdr": -4.899612088297638
+      },
+      "error": null,
+      "sdr_improvement": 6.12,
+      "si_sdr_improvement": 0.54
+    },
+    {
+      "song": "Actions - One Minute Smile",
+      "method": "HPSS (harmonic)",
+      "target": "vocals",
+      "note": "取谐波分量当人声 (对照)",
+      "runtime_s": 2.01,
+      "metrics": {
+        "sdr": -1.5678276106636915,
+        "isr": 9.753240615455049,
+        "sir": Infinity,
+        "sar": -3.8984467835735943,
+        "si_sdr": -3.7343672060605404
+      },
+      "error": null,
+      "sdr_improvement": 2.15,
+      "si_sdr_improvement": -0.08
+    },
+    {
+      "song": "Actions - One Minute Smile",
+      "method": "Open-Unmix umxhq (vocals)",
+      "target": "vocals",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 3.29,
+      "metrics": {
+        "sdr": 4.618947777321859,
+        "isr": 9.226423178547801,
+        "sir": Infinity,
+        "sar": 5.896464593365418,
+        "si_sdr": 3.1924848688413885
+      },
+      "error": null,
+      "sdr_improvement": 8.33,
+      "si_sdr_improvement": 6.85
+    },
+    {
+      "song": "Actions - One Minute Smile",
+      "method": "Open-Unmix umxhq (drums)",
+      "target": "drums",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 0.05,
+      "metrics": {
+        "sdr": 2.2594457890181854,
+        "isr": 8.876262360154293,
+        "sir": Infinity,
+        "sar": 2.3358040984007937,
+        "si_sdr": 0.6200619250164886
+      },
+      "error": null,
+      "sdr_improvement": 7.83,
+      "si_sdr_improvement": 6.06
+    },
+    {
+      "song": "Actions - South Of The Water",
+      "method": "Baseline: mixture (no separation)",
+      "target": "vocals",
+      "note": "直接拿混音当估计, 用于标定各方法是否真的有效",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -8.95457496850344,
+        "isr": 27.417481857366894,
+        "sir": Infinity,
+        "sar": -9.013185978983309,
+        "si_sdr": -9.029823890986652
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "Actions - South Of The Water",
+      "method": "Baseline: mixture (no separation)",
+      "target": "drums",
+      "note": "同上的鼓目标基线",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -6.704466497511272,
+        "isr": 24.669306781307743,
+        "sir": Infinity,
+        "sar": -6.805864524843416,
+        "si_sdr": -8.542348318225805
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "Actions - South Of The Water",
+      "method": "ICA (FastICA, best of 2)",
+      "target": "vocals",
+      "note": "盲源分离: 立体声 2ch -> 2 分量",
+      "runtime_s": 0.17,
+      "metrics": {
+        "sdr": -31.806790782191335,
+        "isr": -22.93267264125934,
+        "sir": Infinity,
+        "sar": -9.014619546248252,
+        "si_sdr": -9.03190050104462
+      },
+      "error": null,
+      "sdr_improvement": -22.85,
+      "si_sdr_improvement": -0.0
+    },
+    {
+      "song": "Actions - South Of The Water",
+      "method": "NMF (unsupervised, k=50)",
+      "target": "vocals",
+      "note": "分量按时域稀疏度聚 2 组, 取更间歇者为 vocals",
+      "runtime_s": 9.73,
+      "metrics": {
+        "sdr": -3.20124410002646,
+        "isr": 0.013929392662985707,
+        "sir": Infinity,
+        "sar": -38.0911314650159,
+        "si_sdr": -58.4335210384349
+      },
+      "error": null,
+      "sdr_improvement": 5.75,
+      "si_sdr_improvement": -49.4
+    },
+    {
+      "song": "Actions - South Of The Water",
+      "method": "NMF (oracle grouping)",
+      "target": "vocals",
+      "note": "分组用真值挑选 -> 上界参考",
+      "runtime_s": 5.26,
+      "metrics": {
+        "sdr": -7.30226269914008,
+        "isr": 28.898958390650115,
+        "sir": Infinity,
+        "sar": -7.401297376781711,
+        "si_sdr": -7.0993378699728265
+      },
+      "error": null,
+      "sdr_improvement": 1.65,
+      "si_sdr_improvement": 1.93
+    },
+    {
+      "song": "Actions - South Of The Water",
+      "method": "RPCA (Inexact ALM)",
+      "target": "vocals",
+      "note": "低秩=伴奏, 稀疏=人声",
+      "runtime_s": 90.98,
+      "metrics": {
+        "sdr": -3.050139833862697,
+        "isr": 7.973238610456744,
+        "sir": Infinity,
+        "sar": -6.944643529217824,
+        "si_sdr": -7.855304877223775
+      },
+      "error": null,
+      "sdr_improvement": 5.9,
+      "si_sdr_improvement": 1.17
+    },
+    {
+      "song": "Actions - South Of The Water",
+      "method": "HPSS (percussive)",
+      "target": "drums",
+      "note": "谐波-打击分离, 取打击分量",
+      "runtime_s": 2.09,
+      "metrics": {
+        "sdr": 1.6022434178266507,
+        "isr": 3.668375238619995,
+        "sir": Infinity,
+        "sar": -1.0884132031370561,
+        "si_sdr": -3.3795402417323475
+      },
+      "error": null,
+      "sdr_improvement": 8.31,
+      "si_sdr_improvement": 5.16
+    },
+    {
+      "song": "Actions - South Of The Water",
+      "method": "HPSS (harmonic)",
+      "target": "vocals",
+      "note": "取谐波分量当人声 (对照)",
+      "runtime_s": 2.08,
+      "metrics": {
+        "sdr": -7.302259374147547,
+        "isr": 13.057250662186522,
+        "sir": Infinity,
+        "sar": -9.12355364624893,
+        "si_sdr": -9.717924504495997
+      },
+      "error": null,
+      "sdr_improvement": 1.65,
+      "si_sdr_improvement": -0.69
+    },
+    {
+      "song": "Actions - South Of The Water",
+      "method": "Open-Unmix umxhq (vocals)",
+      "target": "vocals",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 3.9,
+      "metrics": {
+        "sdr": -7.215690611011953,
+        "isr": 0.21595088163567408,
+        "sir": Infinity,
+        "sar": -3.4583748269541283,
+        "si_sdr": -7.8207813495656335
+      },
+      "error": null,
+      "sdr_improvement": 1.74,
+      "si_sdr_improvement": 1.21
+    },
+    {
+      "song": "Actions - South Of The Water",
+      "method": "Open-Unmix umxhq (drums)",
+      "target": "drums",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 0.05,
+      "metrics": {
+        "sdr": -0.23488091369776087,
+        "isr": 4.438849876915335,
+        "sir": Infinity,
+        "sar": 1.8829765520387292,
+        "si_sdr": -1.7451776144657143
+      },
+      "error": null,
+      "sdr_improvement": 6.47,
+      "si_sdr_improvement": 6.8
+    },
+    {
+      "song": "Aimee Norwich - Child",
+      "method": "Baseline: mixture (no separation)",
+      "target": "vocals",
+      "note": "直接拿混音当估计, 用于标定各方法是否真的有效",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -103.8290009633075,
+        "isr": -10.463972055998617,
+        "sir": Infinity,
+        "sar": -93.43047632167227,
+        "si_sdr": -19.493819280246644
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "Aimee Norwich - Child",
+      "method": "Baseline: mixture (no separation)",
+      "target": "drums",
+      "note": "同上的鼓目标基线",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -4.809221117844836,
+        "isr": 32.68657399209345,
+        "sir": Infinity,
+        "sar": -4.866956762301124,
+        "si_sdr": -3.2509766594102487
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "Aimee Norwich - Child",
+      "method": "ICA (FastICA, best of 2)",
+      "target": "vocals",
+      "note": "盲源分离: 立体声 2ch -> 2 分量",
+      "runtime_s": 0.17,
+      "metrics": {
+        "sdr": -121.76947833746172,
+        "isr": -28.89335911159573,
+        "sir": Infinity,
+        "sar": -93.31423964857636,
+        "si_sdr": -19.428664609532692
+      },
+      "error": null,
+      "sdr_improvement": -17.94,
+      "si_sdr_improvement": 0.07
+    },
+    {
+      "song": "Aimee Norwich - Child",
+      "method": "NMF (unsupervised, k=50)",
+      "target": "vocals",
+      "note": "分量按时域稀疏度聚 2 组, 取更间歇者为 vocals",
+      "runtime_s": 3.83,
+      "metrics": {
+        "sdr": -100.5943866882626,
+        "isr": -4.023485546425131,
+        "sir": Infinity,
+        "sar": -95.49068982681712,
+        "si_sdr": -14.57674812765319
+      },
+      "error": null,
+      "sdr_improvement": 3.23,
+      "si_sdr_improvement": 4.92
+    },
+    {
+      "song": "Aimee Norwich - Child",
+      "method": "NMF (oracle grouping)",
+      "target": "vocals",
+      "note": "分组用真值挑选 -> 上界参考",
+      "runtime_s": 1.34,
+      "metrics": {
+        "sdr": -100.5943866882626,
+        "isr": -4.023485546425131,
+        "sir": Infinity,
+        "sar": -95.49068982681712,
+        "si_sdr": -14.57674812765319
+      },
+      "error": null,
+      "sdr_improvement": 3.23,
+      "si_sdr_improvement": 4.92
+    },
+    {
+      "song": "Aimee Norwich - Child",
+      "method": "RPCA (Inexact ALM)",
+      "target": "vocals",
+      "note": "低秩=伴奏, 稀疏=人声",
+      "runtime_s": 51.1,
+      "metrics": {
+        "sdr": -97.60082650691074,
+        "isr": -1.5785597825801732,
+        "sir": Infinity,
+        "sar": -97.04815473733392,
+        "si_sdr": -17.597241046887255
+      },
+      "error": null,
+      "sdr_improvement": 6.23,
+      "si_sdr_improvement": 1.9
+    },
+    {
+      "song": "Aimee Norwich - Child",
+      "method": "HPSS (percussive)",
+      "target": "drums",
+      "note": "谐波-打击分离, 取打击分量",
+      "runtime_s": 2.09,
+      "metrics": {
+        "sdr": 2.00275423690421,
+        "isr": 4.004245335032081,
+        "sir": Infinity,
+        "sar": 0.014450725740498199,
+        "si_sdr": -0.55107836955874
+      },
+      "error": null,
+      "sdr_improvement": 6.81,
+      "si_sdr_improvement": 2.7
+    },
+    {
+      "song": "Aimee Norwich - Child",
+      "method": "HPSS (harmonic)",
+      "target": "vocals",
+      "note": "取谐波分量当人声 (对照)",
+      "runtime_s": 2.09,
+      "metrics": {
+        "sdr": -100.89131417541313,
+        "isr": -8.240636416214016,
+        "sir": Infinity,
+        "sar": -92.51803574643264,
+        "si_sdr": -18.994786152043723
+      },
+      "error": null,
+      "sdr_improvement": 2.94,
+      "si_sdr_improvement": 0.5
+    },
+    {
+      "song": "Aimee Norwich - Child",
+      "method": "Open-Unmix umxhq (vocals)",
+      "target": "vocals",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 4.57,
+      "metrics": {
+        "sdr": -49.77113918071669,
+        "isr": 2.128279134110262,
+        "sir": Infinity,
+        "sar": -52.088694988867424,
+        "si_sdr": 1.0366882195572216
+      },
+      "error": null,
+      "sdr_improvement": 54.06,
+      "si_sdr_improvement": 20.53
+    },
+    {
+      "song": "Aimee Norwich - Child",
+      "method": "Open-Unmix umxhq (drums)",
+      "target": "drums",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 0.05,
+      "metrics": {
+        "sdr": 5.5287202128422175,
+        "isr": 15.953193173863712,
+        "sir": Infinity,
+        "sar": 5.160884038190345,
+        "si_sdr": 5.848291066118919
+      },
+      "error": null,
+      "sdr_improvement": 10.34,
+      "si_sdr_improvement": 9.1
+    },
+    {
+      "song": "Alexander Ross - Goodbye Bolero",
+      "method": "Baseline: mixture (no separation)",
+      "target": "vocals",
+      "note": "直接拿混音当估计, 用于标定各方法是否真的有效",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -2.51548721018371,
+        "isr": 32.08841919026413,
+        "sir": Infinity,
+        "sar": -2.5403962030589815,
+        "si_sdr": -4.661499726696245
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "Alexander Ross - Goodbye Bolero",
+      "method": "Baseline: mixture (no separation)",
+      "target": "drums",
+      "note": "同上的鼓目标基线",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": -6.137812579671862,
+        "isr": 26.50875613515924,
+        "sir": Infinity,
+        "sar": -6.022553542737002,
+        "si_sdr": -6.224051297392721
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "Alexander Ross - Goodbye Bolero",
+      "method": "ICA (FastICA, best of 2)",
+      "target": "vocals",
+      "note": "盲源分离: 立体声 2ch -> 2 分量",
+      "runtime_s": 0.16,
+      "metrics": {
+        "sdr": -26.069702711019644,
+        "isr": -21.08167273205212,
+        "sir": Infinity,
+        "sar": -2.5454244307594,
+        "si_sdr": -4.665234449191355
+      },
+      "error": null,
+      "sdr_improvement": -23.55,
+      "si_sdr_improvement": -0.0
+    },
+    {
+      "song": "Alexander Ross - Goodbye Bolero",
+      "method": "NMF (unsupervised, k=50)",
+      "target": "vocals",
+      "note": "分量按时域稀疏度聚 2 组, 取更间歇者为 vocals",
+      "runtime_s": 3.94,
+      "metrics": {
+        "sdr": -1.2251756076531075,
+        "isr": 31.359388405357322,
+        "sir": Infinity,
+        "sar": -1.286844192708184,
+        "si_sdr": -3.2398921721292853
+      },
+      "error": null,
+      "sdr_improvement": 1.29,
+      "si_sdr_improvement": 1.42
+    },
+    {
+      "song": "Alexander Ross - Goodbye Bolero",
+      "method": "NMF (oracle grouping)",
+      "target": "vocals",
+      "note": "分组用真值挑选 -> 上界参考",
+      "runtime_s": 1.35,
+      "metrics": {
+        "sdr": -1.2251756076531075,
+        "isr": 31.359388405357322,
+        "sir": Infinity,
+        "sar": -1.286844192708184,
+        "si_sdr": -3.2398921721292853
+      },
+      "error": null,
+      "sdr_improvement": 1.29,
+      "si_sdr_improvement": 1.42
+    },
+    {
+      "song": "Alexander Ross - Goodbye Bolero",
+      "method": "RPCA (Inexact ALM)",
+      "target": "vocals",
+      "note": "低秩=伴奏, 稀疏=人声",
+      "runtime_s": 91.4,
+      "metrics": {
+        "sdr": 3.408101543421722,
+        "isr": 9.819454566088492,
+        "sir": Infinity,
+        "sar": 1.7037971091207993,
+        "si_sdr": -1.2029855192654924
+      },
+      "error": null,
+      "sdr_improvement": 5.92,
+      "si_sdr_improvement": 3.46
+    },
+    {
+      "song": "Alexander Ross - Goodbye Bolero",
+      "method": "HPSS (percussive)",
+      "target": "drums",
+      "note": "谐波-打击分离, 取打击分量",
+      "runtime_s": 2.01,
+      "metrics": {
+        "sdr": -0.4162075943291376,
+        "isr": 3.8484113693700333,
+        "sir": Infinity,
+        "sar": -5.7491172526115495,
+        "si_sdr": -6.414753320003487
+      },
+      "error": null,
+      "sdr_improvement": 5.72,
+      "si_sdr_improvement": -0.19
+    },
+    {
+      "song": "Alexander Ross - Goodbye Bolero",
+      "method": "HPSS (harmonic)",
+      "target": "vocals",
+      "note": "取谐波分量当人声 (对照)",
+      "runtime_s": 2.01,
+      "metrics": {
+        "sdr": -0.5328795496193,
+        "isr": 8.933093586430607,
+        "sir": Infinity,
+        "sar": -3.1786475406942296,
+        "si_sdr": -5.766581890738269
+      },
+      "error": null,
+      "sdr_improvement": 1.98,
+      "si_sdr_improvement": -1.11
+    },
+    {
+      "song": "Alexander Ross - Goodbye Bolero",
+      "method": "Open-Unmix umxhq (vocals)",
+      "target": "vocals",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 3.84,
+      "metrics": {
+        "sdr": 10.284512116887601,
+        "isr": 20.216774092775683,
+        "sir": Infinity,
+        "sar": 10.37226582767767,
+        "si_sdr": 10.394320305821637
+      },
+      "error": null,
+      "sdr_improvement": 12.8,
+      "si_sdr_improvement": 15.06
+    },
+    {
+      "song": "Alexander Ross - Goodbye Bolero",
+      "method": "Open-Unmix umxhq (drums)",
+      "target": "drums",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 0.05,
+      "metrics": {
+        "sdr": 3.731272858126686,
+        "isr": 11.35800699159371,
+        "sir": Infinity,
+        "sar": 2.8778971021091797,
+        "si_sdr": 3.226851732157676
+      },
+      "error": null,
+      "sdr_improvement": 9.87,
+      "si_sdr_improvement": 9.45
+    },
+    {
+      "song": "Alexander Ross - Velvet Curtain",
+      "method": "Baseline: mixture (no separation)",
+      "target": "vocals",
+      "note": "直接拿混音当估计, 用于标定各方法是否真的有效",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": 3.9512956615312267,
+        "isr": 37.71269174866724,
+        "sir": Infinity,
+        "sar": 3.9801186729000992,
+        "si_sdr": 2.7370978862382205
+      },
+      "error": null,
+      "sdr_improvement": 0.0,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "Alexander Ross - Velvet Curtain",
+      "method": "Baseline: mixture (no separation)",
+      "target": "drums",
+      "note": "同上的鼓目标基线",
+      "runtime_s": 0.0,
+      "metrics": {
+        "sdr": null,
+        "isr": null,
+        "sir": null,
+        "sar": null,
+        "si_sdr": -127.47958880120524
+      },
+      "error": null,
+      "sdr_improvement": null,
+      "si_sdr_improvement": 0.0
+    },
+    {
+      "song": "Alexander Ross - Velvet Curtain",
+      "method": "ICA (FastICA, best of 2)",
+      "target": "vocals",
+      "note": "盲源分离: 立体声 2ch -> 2 分量",
+      "runtime_s": 0.19,
+      "metrics": {
+        "sdr": -35.15148454863392,
+        "isr": -34.073927269821006,
+        "sir": Infinity,
+        "sar": 5.734105478721615,
+        "si_sdr": 4.340221440393886
+      },
+      "error": null,
+      "sdr_improvement": -39.1,
+      "si_sdr_improvement": 1.6
+    },
+    {
+      "song": "Alexander Ross - Velvet Curtain",
+      "method": "NMF (unsupervised, k=50)",
+      "target": "vocals",
+      "note": "分量按时域稀疏度聚 2 组, 取更间歇者为 vocals",
+      "runtime_s": 3.94,
+      "metrics": {
+        "sdr": 5.695339355017987,
+        "isr": 7.368171481799907,
+        "sir": Infinity,
+        "sar": 10.364848154633002,
+        "si_sdr": 4.7592517907177045
+      },
+      "error": null,
+      "sdr_improvement": 1.74,
+      "si_sdr_improvement": 2.02
+    },
+    {
+      "song": "Alexander Ross - Velvet Curtain",
+      "method": "NMF (oracle grouping)",
+      "target": "vocals",
+      "note": "分组用真值挑选 -> 上界参考",
+      "runtime_s": 1.41,
+      "metrics": {
+        "sdr": 5.695339355017987,
+        "isr": 7.368171481799907,
+        "sir": Infinity,
+        "sar": 10.364848154633002,
+        "si_sdr": 4.7592517907177045
+      },
+      "error": null,
+      "sdr_improvement": 1.74,
+      "si_sdr_improvement": 2.02
+    },
+    {
+      "song": "Alexander Ross - Velvet Curtain",
+      "method": "RPCA (Inexact ALM)",
+      "target": "vocals",
+      "note": "低秩=伴奏, 稀疏=人声",
+      "runtime_s": 63.84,
+      "metrics": {
+        "sdr": 6.410517009327078,
+        "isr": 10.155487393227194,
+        "sir": Infinity,
+        "sar": 5.517737602483711,
+        "si_sdr": 4.813834855588084
+      },
+      "error": null,
+      "sdr_improvement": 2.46,
+      "si_sdr_improvement": 2.08
+    },
+    {
+      "song": "Alexander Ross - Velvet Curtain",
+      "method": "HPSS (percussive)",
+      "target": "drums",
+      "note": "谐波-打击分离, 取打击分量",
+      "runtime_s": 2.05,
+      "metrics": {
+        "sdr": null,
+        "isr": null,
+        "sir": null,
+        "sar": null,
+        "si_sdr": -115.36220104547004
+      },
+      "error": null,
+      "sdr_improvement": null,
+      "si_sdr_improvement": 12.12
+    },
+    {
+      "song": "Alexander Ross - Velvet Curtain",
+      "method": "HPSS (harmonic)",
+      "target": "vocals",
+      "note": "取谐波分量当人声 (对照)",
+      "runtime_s": 2.08,
+      "metrics": {
+        "sdr": 4.0225024851829065,
+        "isr": 13.306623960364456,
+        "sir": Infinity,
+        "sar": 3.065078914520527,
+        "si_sdr": 1.5417583767081031
+      },
+      "error": null,
+      "sdr_improvement": 0.07,
+      "si_sdr_improvement": -1.2
+    },
+    {
+      "song": "Alexander Ross - Velvet Curtain",
+      "method": "Open-Unmix umxhq (vocals)",
+      "target": "vocals",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 4.34,
+      "metrics": {
+        "sdr": 14.630811144593256,
+        "isr": 18.997054599936803,
+        "sir": Infinity,
+        "sar": 16.72106253561599,
+        "si_sdr": 15.85368550068047
+      },
+      "error": null,
+      "sdr_improvement": 10.68,
+      "si_sdr_improvement": 13.12
+    },
+    {
+      "song": "Alexander Ross - Velvet Curtain",
+      "method": "Open-Unmix umxhq (drums)",
+      "target": "drums",
+      "note": "预训练深度模型 (CPU 推理, umxhq)",
+      "runtime_s": 0.05,
+      "metrics": {
+        "sdr": null,
+        "isr": null,
+        "sir": null,
+        "sar": null,
+        "si_sdr": -101.51508216322961
+      },
+      "error": null,
+      "sdr_improvement": null,
+      "si_sdr_improvement": 25.96
+    }
+  ]
+}

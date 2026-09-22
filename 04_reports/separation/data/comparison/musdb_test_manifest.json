@@ -1,0 +1,512 @@
+{
+  "n_songs": 50,
+  "total_dur_s": 12470.97,
+  "samplerate_set": [
+    44100
+  ],
+  "channels_set": [
+    2
+  ],
+  "songs": [
+    {
+      "song": "Al James - Schoolboy Facination",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 8843231,
+      "dur_s": 200.53,
+      "bytes": 35372968,
+      "has_stems": true
+    },
+    {
+      "song": "AM Contra - Heart Peripheral",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 9265664,
+      "dur_s": 210.11,
+      "bytes": 37062700,
+      "has_stems": true
+    },
+    {
+      "song": "Angels In Amplifiers - I'm Alright",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 7920084,
+      "dur_s": 179.59,
+      "bytes": 31680380,
+      "has_stems": true
+    },
+    {
+      "song": "Arise - Run Run Run",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 9675225,
+      "dur_s": 219.39,
+      "bytes": 38700944,
+      "has_stems": true
+    },
+    {
+      "song": "Ben Carrigan - We'll Talk About It All Tonight",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 11241562,
+      "dur_s": 254.91,
+      "bytes": 44966292,
+      "has_stems": true
+    },
+    {
+      "song": "BKS - Bulldozer",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 14863472,
+      "dur_s": 337.04,
+      "bytes": 59453932,
+      "has_stems": true
+    },
+    {
+      "song": "BKS - Too Much",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 9707512,
+      "dur_s": 220.12,
+      "bytes": 38830092,
+      "has_stems": true
+    },
+    {
+      "song": "Bobby Nobody - Stitch Up",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 9757125,
+      "dur_s": 221.25,
+      "bytes": 39028544,
+      "has_stems": true
+    },
+    {
+      "song": "Buitraker - Revo X",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 12163922,
+      "dur_s": 275.83,
+      "bytes": 48655732,
+      "has_stems": true
+    },
+    {
+      "song": "Carlos Gonzalez - A Place For Us",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 11034647,
+      "dur_s": 250.22,
+      "bytes": 44138632,
+      "has_stems": true
+    },
+    {
+      "song": "Cristina Vane - So Easy",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 11207306,
+      "dur_s": 254.13,
+      "bytes": 44829268,
+      "has_stems": true
+    },
+    {
+      "song": "Detsky Sad - Walkie Talkie",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 8400262,
+      "dur_s": 190.48,
+      "bytes": 33601092,
+      "has_stems": true
+    },
+    {
+      "song": "Enda Reilly - Cur An Long Ag Seol",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 8246503,
+      "dur_s": 187.0,
+      "bytes": 32986056,
+      "has_stems": true
+    },
+    {
+      "song": "Forkupines - Semantics",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 12065091,
+      "dur_s": 273.58,
+      "bytes": 48260408,
+      "has_stems": true
+    },
+    {
+      "song": "Georgia Wonder - Siren",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 18979538,
+      "dur_s": 430.38,
+      "bytes": 75918196,
+      "has_stems": true
+    },
+    {
+      "song": "Girls Under Glass - We Feel Alright",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 13992103,
+      "dur_s": 317.28,
+      "bytes": 55968456,
+      "has_stems": true
+    },
+    {
+      "song": "Hollow Ground - Ill Fate",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 6247828,
+      "dur_s": 141.67,
+      "bytes": 24991356,
+      "has_stems": true
+    },
+    {
+      "song": "James Elder & Mark M Thompson - The English Actor",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 9061369,
+      "dur_s": 205.47,
+      "bytes": 36245520,
+      "has_stems": true
+    },
+    {
+      "song": "Juliet's Rescue - Heartbeats",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 11803444,
+      "dur_s": 267.65,
+      "bytes": 47213820,
+      "has_stems": true
+    },
+    {
+      "song": "Little Chicago's Finest - My Own",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 12419072,
+      "dur_s": 281.61,
+      "bytes": 49676332,
+      "has_stems": true
+    },
+    {
+      "song": "Louis Cressy Band - Good Time",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 12913425,
+      "dur_s": 292.82,
+      "bytes": 51653744,
+      "has_stems": true
+    },
+    {
+      "song": "Lyndsey Ollard - Catching Up",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 10029600,
+      "dur_s": 227.43,
+      "bytes": 40118444,
+      "has_stems": true
+    },
+    {
+      "song": "M.E.R.C. Music - Knockout",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 11907000,
+      "dur_s": 270.0,
+      "bytes": 47628044,
+      "has_stems": true
+    },
+    {
+      "song": "Moosmusic - Big Dummy Shake",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 8769600,
+      "dur_s": 198.86,
+      "bytes": 35078444,
+      "has_stems": true
+    },
+    {
+      "song": "Motor Tapes - Shore",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 10880494,
+      "dur_s": 246.72,
+      "bytes": 43522020,
+      "has_stems": true
+    },
+    {
+      "song": "Mu - Too Bright",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 12002484,
+      "dur_s": 272.17,
+      "bytes": 48009980,
+      "has_stems": true
+    },
+    {
+      "song": "Nerve 9 - Pray For The Rain",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 15157800,
+      "dur_s": 343.71,
+      "bytes": 60631244,
+      "has_stems": true
+    },
+    {
+      "song": "PR - Happy Daze",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 7175168,
+      "dur_s": 162.7,
+      "bytes": 28700938,
+      "has_stems": true
+    },
+    {
+      "song": "PR - Oh No",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 3360177,
+      "dur_s": 76.19,
+      "bytes": 13440972,
+      "has_stems": true
+    },
+    {
+      "song": "Punkdisco - Oral Hygiene",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 9772481,
+      "dur_s": 221.6,
+      "bytes": 39089968,
+      "has_stems": true
+    },
+    {
+      "song": "Raft Monk - Tiring",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 9360028,
+      "dur_s": 212.25,
+      "bytes": 37440156,
+      "has_stems": true
+    },
+    {
+      "song": "Sambasevam Shanmugam - Kaathaadi",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 14018484,
+      "dur_s": 317.88,
+      "bytes": 56073980,
+      "has_stems": true
+    },
+    {
+      "song": "Secretariat - Borderline",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 12649892,
+      "dur_s": 286.85,
+      "bytes": 50599612,
+      "has_stems": true
+    },
+    {
+      "song": "Secretariat - Over The Top",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 11073328,
+      "dur_s": 251.1,
+      "bytes": 44293356,
+      "has_stems": true
+    },
+    {
+      "song": "Side Effects Project - Sing With Me",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 10746422,
+      "dur_s": 243.68,
+      "bytes": 42985732,
+      "has_stems": true
+    },
+    {
+      "song": "Signe Jakobsen - What Have You Done To Me",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 7823222,
+      "dur_s": 177.4,
+      "bytes": 31292932,
+      "has_stems": true
+    },
+    {
+      "song": "Skelpolu - Resurrection",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 17448735,
+      "dur_s": 395.66,
+      "bytes": 69794984,
+      "has_stems": true
+    },
+    {
+      "song": "Speak Softly - Broken Man",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 11164364,
+      "dur_s": 253.16,
+      "bytes": 44657500,
+      "has_stems": true
+    },
+    {
+      "song": "Speak Softly - Like Horses",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 13788600,
+      "dur_s": 312.67,
+      "bytes": 55154444,
+      "has_stems": true
+    },
+    {
+      "song": "The Doppler Shift - Atrophy",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 14616591,
+      "dur_s": 331.44,
+      "bytes": 58466408,
+      "has_stems": true
+    },
+    {
+      "song": "The Easton Ellises (Baumi) - SDRNR",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 10349568,
+      "dur_s": 234.68,
+      "bytes": 41398316,
+      "has_stems": true
+    },
+    {
+      "song": "The Easton Ellises - Falcon 69",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 10892288,
+      "dur_s": 246.99,
+      "bytes": 43569196,
+      "has_stems": true
+    },
+    {
+      "song": "The Long Wait - Dark Horses",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 13482293,
+      "dur_s": 305.72,
+      "bytes": 53929216,
+      "has_stems": true
+    },
+    {
+      "song": "The Mountaineering Club - Mallory",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 10780678,
+      "dur_s": 244.46,
+      "bytes": 43122756,
+      "has_stems": true
+    },
+    {
+      "song": "The Sunshine Garcia Band - For I Am The Moon",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 14125083,
+      "dur_s": 320.3,
+      "bytes": 56500376,
+      "has_stems": true
+    },
+    {
+      "song": "Timboz - Pony",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 11159449,
+      "dur_s": 253.05,
+      "bytes": 44637840,
+      "has_stems": true
+    },
+    {
+      "song": "Tom McKenzie - Directions",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 7755103,
+      "dur_s": 175.85,
+      "bytes": 31020456,
+      "has_stems": true
+    },
+    {
+      "song": "Triviul feat. The Fiend - Widow",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 10368337,
+      "dur_s": 235.11,
+      "bytes": 41473392,
+      "has_stems": true
+    },
+    {
+      "song": "We Fell From The Sky - Not You",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 9168272,
+      "dur_s": 207.9,
+      "bytes": 36673132,
+      "has_stems": true
+    },
+    {
+      "song": "Zeno - Signs",
+      "ok": true,
+      "sr": 44100,
+      "ch": 2,
+      "frames": 10336331,
+      "dur_s": 234.38,
+      "bytes": 41345368,
+      "has_stems": true
+    }
+  ]
+}

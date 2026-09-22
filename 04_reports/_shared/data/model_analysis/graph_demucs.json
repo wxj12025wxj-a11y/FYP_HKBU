@@ -1,0 +1,10592 @@
+{
+ "model_key": "demucs",
+ "label": "Demucs (htdemucs)",
+ "group": "4-stem",
+ "kind": "deep",
+ "status": "OK",
+ "params_M": 41.984,
+ "params_M_source": "model_profile.csv",
+ "n_roots": 1,
+ "roots": [
+  {
+   "cls": "BagOfModels",
+   "params_M": 41.9845
+  }
+ ],
+ "traced_params_M": 41.9845,
+ "traced_vs_csv_ratio": 1.0,
+ "attribution_reconciles": true,
+ "n_aliased_paths": 0,
+ "hooked_root_cls": "BagOfModels",
+ "hooked_root_params_M": 41.9845,
+ "n_targets": "4",
+ "native_sr": "44100",
+ "n_modules_total": 520,
+ "n_modules_fired": 486,
+ "load_s": 0.327,
+ "capture_s": 0.95,
+ "note": "",
+ "exec_order": [
+  {
+   "path": "models.0.tencoder.0.conv",
+   "parent": "models.0.tencoder.0",
+   "cls": "Conv1d",
+   "params": 816,
+   "in_shapes": [
+    [
+     1,
+     2,
+     343980
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 816,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.0.norm1",
+   "parent": "models.0.tencoder.0",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.0.0",
+   "parent": "models.0.tencoder.0.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 870,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    6,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 870,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.0.1",
+   "parent": "models.0.tencoder.0.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 12,
+   "in_shapes": [
+    [
+     1,
+     6,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    6,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 12,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.0.2",
+   "parent": "models.0.tencoder.0.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     6,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    6,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.0.3",
+   "parent": "models.0.tencoder.0.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 672,
+   "in_shapes": [
+    [
+     1,
+     6,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 672,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.0.4",
+   "parent": "models.0.tencoder.0.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 192,
+   "in_shapes": [
+    [
+     1,
+     96,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.0.5",
+   "parent": "models.0.tencoder.0.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.0.6",
+   "parent": "models.0.tencoder.0.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 48,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.0",
+   "parent": "models.0.tencoder.0.dconv.layers",
+   "cls": "Sequential",
+   "params": 1794,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.1.0",
+   "parent": "models.0.tencoder.0.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 870,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    6,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 870,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.1.1",
+   "parent": "models.0.tencoder.0.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 12,
+   "in_shapes": [
+    [
+     1,
+     6,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    6,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 12,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.1.2",
+   "parent": "models.0.tencoder.0.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     6,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    6,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.1.3",
+   "parent": "models.0.tencoder.0.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 672,
+   "in_shapes": [
+    [
+     1,
+     6,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 672,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.1.4",
+   "parent": "models.0.tencoder.0.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 192,
+   "in_shapes": [
+    [
+     1,
+     96,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.1.5",
+   "parent": "models.0.tencoder.0.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.1.6",
+   "parent": "models.0.tencoder.0.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 48,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv.layers.1",
+   "parent": "models.0.tencoder.0.dconv.layers",
+   "cls": "Sequential",
+   "params": 1794,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.0.dconv",
+   "parent": "models.0.tencoder.0",
+   "cls": "DConv",
+   "params": 3588,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.0.rewrite",
+   "parent": "models.0.tencoder.0",
+   "cls": "Conv1d",
+   "params": 4704,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 4704,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.0.norm2",
+   "parent": "models.0.tencoder.0",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.0",
+   "parent": "models.0.tencoder",
+   "cls": "HEncLayer",
+   "params": 9108,
+   "in_shapes": [
+    [
+     1,
+     2,
+     343980
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.0.conv",
+   "parent": "models.0.encoder.0",
+   "cls": "Conv2d",
+   "params": 1584,
+   "in_shapes": [
+    [
+     1,
+     4,
+     2048,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    512,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 1584,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.0.norm1",
+   "parent": "models.0.encoder.0",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     48,
+     512,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    512,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.0.0",
+   "parent": "models.0.encoder.0.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 870,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    6,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 870,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.0.1",
+   "parent": "models.0.encoder.0.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 12,
+   "in_shapes": [
+    [
+     512,
+     6,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    6,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 12,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.0.2",
+   "parent": "models.0.encoder.0.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     512,
+     6,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    6,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.0.3",
+   "parent": "models.0.encoder.0.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 672,
+   "in_shapes": [
+    [
+     512,
+     6,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 672,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.0.4",
+   "parent": "models.0.encoder.0.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 192,
+   "in_shapes": [
+    [
+     512,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.0.5",
+   "parent": "models.0.encoder.0.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     512,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.0.6",
+   "parent": "models.0.encoder.0.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 48,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.0",
+   "parent": "models.0.encoder.0.dconv.layers",
+   "cls": "Sequential",
+   "params": 1794,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.1.0",
+   "parent": "models.0.encoder.0.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 870,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    6,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 870,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.1.1",
+   "parent": "models.0.encoder.0.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 12,
+   "in_shapes": [
+    [
+     512,
+     6,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    6,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 12,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.1.2",
+   "parent": "models.0.encoder.0.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     512,
+     6,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    6,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.1.3",
+   "parent": "models.0.encoder.0.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 672,
+   "in_shapes": [
+    [
+     512,
+     6,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 672,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.1.4",
+   "parent": "models.0.encoder.0.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 192,
+   "in_shapes": [
+    [
+     512,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.1.5",
+   "parent": "models.0.encoder.0.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     512,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.1.6",
+   "parent": "models.0.encoder.0.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 48,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.0.dconv.layers.1",
+   "parent": "models.0.encoder.0.dconv.layers",
+   "cls": "Sequential",
+   "params": 1794,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.0.dconv",
+   "parent": "models.0.encoder.0",
+   "cls": "DConv",
+   "params": 3588,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.0.rewrite",
+   "parent": "models.0.encoder.0",
+   "cls": "Conv2d",
+   "params": 4704,
+   "in_shapes": [
+    [
+     1,
+     48,
+     512,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    512,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 4704,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.0.norm2",
+   "parent": "models.0.encoder.0",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     512,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    512,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.0",
+   "parent": "models.0.encoder",
+   "cls": "HEncLayer",
+   "params": 9876,
+   "in_shapes": [
+    [
+     1,
+     4,
+     2048,
+     336
+    ],
+    null
+   ],
+   "out_shapes": [
+    1,
+    48,
+    512,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.freq_emb.embedding",
+   "parent": "models.0.freq_emb",
+   "cls": "Embedding",
+   "params": 24576,
+   "in_shapes": [
+    [
+     512
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48
+   ],
+   "calls": 2,
+   "params_attr": 24576,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.freq_emb",
+   "parent": "models.0",
+   "cls": "ScaledEmbedding",
+   "params": 24576,
+   "in_shapes": [
+    [
+     512
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.1.conv",
+   "parent": "models.0.tencoder.1",
+   "cls": "Conv1d",
+   "params": 36960,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85996
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 36960,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.1.norm1",
+   "parent": "models.0.tencoder.1",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.0.0",
+   "parent": "models.0.tencoder.1.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 3468,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    12,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 3468,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.0.1",
+   "parent": "models.0.tencoder.1.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 24,
+   "in_shapes": [
+    [
+     1,
+     12,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    12,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 24,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.0.2",
+   "parent": "models.0.tencoder.1.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     12,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    12,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.0.3",
+   "parent": "models.0.tencoder.1.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 2496,
+   "in_shapes": [
+    [
+     1,
+     12,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 2496,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.0.4",
+   "parent": "models.0.tencoder.1.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 384,
+   "in_shapes": [
+    [
+     1,
+     192,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.0.5",
+   "parent": "models.0.tencoder.1.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.0.6",
+   "parent": "models.0.tencoder.1.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 96,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.0",
+   "parent": "models.0.tencoder.1.dconv.layers",
+   "cls": "Sequential",
+   "params": 6468,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.1.0",
+   "parent": "models.0.tencoder.1.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 3468,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    12,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 3468,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.1.1",
+   "parent": "models.0.tencoder.1.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 24,
+   "in_shapes": [
+    [
+     1,
+     12,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    12,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 24,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.1.2",
+   "parent": "models.0.tencoder.1.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     12,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    12,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.1.3",
+   "parent": "models.0.tencoder.1.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 2496,
+   "in_shapes": [
+    [
+     1,
+     12,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 2496,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.1.4",
+   "parent": "models.0.tencoder.1.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 384,
+   "in_shapes": [
+    [
+     1,
+     192,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.1.5",
+   "parent": "models.0.tencoder.1.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.1.6",
+   "parent": "models.0.tencoder.1.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 96,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv.layers.1",
+   "parent": "models.0.tencoder.1.dconv.layers",
+   "cls": "Sequential",
+   "params": 6468,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.1.dconv",
+   "parent": "models.0.tencoder.1",
+   "cls": "DConv",
+   "params": 12936,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.1.rewrite",
+   "parent": "models.0.tencoder.1",
+   "cls": "Conv1d",
+   "params": 18624,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 18624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.1.norm2",
+   "parent": "models.0.tencoder.1",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.1",
+   "parent": "models.0.tencoder",
+   "cls": "HEncLayer",
+   "params": 68520,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.1.conv",
+   "parent": "models.0.encoder.1",
+   "cls": "Conv2d",
+   "params": 36960,
+   "in_shapes": [
+    [
+     1,
+     48,
+     512,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    128,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 36960,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.1.norm1",
+   "parent": "models.0.encoder.1",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     128,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    128,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.0.0",
+   "parent": "models.0.encoder.1.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 3468,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    12,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 3468,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.0.1",
+   "parent": "models.0.encoder.1.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 24,
+   "in_shapes": [
+    [
+     128,
+     12,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    12,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 24,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.0.2",
+   "parent": "models.0.encoder.1.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     128,
+     12,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    12,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.0.3",
+   "parent": "models.0.encoder.1.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 2496,
+   "in_shapes": [
+    [
+     128,
+     12,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 2496,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.0.4",
+   "parent": "models.0.encoder.1.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 384,
+   "in_shapes": [
+    [
+     128,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.0.5",
+   "parent": "models.0.encoder.1.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     128,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.0.6",
+   "parent": "models.0.encoder.1.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 96,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.0",
+   "parent": "models.0.encoder.1.dconv.layers",
+   "cls": "Sequential",
+   "params": 6468,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.1.0",
+   "parent": "models.0.encoder.1.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 3468,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    12,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 3468,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.1.1",
+   "parent": "models.0.encoder.1.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 24,
+   "in_shapes": [
+    [
+     128,
+     12,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    12,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 24,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.1.2",
+   "parent": "models.0.encoder.1.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     128,
+     12,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    12,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.1.3",
+   "parent": "models.0.encoder.1.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 2496,
+   "in_shapes": [
+    [
+     128,
+     12,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 2496,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.1.4",
+   "parent": "models.0.encoder.1.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 384,
+   "in_shapes": [
+    [
+     128,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.1.5",
+   "parent": "models.0.encoder.1.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     128,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.1.6",
+   "parent": "models.0.encoder.1.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 96,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.1.dconv.layers.1",
+   "parent": "models.0.encoder.1.dconv.layers",
+   "cls": "Sequential",
+   "params": 6468,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.1.dconv",
+   "parent": "models.0.encoder.1",
+   "cls": "DConv",
+   "params": 12936,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.1.rewrite",
+   "parent": "models.0.encoder.1",
+   "cls": "Conv2d",
+   "params": 18624,
+   "in_shapes": [
+    [
+     1,
+     96,
+     128,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    128,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 18624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.1.norm2",
+   "parent": "models.0.encoder.1",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     128,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    128,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.1",
+   "parent": "models.0.encoder",
+   "cls": "HEncLayer",
+   "params": 68520,
+   "in_shapes": [
+    [
+     1,
+     48,
+     512,
+     336
+    ],
+    null
+   ],
+   "out_shapes": [
+    1,
+    96,
+    128,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.2.conv",
+   "parent": "models.0.tencoder.2",
+   "cls": "Conv1d",
+   "params": 147648,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21500
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 147648,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.2.norm1",
+   "parent": "models.0.tencoder.2",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.0.0",
+   "parent": "models.0.tencoder.2.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 13848,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    24,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 13848,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.0.1",
+   "parent": "models.0.tencoder.2.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 48,
+   "in_shapes": [
+    [
+     1,
+     24,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    24,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.0.2",
+   "parent": "models.0.tencoder.2.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     24,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    24,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.0.3",
+   "parent": "models.0.tencoder.2.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 9600,
+   "in_shapes": [
+    [
+     1,
+     24,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 9600,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.0.4",
+   "parent": "models.0.tencoder.2.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 768,
+   "in_shapes": [
+    [
+     1,
+     384,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 768,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.0.5",
+   "parent": "models.0.tencoder.2.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     384,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.0.6",
+   "parent": "models.0.tencoder.2.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 192,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.0",
+   "parent": "models.0.tencoder.2.dconv.layers",
+   "cls": "Sequential",
+   "params": 24456,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.1.0",
+   "parent": "models.0.tencoder.2.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 13848,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    24,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 13848,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.1.1",
+   "parent": "models.0.tencoder.2.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 48,
+   "in_shapes": [
+    [
+     1,
+     24,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    24,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.1.2",
+   "parent": "models.0.tencoder.2.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     24,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    24,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.1.3",
+   "parent": "models.0.tencoder.2.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 9600,
+   "in_shapes": [
+    [
+     1,
+     24,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 9600,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.1.4",
+   "parent": "models.0.tencoder.2.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 768,
+   "in_shapes": [
+    [
+     1,
+     384,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 768,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.1.5",
+   "parent": "models.0.tencoder.2.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     384,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.1.6",
+   "parent": "models.0.tencoder.2.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 192,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv.layers.1",
+   "parent": "models.0.tencoder.2.dconv.layers",
+   "cls": "Sequential",
+   "params": 24456,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.2.dconv",
+   "parent": "models.0.tencoder.2",
+   "cls": "DConv",
+   "params": 48912,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.2.rewrite",
+   "parent": "models.0.tencoder.2",
+   "cls": "Conv1d",
+   "params": 74112,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 74112,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.2.norm2",
+   "parent": "models.0.tencoder.2",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     384,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.2",
+   "parent": "models.0.tencoder",
+   "cls": "HEncLayer",
+   "params": 270672,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.2.conv",
+   "parent": "models.0.encoder.2",
+   "cls": "Conv2d",
+   "params": 147648,
+   "in_shapes": [
+    [
+     1,
+     96,
+     128,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    32,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 147648,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.2.norm1",
+   "parent": "models.0.encoder.2",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     32,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    32,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.0.0",
+   "parent": "models.0.encoder.2.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 13848,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    24,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 13848,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.0.1",
+   "parent": "models.0.encoder.2.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 48,
+   "in_shapes": [
+    [
+     32,
+     24,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    24,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.0.2",
+   "parent": "models.0.encoder.2.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     32,
+     24,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    24,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.0.3",
+   "parent": "models.0.encoder.2.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 9600,
+   "in_shapes": [
+    [
+     32,
+     24,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 9600,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.0.4",
+   "parent": "models.0.encoder.2.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 768,
+   "in_shapes": [
+    [
+     32,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 768,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.0.5",
+   "parent": "models.0.encoder.2.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     32,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.0.6",
+   "parent": "models.0.encoder.2.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 192,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.0",
+   "parent": "models.0.encoder.2.dconv.layers",
+   "cls": "Sequential",
+   "params": 24456,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.1.0",
+   "parent": "models.0.encoder.2.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 13848,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    24,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 13848,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.1.1",
+   "parent": "models.0.encoder.2.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 48,
+   "in_shapes": [
+    [
+     32,
+     24,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    24,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.1.2",
+   "parent": "models.0.encoder.2.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     32,
+     24,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    24,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.1.3",
+   "parent": "models.0.encoder.2.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 9600,
+   "in_shapes": [
+    [
+     32,
+     24,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 9600,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.1.4",
+   "parent": "models.0.encoder.2.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 768,
+   "in_shapes": [
+    [
+     32,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 768,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.1.5",
+   "parent": "models.0.encoder.2.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     32,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.1.6",
+   "parent": "models.0.encoder.2.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 192,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.2.dconv.layers.1",
+   "parent": "models.0.encoder.2.dconv.layers",
+   "cls": "Sequential",
+   "params": 24456,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.2.dconv",
+   "parent": "models.0.encoder.2",
+   "cls": "DConv",
+   "params": 48912,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.2.rewrite",
+   "parent": "models.0.encoder.2",
+   "cls": "Conv2d",
+   "params": 74112,
+   "in_shapes": [
+    [
+     1,
+     192,
+     32,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    32,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 74112,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.2.norm2",
+   "parent": "models.0.encoder.2",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     384,
+     32,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    32,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.2",
+   "parent": "models.0.encoder",
+   "cls": "HEncLayer",
+   "params": 270672,
+   "in_shapes": [
+    [
+     1,
+     96,
+     128,
+     336
+    ],
+    null
+   ],
+   "out_shapes": [
+    1,
+    192,
+    32,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.3.conv",
+   "parent": "models.0.tencoder.3",
+   "cls": "Conv1d",
+   "params": 590208,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5376
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 590208,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.3.norm1",
+   "parent": "models.0.tencoder.3",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.0.0",
+   "parent": "models.0.tencoder.3.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 55344,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 55344,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.0.1",
+   "parent": "models.0.tencoder.3.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 96,
+   "in_shapes": [
+    [
+     1,
+     48,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.0.2",
+   "parent": "models.0.tencoder.3.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     48,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.0.3",
+   "parent": "models.0.tencoder.3.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 37632,
+   "in_shapes": [
+    [
+     1,
+     48,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 37632,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.0.4",
+   "parent": "models.0.tencoder.3.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 1536,
+   "in_shapes": [
+    [
+     1,
+     768,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 1536,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.0.5",
+   "parent": "models.0.tencoder.3.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     768,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.0.6",
+   "parent": "models.0.tencoder.3.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 384,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.0",
+   "parent": "models.0.tencoder.3.dconv.layers",
+   "cls": "Sequential",
+   "params": 94992,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.1.0",
+   "parent": "models.0.tencoder.3.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 55344,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 55344,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.1.1",
+   "parent": "models.0.tencoder.3.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 96,
+   "in_shapes": [
+    [
+     1,
+     48,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.1.2",
+   "parent": "models.0.tencoder.3.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     48,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.1.3",
+   "parent": "models.0.tencoder.3.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 37632,
+   "in_shapes": [
+    [
+     1,
+     48,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 37632,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.1.4",
+   "parent": "models.0.tencoder.3.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 1536,
+   "in_shapes": [
+    [
+     1,
+     768,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 1536,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.1.5",
+   "parent": "models.0.tencoder.3.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     768,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.1.6",
+   "parent": "models.0.tencoder.3.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 384,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv.layers.1",
+   "parent": "models.0.tencoder.3.dconv.layers",
+   "cls": "Sequential",
+   "params": 94992,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.3.dconv",
+   "parent": "models.0.tencoder.3",
+   "cls": "DConv",
+   "params": 189984,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.3.rewrite",
+   "parent": "models.0.tencoder.3",
+   "cls": "Conv1d",
+   "params": 295680,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 295680,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tencoder.3.norm2",
+   "parent": "models.0.tencoder.3",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     768,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tencoder.3",
+   "parent": "models.0.tencoder",
+   "cls": "HEncLayer",
+   "params": 1075872,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.3.conv",
+   "parent": "models.0.encoder.3",
+   "cls": "Conv2d",
+   "params": 590208,
+   "in_shapes": [
+    [
+     1,
+     192,
+     32,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    8,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 590208,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.3.norm1",
+   "parent": "models.0.encoder.3",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     384,
+     8,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    8,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.0.0",
+   "parent": "models.0.encoder.3.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 55344,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 55344,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.0.1",
+   "parent": "models.0.encoder.3.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 96,
+   "in_shapes": [
+    [
+     8,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.0.2",
+   "parent": "models.0.encoder.3.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     8,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.0.3",
+   "parent": "models.0.encoder.3.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 37632,
+   "in_shapes": [
+    [
+     8,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    768,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 37632,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.0.4",
+   "parent": "models.0.encoder.3.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 1536,
+   "in_shapes": [
+    [
+     8,
+     768,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    768,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 1536,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.0.5",
+   "parent": "models.0.encoder.3.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     8,
+     768,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.0.6",
+   "parent": "models.0.encoder.3.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 384,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.0",
+   "parent": "models.0.encoder.3.dconv.layers",
+   "cls": "Sequential",
+   "params": 94992,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.1.0",
+   "parent": "models.0.encoder.3.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 55344,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 55344,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.1.1",
+   "parent": "models.0.encoder.3.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 96,
+   "in_shapes": [
+    [
+     8,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.1.2",
+   "parent": "models.0.encoder.3.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     8,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.1.3",
+   "parent": "models.0.encoder.3.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 37632,
+   "in_shapes": [
+    [
+     8,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    768,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 37632,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.1.4",
+   "parent": "models.0.encoder.3.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 1536,
+   "in_shapes": [
+    [
+     8,
+     768,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    768,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 1536,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.1.5",
+   "parent": "models.0.encoder.3.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     8,
+     768,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.1.6",
+   "parent": "models.0.encoder.3.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 384,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.3.dconv.layers.1",
+   "parent": "models.0.encoder.3.dconv.layers",
+   "cls": "Sequential",
+   "params": 94992,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.3.dconv",
+   "parent": "models.0.encoder.3",
+   "cls": "DConv",
+   "params": 189984,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.3.rewrite",
+   "parent": "models.0.encoder.3",
+   "cls": "Conv2d",
+   "params": 295680,
+   "in_shapes": [
+    [
+     1,
+     384,
+     8,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    8,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 295680,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.encoder.3.norm2",
+   "parent": "models.0.encoder.3",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     768,
+     8,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    8,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.encoder.3",
+   "parent": "models.0.encoder",
+   "cls": "HEncLayer",
+   "params": 1075872,
+   "in_shapes": [
+    [
+     1,
+     192,
+     32,
+     336
+    ],
+    null
+   ],
+   "out_shapes": [
+    1,
+    384,
+    8,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.channel_upsampler",
+   "parent": "models.0",
+   "cls": "Conv1d",
+   "params": 197120,
+   "in_shapes": [
+    [
+     1,
+     384,
+     2688
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    2688
+   ],
+   "calls": 2,
+   "params_attr": 197120,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.channel_upsampler_t",
+   "parent": "models.0",
+   "cls": "Conv1d",
+   "params": 197120,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    512,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 197120,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.norm_in",
+   "parent": "models.0.crosstransformer",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.norm_in_t",
+   "parent": "models.0.crosstransformer",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.0.norm1",
+   "parent": "models.0.crosstransformer.layers.0",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.0.self_attn",
+   "parent": "models.0.crosstransformer.layers.0",
+   "cls": "MultiheadAttention",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ],
+    [
+     1,
+     2688,
+     512
+    ],
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     2688,
+     512
+    ],
+    null
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.0.dropout1",
+   "parent": "models.0.crosstransformer.layers.0",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.0.gamma_1",
+   "parent": "models.0.crosstransformer.layers.0",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.0.norm2",
+   "parent": "models.0.crosstransformer.layers.0",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.0.linear1",
+   "parent": "models.0.crosstransformer.layers.0",
+   "cls": "Linear",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.0.dropout",
+   "parent": "models.0.crosstransformer.layers.0",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.0.linear2",
+   "parent": "models.0.crosstransformer.layers.0",
+   "cls": "Linear",
+   "params": 1049088,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1049088,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.0.dropout2",
+   "parent": "models.0.crosstransformer.layers.0",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.0.gamma_2",
+   "parent": "models.0.crosstransformer.layers.0",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.0.norm_out",
+   "parent": "models.0.crosstransformer.layers.0",
+   "cls": "MyGroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.0",
+   "parent": "models.0.crosstransformer.layers",
+   "cls": "MyTransformerEncoderLayer",
+   "params": 3154432,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.0.norm1",
+   "parent": "models.0.crosstransformer.layers_t.0",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.0.self_attn",
+   "parent": "models.0.crosstransformer.layers_t.0",
+   "cls": "MultiheadAttention",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ],
+    [
+     1,
+     1344,
+     512
+    ],
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     1344,
+     512
+    ],
+    null
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.0.dropout1",
+   "parent": "models.0.crosstransformer.layers_t.0",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.0.gamma_1",
+   "parent": "models.0.crosstransformer.layers_t.0",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.0.norm2",
+   "parent": "models.0.crosstransformer.layers_t.0",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.0.linear1",
+   "parent": "models.0.crosstransformer.layers_t.0",
+   "cls": "Linear",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.0.dropout",
+   "parent": "models.0.crosstransformer.layers_t.0",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.0.linear2",
+   "parent": "models.0.crosstransformer.layers_t.0",
+   "cls": "Linear",
+   "params": 1049088,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1049088,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.0.dropout2",
+   "parent": "models.0.crosstransformer.layers_t.0",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.0.gamma_2",
+   "parent": "models.0.crosstransformer.layers_t.0",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.0.norm_out",
+   "parent": "models.0.crosstransformer.layers_t.0",
+   "cls": "MyGroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.0",
+   "parent": "models.0.crosstransformer.layers_t",
+   "cls": "MyTransformerEncoderLayer",
+   "params": 3154432,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.1.norm1",
+   "parent": "models.0.crosstransformer.layers.1",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.1.norm2",
+   "parent": "models.0.crosstransformer.layers.1",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.1.cross_attn",
+   "parent": "models.0.crosstransformer.layers.1",
+   "cls": "MultiheadAttention",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ],
+    [
+     1,
+     1344,
+     512
+    ],
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     2688,
+     512
+    ],
+    null
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.1.dropout1",
+   "parent": "models.0.crosstransformer.layers.1",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.1.gamma_1",
+   "parent": "models.0.crosstransformer.layers.1",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.1.norm3",
+   "parent": "models.0.crosstransformer.layers.1",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.1.linear1",
+   "parent": "models.0.crosstransformer.layers.1",
+   "cls": "Linear",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.1.dropout",
+   "parent": "models.0.crosstransformer.layers.1",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.1.linear2",
+   "parent": "models.0.crosstransformer.layers.1",
+   "cls": "Linear",
+   "params": 1049088,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1049088,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.1.dropout2",
+   "parent": "models.0.crosstransformer.layers.1",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.1.gamma_2",
+   "parent": "models.0.crosstransformer.layers.1",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.1.norm_out",
+   "parent": "models.0.crosstransformer.layers.1",
+   "cls": "MyGroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.1",
+   "parent": "models.0.crosstransformer.layers",
+   "cls": "CrossTransformerEncoderLayer",
+   "params": 3155456,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ],
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.1.norm1",
+   "parent": "models.0.crosstransformer.layers_t.1",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.1.norm2",
+   "parent": "models.0.crosstransformer.layers_t.1",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.1.cross_attn",
+   "parent": "models.0.crosstransformer.layers_t.1",
+   "cls": "MultiheadAttention",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ],
+    [
+     1,
+     2688,
+     512
+    ],
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     1344,
+     512
+    ],
+    null
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.1.dropout1",
+   "parent": "models.0.crosstransformer.layers_t.1",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.1.gamma_1",
+   "parent": "models.0.crosstransformer.layers_t.1",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.1.norm3",
+   "parent": "models.0.crosstransformer.layers_t.1",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.1.linear1",
+   "parent": "models.0.crosstransformer.layers_t.1",
+   "cls": "Linear",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.1.dropout",
+   "parent": "models.0.crosstransformer.layers_t.1",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.1.linear2",
+   "parent": "models.0.crosstransformer.layers_t.1",
+   "cls": "Linear",
+   "params": 1049088,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1049088,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.1.dropout2",
+   "parent": "models.0.crosstransformer.layers_t.1",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.1.gamma_2",
+   "parent": "models.0.crosstransformer.layers_t.1",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.1.norm_out",
+   "parent": "models.0.crosstransformer.layers_t.1",
+   "cls": "MyGroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.1",
+   "parent": "models.0.crosstransformer.layers_t",
+   "cls": "CrossTransformerEncoderLayer",
+   "params": 3155456,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ],
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.2.norm1",
+   "parent": "models.0.crosstransformer.layers.2",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.2.self_attn",
+   "parent": "models.0.crosstransformer.layers.2",
+   "cls": "MultiheadAttention",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ],
+    [
+     1,
+     2688,
+     512
+    ],
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     2688,
+     512
+    ],
+    null
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.2.dropout1",
+   "parent": "models.0.crosstransformer.layers.2",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.2.gamma_1",
+   "parent": "models.0.crosstransformer.layers.2",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.2.norm2",
+   "parent": "models.0.crosstransformer.layers.2",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.2.linear1",
+   "parent": "models.0.crosstransformer.layers.2",
+   "cls": "Linear",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.2.dropout",
+   "parent": "models.0.crosstransformer.layers.2",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.2.linear2",
+   "parent": "models.0.crosstransformer.layers.2",
+   "cls": "Linear",
+   "params": 1049088,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1049088,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.2.dropout2",
+   "parent": "models.0.crosstransformer.layers.2",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.2.gamma_2",
+   "parent": "models.0.crosstransformer.layers.2",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.2.norm_out",
+   "parent": "models.0.crosstransformer.layers.2",
+   "cls": "MyGroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.2",
+   "parent": "models.0.crosstransformer.layers",
+   "cls": "MyTransformerEncoderLayer",
+   "params": 3154432,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.2.norm1",
+   "parent": "models.0.crosstransformer.layers_t.2",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.2.self_attn",
+   "parent": "models.0.crosstransformer.layers_t.2",
+   "cls": "MultiheadAttention",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ],
+    [
+     1,
+     1344,
+     512
+    ],
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     1344,
+     512
+    ],
+    null
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.2.dropout1",
+   "parent": "models.0.crosstransformer.layers_t.2",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.2.gamma_1",
+   "parent": "models.0.crosstransformer.layers_t.2",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.2.norm2",
+   "parent": "models.0.crosstransformer.layers_t.2",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.2.linear1",
+   "parent": "models.0.crosstransformer.layers_t.2",
+   "cls": "Linear",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.2.dropout",
+   "parent": "models.0.crosstransformer.layers_t.2",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.2.linear2",
+   "parent": "models.0.crosstransformer.layers_t.2",
+   "cls": "Linear",
+   "params": 1049088,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1049088,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.2.dropout2",
+   "parent": "models.0.crosstransformer.layers_t.2",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.2.gamma_2",
+   "parent": "models.0.crosstransformer.layers_t.2",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.2.norm_out",
+   "parent": "models.0.crosstransformer.layers_t.2",
+   "cls": "MyGroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.2",
+   "parent": "models.0.crosstransformer.layers_t",
+   "cls": "MyTransformerEncoderLayer",
+   "params": 3154432,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.3.norm1",
+   "parent": "models.0.crosstransformer.layers.3",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.3.norm2",
+   "parent": "models.0.crosstransformer.layers.3",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.3.cross_attn",
+   "parent": "models.0.crosstransformer.layers.3",
+   "cls": "MultiheadAttention",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ],
+    [
+     1,
+     1344,
+     512
+    ],
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     2688,
+     512
+    ],
+    null
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.3.dropout1",
+   "parent": "models.0.crosstransformer.layers.3",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.3.gamma_1",
+   "parent": "models.0.crosstransformer.layers.3",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.3.norm3",
+   "parent": "models.0.crosstransformer.layers.3",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.3.linear1",
+   "parent": "models.0.crosstransformer.layers.3",
+   "cls": "Linear",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.3.dropout",
+   "parent": "models.0.crosstransformer.layers.3",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.3.linear2",
+   "parent": "models.0.crosstransformer.layers.3",
+   "cls": "Linear",
+   "params": 1049088,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1049088,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.3.dropout2",
+   "parent": "models.0.crosstransformer.layers.3",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.3.gamma_2",
+   "parent": "models.0.crosstransformer.layers.3",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.3.norm_out",
+   "parent": "models.0.crosstransformer.layers.3",
+   "cls": "MyGroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.3",
+   "parent": "models.0.crosstransformer.layers",
+   "cls": "CrossTransformerEncoderLayer",
+   "params": 3155456,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ],
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.3.norm1",
+   "parent": "models.0.crosstransformer.layers_t.3",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.3.norm2",
+   "parent": "models.0.crosstransformer.layers_t.3",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.3.cross_attn",
+   "parent": "models.0.crosstransformer.layers_t.3",
+   "cls": "MultiheadAttention",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ],
+    [
+     1,
+     2688,
+     512
+    ],
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     1344,
+     512
+    ],
+    null
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.3.dropout1",
+   "parent": "models.0.crosstransformer.layers_t.3",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.3.gamma_1",
+   "parent": "models.0.crosstransformer.layers_t.3",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.3.norm3",
+   "parent": "models.0.crosstransformer.layers_t.3",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.3.linear1",
+   "parent": "models.0.crosstransformer.layers_t.3",
+   "cls": "Linear",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.3.dropout",
+   "parent": "models.0.crosstransformer.layers_t.3",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.3.linear2",
+   "parent": "models.0.crosstransformer.layers_t.3",
+   "cls": "Linear",
+   "params": 1049088,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1049088,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.3.dropout2",
+   "parent": "models.0.crosstransformer.layers_t.3",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.3.gamma_2",
+   "parent": "models.0.crosstransformer.layers_t.3",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.3.norm_out",
+   "parent": "models.0.crosstransformer.layers_t.3",
+   "cls": "MyGroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.3",
+   "parent": "models.0.crosstransformer.layers_t",
+   "cls": "CrossTransformerEncoderLayer",
+   "params": 3155456,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ],
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.4.norm1",
+   "parent": "models.0.crosstransformer.layers.4",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.4.self_attn",
+   "parent": "models.0.crosstransformer.layers.4",
+   "cls": "MultiheadAttention",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ],
+    [
+     1,
+     2688,
+     512
+    ],
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     2688,
+     512
+    ],
+    null
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.4.dropout1",
+   "parent": "models.0.crosstransformer.layers.4",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.4.gamma_1",
+   "parent": "models.0.crosstransformer.layers.4",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.4.norm2",
+   "parent": "models.0.crosstransformer.layers.4",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.4.linear1",
+   "parent": "models.0.crosstransformer.layers.4",
+   "cls": "Linear",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.4.dropout",
+   "parent": "models.0.crosstransformer.layers.4",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.4.linear2",
+   "parent": "models.0.crosstransformer.layers.4",
+   "cls": "Linear",
+   "params": 1049088,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1049088,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.4.dropout2",
+   "parent": "models.0.crosstransformer.layers.4",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.4.gamma_2",
+   "parent": "models.0.crosstransformer.layers.4",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.4.norm_out",
+   "parent": "models.0.crosstransformer.layers.4",
+   "cls": "MyGroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers.4",
+   "parent": "models.0.crosstransformer.layers",
+   "cls": "MyTransformerEncoderLayer",
+   "params": 3154432,
+   "in_shapes": [
+    [
+     1,
+     2688,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    2688,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.4.norm1",
+   "parent": "models.0.crosstransformer.layers_t.4",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.4.self_attn",
+   "parent": "models.0.crosstransformer.layers_t.4",
+   "cls": "MultiheadAttention",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ],
+    [
+     1,
+     1344,
+     512
+    ],
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     1344,
+     512
+    ],
+    null
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.4.dropout1",
+   "parent": "models.0.crosstransformer.layers_t.4",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.4.gamma_1",
+   "parent": "models.0.crosstransformer.layers_t.4",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.4.norm2",
+   "parent": "models.0.crosstransformer.layers_t.4",
+   "cls": "LayerNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.4.linear1",
+   "parent": "models.0.crosstransformer.layers_t.4",
+   "cls": "Linear",
+   "params": 1050624,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 1050624,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.4.dropout",
+   "parent": "models.0.crosstransformer.layers_t.4",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    2048
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.4.linear2",
+   "parent": "models.0.crosstransformer.layers_t.4",
+   "cls": "Linear",
+   "params": 1049088,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     2048
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1049088,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.4.dropout2",
+   "parent": "models.0.crosstransformer.layers_t.4",
+   "cls": "Dropout",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.4.gamma_2",
+   "parent": "models.0.crosstransformer.layers_t.4",
+   "cls": "LayerScale",
+   "params": 512,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 512,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.4.norm_out",
+   "parent": "models.0.crosstransformer.layers_t.4",
+   "cls": "MyGroupNorm",
+   "params": 1024,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 1024,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.crosstransformer.layers_t.4",
+   "parent": "models.0.crosstransformer.layers_t",
+   "cls": "MyTransformerEncoderLayer",
+   "params": 3154432,
+   "in_shapes": [
+    [
+     1,
+     1344,
+     512
+    ]
+   ],
+   "out_shapes": [
+    1,
+    1344,
+    512
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.crosstransformer",
+   "parent": "models.0",
+   "cls": "CrossTransformerEncoder",
+   "params": 31550464,
+   "in_shapes": [
+    [
+     1,
+     512,
+     8,
+     336
+    ],
+    [
+     1,
+     512,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    [
+     1,
+     512,
+     8,
+     336
+    ],
+    [
+     1,
+     512,
+     1344
+    ]
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.channel_downsampler",
+   "parent": "models.0",
+   "cls": "Conv1d",
+   "params": 196992,
+   "in_shapes": [
+    [
+     1,
+     512,
+     2688
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    2688
+   ],
+   "calls": 2,
+   "params_attr": 196992,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.channel_downsampler_t",
+   "parent": "models.0",
+   "cls": "Conv1d",
+   "params": 196992,
+   "in_shapes": [
+    [
+     1,
+     512,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 196992,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.0.rewrite",
+   "parent": "models.0.decoder.0",
+   "cls": "Conv2d",
+   "params": 2654976,
+   "in_shapes": [
+    [
+     1,
+     384,
+     8,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    8,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 2654976,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.0.norm1",
+   "parent": "models.0.decoder.0",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     768,
+     8,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    8,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.0.0",
+   "parent": "models.0.decoder.0.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 55344,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 55344,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.0.1",
+   "parent": "models.0.decoder.0.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 96,
+   "in_shapes": [
+    [
+     8,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.0.2",
+   "parent": "models.0.decoder.0.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     8,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.0.3",
+   "parent": "models.0.decoder.0.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 37632,
+   "in_shapes": [
+    [
+     8,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    768,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 37632,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.0.4",
+   "parent": "models.0.decoder.0.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 1536,
+   "in_shapes": [
+    [
+     8,
+     768,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    768,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 1536,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.0.5",
+   "parent": "models.0.decoder.0.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     8,
+     768,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.0.6",
+   "parent": "models.0.decoder.0.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 384,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.0",
+   "parent": "models.0.decoder.0.dconv.layers",
+   "cls": "Sequential",
+   "params": 94992,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.1.0",
+   "parent": "models.0.decoder.0.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 55344,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 55344,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.1.1",
+   "parent": "models.0.decoder.0.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 96,
+   "in_shapes": [
+    [
+     8,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.1.2",
+   "parent": "models.0.decoder.0.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     8,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.1.3",
+   "parent": "models.0.decoder.0.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 37632,
+   "in_shapes": [
+    [
+     8,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    768,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 37632,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.1.4",
+   "parent": "models.0.decoder.0.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 1536,
+   "in_shapes": [
+    [
+     8,
+     768,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    768,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 1536,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.1.5",
+   "parent": "models.0.decoder.0.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     8,
+     768,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.1.6",
+   "parent": "models.0.decoder.0.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 384,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.0.dconv.layers.1",
+   "parent": "models.0.decoder.0.dconv.layers",
+   "cls": "Sequential",
+   "params": 94992,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.0.dconv",
+   "parent": "models.0.decoder.0",
+   "cls": "DConv",
+   "params": 189984,
+   "in_shapes": [
+    [
+     8,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    8,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.0.conv_tr",
+   "parent": "models.0.decoder.0",
+   "cls": "ConvTranspose2d",
+   "params": 590016,
+   "in_shapes": [
+    [
+     1,
+     384,
+     8,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    36,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 590016,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.0.norm2",
+   "parent": "models.0.decoder.0",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     36,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    36,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.0",
+   "parent": "models.0.decoder",
+   "cls": "HDecLayer",
+   "params": 3434976,
+   "in_shapes": [
+    [
+     1,
+     384,
+     8,
+     336
+    ],
+    [
+     1,
+     384,
+     8,
+     336
+    ],
+    336
+   ],
+   "out_shapes": [
+    [
+     1,
+     192,
+     32,
+     336
+    ],
+    [
+     1,
+     384,
+     8,
+     336
+    ]
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.0.rewrite",
+   "parent": "models.0.tdecoder.0",
+   "cls": "Conv1d",
+   "params": 885504,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 885504,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.0.norm1",
+   "parent": "models.0.tdecoder.0",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     768,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.0.0",
+   "parent": "models.0.tdecoder.0.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 55344,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 55344,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.0.1",
+   "parent": "models.0.tdecoder.0.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 96,
+   "in_shapes": [
+    [
+     1,
+     48,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.0.2",
+   "parent": "models.0.tdecoder.0.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     48,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.0.3",
+   "parent": "models.0.tdecoder.0.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 37632,
+   "in_shapes": [
+    [
+     1,
+     48,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 37632,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.0.4",
+   "parent": "models.0.tdecoder.0.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 1536,
+   "in_shapes": [
+    [
+     1,
+     768,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 1536,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.0.5",
+   "parent": "models.0.tdecoder.0.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     768,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.0.6",
+   "parent": "models.0.tdecoder.0.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 384,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.0",
+   "parent": "models.0.tdecoder.0.dconv.layers",
+   "cls": "Sequential",
+   "params": 94992,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.1.0",
+   "parent": "models.0.tdecoder.0.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 55344,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 55344,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.1.1",
+   "parent": "models.0.tdecoder.0.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 96,
+   "in_shapes": [
+    [
+     1,
+     48,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.1.2",
+   "parent": "models.0.tdecoder.0.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     48,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.1.3",
+   "parent": "models.0.tdecoder.0.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 37632,
+   "in_shapes": [
+    [
+     1,
+     48,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 37632,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.1.4",
+   "parent": "models.0.tdecoder.0.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 1536,
+   "in_shapes": [
+    [
+     1,
+     768,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    768,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 1536,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.1.5",
+   "parent": "models.0.tdecoder.0.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     768,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.1.6",
+   "parent": "models.0.tdecoder.0.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 384,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv.layers.1",
+   "parent": "models.0.tdecoder.0.dconv.layers",
+   "cls": "Sequential",
+   "params": 94992,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.0.dconv",
+   "parent": "models.0.tdecoder.0",
+   "cls": "DConv",
+   "params": 189984,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    1344
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.0.conv_tr",
+   "parent": "models.0.tdecoder.0",
+   "cls": "ConvTranspose1d",
+   "params": 590016,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5380
+   ],
+   "calls": 2,
+   "params_attr": 590016,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.0.norm2",
+   "parent": "models.0.tdecoder.0",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5380
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5380
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.0",
+   "parent": "models.0.tdecoder",
+   "cls": "HDecLayer",
+   "params": 1665504,
+   "in_shapes": [
+    [
+     1,
+     384,
+     1344
+    ],
+    [
+     1,
+     384,
+     1344
+    ],
+    5375
+   ],
+   "out_shapes": [
+    [
+     1,
+     192,
+     5375
+    ],
+    [
+     1,
+     384,
+     1344
+    ]
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.1.rewrite",
+   "parent": "models.0.decoder.1",
+   "cls": "Conv2d",
+   "params": 663936,
+   "in_shapes": [
+    [
+     1,
+     192,
+     32,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    32,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 663936,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.1.norm1",
+   "parent": "models.0.decoder.1",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     384,
+     32,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    32,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.0.0",
+   "parent": "models.0.decoder.1.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 13848,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    24,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 13848,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.0.1",
+   "parent": "models.0.decoder.1.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 48,
+   "in_shapes": [
+    [
+     32,
+     24,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    24,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.0.2",
+   "parent": "models.0.decoder.1.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     32,
+     24,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    24,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.0.3",
+   "parent": "models.0.decoder.1.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 9600,
+   "in_shapes": [
+    [
+     32,
+     24,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 9600,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.0.4",
+   "parent": "models.0.decoder.1.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 768,
+   "in_shapes": [
+    [
+     32,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 768,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.0.5",
+   "parent": "models.0.decoder.1.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     32,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.0.6",
+   "parent": "models.0.decoder.1.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 192,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.0",
+   "parent": "models.0.decoder.1.dconv.layers",
+   "cls": "Sequential",
+   "params": 24456,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.1.0",
+   "parent": "models.0.decoder.1.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 13848,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    24,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 13848,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.1.1",
+   "parent": "models.0.decoder.1.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 48,
+   "in_shapes": [
+    [
+     32,
+     24,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    24,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.1.2",
+   "parent": "models.0.decoder.1.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     32,
+     24,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    24,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.1.3",
+   "parent": "models.0.decoder.1.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 9600,
+   "in_shapes": [
+    [
+     32,
+     24,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 9600,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.1.4",
+   "parent": "models.0.decoder.1.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 768,
+   "in_shapes": [
+    [
+     32,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    384,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 768,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.1.5",
+   "parent": "models.0.decoder.1.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     32,
+     384,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.1.6",
+   "parent": "models.0.decoder.1.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 192,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.1.dconv.layers.1",
+   "parent": "models.0.decoder.1.dconv.layers",
+   "cls": "Sequential",
+   "params": 24456,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.1.dconv",
+   "parent": "models.0.decoder.1",
+   "cls": "DConv",
+   "params": 48912,
+   "in_shapes": [
+    [
+     32,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    32,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.1.conv_tr",
+   "parent": "models.0.decoder.1",
+   "cls": "ConvTranspose2d",
+   "params": 147552,
+   "in_shapes": [
+    [
+     1,
+     192,
+     32,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    132,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 147552,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.1.norm2",
+   "parent": "models.0.decoder.1",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     132,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    132,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.1",
+   "parent": "models.0.decoder",
+   "cls": "HDecLayer",
+   "params": 860400,
+   "in_shapes": [
+    [
+     1,
+     192,
+     32,
+     336
+    ],
+    [
+     1,
+     192,
+     32,
+     336
+    ],
+    336
+   ],
+   "out_shapes": [
+    [
+     1,
+     96,
+     128,
+     336
+    ],
+    [
+     1,
+     192,
+     32,
+     336
+    ]
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.1.rewrite",
+   "parent": "models.0.tdecoder.1",
+   "cls": "Conv1d",
+   "params": 221568,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 221568,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.1.norm1",
+   "parent": "models.0.tdecoder.1",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     384,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.0.0",
+   "parent": "models.0.tdecoder.1.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 13848,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    24,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 13848,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.0.1",
+   "parent": "models.0.tdecoder.1.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 48,
+   "in_shapes": [
+    [
+     1,
+     24,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    24,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.0.2",
+   "parent": "models.0.tdecoder.1.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     24,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    24,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.0.3",
+   "parent": "models.0.tdecoder.1.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 9600,
+   "in_shapes": [
+    [
+     1,
+     24,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 9600,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.0.4",
+   "parent": "models.0.tdecoder.1.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 768,
+   "in_shapes": [
+    [
+     1,
+     384,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 768,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.0.5",
+   "parent": "models.0.tdecoder.1.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     384,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.0.6",
+   "parent": "models.0.tdecoder.1.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 192,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.0",
+   "parent": "models.0.tdecoder.1.dconv.layers",
+   "cls": "Sequential",
+   "params": 24456,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.1.0",
+   "parent": "models.0.tdecoder.1.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 13848,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    24,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 13848,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.1.1",
+   "parent": "models.0.tdecoder.1.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 48,
+   "in_shapes": [
+    [
+     1,
+     24,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    24,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.1.2",
+   "parent": "models.0.tdecoder.1.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     24,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    24,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.1.3",
+   "parent": "models.0.tdecoder.1.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 9600,
+   "in_shapes": [
+    [
+     1,
+     24,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 9600,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.1.4",
+   "parent": "models.0.tdecoder.1.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 768,
+   "in_shapes": [
+    [
+     1,
+     384,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    384,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 768,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.1.5",
+   "parent": "models.0.tdecoder.1.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     384,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.1.6",
+   "parent": "models.0.tdecoder.1.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 192,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv.layers.1",
+   "parent": "models.0.tdecoder.1.dconv.layers",
+   "cls": "Sequential",
+   "params": 24456,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.1.dconv",
+   "parent": "models.0.tdecoder.1",
+   "cls": "DConv",
+   "params": 48912,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    5375
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.1.conv_tr",
+   "parent": "models.0.tdecoder.1",
+   "cls": "ConvTranspose1d",
+   "params": 147552,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21504
+   ],
+   "calls": 2,
+   "params_attr": 147552,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.1.norm2",
+   "parent": "models.0.tdecoder.1",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21504
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21504
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.1",
+   "parent": "models.0.tdecoder",
+   "cls": "HDecLayer",
+   "params": 418032,
+   "in_shapes": [
+    [
+     1,
+     192,
+     5375
+    ],
+    [
+     1,
+     192,
+     5375
+    ],
+    21499
+   ],
+   "out_shapes": [
+    [
+     1,
+     96,
+     21499
+    ],
+    [
+     1,
+     192,
+     5375
+    ]
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.2.rewrite",
+   "parent": "models.0.decoder.2",
+   "cls": "Conv2d",
+   "params": 166080,
+   "in_shapes": [
+    [
+     1,
+     96,
+     128,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    128,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 166080,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.2.norm1",
+   "parent": "models.0.decoder.2",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     128,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    128,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.0.0",
+   "parent": "models.0.decoder.2.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 3468,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    12,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 3468,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.0.1",
+   "parent": "models.0.decoder.2.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 24,
+   "in_shapes": [
+    [
+     128,
+     12,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    12,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 24,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.0.2",
+   "parent": "models.0.decoder.2.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     128,
+     12,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    12,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.0.3",
+   "parent": "models.0.decoder.2.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 2496,
+   "in_shapes": [
+    [
+     128,
+     12,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 2496,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.0.4",
+   "parent": "models.0.decoder.2.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 384,
+   "in_shapes": [
+    [
+     128,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.0.5",
+   "parent": "models.0.decoder.2.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     128,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.0.6",
+   "parent": "models.0.decoder.2.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 96,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.0",
+   "parent": "models.0.decoder.2.dconv.layers",
+   "cls": "Sequential",
+   "params": 6468,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.1.0",
+   "parent": "models.0.decoder.2.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 3468,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    12,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 3468,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.1.1",
+   "parent": "models.0.decoder.2.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 24,
+   "in_shapes": [
+    [
+     128,
+     12,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    12,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 24,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.1.2",
+   "parent": "models.0.decoder.2.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     128,
+     12,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    12,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.1.3",
+   "parent": "models.0.decoder.2.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 2496,
+   "in_shapes": [
+    [
+     128,
+     12,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 2496,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.1.4",
+   "parent": "models.0.decoder.2.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 384,
+   "in_shapes": [
+    [
+     128,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    192,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.1.5",
+   "parent": "models.0.decoder.2.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     128,
+     192,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.1.6",
+   "parent": "models.0.decoder.2.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 96,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.2.dconv.layers.1",
+   "parent": "models.0.decoder.2.dconv.layers",
+   "cls": "Sequential",
+   "params": 6468,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.2.dconv",
+   "parent": "models.0.decoder.2",
+   "cls": "DConv",
+   "params": 12936,
+   "in_shapes": [
+    [
+     128,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    128,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.2.conv_tr",
+   "parent": "models.0.decoder.2",
+   "cls": "ConvTranspose2d",
+   "params": 36912,
+   "in_shapes": [
+    [
+     1,
+     96,
+     128,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    516,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 36912,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.2.norm2",
+   "parent": "models.0.decoder.2",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     48,
+     516,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    516,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.2",
+   "parent": "models.0.decoder",
+   "cls": "HDecLayer",
+   "params": 215928,
+   "in_shapes": [
+    [
+     1,
+     96,
+     128,
+     336
+    ],
+    [
+     1,
+     96,
+     128,
+     336
+    ],
+    336
+   ],
+   "out_shapes": [
+    [
+     1,
+     48,
+     512,
+     336
+    ],
+    [
+     1,
+     96,
+     128,
+     336
+    ]
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.2.rewrite",
+   "parent": "models.0.tdecoder.2",
+   "cls": "Conv1d",
+   "params": 55488,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 55488,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.2.norm1",
+   "parent": "models.0.tdecoder.2",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.0.0",
+   "parent": "models.0.tdecoder.2.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 3468,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    12,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 3468,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.0.1",
+   "parent": "models.0.tdecoder.2.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 24,
+   "in_shapes": [
+    [
+     1,
+     12,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    12,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 24,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.0.2",
+   "parent": "models.0.tdecoder.2.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     12,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    12,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.0.3",
+   "parent": "models.0.tdecoder.2.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 2496,
+   "in_shapes": [
+    [
+     1,
+     12,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 2496,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.0.4",
+   "parent": "models.0.tdecoder.2.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 384,
+   "in_shapes": [
+    [
+     1,
+     192,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.0.5",
+   "parent": "models.0.tdecoder.2.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.0.6",
+   "parent": "models.0.tdecoder.2.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 96,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.0",
+   "parent": "models.0.tdecoder.2.dconv.layers",
+   "cls": "Sequential",
+   "params": 6468,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.1.0",
+   "parent": "models.0.tdecoder.2.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 3468,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    12,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 3468,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.1.1",
+   "parent": "models.0.tdecoder.2.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 24,
+   "in_shapes": [
+    [
+     1,
+     12,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    12,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 24,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.1.2",
+   "parent": "models.0.tdecoder.2.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     12,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    12,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.1.3",
+   "parent": "models.0.tdecoder.2.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 2496,
+   "in_shapes": [
+    [
+     1,
+     12,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 2496,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.1.4",
+   "parent": "models.0.tdecoder.2.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 384,
+   "in_shapes": [
+    [
+     1,
+     192,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    192,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 384,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.1.5",
+   "parent": "models.0.tdecoder.2.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     192,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.1.6",
+   "parent": "models.0.tdecoder.2.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 96,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 96,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv.layers.1",
+   "parent": "models.0.tdecoder.2.dconv.layers",
+   "cls": "Sequential",
+   "params": 6468,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.2.dconv",
+   "parent": "models.0.tdecoder.2",
+   "cls": "DConv",
+   "params": 12936,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    21499
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.2.conv_tr",
+   "parent": "models.0.tdecoder.2",
+   "cls": "ConvTranspose1d",
+   "params": 36912,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    86000
+   ],
+   "calls": 2,
+   "params_attr": 36912,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.2.norm2",
+   "parent": "models.0.tdecoder.2",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     48,
+     86000
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    86000
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.2",
+   "parent": "models.0.tdecoder",
+   "cls": "HDecLayer",
+   "params": 105336,
+   "in_shapes": [
+    [
+     1,
+     96,
+     21499
+    ],
+    [
+     1,
+     96,
+     21499
+    ],
+    85995
+   ],
+   "out_shapes": [
+    [
+     1,
+     48,
+     85995
+    ],
+    [
+     1,
+     96,
+     21499
+    ]
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.3.rewrite",
+   "parent": "models.0.decoder.3",
+   "cls": "Conv2d",
+   "params": 41568,
+   "in_shapes": [
+    [
+     1,
+     48,
+     512,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    512,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 41568,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.3.norm1",
+   "parent": "models.0.decoder.3",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     512,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    512,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.0.0",
+   "parent": "models.0.decoder.3.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 870,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    6,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 870,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.0.1",
+   "parent": "models.0.decoder.3.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 12,
+   "in_shapes": [
+    [
+     512,
+     6,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    6,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 12,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.0.2",
+   "parent": "models.0.decoder.3.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     512,
+     6,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    6,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.0.3",
+   "parent": "models.0.decoder.3.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 672,
+   "in_shapes": [
+    [
+     512,
+     6,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 672,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.0.4",
+   "parent": "models.0.decoder.3.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 192,
+   "in_shapes": [
+    [
+     512,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.0.5",
+   "parent": "models.0.decoder.3.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     512,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.0.6",
+   "parent": "models.0.decoder.3.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 48,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.0",
+   "parent": "models.0.decoder.3.dconv.layers",
+   "cls": "Sequential",
+   "params": 1794,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.1.0",
+   "parent": "models.0.decoder.3.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 870,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    6,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 870,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.1.1",
+   "parent": "models.0.decoder.3.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 12,
+   "in_shapes": [
+    [
+     512,
+     6,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    6,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 12,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.1.2",
+   "parent": "models.0.decoder.3.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     512,
+     6,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    6,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.1.3",
+   "parent": "models.0.decoder.3.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 672,
+   "in_shapes": [
+    [
+     512,
+     6,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 672,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.1.4",
+   "parent": "models.0.decoder.3.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 192,
+   "in_shapes": [
+    [
+     512,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    96,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.1.5",
+   "parent": "models.0.decoder.3.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     512,
+     96,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.1.6",
+   "parent": "models.0.decoder.3.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 48,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.3.dconv.layers.1",
+   "parent": "models.0.decoder.3.dconv.layers",
+   "cls": "Sequential",
+   "params": 1794,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.3.dconv",
+   "parent": "models.0.decoder.3",
+   "cls": "DConv",
+   "params": 3588,
+   "in_shapes": [
+    [
+     512,
+     48,
+     336
+    ]
+   ],
+   "out_shapes": [
+    512,
+    48,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.3.conv_tr",
+   "parent": "models.0.decoder.3",
+   "cls": "ConvTranspose2d",
+   "params": 6160,
+   "in_shapes": [
+    [
+     1,
+     48,
+     512,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    16,
+    2052,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 6160,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.decoder.3.norm2",
+   "parent": "models.0.decoder.3",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     16,
+     2052,
+     336
+    ]
+   ],
+   "out_shapes": [
+    1,
+    16,
+    2052,
+    336
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.decoder.3",
+   "parent": "models.0.decoder",
+   "cls": "HDecLayer",
+   "params": 51316,
+   "in_shapes": [
+    [
+     1,
+     48,
+     512,
+     336
+    ],
+    [
+     1,
+     48,
+     512,
+     336
+    ],
+    336
+   ],
+   "out_shapes": [
+    [
+     1,
+     16,
+     2048,
+     336
+    ],
+    [
+     1,
+     48,
+     512,
+     336
+    ]
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.3.rewrite",
+   "parent": "models.0.tdecoder.3",
+   "cls": "Conv1d",
+   "params": 13920,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 13920,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.3.norm1",
+   "parent": "models.0.tdecoder.3",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.0.0",
+   "parent": "models.0.tdecoder.3.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 870,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    6,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 870,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.0.1",
+   "parent": "models.0.tdecoder.3.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 12,
+   "in_shapes": [
+    [
+     1,
+     6,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    6,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 12,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.0.2",
+   "parent": "models.0.tdecoder.3.dconv.layers.0",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     6,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    6,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.0.3",
+   "parent": "models.0.tdecoder.3.dconv.layers.0",
+   "cls": "Conv1d",
+   "params": 672,
+   "in_shapes": [
+    [
+     1,
+     6,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 672,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.0.4",
+   "parent": "models.0.tdecoder.3.dconv.layers.0",
+   "cls": "GroupNorm",
+   "params": 192,
+   "in_shapes": [
+    [
+     1,
+     96,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.0.5",
+   "parent": "models.0.tdecoder.3.dconv.layers.0",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.0.6",
+   "parent": "models.0.tdecoder.3.dconv.layers.0",
+   "cls": "LayerScale",
+   "params": 48,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.0",
+   "parent": "models.0.tdecoder.3.dconv.layers",
+   "cls": "Sequential",
+   "params": 1794,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.1.0",
+   "parent": "models.0.tdecoder.3.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 870,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    6,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 870,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.1.1",
+   "parent": "models.0.tdecoder.3.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 12,
+   "in_shapes": [
+    [
+     1,
+     6,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    6,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 12,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.1.2",
+   "parent": "models.0.tdecoder.3.dconv.layers.1",
+   "cls": "GELU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     6,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    6,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.1.3",
+   "parent": "models.0.tdecoder.3.dconv.layers.1",
+   "cls": "Conv1d",
+   "params": 672,
+   "in_shapes": [
+    [
+     1,
+     6,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 672,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.1.4",
+   "parent": "models.0.tdecoder.3.dconv.layers.1",
+   "cls": "GroupNorm",
+   "params": 192,
+   "in_shapes": [
+    [
+     1,
+     96,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    96,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 192,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.1.5",
+   "parent": "models.0.tdecoder.3.dconv.layers.1",
+   "cls": "GLU",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     96,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.1.6",
+   "parent": "models.0.tdecoder.3.dconv.layers.1",
+   "cls": "LayerScale",
+   "params": 48,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 48,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv.layers.1",
+   "parent": "models.0.tdecoder.3.dconv.layers",
+   "cls": "Sequential",
+   "params": 1794,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.3.dconv",
+   "parent": "models.0.tdecoder.3",
+   "cls": "DConv",
+   "params": 3588,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    48,
+    85995
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.3.conv_tr",
+   "parent": "models.0.tdecoder.3",
+   "cls": "ConvTranspose1d",
+   "params": 3080,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "out_shapes": [
+    1,
+    8,
+    343984
+   ],
+   "calls": 2,
+   "params_attr": 3080,
+   "role": "leaf"
+  },
+  {
+   "path": "models.0.tdecoder.3.norm2",
+   "parent": "models.0.tdecoder.3",
+   "cls": "Identity",
+   "params": 0,
+   "in_shapes": [
+    [
+     1,
+     8,
+     343984
+    ]
+   ],
+   "out_shapes": [
+    1,
+    8,
+    343984
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0.tdecoder.3",
+   "parent": "models.0.tdecoder",
+   "cls": "HDecLayer",
+   "params": 20588,
+   "in_shapes": [
+    [
+     1,
+     48,
+     85995
+    ],
+    [
+     1,
+     48,
+     85995
+    ],
+    343980
+   ],
+   "out_shapes": [
+    [
+     1,
+     8,
+     343980
+    ],
+    [
+     1,
+     48,
+     85995
+    ]
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  },
+  {
+   "path": "models.0",
+   "parent": "models",
+   "cls": "HTDemucs",
+   "params": 41984456,
+   "in_shapes": [
+    [
+     1,
+     2,
+     343980
+    ]
+   ],
+   "out_shapes": [
+    1,
+    4,
+    2,
+    343980
+   ],
+   "calls": 2,
+   "params_attr": 0,
+   "role": "container"
+  }
+ ]
+}

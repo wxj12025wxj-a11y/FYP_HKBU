@@ -1,0 +1,661 @@
+{
+  "models": {
+    "BS-RoFormer L12 / L6": [
+      {
+        "module": "torch",
+        "purpose": "张量/模型",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "numpy",
+        "purpose": "数组",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "librosa",
+        "purpose": "STFT (ZFTurbo inference 路径)",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "soundfile",
+        "purpose": "音频 IO",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "tqdm",
+        "purpose": "进度条",
+        "severity": "optional",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "yaml",
+        "purpose": "读取 config",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "omegaconf",
+        "purpose": "读取 config (utils.settings)",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "ml_collections",
+        "purpose": "ConfigDict (utils.settings / model_utils)",
+        "severity": "core",
+        "status": "MISSING",
+        "detail": "No module named 'ml_collections'"
+      },
+      {
+        "module": "rotary_embedding_torch",
+        "purpose": "bs_roformer 架构 (RoPE)",
+        "severity": "core",
+        "status": "MISSING",
+        "detail": "No module named 'rotary_embedding_torch'"
+      },
+      {
+        "module": "beartype",
+        "purpose": "lucidrains bs_roformer 运行时类型检查",
+        "severity": "core",
+        "status": "MISSING",
+        "detail": "No module named 'beartype'"
+      },
+      {
+        "module": "einx",
+        "purpose": "lucidrains bs_roformer",
+        "severity": "optional",
+        "status": "MISSING",
+        "detail": "No module named 'einx'"
+      },
+      {
+        "module": "torch_einops_utils",
+        "purpose": "lucidrains bs_roformer",
+        "severity": "optional",
+        "status": "MISSING",
+        "detail": "No module named 'torch_einops_utils'"
+      },
+      {
+        "module": "einops",
+        "purpose": "reshape 算子",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "scipy.signal",
+        "purpose": "STFT 备选路径 / 重采样",
+        "severity": "optional",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      }
+    ],
+    "Band-Split RNN (BSRNN)": [
+      {
+        "module": "torch",
+        "purpose": "张量/模型",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "torchaudio",
+        "purpose": "音频 IO + resample",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "hydra",
+        "purpose": "separate.py 入口 (@hydra.main)",
+        "severity": "core",
+        "status": "MISSING",
+        "detail": "No module named 'hydra'"
+      },
+      {
+        "module": "omegaconf",
+        "purpose": "config",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "lightning.pytorch",
+        "purpose": "models/pl_module.py",
+        "severity": "core",
+        "status": "MISSING",
+        "detail": "No module named 'lightning'"
+      },
+      {
+        "module": "pandas",
+        "purpose": "pl_module 内 SDR 汇总",
+        "severity": "core",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "helpers",
+        "purpose": "(仓库内模块 models/helpers, 在 bsrnn/ 下运行即可)",
+        "severity": "core",
+        "status": "LOCAL",
+        "detail": "仓库内模块，无需安装"
+      },
+      {
+        "module": "museval",
+        "purpose": "helpers.eval.compute_sdr",
+        "severity": "core",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "bs_roformer",
+        "purpose": "(仓库可选变体, 需 sys.path)",
+        "severity": "optional",
+        "status": "LOCAL",
+        "detail": "仓库内模块，无需安装"
+      }
+    ],
+    "MDX-Net (onnx Track A)": [
+      {
+        "module": "torch",
+        "purpose": "张量/模型",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "onnxruntime",
+        "purpose": "加载 onnx_A.zip 内的 onnx 模型",
+        "severity": "core",
+        "status": "MISSING",
+        "detail": "No module named 'onnxruntime'"
+      },
+      {
+        "module": "onnx",
+        "purpose": "onnx 图操作",
+        "severity": "core",
+        "status": "MISSING",
+        "detail": "No module named 'onnx'"
+      },
+      {
+        "module": "numpy",
+        "purpose": "数组",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "librosa",
+        "purpose": "STFT",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "soundfile",
+        "purpose": "音频 IO",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "museval",
+        "purpose": "评估",
+        "severity": "optional",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      }
+    ],
+    "MDX-Net (Demucs mdx_extra 路线)": [
+      {
+        "module": "torch",
+        "purpose": "张量/模型",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "einops",
+        "purpose": "demucs 内部",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "julius",
+        "purpose": "demucs 内部重采样",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "dora",
+        "purpose": "demucs 内部 (pip 包名 dora-search)",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "soundfile",
+        "purpose": "音频 IO",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "numpy",
+        "purpose": "数组",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      }
+    ],
+    "Conv-TasNet (tky823)": [
+      {
+        "module": "torch",
+        "purpose": "张量/模型",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "numpy",
+        "purpose": "数组",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "scipy",
+        "purpose": "重采样/滤波",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "scipy.signal",
+        "purpose": "stft/istft",
+        "severity": "core",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "soundfile",
+        "purpose": "音频 IO",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "librosa",
+        "purpose": "STFT",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "musdb",
+        "purpose": "MUSDB18 读取",
+        "severity": "optional",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "tqdm",
+        "purpose": "进度条",
+        "severity": "optional",
+        "status": "OK",
+        "detail": ""
+      }
+    ],
+    "MMDenseLSTM (tky823)": [
+      {
+        "module": "torch",
+        "purpose": "张量/模型",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "numpy",
+        "purpose": "数组",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "scipy",
+        "purpose": "重采样/滤波",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "scipy.signal",
+        "purpose": "stft/istft",
+        "severity": "core",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "soundfile",
+        "purpose": "音频 IO",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "librosa",
+        "purpose": "STFT",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      }
+    ],
+    "DPRNN (待自训)": [
+      {
+        "module": "torch",
+        "purpose": "张量/模型/训练",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "numpy",
+        "purpose": "数组",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "numpy.random",
+        "purpose": "打乱/初始化 (训练必需)",
+        "severity": "core",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "scipy.signal",
+        "purpose": "stft/istft",
+        "severity": "core",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "soundfile",
+        "purpose": "音频 IO",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "librosa",
+        "purpose": "STFT",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "musdb",
+        "purpose": "MUSDB18 读取",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      }
+    ],
+    "IRM / IBM oracle": [
+      {
+        "module": "torch",
+        "purpose": "torch.stft 路径",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "numpy",
+        "purpose": "数组",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "librosa",
+        "purpose": "参考实现 (sigsep-mus-oracle 依赖它)",
+        "severity": "optional",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "scipy.signal",
+        "purpose": "sigsep-mus-oracle 内部",
+        "severity": "optional",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "soundfile",
+        "purpose": "音频 IO",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      }
+    ],
+    "RPCA (自研)": [
+      {
+        "module": "numpy",
+        "purpose": "核心线性代数",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "numpy.linalg",
+        "purpose": "SVD",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "scipy.signal",
+        "purpose": "stft/istft",
+        "severity": "core",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "soundfile",
+        "purpose": "音频 IO",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "librosa",
+        "purpose": "STFT",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      }
+    ],
+    "RPCA+DRNN (自研)": [
+      {
+        "module": "torch",
+        "purpose": "DRNN 训练/推理",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "numpy",
+        "purpose": "数组",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      },
+      {
+        "module": "numpy.random",
+        "purpose": "初始化/打乱",
+        "severity": "core",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "scipy.signal",
+        "purpose": "stft/istft + 中值滤波 + 形态学",
+        "severity": "core",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "scipy.ndimage",
+        "purpose": "形态学后处理",
+        "severity": "core",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "soundfile",
+        "purpose": "音频 IO",
+        "severity": "core",
+        "status": "OK",
+        "detail": ""
+      }
+    ],
+    "评估指标 (全模型共用)": [
+      {
+        "module": "museval",
+        "purpose": "BSSEval v4 SDR/ISR/SAR (MUSDB18 官方口径)",
+        "severity": "core",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "pystoi",
+        "purpose": "STOI",
+        "severity": "optional",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "mir_eval",
+        "purpose": "PESQ/其他",
+        "severity": "optional",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "pandas",
+        "purpose": "汇总表",
+        "severity": "optional",
+        "status": "BLOCKED",
+        "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+      },
+      {
+        "module": "matplotlib",
+        "purpose": "绘图",
+        "severity": "optional",
+        "status": "OK",
+        "detail": ""
+      }
+    ]
+  },
+  "functional": [
+    {
+      "probe": "librosa.stft",
+      "status": "BLOCKED",
+      "detail": "Could not find/load shared object file 'llvmlite.dll' from resource location: 'llvmlite.binding'. This could mean that the library literally cannot be found, but may also mean that the permissions are"
+    },
+    {
+      "probe": "librosa.effects.hpss",
+      "status": "BLOCKED",
+      "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+    },
+    {
+      "probe": "librosa.resample",
+      "status": "BLOCKED",
+      "detail": "Could not find/load shared object file 'llvmlite.dll' from resource location: 'llvmlite.binding'. This could mean that the library literally cannot be found, but may also mean that the permissions are"
+    },
+    {
+      "probe": "numpy.random.default_rng",
+      "status": "BLOCKED",
+      "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+    },
+    {
+      "probe": "numpy.random.seed",
+      "status": "BLOCKED",
+      "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+    },
+    {
+      "probe": "numpy.linalg.svd",
+      "status": "OK",
+      "detail": ""
+    },
+    {
+      "probe": "scipy.signal.stft",
+      "status": "BLOCKED",
+      "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+    },
+    {
+      "probe": "scipy.signal.medfilt",
+      "status": "BLOCKED",
+      "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+    },
+    {
+      "probe": "scipy.signal.resample",
+      "status": "BLOCKED",
+      "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+    },
+    {
+      "probe": "scipy.ndimage.binary_opening",
+      "status": "BLOCKED",
+      "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+    },
+    {
+      "probe": "torch.stft",
+      "status": "OK",
+      "detail": ""
+    },
+    {
+      "probe": "torchaudio.resample",
+      "status": "OK",
+      "detail": ""
+    },
+    {
+      "probe": "torch.save/load 往返",
+      "status": "OK",
+      "detail": ""
+    },
+    {
+      "probe": "museval.metrics.bss_eval",
+      "status": "BLOCKED",
+      "detail": "DLL load failed while importing _generator: 应用程序控制策略已阻止此文件。"
+    },
+    {
+      "probe": "soundfile.read",
+      "status": "OK",
+      "detail": ""
+    },
+    {
+      "probe": "matplotlib 后端",
+      "status": "OK",
+      "detail": ""
+    }
+  ],
+  "tally": {
+    "OK": 56,
+    "MISSING": 9,
+    "BLOCKED": 27,
+    "ERROR": 0,
+    "LOCAL": 2
+  }
+}

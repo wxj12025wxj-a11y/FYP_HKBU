@@ -1,0 +1,452 @@
+{
+  "criteria": {
+    "stem": "vocals",
+    "dur_s": 20.0,
+    "windows_per_song": 8,
+    "target_min_pct": 12.0,
+    "min_song_dur_s": 60.0,
+    "rule": "目标轨占比 ≥ target_min 的窗中，取四轨占比最小值最大的窗；歌曲按该分数排序取 Top-N"
+  },
+  "picked": [
+    "The Easton Ellises - Falcon 69",
+    "Bobby Nobody - Stitch Up",
+    "Raft Monk - Tiring"
+  ],
+  "picked_detail": [
+    {
+      "song": "The Easton Ellises - Falcon 69",
+      "qualified": true,
+      "dur_s": 247.0,
+      "offset": 162.1,
+      "min_share_pct": 22.944994373139128,
+      "shares": {
+        "vocals": 27.26,
+        "drums": 22.94,
+        "bass": 25.82,
+        "other": 23.98
+      }
+    },
+    {
+      "song": "Bobby Nobody - Stitch Up",
+      "qualified": true,
+      "dur_s": 221.2,
+      "offset": 172.5,
+      "min_share_pct": 22.815380895552874,
+      "shares": {
+        "vocals": 22.82,
+        "drums": 26.79,
+        "bass": 26.18,
+        "other": 24.22
+      }
+    },
+    {
+      "song": "Raft Monk - Tiring",
+      "qualified": true,
+      "dur_s": 212.2,
+      "offset": 27.5,
+      "min_share_pct": 22.50864723531372,
+      "shares": {
+        "vocals": 22.51,
+        "drums": 22.84,
+        "bass": 29.76,
+        "other": 24.89
+      }
+    }
+  ],
+  "ranking_top30": [
+    {
+      "song": "The Easton Ellises - Falcon 69",
+      "qualified": true,
+      "dur_s": 247.0,
+      "offset": 162.1,
+      "min_share_pct": 22.944994373139128,
+      "shares": {
+        "vocals": 27.26,
+        "drums": 22.94,
+        "bass": 25.82,
+        "other": 23.98
+      }
+    },
+    {
+      "song": "Bobby Nobody - Stitch Up",
+      "qualified": true,
+      "dur_s": 221.2,
+      "offset": 172.5,
+      "min_share_pct": 22.815380895552874,
+      "shares": {
+        "vocals": 22.82,
+        "drums": 26.79,
+        "bass": 26.18,
+        "other": 24.22
+      }
+    },
+    {
+      "song": "Raft Monk - Tiring",
+      "qualified": true,
+      "dur_s": 212.2,
+      "offset": 27.5,
+      "min_share_pct": 22.50864723531372,
+      "shares": {
+        "vocals": 22.51,
+        "drums": 22.84,
+        "bass": 29.76,
+        "other": 24.89
+      }
+    },
+    {
+      "song": "The Doppler Shift - Atrophy",
+      "qualified": true,
+      "dur_s": 331.4,
+      "offset": 222.5,
+      "min_share_pct": 21.691255746721804,
+      "shares": {
+        "vocals": 29.63,
+        "drums": 26.34,
+        "bass": 21.69,
+        "other": 22.33
+      }
+    },
+    {
+      "song": "Enda Reilly - Cur An Long Ag Seol",
+      "qualified": true,
+      "dur_s": 187.0,
+      "offset": 95.4,
+      "min_share_pct": 21.47375962395681,
+      "shares": {
+        "vocals": 24.37,
+        "drums": 29.76,
+        "bass": 24.4,
+        "other": 21.47
+      }
+    },
+    {
+      "song": "Al James - Schoolboy Facination",
+      "qualified": true,
+      "dur_s": 200.5,
+      "offset": 25.8,
+      "min_share_pct": 20.106453932612304,
+      "shares": {
+        "vocals": 33.22,
+        "drums": 21.33,
+        "bass": 25.34,
+        "other": 20.11
+      }
+    },
+    {
+      "song": "Georgia Wonder - Siren",
+      "qualified": true,
+      "dur_s": 430.4,
+      "offset": 175.9,
+      "min_share_pct": 19.64725040044247,
+      "shares": {
+        "vocals": 28.41,
+        "drums": 28.16,
+        "bass": 19.65,
+        "other": 23.77
+      }
+    },
+    {
+      "song": "The Long Wait - Dark Horses",
+      "qualified": true,
+      "dur_s": 305.7,
+      "offset": 122.5,
+      "min_share_pct": 19.00252828804878,
+      "shares": {
+        "vocals": 24.79,
+        "drums": 19.0,
+        "bass": 28.61,
+        "other": 27.6
+      }
+    },
+    {
+      "song": "AM Contra - Heart Peripheral",
+      "qualified": true,
+      "dur_s": 210.1,
+      "offset": 108.6,
+      "min_share_pct": 18.25177310286112,
+      "shares": {
+        "vocals": 18.41,
+        "drums": 43.1,
+        "bass": 20.23,
+        "other": 18.25
+      }
+    },
+    {
+      "song": "Moosmusic - Big Dummy Shake",
+      "qualified": true,
+      "dur_s": 198.9,
+      "offset": 76.7,
+      "min_share_pct": 17.90524544696524,
+      "shares": {
+        "vocals": 17.91,
+        "drums": 32.83,
+        "bass": 18.75,
+        "other": 30.52
+      }
+    },
+    {
+      "song": "Girls Under Glass - We Feel Alright",
+      "qualified": true,
+      "dur_s": 317.3,
+      "offset": 84.9,
+      "min_share_pct": 17.620204512822603,
+      "shares": {
+        "vocals": 17.62,
+        "drums": 33.06,
+        "bass": 22.07,
+        "other": 27.26
+      }
+    },
+    {
+      "song": "James Elder & Mark M Thompson - The English Actor",
+      "qualified": true,
+      "dur_s": 205.5,
+      "offset": 132.5,
+      "min_share_pct": 17.55039977442198,
+      "shares": {
+        "vocals": 27.67,
+        "drums": 17.61,
+        "bass": 17.55,
+        "other": 37.17
+      }
+    },
+    {
+      "song": "Juliet's Rescue - Heartbeats",
+      "qualified": true,
+      "dur_s": 267.7,
+      "offset": 176.9,
+      "min_share_pct": 17.30651098327364,
+      "shares": {
+        "vocals": 24.23,
+        "drums": 38.86,
+        "bass": 19.6,
+        "other": 17.31
+      }
+    },
+    {
+      "song": "Secretariat - Over The Top",
+      "qualified": true,
+      "dur_s": 251.1,
+      "offset": 99.0,
+      "min_share_pct": 17.13751740596678,
+      "shares": {
+        "vocals": 17.14,
+        "drums": 21.71,
+        "bass": 41.22,
+        "other": 19.93
+      }
+    },
+    {
+      "song": "Ben Carrigan - We'll Talk About It All Tonight",
+      "qualified": true,
+      "dur_s": 254.9,
+      "offset": 33.6,
+      "min_share_pct": 16.704008756307793,
+      "shares": {
+        "vocals": 16.7,
+        "drums": 34.96,
+        "bass": 31.63,
+        "other": 16.71
+      }
+    },
+    {
+      "song": "BKS - Bulldozer",
+      "qualified": true,
+      "dur_s": 337.0,
+      "offset": 90.6,
+      "min_share_pct": 16.312581234239175,
+      "shares": {
+        "vocals": 17.89,
+        "drums": 42.64,
+        "bass": 23.16,
+        "other": 16.31
+      }
+    },
+    {
+      "song": "Angels In Amplifiers - I'm Alright",
+      "qualified": true,
+      "dur_s": 179.6,
+      "offset": 45.6,
+      "min_share_pct": 16.004887022799142,
+      "shares": {
+        "vocals": 23.11,
+        "drums": 17.28,
+        "bass": 16.0,
+        "other": 43.6
+      }
+    },
+    {
+      "song": "The Mountaineering Club - Mallory",
+      "qualified": true,
+      "dur_s": 244.5,
+      "offset": 224.5,
+      "min_share_pct": 15.905214798114134,
+      "shares": {
+        "vocals": 17.32,
+        "drums": 15.91,
+        "bass": 48.44,
+        "other": 18.33
+      }
+    },
+    {
+      "song": "The Easton Ellises (Baumi) - SDRNR",
+      "qualified": true,
+      "dur_s": 234.7,
+      "offset": 122.7,
+      "min_share_pct": 15.63748924203589,
+      "shares": {
+        "vocals": 23.3,
+        "drums": 37.27,
+        "bass": 23.79,
+        "other": 15.64
+      }
+    },
+    {
+      "song": "Speak Softly - Broken Man",
+      "qualified": true,
+      "dur_s": 253.2,
+      "offset": 66.6,
+      "min_share_pct": 15.384841866247596,
+      "shares": {
+        "vocals": 15.38,
+        "drums": 26.6,
+        "bass": 29.97,
+        "other": 28.05
+      }
+    },
+    {
+      "song": "Lyndsey Ollard - Catching Up",
+      "qualified": true,
+      "dur_s": 227.4,
+      "offset": 177.8,
+      "min_share_pct": 15.148467562813675,
+      "shares": {
+        "vocals": 49.06,
+        "drums": 15.15,
+        "bass": 16.29,
+        "other": 19.51
+      }
+    },
+    {
+      "song": "BKS - Too Much",
+      "qualified": true,
+      "dur_s": 220.1,
+      "offset": 57.2,
+      "min_share_pct": 14.452904726521345,
+      "shares": {
+        "vocals": 25.57,
+        "drums": 23.95,
+        "bass": 36.03,
+        "other": 14.45
+      }
+    },
+    {
+      "song": "Signe Jakobsen - What Have You Done To Me",
+      "qualified": true,
+      "dur_s": 177.4,
+      "offset": 22.5,
+      "min_share_pct": 14.43788918514609,
+      "shares": {
+        "vocals": 33.4,
+        "drums": 29.66,
+        "bass": 22.5,
+        "other": 14.44
+      }
+    },
+    {
+      "song": "Nerve 9 - Pray For The Rain",
+      "qualified": true,
+      "dur_s": 343.7,
+      "offset": 138.7,
+      "min_share_pct": 14.21085299896666,
+      "shares": {
+        "vocals": 28.25,
+        "drums": 17.02,
+        "bass": 14.21,
+        "other": 40.52
+      }
+    },
+    {
+      "song": "Arise - Run Run Run",
+      "qualified": true,
+      "dur_s": 219.4,
+      "offset": 142.4,
+      "min_share_pct": 14.061196026399637,
+      "shares": {
+        "vocals": 14.3,
+        "drums": 14.06,
+        "bass": 30.48,
+        "other": 41.16
+      }
+    },
+    {
+      "song": "Cristina Vane - So Easy",
+      "qualified": true,
+      "dur_s": 254.1,
+      "offset": 100.3,
+      "min_share_pct": 13.985352111674553,
+      "shares": {
+        "vocals": 13.99,
+        "drums": 43.98,
+        "bass": 15.9,
+        "other": 26.14
+      }
+    },
+    {
+      "song": "Triviul feat. The Fiend - Widow",
+      "qualified": true,
+      "dur_s": 235.1,
+      "offset": 122.9,
+      "min_share_pct": 13.78085474582828,
+      "shares": {
+        "vocals": 44.63,
+        "drums": 13.78,
+        "bass": 25.89,
+        "other": 15.69
+      }
+    },
+    {
+      "song": "Louis Cressy Band - Good Time",
+      "qualified": true,
+      "dur_s": 292.8,
+      "offset": 39.0,
+      "min_share_pct": 13.39115999463769,
+      "shares": {
+        "vocals": 28.36,
+        "drums": 32.78,
+        "bass": 13.39,
+        "other": 25.47
+      }
+    },
+    {
+      "song": "Buitraker - Revo X",
+      "qualified": true,
+      "dur_s": 275.8,
+      "offset": 182.7,
+      "min_share_pct": 13.222033509872244,
+      "shares": {
+        "vocals": 13.22,
+        "drums": 41.37,
+        "bass": 19.84,
+        "other": 25.56
+      }
+    },
+    {
+      "song": "Secretariat - Borderline",
+      "qualified": true,
+      "dur_s": 286.8,
+      "offset": 228.7,
+      "min_share_pct": 13.21127381280151,
+      "shares": {
+        "vocals": 39.13,
+        "drums": 14.52,
+        "bass": 13.21,
+        "other": 33.14
+      }
+    }
+  ],
+  "scanned": 50,
+  "qualified": 47,
+  "elapsed_s": 40.7,
+  "status": "PASS"
+}

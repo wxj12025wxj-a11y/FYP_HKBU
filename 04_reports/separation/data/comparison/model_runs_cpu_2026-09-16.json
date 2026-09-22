@@ -1,0 +1,3119 @@
+{
+  "runs": {
+    "oracle": {
+      "A Classic Education - NightOwl": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "A Classic Education - NightOwl",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 0.083,
+        "rtf": 0.0083,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 7.469,
+          "drums": 3.106,
+          "bass": 17.768,
+          "other": 9.289
+        },
+        "si_sdr": {
+          "vocals": 8.156,
+          "drums": 0.682,
+          "bass": 17.974,
+          "other": 8.73
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T20:50:07",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\A Classic Education - NightOwl",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "ANiMAL - Clinic A": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "ANiMAL - Clinic A",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 140.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 0.204,
+        "rtf": 0.0204,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 10.033,
+          "drums": 8.477,
+          "bass": 8.398,
+          "other": 10.546
+        },
+        "si_sdr": {
+          "vocals": 9.387,
+          "drums": 7.919,
+          "bass": 8.053,
+          "other": 9.924
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:26:26",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\ANiMAL - Clinic A",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Creepoid - OldTree": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Creepoid - OldTree",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 60.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 0.07,
+        "rtf": 0.007,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 11.849,
+          "drums": 6.016,
+          "bass": 8.548,
+          "other": 6.154
+        },
+        "si_sdr": {
+          "vocals": 12.19,
+          "drums": 5.115,
+          "bass": 7.803,
+          "other": 4.942
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:32:20",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\Creepoid - OldTree",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Dark Ride - Burning Bridges": {
+        "model": "oracle",
+        "label": "IRM/IBM Oracle",
+        "song": "Dark Ride - Burning Bridges",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 180.0,
+        "status": "PASS",
+        "weights_downloaded": false,
+        "load_s": 0.0,
+        "infer_s": 0.068,
+        "rtf": 0.0068,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 8.978,
+          "drums": 8.783,
+          "bass": 8.686,
+          "other": 5.655
+        },
+        "si_sdr": {
+          "vocals": 11.176,
+          "drums": 9.029,
+          "bass": 7.542,
+          "other": 3.614
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:37:51",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\Dark Ride - Burning Bridges",
+        "info": {
+          "kind": "analytic"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    },
+    "mmdenselstm": {
+      "A Classic Education - NightOwl": {
+        "model": "mmdenselstm",
+        "label": "MMDenseLSTM (musdb18)",
+        "song": "A Classic Education - NightOwl",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.471,
+        "infer_s": 3.2,
+        "rtf": 0.32,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "bass": 17.127,
+          "drums": 2.37,
+          "other": 7.833,
+          "vocals": 7.015
+        },
+        "si_sdr": {
+          "bass": 17.581,
+          "drums": -0.987,
+          "other": 7.587,
+          "vocals": 6.684
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T20:51:05",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\mmdenselstm_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\MMDenseLSTM\\A Classic Education - NightOwl",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "tky823",
+          "config": "paper",
+          "params": 5483136,
+          "sources": [
+            "bass",
+            "drums",
+            "other",
+            "vocals"
+          ],
+          "n_fft": 4096,
+          "hop_length": 1024
+        },
+        "ref_used": {
+          "bass": "bass",
+          "drums": "drums",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      },
+      "ANiMAL - Clinic A": {
+        "model": "mmdenselstm",
+        "label": "MMDenseLSTM (musdb18)",
+        "song": "ANiMAL - Clinic A",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 140.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.399,
+        "infer_s": 2.738,
+        "rtf": 0.2738,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "bass": 7.355,
+          "drums": 7.724,
+          "other": 5.814,
+          "vocals": 5.345
+        },
+        "si_sdr": {
+          "bass": 6.623,
+          "drums": 6.485,
+          "other": 5.057,
+          "vocals": 4.067
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:27:24",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\mmdenselstm_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\MMDenseLSTM\\ANiMAL - Clinic A",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "tky823",
+          "config": "paper",
+          "params": 5483136,
+          "sources": [
+            "bass",
+            "drums",
+            "other",
+            "vocals"
+          ],
+          "n_fft": 4096,
+          "hop_length": 1024
+        },
+        "ref_used": {
+          "bass": "bass",
+          "drums": "drums",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      },
+      "Creepoid - OldTree": {
+        "model": "mmdenselstm",
+        "label": "MMDenseLSTM (musdb18)",
+        "song": "Creepoid - OldTree",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 60.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.333,
+        "infer_s": 2.707,
+        "rtf": 0.2707,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "bass": 8.016,
+          "drums": 5.158,
+          "other": 4.956,
+          "vocals": 10.097
+        },
+        "si_sdr": {
+          "bass": 7.072,
+          "drums": 3.575,
+          "other": 2.932,
+          "vocals": 10.248
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:33:05",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\mmdenselstm_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\MMDenseLSTM\\Creepoid - OldTree",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "tky823",
+          "config": "paper",
+          "params": 5483136,
+          "sources": [
+            "bass",
+            "drums",
+            "other",
+            "vocals"
+          ],
+          "n_fft": 4096,
+          "hop_length": 1024
+        },
+        "ref_used": {
+          "bass": "bass",
+          "drums": "drums",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      },
+      "Dark Ride - Burning Bridges": {
+        "model": "mmdenselstm",
+        "label": "MMDenseLSTM (musdb18)",
+        "song": "Dark Ride - Burning Bridges",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 180.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.332,
+        "infer_s": 2.687,
+        "rtf": 0.2687,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "bass": 5.575,
+          "drums": 7.147,
+          "other": 2.5,
+          "vocals": 5.603
+        },
+        "si_sdr": {
+          "bass": 4.294,
+          "drums": 6.094,
+          "other": -1.798,
+          "vocals": 7.13
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:38:31",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\mmdenselstm_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\MMDenseLSTM\\Dark Ride - Burning Bridges",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "tky823",
+          "config": "paper",
+          "params": 5483136,
+          "sources": [
+            "bass",
+            "drums",
+            "other",
+            "vocals"
+          ],
+          "n_fft": 4096,
+          "hop_length": 1024
+        },
+        "ref_used": {
+          "bass": "bass",
+          "drums": "drums",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      }
+    },
+    "rpca": {
+      "A Classic Education - NightOwl": {
+        "model": "rpca",
+        "label": "RPCA (Inexact-ALM)",
+        "song": "A Classic Education - NightOwl",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": null,
+        "load_s": 0.01,
+        "infer_s": 24.516,
+        "rtf": 2.4516,
+        "targets": [
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": null
+        },
+        "si_sdr": {
+          "vocals": -7.901
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T20:50:10",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\rpca_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\RPCA\\A Classic Education - NightOwl",
+        "info": {
+          "kind": "classical",
+          "targets": [
+            "vocals"
+          ]
+        },
+        "cross_stem": {
+          "vocals": {
+            "vocals": {
+              "si_sdr": -7.901,
+              "corr": 0.3735
+            },
+            "drums": {
+              "si_sdr": -19.276,
+              "corr": 0.1081
+            },
+            "bass": {
+              "si_sdr": 3.957,
+              "corr": 0.8445
+            },
+            "other": {
+              "si_sdr": -13.503,
+              "corr": 0.2067
+            }
+          }
+        },
+        "best_match": {
+          "vocals": {
+            "stem": "bass",
+            "si_sdr": 3.957,
+            "corr": 0.8445
+          }
+        },
+        "ref_used": {
+          "vocals": "(cross-stem; 见 cross_stem)"
+        }
+      },
+      "ANiMAL - Clinic A": {
+        "model": "rpca",
+        "label": "RPCA (Inexact-ALM)",
+        "song": "ANiMAL - Clinic A",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 140.0,
+        "status": "PASS",
+        "weights_downloaded": null,
+        "load_s": 0.093,
+        "infer_s": 25.43,
+        "rtf": 2.543,
+        "targets": [
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": null
+        },
+        "si_sdr": {
+          "vocals": -3.694
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:26:31",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\rpca_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\RPCA\\ANiMAL - Clinic A",
+        "info": {
+          "kind": "classical",
+          "targets": [
+            "vocals"
+          ]
+        },
+        "cross_stem": {
+          "vocals": {
+            "vocals": {
+              "si_sdr": -3.694,
+              "corr": 0.5471
+            },
+            "drums": {
+              "si_sdr": -5.852,
+              "corr": 0.4542
+            },
+            "bass": {
+              "si_sdr": -10.298,
+              "corr": 0.2922
+            },
+            "other": {
+              "si_sdr": -3.868,
+              "corr": 0.5394
+            }
+          }
+        },
+        "best_match": {
+          "vocals": {
+            "stem": "vocals",
+            "si_sdr": -3.694,
+            "corr": 0.5471
+          }
+        },
+        "ref_used": {
+          "vocals": "(cross-stem; 见 cross_stem)"
+        }
+      },
+      "Creepoid - OldTree": {
+        "model": "rpca",
+        "label": "RPCA (Inexact-ALM)",
+        "song": "Creepoid - OldTree",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 60.0,
+        "status": "PASS",
+        "weights_downloaded": null,
+        "load_s": 0.063,
+        "infer_s": 15.973,
+        "rtf": 1.5973,
+        "targets": [
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": null
+        },
+        "si_sdr": {
+          "vocals": -0.203
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:32:24",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\rpca_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\RPCA\\Creepoid - OldTree",
+        "info": {
+          "kind": "classical",
+          "targets": [
+            "vocals"
+          ]
+        },
+        "cross_stem": {
+          "vocals": {
+            "vocals": {
+              "si_sdr": -0.203,
+              "corr": 0.6988
+            },
+            "drums": {
+              "si_sdr": -8.008,
+              "corr": 0.3696
+            },
+            "bass": {
+              "si_sdr": -7.552,
+              "corr": 0.3866
+            },
+            "other": {
+              "si_sdr": -11.534,
+              "corr": 0.2562
+            }
+          }
+        },
+        "best_match": {
+          "vocals": {
+            "stem": "vocals",
+            "si_sdr": -0.203,
+            "corr": 0.6988
+          }
+        },
+        "ref_used": {
+          "vocals": "(cross-stem; 见 cross_stem)"
+        }
+      },
+      "Dark Ride - Burning Bridges": {
+        "model": "rpca",
+        "label": "RPCA (Inexact-ALM)",
+        "song": "Dark Ride - Burning Bridges",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 180.0,
+        "status": "PASS",
+        "weights_downloaded": null,
+        "load_s": 0.051,
+        "infer_s": 16.115,
+        "rtf": 1.6115,
+        "targets": [
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": null
+        },
+        "si_sdr": {
+          "vocals": -4.345
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:37:54",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\rpca_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\RPCA\\Dark Ride - Burning Bridges",
+        "info": {
+          "kind": "classical",
+          "targets": [
+            "vocals"
+          ]
+        },
+        "cross_stem": {
+          "vocals": {
+            "vocals": {
+              "si_sdr": -4.345,
+              "corr": 0.5185
+            },
+            "drums": {
+              "si_sdr": -1.474,
+              "corr": 0.6449
+            },
+            "bass": {
+              "si_sdr": -7.567,
+              "corr": 0.386
+            },
+            "other": {
+              "si_sdr": -11.931,
+              "corr": 0.2454
+            }
+          }
+        },
+        "best_match": {
+          "vocals": {
+            "stem": "drums",
+            "si_sdr": -1.474,
+            "corr": 0.6449
+          }
+        },
+        "ref_used": {
+          "vocals": "(cross-stem; 见 cross_stem)"
+        }
+      }
+    },
+    "umx": {
+      "A Classic Education - NightOwl": {
+        "model": "umx",
+        "label": "Open-Unmix (umxhq)",
+        "song": "A Classic Education - NightOwl",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.218,
+        "infer_s": 1.164,
+        "rtf": 0.1164,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 6.492,
+          "drums": 1.879,
+          "bass": 17.361,
+          "other": 7.575
+        },
+        "si_sdr": {
+          "vocals": 6.263,
+          "drums": -1.821,
+          "bass": 17.646,
+          "other": 7.128
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T20:50:35",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\umx_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Open-Unmix\\A Classic Education - NightOwl",
+        "info": {
+          "kind": "deep",
+          "device": "cpu"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "ANiMAL - Clinic A": {
+        "model": "umx",
+        "label": "Open-Unmix (umxhq)",
+        "song": "ANiMAL - Clinic A",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 140.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.279,
+        "infer_s": 1.495,
+        "rtf": 0.1495,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 5.476,
+          "drums": 8.233,
+          "bass": 8.421,
+          "other": 6.131
+        },
+        "si_sdr": {
+          "vocals": 3.926,
+          "drums": 7.374,
+          "bass": 8.021,
+          "other": 5.186
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:26:57",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\umx_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Open-Unmix\\ANiMAL - Clinic A",
+        "info": {
+          "kind": "deep",
+          "device": "cpu"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Creepoid - OldTree": {
+        "model": "umx",
+        "label": "Open-Unmix (umxhq)",
+        "song": "Creepoid - OldTree",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 60.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.205,
+        "infer_s": 1.125,
+        "rtf": 0.1125,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 10.249,
+          "drums": 5.679,
+          "bass": 8.351,
+          "other": 4.903
+        },
+        "si_sdr": {
+          "vocals": 10.169,
+          "drums": 4.299,
+          "bass": 7.447,
+          "other": 2.802
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:32:40",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\umx_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Open-Unmix\\Creepoid - OldTree",
+        "info": {
+          "kind": "deep",
+          "device": "cpu"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Dark Ride - Burning Bridges": {
+        "model": "umx",
+        "label": "Open-Unmix (umxhq)",
+        "song": "Dark Ride - Burning Bridges",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 180.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.206,
+        "infer_s": 1.224,
+        "rtf": 0.1224,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 6.047,
+          "drums": 7.31,
+          "bass": 6.781,
+          "other": 3.34
+        },
+        "si_sdr": {
+          "vocals": 7.547,
+          "drums": 7.087,
+          "bass": 5.423,
+          "other": -0.458
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:38:10",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\umx_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Open-Unmix\\Dark Ride - Burning Bridges",
+        "info": {
+          "kind": "deep",
+          "device": "cpu"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    },
+    "mdx": {
+      "A Classic Education - NightOwl": {
+        "model": "mdx",
+        "label": "MDX-Net (mdx_extra)",
+        "song": "A Classic Education - NightOwl",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 2.365,
+        "infer_s": 9.127,
+        "rtf": 0.9127,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "drums": 6.218,
+          "bass": 21.095,
+          "other": 8.901,
+          "vocals": 8.546
+        },
+        "si_sdr": {
+          "drums": 5.037,
+          "bass": 21.755,
+          "other": 8.635,
+          "vocals": 8.854
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T20:50:38",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\mdx_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\MDX-Net\\A Classic Education - NightOwl",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "bag": "mdx_extra",
+          "weights_src": "local:E:\\FYP_HKBU\\01_models\\_weights\\MDX-Net\\mdx_extra"
+        },
+        "ref_used": {
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      },
+      "ANiMAL - Clinic A": {
+        "model": "mdx",
+        "label": "MDX-Net (mdx_extra)",
+        "song": "ANiMAL - Clinic A",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 140.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 2.272,
+        "infer_s": 9.712,
+        "rtf": 0.9712,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "drums": 11.963,
+          "bass": 15.189,
+          "other": 8.812,
+          "vocals": 7.961
+        },
+        "si_sdr": {
+          "drums": 12.393,
+          "bass": 15.303,
+          "other": 8.643,
+          "vocals": 7.126
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:27:01",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\mdx_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\MDX-Net\\ANiMAL - Clinic A",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "bag": "mdx_extra",
+          "weights_src": "local:E:\\FYP_HKBU\\01_models\\_weights\\MDX-Net\\mdx_extra"
+        },
+        "ref_used": {
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      },
+      "Creepoid - OldTree": {
+        "model": "mdx",
+        "label": "MDX-Net (mdx_extra)",
+        "song": "Creepoid - OldTree",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 60.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 2.066,
+        "infer_s": 8.746,
+        "rtf": 0.8746,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "drums": 8.75,
+          "bass": 12.916,
+          "other": 6.269,
+          "vocals": 11.168
+        },
+        "si_sdr": {
+          "drums": 8.035,
+          "bass": 12.332,
+          "other": 4.646,
+          "vocals": 11.225
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:32:44",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\mdx_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\MDX-Net\\Creepoid - OldTree",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "bag": "mdx_extra",
+          "weights_src": "local:E:\\FYP_HKBU\\01_models\\_weights\\MDX-Net\\mdx_extra"
+        },
+        "ref_used": {
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      },
+      "Dark Ride - Burning Bridges": {
+        "model": "mdx",
+        "label": "MDX-Net (mdx_extra)",
+        "song": "Dark Ride - Burning Bridges",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 180.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 2.033,
+        "infer_s": 5.984,
+        "rtf": 0.5984,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "drums": 9.364,
+          "bass": 10.583,
+          "other": 5.637,
+          "vocals": 6.765
+        },
+        "si_sdr": {
+          "drums": 9.63,
+          "bass": 10.099,
+          "other": 3.043,
+          "vocals": 8.474
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:38:13",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\mdx_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\MDX-Net\\Dark Ride - Burning Bridges",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "bag": "mdx_extra",
+          "weights_src": "local:E:\\FYP_HKBU\\01_models\\_weights\\MDX-Net\\mdx_extra"
+        },
+        "ref_used": {
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      }
+    },
+    "convtasnet": {
+      "A Classic Education - NightOwl": {
+        "model": "convtasnet",
+        "label": "Conv-TasNet (musdb18)",
+        "song": "A Classic Education - NightOwl",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.289,
+        "infer_s": 8.777,
+        "rtf": 0.8777,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "bass": 17.296,
+          "drums": 2.045,
+          "other": 5.578,
+          "vocals": 4.725
+        },
+        "si_sdr": {
+          "bass": 18.135,
+          "drums": -1.833,
+          "other": 4.924,
+          "vocals": 4.19
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T20:50:53",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\convtasnet_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Conv-TasNet\\A Classic Education - NightOwl",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "tky823",
+          "config": "4sec_L20",
+          "params": 13394513,
+          "sources": [
+            "bass",
+            "drums",
+            "other",
+            "vocals"
+          ]
+        },
+        "ref_used": {
+          "bass": "bass",
+          "drums": "drums",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      },
+      "ANiMAL - Clinic A": {
+        "model": "convtasnet",
+        "label": "Conv-TasNet (musdb18)",
+        "song": "ANiMAL - Clinic A",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 140.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.266,
+        "infer_s": 6.363,
+        "rtf": 0.6363,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "bass": 9.383,
+          "drums": 7.985,
+          "other": 5.831,
+          "vocals": 4.998
+        },
+        "si_sdr": {
+          "bass": 8.907,
+          "drums": 7.189,
+          "other": 4.689,
+          "vocals": 3.263
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:27:15",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\convtasnet_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Conv-TasNet\\ANiMAL - Clinic A",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "tky823",
+          "config": "4sec_L20",
+          "params": 13394513,
+          "sources": [
+            "bass",
+            "drums",
+            "other",
+            "vocals"
+          ]
+        },
+        "ref_used": {
+          "bass": "bass",
+          "drums": "drums",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      },
+      "Creepoid - OldTree": {
+        "model": "convtasnet",
+        "label": "Conv-TasNet (musdb18)",
+        "song": "Creepoid - OldTree",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 60.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.228,
+        "infer_s": 6.704,
+        "rtf": 0.6704,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "bass": 9.294,
+          "drums": 5.56,
+          "other": 1.312,
+          "vocals": 5.597
+        },
+        "si_sdr": {
+          "bass": 8.247,
+          "drums": 4.23,
+          "other": -1.139,
+          "vocals": 5.772
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:32:56",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\convtasnet_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Conv-TasNet\\Creepoid - OldTree",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "tky823",
+          "config": "4sec_L20",
+          "params": 13394513,
+          "sources": [
+            "bass",
+            "drums",
+            "other",
+            "vocals"
+          ]
+        },
+        "ref_used": {
+          "bass": "bass",
+          "drums": "drums",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      },
+      "Dark Ride - Burning Bridges": {
+        "model": "convtasnet",
+        "label": "Conv-TasNet (musdb18)",
+        "song": "Dark Ride - Burning Bridges",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 180.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.219,
+        "infer_s": 6.413,
+        "rtf": 0.6413,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "bass": 7.359,
+          "drums": 7.776,
+          "other": 1.655,
+          "vocals": 2.777
+        },
+        "si_sdr": {
+          "bass": 6.317,
+          "drums": 7.175,
+          "other": -1.699,
+          "vocals": 4.063
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:38:23",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\convtasnet_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\Conv-TasNet\\Dark Ride - Burning Bridges",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "tky823",
+          "config": "4sec_L20",
+          "params": 13394513,
+          "sources": [
+            "bass",
+            "drums",
+            "other",
+            "vocals"
+          ]
+        },
+        "ref_used": {
+          "bass": "bass",
+          "drums": "drums",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      }
+    },
+    "bsroformer_l12": {
+      "A Classic Education - NightOwl": {
+        "model": "bsroformer_l12",
+        "label": "BS-RoFormer L12 (ep_317, vocals)",
+        "song": "A Classic Education - NightOwl",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 1.196,
+        "infer_s": 117.247,
+        "rtf": 11.7247,
+        "targets": [
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.996
+        },
+        "si_sdr": {
+          "vocals": 11.099
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T20:51:10",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l12_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L12\\A Classic Education - NightOwl",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "ZFTurbo/MSS-Training",
+          "ckpt": "model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+          "params": 159758092,
+          "normalize": false,
+          "targets": [
+            "vocals"
+          ],
+          "script": "bs_roformer",
+          "dim": 512,
+          "depth": 12,
+          "librosa_stub": true
+        },
+        "ref_used": {
+          "vocals": "vocals"
+        }
+      },
+      "ANiMAL - Clinic A": {
+        "model": "bsroformer_l12",
+        "label": "BS-RoFormer L12 (ep_317, vocals)",
+        "song": "ANiMAL - Clinic A",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 140.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 1.329,
+        "infer_s": 108.988,
+        "rtf": 10.8988,
+        "targets": [
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.689
+        },
+        "si_sdr": {
+          "vocals": 8.957
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:27:28",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l12_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L12\\ANiMAL - Clinic A",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "ZFTurbo/MSS-Training",
+          "ckpt": "model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+          "params": 159758092,
+          "normalize": false,
+          "targets": [
+            "vocals"
+          ],
+          "script": "bs_roformer",
+          "dim": 512,
+          "depth": 12,
+          "librosa_stub": false
+        },
+        "ref_used": {
+          "vocals": "vocals"
+        }
+      },
+      "Creepoid - OldTree": {
+        "model": "bsroformer_l12",
+        "label": "BS-RoFormer L12 (ep_317, vocals)",
+        "song": "Creepoid - OldTree",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 60.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 1.024,
+        "infer_s": 110.559,
+        "rtf": 11.0559,
+        "targets": [
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 12.721
+        },
+        "si_sdr": {
+          "vocals": 12.753
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:33:10",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l12_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L12\\Creepoid - OldTree",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "ZFTurbo/MSS-Training",
+          "ckpt": "model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+          "params": 159758092,
+          "normalize": false,
+          "targets": [
+            "vocals"
+          ],
+          "script": "bs_roformer",
+          "dim": 512,
+          "depth": 12,
+          "librosa_stub": false
+        },
+        "ref_used": {
+          "vocals": "vocals"
+        }
+      },
+      "Dark Ride - Burning Bridges": {
+        "model": "bsroformer_l12",
+        "label": "BS-RoFormer L12 (ep_317, vocals)",
+        "song": "Dark Ride - Burning Bridges",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 180.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 1.042,
+        "infer_s": 109.676,
+        "rtf": 10.9676,
+        "targets": [
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 7.587
+        },
+        "si_sdr": {
+          "vocals": 9.17
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:38:36",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l12_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L12\\Dark Ride - Burning Bridges",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "ZFTurbo/MSS-Training",
+          "ckpt": "model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+          "params": 159758092,
+          "normalize": false,
+          "targets": [
+            "vocals"
+          ],
+          "script": "bs_roformer",
+          "dim": 512,
+          "depth": 12,
+          "librosa_stub": false
+        },
+        "ref_used": {
+          "vocals": "vocals"
+        }
+      }
+    },
+    "bsroformer_l6": {
+      "A Classic Education - NightOwl": {
+        "model": "bsroformer_l6",
+        "label": "BS-RoFormer L6 (ep_937, vocals+other)",
+        "song": "A Classic Education - NightOwl",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.649,
+        "infer_s": 44.978,
+        "rtf": 4.4978,
+        "targets": [
+          "vocals+other"
+        ],
+        "sdr": {
+          "vocals+other": 12.627
+        },
+        "si_sdr": {
+          "vocals+other": 12.131
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T20:53:13",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l6_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L6\\A Classic Education - NightOwl",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "ZFTurbo/MSS-Training",
+          "ckpt": "model_bs_roformer_ep_937_sdr_10.5309.ckpt",
+          "params": 98194828,
+          "normalize": false,
+          "targets": [
+            "other"
+          ],
+          "script": "bs_roformer",
+          "dim": 384,
+          "depth": 12,
+          "librosa_stub": false
+        },
+        "ref_used": {
+          "vocals+other": "vocals+other"
+        }
+      },
+      "ANiMAL - Clinic A": {
+        "model": "bsroformer_l6",
+        "label": "BS-RoFormer L6 (ep_937, vocals+other)",
+        "song": "ANiMAL - Clinic A",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 140.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.789,
+        "infer_s": 44.122,
+        "rtf": 4.4122,
+        "targets": [
+          "vocals+other"
+        ],
+        "sdr": {
+          "vocals+other": 10.062
+        },
+        "si_sdr": {
+          "vocals+other": 8.679
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:29:19",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l6_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L6\\ANiMAL - Clinic A",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "ZFTurbo/MSS-Training",
+          "ckpt": "model_bs_roformer_ep_937_sdr_10.5309.ckpt",
+          "params": 98194828,
+          "normalize": false,
+          "targets": [
+            "other"
+          ],
+          "script": "bs_roformer",
+          "dim": 384,
+          "depth": 12,
+          "librosa_stub": false
+        },
+        "ref_used": {
+          "vocals+other": "vocals+other"
+        }
+      },
+      "Creepoid - OldTree": {
+        "model": "bsroformer_l6",
+        "label": "BS-RoFormer L6 (ep_937, vocals+other)",
+        "song": "Creepoid - OldTree",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 60.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.594,
+        "infer_s": 43.142,
+        "rtf": 4.3142,
+        "targets": [
+          "vocals+other"
+        ],
+        "sdr": {
+          "vocals+other": 12.824
+        },
+        "si_sdr": {
+          "vocals+other": 12.997
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:35:02",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l6_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L6\\Creepoid - OldTree",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "ZFTurbo/MSS-Training",
+          "ckpt": "model_bs_roformer_ep_937_sdr_10.5309.ckpt",
+          "params": 98194828,
+          "normalize": false,
+          "targets": [
+            "other"
+          ],
+          "script": "bs_roformer",
+          "dim": 384,
+          "depth": 12,
+          "librosa_stub": false
+        },
+        "ref_used": {
+          "vocals+other": "vocals+other"
+        }
+      },
+      "Dark Ride - Burning Bridges": {
+        "model": "bsroformer_l6",
+        "label": "BS-RoFormer L6 (ep_937, vocals+other)",
+        "song": "Dark Ride - Burning Bridges",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 180.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.597,
+        "infer_s": 42.721,
+        "rtf": 4.2721,
+        "targets": [
+          "vocals+other"
+        ],
+        "sdr": {
+          "vocals+other": 0.995
+        },
+        "si_sdr": {
+          "vocals+other": 1.012
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:40:27",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l6_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L6\\Dark Ride - Burning Bridges",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "repo": "ZFTurbo/MSS-Training",
+          "ckpt": "model_bs_roformer_ep_937_sdr_10.5309.ckpt",
+          "params": 98194828,
+          "normalize": false,
+          "targets": [
+            "other"
+          ],
+          "script": "bs_roformer",
+          "dim": 384,
+          "depth": 12,
+          "librosa_stub": false
+        },
+        "ref_used": {
+          "vocals+other": "vocals+other"
+        }
+      }
+    },
+    "bsrnn_all": {
+      "A Classic Education - NightOwl": {
+        "model": "bsrnn_all",
+        "label": "BSRNN (oBSRNN, 4-stem)",
+        "song": "A Classic Education - NightOwl",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 4.509,
+        "infer_s": 59.529,
+        "rtf": 5.9529,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 8.904,
+          "drums": 5.935,
+          "bass": 22.514,
+          "other": 9.293
+        },
+        "si_sdr": {
+          "vocals": 9.418,
+          "drums": 5.005,
+          "bass": 23.249,
+          "other": 9.642
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T20:53:59",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_all_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-opt\\A Classic Education - NightOwl",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "bsrnn-opt",
+          "params": 164119072,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "stubbed": [
+            "lightning.pytorch",
+            "helpers.data",
+            "helpers.eval"
+          ],
+          "per_target": {
+            "vocals": {
+              "ckpt": "vocals.ckpt",
+              "params": 40777192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "vocals"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "drums": {
+              "ckpt": "drums.ckpt",
+              "params": 45491944,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "drums"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "bass": {
+              "ckpt": "bass.ckpt",
+              "params": 37072744,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "bass"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "other": {
+              "ckpt": "other.ckpt",
+              "params": 40777192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "other"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            }
+          },
+          "n_models": 4
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "ANiMAL - Clinic A": {
+        "model": "bsrnn_all",
+        "label": "BSRNN (oBSRNN, 4-stem)",
+        "song": "ANiMAL - Clinic A",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 140.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 4.196,
+        "infer_s": 53.378,
+        "rtf": 5.3378,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.168,
+          "drums": 11.221,
+          "bass": 14.048,
+          "other": 8.327
+        },
+        "si_sdr": {
+          "vocals": 8.117,
+          "drums": 10.794,
+          "bass": 13.701,
+          "other": 7.987
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:30:05",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_all_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-opt\\ANiMAL - Clinic A",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "bsrnn-opt",
+          "params": 164119072,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "stubbed": [
+            "lightning.pytorch",
+            "helpers.data",
+            "helpers.eval"
+          ],
+          "per_target": {
+            "vocals": {
+              "ckpt": "vocals.ckpt",
+              "params": 40777192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "vocals"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "drums": {
+              "ckpt": "drums.ckpt",
+              "params": 45491944,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "drums"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "bass": {
+              "ckpt": "bass.ckpt",
+              "params": 37072744,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "bass"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "other": {
+              "ckpt": "other.ckpt",
+              "params": 40777192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "other"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            }
+          },
+          "n_models": 4
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Creepoid - OldTree": {
+        "model": "bsrnn_all",
+        "label": "BSRNN (oBSRNN, 4-stem)",
+        "song": "Creepoid - OldTree",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 60.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 3.233,
+        "infer_s": 51.686,
+        "rtf": 5.1686,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 11.746,
+          "drums": 7.303,
+          "bass": 11.917,
+          "other": 6.367
+        },
+        "si_sdr": {
+          "vocals": 11.712,
+          "drums": 6.062,
+          "bass": 10.738,
+          "other": 4.667
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:35:47",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_all_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-opt\\Creepoid - OldTree",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "bsrnn-opt",
+          "params": 164119072,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "stubbed": [
+            "lightning.pytorch",
+            "helpers.data",
+            "helpers.eval"
+          ],
+          "per_target": {
+            "vocals": {
+              "ckpt": "vocals.ckpt",
+              "params": 40777192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "vocals"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "drums": {
+              "ckpt": "drums.ckpt",
+              "params": 45491944,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "drums"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "bass": {
+              "ckpt": "bass.ckpt",
+              "params": 37072744,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "bass"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "other": {
+              "ckpt": "other.ckpt",
+              "params": 40777192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "other"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            }
+          },
+          "n_models": 4
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Dark Ride - Burning Bridges": {
+        "model": "bsrnn_all",
+        "label": "BSRNN (oBSRNN, 4-stem)",
+        "song": "Dark Ride - Burning Bridges",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 180.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 3.268,
+        "infer_s": 51.504,
+        "rtf": 5.1504,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 6.939,
+          "drums": 9.193,
+          "bass": 9.053,
+          "other": 4.043
+        },
+        "si_sdr": {
+          "vocals": 8.674,
+          "drums": 8.97,
+          "bass": 8.594,
+          "other": 1.349
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:41:11",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_all_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-opt\\Dark Ride - Burning Bridges",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "bsrnn-opt",
+          "params": 164119072,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "stubbed": [
+            "lightning.pytorch",
+            "helpers.data",
+            "helpers.eval"
+          ],
+          "per_target": {
+            "vocals": {
+              "ckpt": "vocals.ckpt",
+              "params": 40777192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "vocals"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "drums": {
+              "ckpt": "drums.ckpt",
+              "params": 45491944,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "drums"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "bass": {
+              "ckpt": "bass.ckpt",
+              "params": 37072744,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "bass"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "other": {
+              "ckpt": "other.ckpt",
+              "params": 40777192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "other"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            }
+          },
+          "n_models": 4
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    },
+    "bsrnn_large_all": {
+      "A Classic Education - NightOwl": {
+        "model": "bsrnn_large_all",
+        "label": "BSRNN large (4-stem)",
+        "song": "A Classic Education - NightOwl",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 3.169,
+        "infer_s": 41.163,
+        "rtf": 4.1163,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 8.952,
+          "drums": 6.319,
+          "bass": 20.449,
+          "other": 8.575
+        },
+        "si_sdr": {
+          "vocals": 9.406,
+          "drums": 5.05,
+          "bass": 21.701,
+          "other": 8.716
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T20:55:05",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_large_all_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-large\\A Classic Education - NightOwl",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "bsrnn-large",
+          "params": 146655904,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "stubbed": [],
+          "per_target": {
+            "vocals": {
+              "ckpt": "vocals.ckpt",
+              "params": 36417160,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "v",
+                "o",
+                "c",
+                "a",
+                "l",
+                "s"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "drums": {
+              "ckpt": "drums.ckpt",
+              "params": 41024392,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "d",
+                "r",
+                "u",
+                "m",
+                "s"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "bass": {
+              "ckpt": "bass.ckpt",
+              "params": 32797192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "b",
+                "a",
+                "s",
+                "s"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "other": {
+              "ckpt": "other.ckpt",
+              "params": 36417160,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "o",
+                "t",
+                "h",
+                "e",
+                "r"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            }
+          },
+          "n_models": 4
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "ANiMAL - Clinic A": {
+        "model": "bsrnn_large_all",
+        "label": "BSRNN large (4-stem)",
+        "song": "ANiMAL - Clinic A",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 140.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 3.611,
+        "infer_s": 39.593,
+        "rtf": 3.9593,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 8.28,
+          "drums": 10.433,
+          "bass": 10.927,
+          "other": 7.225
+        },
+        "si_sdr": {
+          "vocals": 7.042,
+          "drums": 10.132,
+          "bass": 10.869,
+          "other": 6.35
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:31:06",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_large_all_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-large\\ANiMAL - Clinic A",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "bsrnn-large",
+          "params": 146655904,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "stubbed": [],
+          "per_target": {
+            "vocals": {
+              "ckpt": "vocals.ckpt",
+              "params": 36417160,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "v",
+                "o",
+                "c",
+                "a",
+                "l",
+                "s"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "drums": {
+              "ckpt": "drums.ckpt",
+              "params": 41024392,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "d",
+                "r",
+                "u",
+                "m",
+                "s"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "bass": {
+              "ckpt": "bass.ckpt",
+              "params": 32797192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "b",
+                "a",
+                "s",
+                "s"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "other": {
+              "ckpt": "other.ckpt",
+              "params": 36417160,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "o",
+                "t",
+                "h",
+                "e",
+                "r"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            }
+          },
+          "n_models": 4
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Creepoid - OldTree": {
+        "model": "bsrnn_large_all",
+        "label": "BSRNN large (4-stem)",
+        "song": "Creepoid - OldTree",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 60.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 2.513,
+        "infer_s": 37.292,
+        "rtf": 3.7292,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 11.689,
+          "drums": 7.79,
+          "bass": 10.66,
+          "other": 5.494
+        },
+        "si_sdr": {
+          "vocals": 11.534,
+          "drums": 6.512,
+          "bass": 9.27,
+          "other": 3.784
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:36:44",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_large_all_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-large\\Creepoid - OldTree",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "bsrnn-large",
+          "params": 146655904,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "stubbed": [],
+          "per_target": {
+            "vocals": {
+              "ckpt": "vocals.ckpt",
+              "params": 36417160,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "v",
+                "o",
+                "c",
+                "a",
+                "l",
+                "s"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "drums": {
+              "ckpt": "drums.ckpt",
+              "params": 41024392,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "d",
+                "r",
+                "u",
+                "m",
+                "s"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "bass": {
+              "ckpt": "bass.ckpt",
+              "params": 32797192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "b",
+                "a",
+                "s",
+                "s"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "other": {
+              "ckpt": "other.ckpt",
+              "params": 36417160,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "o",
+                "t",
+                "h",
+                "e",
+                "r"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            }
+          },
+          "n_models": 4
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Dark Ride - Burning Bridges": {
+        "model": "bsrnn_large_all",
+        "label": "BSRNN large (4-stem)",
+        "song": "Dark Ride - Burning Bridges",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 180.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 2.524,
+        "infer_s": 38.323,
+        "rtf": 3.8323,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 6.793,
+          "drums": 9.242,
+          "bass": 7.416,
+          "other": 3.04
+        },
+        "si_sdr": {
+          "vocals": 8.524,
+          "drums": 9.266,
+          "bass": 6.607,
+          "other": 0.017
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:42:08",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_large_all_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-large\\Dark Ride - Burning Bridges",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "bsrnn-large",
+          "params": 146655904,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "stubbed": [],
+          "per_target": {
+            "vocals": {
+              "ckpt": "vocals.ckpt",
+              "params": 36417160,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "v",
+                "o",
+                "c",
+                "a",
+                "l",
+                "s"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "drums": {
+              "ckpt": "drums.ckpt",
+              "params": 41024392,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "d",
+                "r",
+                "u",
+                "m",
+                "s"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "bass": {
+              "ckpt": "bass.ckpt",
+              "params": 32797192,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "b",
+                "a",
+                "s",
+                "s"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            },
+            "other": {
+              "ckpt": "other.ckpt",
+              "params": 36417160,
+              "wrapper": "state_dict",
+              "ckpt_targets": [
+                "o",
+                "t",
+                "h",
+                "e",
+                "r"
+              ],
+              "n_missing_keys": 0,
+              "n_unexpected_keys": 0
+            }
+          },
+          "n_models": 4
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    },
+    "bsrnn_simo": {
+      "A Classic Education - NightOwl": {
+        "model": "bsrnn_simo",
+        "label": "BSRNN SIMO (4-stem)",
+        "song": "A Classic Education - NightOwl",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 2.154,
+        "infer_s": 19.415,
+        "rtf": 1.9415,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 9.581,
+          "drums": 6.099,
+          "bass": 22.71,
+          "other": 10.603
+        },
+        "si_sdr": {
+          "vocals": 10.793,
+          "drums": 5.339,
+          "bass": 23.408,
+          "other": 11.015
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T20:55:51",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_simo_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-SIMO\\A Classic Education - NightOwl",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "simo-bsrnn-opt",
+          "ckpt": "separator.ckpt",
+          "params": 108727540,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "build_targets": [
+            "vocals",
+            "bass",
+            "drums",
+            "other"
+          ],
+          "ckpt_targets": [
+            "vocals",
+            "bass",
+            "drums",
+            "other"
+          ],
+          "stubbed": [],
+          "ckpt_wrapper": "state_dict",
+          "n_missing_keys": 0,
+          "n_unexpected_keys": 0
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "ANiMAL - Clinic A": {
+        "model": "bsrnn_simo",
+        "label": "BSRNN SIMO (4-stem)",
+        "song": "ANiMAL - Clinic A",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 140.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 2.607,
+        "infer_s": 19.627,
+        "rtf": 1.9627,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 8.651,
+          "drums": 11.422,
+          "bass": 12.952,
+          "other": 8.979
+        },
+        "si_sdr": {
+          "vocals": 7.862,
+          "drums": 11.068,
+          "bass": 12.537,
+          "other": 8.766
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:31:52",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_simo_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-SIMO\\ANiMAL - Clinic A",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "simo-bsrnn-opt",
+          "ckpt": "separator.ckpt",
+          "params": 108727540,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "build_targets": [
+            "vocals",
+            "bass",
+            "drums",
+            "other"
+          ],
+          "ckpt_targets": [
+            "vocals",
+            "bass",
+            "drums",
+            "other"
+          ],
+          "stubbed": [],
+          "ckpt_wrapper": "state_dict",
+          "n_missing_keys": 0,
+          "n_unexpected_keys": 0
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Creepoid - OldTree": {
+        "model": "bsrnn_simo",
+        "label": "BSRNN SIMO (4-stem)",
+        "song": "Creepoid - OldTree",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 60.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 1.874,
+        "infer_s": 18.742,
+        "rtf": 1.8742,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 12.253,
+          "drums": 8.017,
+          "bass": 11.722,
+          "other": 7.032
+        },
+        "si_sdr": {
+          "vocals": 12.114,
+          "drums": 6.8,
+          "bass": 10.475,
+          "other": 5.474
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:37:26",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_simo_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-SIMO\\Creepoid - OldTree",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "simo-bsrnn-opt",
+          "ckpt": "separator.ckpt",
+          "params": 108727540,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "build_targets": [
+            "vocals",
+            "bass",
+            "drums",
+            "other"
+          ],
+          "ckpt_targets": [
+            "vocals",
+            "bass",
+            "drums",
+            "other"
+          ],
+          "stubbed": [],
+          "ckpt_wrapper": "state_dict",
+          "n_missing_keys": 0,
+          "n_unexpected_keys": 0
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      },
+      "Dark Ride - Burning Bridges": {
+        "model": "bsrnn_simo",
+        "label": "BSRNN SIMO (4-stem)",
+        "song": "Dark Ride - Burning Bridges",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 180.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 1.928,
+        "infer_s": 18.317,
+        "rtf": 1.8317,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 7.211,
+          "drums": 9.66,
+          "bass": 8.666,
+          "other": 4.731
+        },
+        "si_sdr": {
+          "vocals": 8.977,
+          "drums": 9.785,
+          "bass": 8.028,
+          "other": 2.02
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:42:50",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_simo_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\BSRNN-SIMO\\Dark Ride - Burning Bridges",
+        "info": {
+          "kind": "deep",
+          "repo": "bsrnn(Paul Magron)",
+          "conf": "simo-bsrnn-opt",
+          "ckpt": "separator.ckpt",
+          "params": 108727540,
+          "targets": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "build_targets": [
+            "vocals",
+            "bass",
+            "drums",
+            "other"
+          ],
+          "ckpt_targets": [
+            "vocals",
+            "bass",
+            "drums",
+            "other"
+          ],
+          "stubbed": [],
+          "ckpt_wrapper": "state_dict",
+          "n_missing_keys": 0,
+          "n_unexpected_keys": 0
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    },
+    "demucs": {
+      "ANiMAL - Clinic A": {
+        "model": "demucs",
+        "label": "Demucs (htdemucs)",
+        "song": "ANiMAL - Clinic A",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 140.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.328,
+        "infer_s": 3.935,
+        "rtf": 0.3935,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "drums": 10.286,
+          "bass": 11.991,
+          "other": 7.467,
+          "vocals": 7.095
+        },
+        "si_sdr": {
+          "drums": 10.183,
+          "bass": 11.539,
+          "other": 7.193,
+          "vocals": 6.173
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:43:30",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\demucs_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\demucs\\ANiMAL - Clinic A",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "model": "htdemucs",
+          "params_m": 41.98,
+          "sources": [
+            "drums",
+            "bass",
+            "other",
+            "vocals"
+          ]
+        },
+        "ref_used": {
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      },
+      "Creepoid - OldTree": {
+        "model": "demucs",
+        "label": "Demucs (htdemucs)",
+        "song": "Creepoid - OldTree",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 60.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.251,
+        "infer_s": 3.889,
+        "rtf": 0.3889,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "drums": 7.476,
+          "bass": 10.965,
+          "other": 5.44,
+          "vocals": 10.48
+        },
+        "si_sdr": {
+          "drums": 5.974,
+          "bass": 9.946,
+          "other": 3.43,
+          "vocals": 10.461
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:43:40",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\demucs_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\demucs\\Creepoid - OldTree",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "model": "htdemucs",
+          "params_m": 41.98,
+          "sources": [
+            "drums",
+            "bass",
+            "other",
+            "vocals"
+          ]
+        },
+        "ref_used": {
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      },
+      "Dark Ride - Burning Bridges": {
+        "model": "demucs",
+        "label": "Demucs (htdemucs)",
+        "song": "Dark Ride - Burning Bridges",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 180.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.243,
+        "infer_s": 3.847,
+        "rtf": 0.3847,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "drums": 8.874,
+          "bass": 8.931,
+          "other": 4.427,
+          "vocals": 6.1
+        },
+        "si_sdr": {
+          "drums": 8.697,
+          "bass": 8.081,
+          "other": 1.401,
+          "vocals": 8.038
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:43:50",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\demucs_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\demucs\\Dark Ride - Burning Bridges",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "model": "htdemucs",
+          "params_m": 41.98,
+          "sources": [
+            "drums",
+            "bass",
+            "other",
+            "vocals"
+          ]
+        },
+        "ref_used": {
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      },
+      "A Classic Education - NightOwl": {
+        "model": "demucs",
+        "label": "Demucs (htdemucs)",
+        "song": "A Classic Education - NightOwl",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 0.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.24,
+        "infer_s": 3.863,
+        "rtf": 0.3863,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "drums": 3.841,
+          "bass": 20.207,
+          "other": 8.852,
+          "vocals": 8.26
+        },
+        "si_sdr": {
+          "drums": 3.195,
+          "bass": 21.623,
+          "other": 8.618,
+          "vocals": 8.381
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cpu",
+        "cuda": false,
+        "timestamp": "2026-09-16T21:44:19",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\demucs_2026-09-16.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\demucs\\A Classic Education - NightOwl",
+        "info": {
+          "kind": "deep",
+          "device": "cpu",
+          "model": "htdemucs",
+          "params_m": 41.98,
+          "sources": [
+            "drums",
+            "bass",
+            "other",
+            "vocals"
+          ]
+        },
+        "ref_used": {
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other",
+          "vocals": "vocals"
+        }
+      }
+    },
+    "dprnn": {
+      "Creepoid - OldTree": {
+        "model": "dprnn",
+        "label": "DPRNN (自训, 4-stem)",
+        "song": "Creepoid - OldTree",
+        "subset": "train",
+        "duration_s": 10,
+        "offset_s": 60.0,
+        "status": "PASS",
+        "weights_downloaded": true,
+        "load_s": 0.23,
+        "infer_s": 0.449,
+        "rtf": 0.0449,
+        "targets": [
+          "bass",
+          "drums",
+          "other",
+          "vocals"
+        ],
+        "sdr": {
+          "vocals": 0.794,
+          "drums": 0.722,
+          "bass": 2.927,
+          "other": 0.107
+        },
+        "si_sdr": {
+          "vocals": -5.368,
+          "drums": -6.221,
+          "bass": 0.1,
+          "other": -11.346
+        },
+        "error": null,
+        "torch_ver": "2.14.0+cu126",
+        "cuda": true,
+        "timestamp": "2026-09-17T00:56:20",
+        "log": "E:\\FYP_HKBU\\05_misc\\logs\\dprnn_2026-09-17.log",
+        "out_dir": "E:\\FYP_HKBU\\03_outputs\\DPRNN\\Creepoid - OldTree",
+        "info": {
+          "kind": "deep",
+          "device": "cuda",
+          "repo": "Dual-Path-RNN-Pytorch (自训 ckpt)",
+          "params": 3685761,
+          "sources": [
+            "vocals",
+            "drums",
+            "bass",
+            "other"
+          ],
+          "native_sr": 11025,
+          "ckpt": "best.pt",
+          "train_step": 30,
+          "train_val_sisdr": -5.7281587585045965,
+          "note": "原生 11025 Hz 自训；升采样回 44100 Hz 评测，带宽损失计入 SDR"
+        },
+        "ref_used": {
+          "vocals": "vocals",
+          "drums": "drums",
+          "bass": "bass",
+          "other": "other"
+        }
+      }
+    }
+  },
+  "updated": "2026-09-17T00:56:28"
+}

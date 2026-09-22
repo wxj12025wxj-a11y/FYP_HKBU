@@ -1,0 +1,53 @@
+{
+  "song": "A Classic Education - NightOwl",
+  "duration_s": 30,
+  "sr": 44100,
+  "model": "htdemucs",
+  "demucs_seconds": 11.6,
+  "rtf": 0.387,
+  "targets": {
+    "vocals": {
+      "sdr": 8.742368892223713,
+      "isr": 18.92613720674878,
+      "sir": Infinity,
+      "sar": 8.524482468283702,
+      "si_sdr": 9.487275310871826,
+      "delta_SDR": 17.91,
+      "PESQ": 2.1582,
+      "PESQ_impl": "pesq(C)",
+      "PESQ_baseline": 1.0689,
+      "STOI": 0.6429,
+      "STOI_impl": "pystoi",
+      "baseline_SDR": -9.16
+    },
+    "drums": {
+      "sdr": 4.5723470060253995,
+      "isr": 7.591994069240679,
+      "sir": Infinity,
+      "sar": 3.535496004419158,
+      "si_sdr": 2.5452853212414244,
+      "delta_SDR": 22.51,
+      "PESQ": 1.0797,
+      "PESQ_impl": "pesq(C)",
+      "PESQ_baseline": 2.7915,
+      "STOI": 0.6013,
+      "STOI_impl": "pystoi",
+      "baseline_SDR": -17.93
+    }
+  },
+  "baseline_vocals_sdr": -9.16,
+  "baseline_drums_sdr": -17.93,
+  "complexity": {
+    "params": 41984456,
+    "params_M": 41.98,
+    "n_models_in_bag": 1,
+    "segment_s": 7.8,
+    "macs": 112234306176.0,
+    "flops": 224468612352.0,
+    "gmacs": 112.234,
+    "gflops": 224.469,
+    "gmacs_per_s": 14.389,
+    "gflops_per_s": 28.778,
+    "impl": "torch.flop_counter (conv/linear；复数STFT未计入；输入 7.80s, 343980 samples)"
+  }
+}

@@ -1,0 +1,1452 @@
+{
+ "date": "2026-09-23",
+ "project_root": "E:\\FYP_HKBU",
+ "note": "只移动/新建，未删除任何文件。逆向：按 dst->src 反向 mv；硬链接直接删除即可（原文件不受影响）。",
+ "ops": [
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\scratch",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\tools\\_bat"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\_schedtest.bat",
+   "dst": "E:\\FYP_HKBU\\tools\\_bat\\_schedtest.bat"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\_sweep_launch.bat",
+   "dst": "E:\\FYP_HKBU\\tools\\_bat\\_sweep_launch.bat"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\_sweep_smoke.bat",
+   "dst": "E:\\FYP_HKBU\\tools\\_bat\\_sweep_smoke.bat"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_check_arch.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_check_arch.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_clean_rtf_2026-09-16.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_clean_rtf_2026-09-16.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_clone.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_clone.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_clone_mdx_lb.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_clone_mdx_lb.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_cuda_torch_install.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_cuda_torch_install.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_dl_all.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_dl_all.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_dl_bsroformer.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_dl_bsroformer.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_dl_dnnbased.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_dl_dnnbased.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_dl_mdx.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_dl_mdx.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_dlpar_console.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_dlpar_console.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_dlpar_out.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_dlpar_out.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_dns_all.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_dns_all.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_dprnn_timing_driver.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_dprnn_timing_driver.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_dprnn_train2_driver.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_dprnn_train2_driver.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_dprnn_train_driver.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_dprnn_train_driver.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_extract_graph.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_extract_graph.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_fetch_bsrnn.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_fetch_bsrnn.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_fetch_bsrnn_bsrnn-large.zip.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_fetch_bsrnn_bsrnn-large.zip.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_fetch_bsrnn_bsrnn-opt.zip.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_fetch_bsrnn_bsrnn-opt.zip.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_fetch_bsrnn_simo-bsrnn-opt.zip.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_fetch_bsrnn_simo-bsrnn-opt.zip.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_kill.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_kill.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_migrate_layout.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_migrate_layout.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_multisong.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_multisong.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_multisong_driver.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_multisong_driver.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_multisong_gpu.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_multisong_gpu.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_musdb_test.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_musdb_test.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_musdb_test_fast.out",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_musdb_test_fast.out"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_par_download.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_par_download.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_pidtest.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_pidtest.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_post_dprnn.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_post_dprnn.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_pre_relaunch.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_pre_relaunch.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_proc_stat.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_proc_stat.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_procs.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_procs.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_psspd.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_psspd.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_pstest.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_pstest.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_psview.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_psview.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_rebuild_runs_2026-09-16.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_rebuild_runs_2026-09-16.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_relaunch.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_relaunch.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_rerun4.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_rerun4.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_rerun_bsrnn.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_rerun_bsrnn.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_rerun_sdr_2026-09-16.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_rerun_sdr_2026-09-16.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_sac_state.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_sac_state.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_schedtest.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_schedtest.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_stage0_manifest.json",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_stage0_manifest.json"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_sweep_detached.out",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_sweep_detached.out"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_sweep_smoke.out",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_sweep_smoke.out"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_test_sweep.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_test_sweep.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_test_sweep_run.out",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_test_sweep_run.out"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_thop_agg.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_thop_agg.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_thop_bsrnn.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_thop_bsrnn.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_thop_crosscheck.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_thop_crosscheck.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_weights_verify.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_weights_verify.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\_wf.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_wf.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_2026-09-16.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_2026-09-16.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_2026-09-22.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_2026-09-22.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_all_2026-09-16.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_all_2026-09-16.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_all_2026-09-17.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_all_2026-09-17.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_all_2026-09-19.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_all_2026-09-19.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_all_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_all_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_large_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_large_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_large_2026-09-22.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_large_2026-09-22.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_large_all_2026-09-16.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_large_all_2026-09-16.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_large_all_2026-09-17.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_large_all_2026-09-17.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_large_all_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_large_all_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_simo_2026-09-16.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_simo_2026-09-16.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_simo_2026-09-17.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_simo_2026-09-17.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_simo_2026-09-19.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_simo_2026-09-19.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_simo_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_simo_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsrnn_simo_2026-09-22.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsrnn_simo_2026-09-22.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l12_2026-09-16.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsroformer_l12_2026-09-16.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l12_2026-09-17.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsroformer_l12_2026-09-17.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l12_2026-09-19.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsroformer_l12_2026-09-19.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l12_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsroformer_l12_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l12_2026-09-22.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsroformer_l12_2026-09-22.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l6_2026-09-16.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsroformer_l6_2026-09-16.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l6_2026-09-17.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsroformer_l6_2026-09-17.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l6_2026-09-19.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsroformer_l6_2026-09-19.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l6_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsroformer_l6_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\bsroformer_l6_2026-09-22.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\bsroformer_l6_2026-09-22.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\convtasnet_2026-09-16.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\convtasnet_2026-09-16.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\convtasnet_2026-09-17.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\convtasnet_2026-09-17.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\convtasnet_2026-09-19.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\convtasnet_2026-09-19.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\convtasnet_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\convtasnet_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\convtasnet_2026-09-22.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\convtasnet_2026-09-22.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\demucs_2026-09-16.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\demucs_2026-09-16.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\demucs_2026-09-17.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\demucs_2026-09-17.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\demucs_2026-09-19.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\demucs_2026-09-19.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\demucs_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\demucs_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\demucs_2026-09-22.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\demucs_2026-09-22.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\demucs_deepdive_run.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\demucs_deepdive_run.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\dprnn_2026-09-17.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\dprnn_2026-09-17.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\dprnn_2026-09-19.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\dprnn_2026-09-19.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\dprnn_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\dprnn_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\dprnn_2026-09-22.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\dprnn_2026-09-22.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\mdx_2026-09-16.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\mdx_2026-09-16.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\mdx_2026-09-17.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\mdx_2026-09-17.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\mdx_2026-09-19.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\mdx_2026-09-19.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\mdx_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\mdx_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\mdx_2026-09-22.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\mdx_2026-09-22.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\mmdenselstm_2026-09-16.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\mmdenselstm_2026-09-16.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\mmdenselstm_2026-09-17.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\mmdenselstm_2026-09-17.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\mmdenselstm_2026-09-19.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\mmdenselstm_2026-09-19.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\mmdenselstm_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\mmdenselstm_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\mmdenselstm_2026-09-22.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\mmdenselstm_2026-09-22.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-16.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\oracle_2026-09-16.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-17.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\oracle_2026-09-17.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-19.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\oracle_2026-09-19.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\oracle_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\oracle_2026-09-22.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\oracle_2026-09-22.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\rpca_2026-09-16.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\rpca_2026-09-16.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\rpca_2026-09-17.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\rpca_2026-09-17.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\rpca_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\rpca_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\train_dprnn_musdb.txt",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\train_dprnn_musdb.txt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\umx_2026-09-16.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\umx_2026-09-16.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\umx_2026-09-17.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\umx_2026-09-17.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\umx_2026-09-19.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\umx_2026-09-19.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\umx_2026-09-21.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\umx_2026-09-21.log"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\logs\\umx_2026-09-22.log",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\umx_2026-09-22.log"
+  },
+  {
+   "kind": "archive-text",
+   "src": "E:\\FYP_HKBU\\05_misc\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_FROM_05_misc_README.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\05_misc\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_logs\\_FROM_05_misc_README_ORIGINAL.md"
+  },
+  {
+   "kind": "rmdir-empty",
+   "src": "E:\\FYP_HKBU\\05_misc",
+   "dst": ""
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L12"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L12\\weights"
+  },
+  {
+   "kind": "hardlink",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\BS-RoFormer\\model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+   "dst": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L12\\weights\\model_bs_roformer_ep_317_sdr_12.9755.ckpt"
+  },
+  {
+   "kind": "hardlink",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\BS-RoFormer\\configs\\model_bs_roformer_ep_317_sdr_12.9755.yaml",
+   "dst": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L12\\weights\\model_bs_roformer_ep_317_sdr_12.9755.yaml"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L6"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L6\\weights"
+  },
+  {
+   "kind": "hardlink",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\BS-RoFormer\\model_bs_roformer_ep_937_sdr_10.5309.ckpt",
+   "dst": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L6\\weights\\model_bs_roformer_ep_937_sdr_10.5309.ckpt"
+  },
+  {
+   "kind": "hardlink",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\BS-RoFormer\\configs\\model_bs_roformer_ep_937_sdr_10.5309.yaml",
+   "dst": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L6\\weights\\model_bs_roformer_ep_937_sdr_10.5309.yaml"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\BSRNN-opt"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\BSRNN-opt\\weights"
+  },
+  {
+   "kind": "junction",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\BSRNN\\bsrnn-opt",
+   "dst": "E:\\FYP_HKBU\\01_models\\BSRNN-opt\\weights\\bsrnn-opt"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\BSRNN-large"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\BSRNN-large\\weights"
+  },
+  {
+   "kind": "junction",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\BSRNN\\bsrnn-large",
+   "dst": "E:\\FYP_HKBU\\01_models\\BSRNN-large\\weights\\bsrnn-large"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\BSRNN-SIMO"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\BSRNN-SIMO\\weights"
+  },
+  {
+   "kind": "junction",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\BSRNN\\simo-bsrnn-opt",
+   "dst": "E:\\FYP_HKBU\\01_models\\BSRNN-SIMO\\weights\\simo-bsrnn-opt"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\Demucs"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\Demucs\\weights"
+  },
+  {
+   "kind": "hardlink",
+   "src": "E:\\FYP_HKBU\\tools\\_scratch\\.cache\\torch\\hub\\checkpoints\\955717e8-8726e21a.th",
+   "dst": "E:\\FYP_HKBU\\01_models\\Demucs\\weights\\955717e8-8726e21a.th"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\MDX-Net"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\MDX-Net\\weights"
+  },
+  {
+   "kind": "junction",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\MDX-Net\\mdx_extra",
+   "dst": "E:\\FYP_HKBU\\01_models\\MDX-Net\\weights\\mdx_extra"
+  },
+  {
+   "kind": "hardlink",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\MDX-Net\\mixer.ckpt",
+   "dst": "E:\\FYP_HKBU\\01_models\\MDX-Net\\weights\\mixer.ckpt"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\Open-Unmix"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\Open-Unmix\\weights"
+  },
+  {
+   "kind": "hardlink",
+   "src": "E:\\FYP_HKBU\\tools\\_scratch\\.cache\\torch\\hub\\checkpoints\\vocals-b62c91ce.pth",
+   "dst": "E:\\FYP_HKBU\\01_models\\Open-Unmix\\weights\\vocals-b62c91ce.pth"
+  },
+  {
+   "kind": "hardlink",
+   "src": "E:\\FYP_HKBU\\tools\\_scratch\\.cache\\torch\\hub\\checkpoints\\drums-9619578f.pth",
+   "dst": "E:\\FYP_HKBU\\01_models\\Open-Unmix\\weights\\drums-9619578f.pth"
+  },
+  {
+   "kind": "hardlink",
+   "src": "E:\\FYP_HKBU\\tools\\_scratch\\.cache\\torch\\hub\\checkpoints\\bass-8d85a5bd.pth",
+   "dst": "E:\\FYP_HKBU\\01_models\\Open-Unmix\\weights\\bass-8d85a5bd.pth"
+  },
+  {
+   "kind": "hardlink",
+   "src": "E:\\FYP_HKBU\\tools\\_scratch\\.cache\\torch\\hub\\checkpoints\\other-b52fbbf7.pth",
+   "dst": "E:\\FYP_HKBU\\01_models\\Open-Unmix\\weights\\other-b52fbbf7.pth"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\Conv-TasNet"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\Conv-TasNet\\weights"
+  },
+  {
+   "kind": "junction",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\DNN-based_source_separation\\ConvTasNet",
+   "dst": "E:\\FYP_HKBU\\01_models\\Conv-TasNet\\weights\\ConvTasNet"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\MMDenseLSTM"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\MMDenseLSTM\\weights"
+  },
+  {
+   "kind": "junction",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\DNN-based_source_separation\\MMDenseLSTM",
+   "dst": "E:\\FYP_HKBU\\01_models\\MMDenseLSTM\\weights\\MMDenseLSTM"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\DPRNN"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\DPRNN\\weights"
+  },
+  {
+   "kind": "junction",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\dprnn_musdb",
+   "dst": "E:\\FYP_HKBU\\01_models\\DPRNN\\weights\\dprnn_musdb"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\RPCA"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\Oracle-IRM"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoiser-dns48"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoiser-dns48\\weights"
+  },
+  {
+   "kind": "hardlink",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\denoiser\\dns48-11decc9d8e3f0998.th",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoiser-dns48\\weights\\dns48-11decc9d8e3f0998.th"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoiser-dns64"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoiser-dns64\\weights"
+  },
+  {
+   "kind": "hardlink",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\denoiser\\dns64-a7761ff99a7d5bb6.th",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoiser-dns64\\weights\\dns64-a7761ff99a7d5bb6.th"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoiser-master64"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoiser-master64\\weights"
+  },
+  {
+   "kind": "hardlink",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\denoiser\\master64-8a5dfb4bb92753dd.th",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoiser-master64\\weights\\master64-8a5dfb4bb92753dd.th"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Denoise"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Denoise\\weights"
+  },
+  {
+   "kind": "junction",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\mel_roformer_denoise",
+   "dst": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Denoise\\weights\\mel_roformer_denoise"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb\\weights"
+  },
+  {
+   "kind": "junction",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\mel_roformer_dereverb",
+   "dst": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb\\weights\\mel_roformer_dereverb"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb-Echo"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb-Echo\\weights"
+  },
+  {
+   "kind": "junction",
+   "src": "E:\\FYP_HKBU\\01_models\\_weights\\mel_roformer_dereverb_echo",
+   "dst": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb-Echo\\weights\\mel_roformer_dereverb_echo"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L12"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run\\BS-RoFormer-L12",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L12\\test"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L6"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run\\BS-RoFormer-L6",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\BS-RoFormer-L6\\test"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\BSRNN-large"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run\\BSRNN-large",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\BSRNN-large\\test"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\BSRNN-opt"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run\\BSRNN-opt",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\BSRNN-opt\\test"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\BSRNN-SIMO"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run\\BSRNN-SIMO",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\BSRNN-SIMO\\test"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Conv-TasNet"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run\\Conv-TasNet",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Conv-TasNet\\test"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Demucs"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run\\Demucs",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Demucs\\test"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\DPRNN"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run\\DPRNN",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\DPRNN\\test"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\MDX-Net"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run\\MDX-Net",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\MDX-Net\\test"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\MMDenseLSTM"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run\\MMDenseLSTM",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\MMDenseLSTM\\test"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Open-Unmix"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run\\Open-Unmix",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Open-Unmix\\test"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run\\Oracle-IRM",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Oracle-IRM\\test"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\RPCA"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run\\RPCA",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\RPCA\\test"
+  },
+  {
+   "kind": "rmdir-empty",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_test_run",
+   "dst": ""
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\denoiser-dns48\\stage0_gate"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_stage0_gate\\denoiser_dns48",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\denoiser-dns48\\stage0_gate\\denoiser_dns48"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\denoiser-dns64\\stage0_gate"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_stage0_gate\\denoiser_dns64",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\denoiser-dns64\\stage0_gate\\denoiser_dns64"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\denoiser-master64\\stage0_gate"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_stage0_gate\\denoiser_master64",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\denoiser-master64\\stage0_gate\\denoiser_master64"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Mel-RoFormer-Denoise\\stage0_gate"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_stage0_gate\\mel_roformer_denoise",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Mel-RoFormer-Denoise\\stage0_gate\\mel_roformer_denoise"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_stage0_gate\\mel_roformer_denoise_aggr",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Mel-RoFormer-Denoise\\stage0_gate\\mel_roformer_denoise_aggr"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Mel-RoFormer-Dereverb\\stage0_gate"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_stage0_gate\\mel_roformer_dereverb",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Mel-RoFormer-Dereverb\\stage0_gate\\mel_roformer_dereverb"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Mel-RoFormer-Dereverb-Echo\\stage0_gate"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_stage0_gate\\mel_roformer_dereverb_echo",
+   "dst": "E:\\FYP_HKBU\\03_outputs\\Mel-RoFormer-Dereverb-Echo\\stage0_gate\\mel_roformer_dereverb_echo"
+  },
+  {
+   "kind": "rmdir-empty",
+   "src": "E:\\FYP_HKBU\\03_outputs\\_stage0_gate",
+   "dst": ""
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\docs"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\figures"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\data"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\html"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\denoiser\\docs"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\denoiser\\figures"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\denoiser\\data"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\denoiser\\html"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\cascade\\docs"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\cascade\\figures"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\cascade\\data"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\cascade\\html"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\docs"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\figures"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\data"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\html"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\DEMUCS_REPORT.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\docs\\DEMUCS_REPORT.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\METHOD_COMPARISON_REPORT.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\docs\\METHOD_COMPARISON_REPORT.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\MUSDB18_TEST_SWEEP_2026-09-22.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\docs\\MUSDB18_TEST_SWEEP_2026-09-22.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\MEDIAN_TABLE.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\docs\\MEDIAN_TABLE.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\MEDIAN_TABLE_TEST.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\docs\\MEDIAN_TABLE_TEST.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\MODEL_PROVISIONING_REPORT.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\docs\\MODEL_PROVISIONING_REPORT.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\MODEL_RULE_AUDIT_2026-09-19.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\docs\\MODEL_RULE_AUDIT_2026-09-19.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\PROJECT_AUDIT_2026-09-19.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\docs\\PROJECT_AUDIT_2026-09-19.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\CODE_REVIEW_REPORT.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\docs\\CODE_REVIEW_REPORT.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\FYP_PLAN_2026-09-22.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\docs\\FYP_PLAN_2026-09-22.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\FYP_ROADMAP_2026-09-22.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\docs\\FYP_ROADMAP_2026-09-22.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\FYP_RETROSPECTIVE_2026-09-22.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\docs\\FYP_RETROSPECTIVE_2026-09-22.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\MODEL_PROFILE_2026-09-22.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\docs\\MODEL_PROFILE_2026-09-22.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\docs\\FYP_Audio_Setup_Guide.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\docs\\FYP_Audio_Setup_Guide.md"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures\\comparison",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\figures\\comparison"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures\\demucs",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\figures\\demucs"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures\\test_run",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\figures\\test_run"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures\\figs_time",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\figures\\figs_time"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures\\audio_analysis",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\figures\\audio_analysis"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures\\spectrograms",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\figures\\spectrograms"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures\\dprnn",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\figures\\dprnn"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures\\reverb",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\figures\\reverb"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures\\denoise",
+   "dst": "E:\\FYP_HKBU\\04_reports\\denoiser\\figures\\denoise"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures\\cascade",
+   "dst": "E:\\FYP_HKBU\\04_reports\\cascade\\figures\\cascade"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures\\model_arch",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\figures\\model_arch"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures\\_smoketest",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\figures\\_smoketest"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures\\README.md",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\figures\\README.md"
+  },
+  {
+   "kind": "rmdir-empty",
+   "src": "E:\\FYP_HKBU\\04_reports\\figures",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\data\\comparison",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\data\\comparison"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\data\\denoise",
+   "dst": "E:\\FYP_HKBU\\04_reports\\denoiser\\data\\denoise"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\data\\reverb",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\data\\reverb"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\data\\cascade",
+   "dst": "E:\\FYP_HKBU\\04_reports\\cascade\\data\\cascade"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\data\\model_analysis",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\data\\model_analysis"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\data\\dprnn_training.bak-before-metafix.json",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\data\\dprnn_training.bak-before-metafix.json"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\data\\dprnn_training.json",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\data\\dprnn_training.json"
+  },
+  {
+   "kind": "rmdir-empty",
+   "src": "E:\\FYP_HKBU\\04_reports\\data",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\html\\METHOD_VISUAL_COMPARISON_1.3.html",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\html\\METHOD_VISUAL_COMPARISON_1.3.html"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\html\\RUNTIME_BENCH_PPT.html",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\html\\RUNTIME_BENCH_PPT.html"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\html\\test_run_dashboard.html",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\html\\test_run_dashboard.html"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\html\\listen_compare.html",
+   "dst": "E:\\FYP_HKBU\\04_reports\\separation\\html\\listen_compare.html"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\html\\_qa_audio_probe.html",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\html\\_qa_audio_probe.html"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\html\\_superseded"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\html\\METHOD_VISUAL_COMPARISON_1.0.html",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\html\\_superseded\\METHOD_VISUAL_COMPARISON_1.0.html"
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\04_reports\\html\\METHOD_VISUAL_COMPARISON_1.2.html",
+   "dst": "E:\\FYP_HKBU\\04_reports\\_shared\\html\\_superseded\\METHOD_VISUAL_COMPARISON_1.2.html"
+  },
+  {
+   "kind": "rmdir-empty",
+   "src": "E:\\FYP_HKBU\\04_reports\\html",
+   "dst": ""
+  }
+ ]
+}

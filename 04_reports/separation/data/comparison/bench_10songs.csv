@@ -1,0 +1,21 @@
+﻿model,index,song,audio_seconds,inference_seconds,rtf,sdr_vocals,sdr_drums
+Open-Unmix,1,A Classic Education - NightOwl,30,3.945,0.1315,6.978,1.918
+Open-Unmix,2,ANiMAL - Clinic A,30,4.074,0.1358,7.298,7.051
+Open-Unmix,3,ANiMAL - Easy Tiger,30,4.395,0.1465,3.176,11.013
+Open-Unmix,4,ANiMAL - Rockshow,30,4.237,0.1412,4.985,6.106
+Open-Unmix,5,Actions - Devil's Words,30,3.793,0.1264,10.233,8.0
+Open-Unmix,6,Actions - One Minute Smile,30,3.843,0.1281,8.251,6.472
+Open-Unmix,7,Actions - South Of The Water,30,4.35,0.145,11.462,7.062
+Open-Unmix,8,Aimee Norwich - Child,30,4.289,0.143,-47.668,5.652
+Open-Unmix,9,Alexander Ross - Goodbye Bolero,30,4.307,0.1436,10.819,4.565
+Open-Unmix,10,Alexander Ross - Velvet Curtain,30,4.746,0.1582,14.419,
+Demucs,1,A Classic Education - NightOwl,30,11.004,0.3668,8.502,4.484
+Demucs,2,ANiMAL - Clinic A,30,11.752,0.3917,9.776,9.43
+Demucs,3,ANiMAL - Easy Tiger,30,11.651,0.3884,6.846,15.004
+Demucs,4,ANiMAL - Rockshow,30,11.22,0.374,5.809,10.014
+Demucs,5,Actions - Devil's Words,30,11.327,0.3776,13.714,11.052
+Demucs,6,Actions - One Minute Smile,30,11.39,0.3797,9.278,9.257
+Demucs,7,Actions - South Of The Water,30,11.527,0.3842,11.586,14.149
+Demucs,8,Aimee Norwich - Child,30,11.37,0.379,-60.453,10.148
+Demucs,9,Alexander Ross - Goodbye Bolero,30,10.249,0.3416,13.074,9.84
+Demucs,10,Alexander Ross - Velvet Curtain,30,11.775,0.3925,19.609,

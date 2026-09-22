@@ -1,0 +1,565 @@
+﻿model_key,model,song,status,ledger_status,song_dur_s,wall_s,infer_s,overhead_s,rtf,n_tracks,tracks,out_mb,sdr_mean,sdr_vocals,sdr_drums,sdr_bass,sdr_other
+"oracle","Oracle-IRM","PR - Oh No","PASS","PASS",76.19,12.9,0.728,12.17,0.0096,4,"bass+drums+other+vocals",6.62,7.495,2.836,9.685,9.936,7.523
+"oracle","Oracle-IRM","AM Contra - Heart Peripheral","PASS","PASS",210.11,34.3,2.105,32.2,0.01,4,"bass+drums+other+vocals",23.03,7.655,13.557,7.274,2.871,6.916
+"oracle","Oracle-IRM","Al James - Schoolboy Facination","PASS","PASS",200.53,27.2,1.86,25.34,0.0093,4,"bass+drums+other+vocals",28.28,7.348,10.452,6.953,7.495,4.49
+"oracle","Oracle-IRM","Angels In Amplifiers - I'm Alright","PASS","PASS",179.59,36.9,2.488,34.41,0.0139,4,"bass+drums+other+vocals",24.53,8.895,11.686,8.914,7.167,7.813
+"oracle","Oracle-IRM","Arise - Run Run Run","PASS","PASS",219.39,51.9,3.199,48.7,0.0146,4,"bass+drums+other+vocals",23.77,9.11,8.992,8.957,8.902,9.587
+"oracle","Oracle-IRM","BKS - Bulldozer","PASS","PASS",337.04,61.6,4.967,56.63,0.0147,4,"bass+drums+other+vocals",35.72,8.66,7.011,11.524,8.056,8.049
+"oracle","Oracle-IRM","BKS - Too Much","PASS","PASS",220.12,48.8,3.053,45.75,0.0139,4,"bass+drums+other+vocals",23.38,9.318,12.95,8.076,9.704,6.54
+"oracle","Oracle-IRM","Ben Carrigan - We'll Talk About It All Tonight","PASS","PASS",254.91,50.8,3.489,47.31,0.0137,4,"bass+drums+other+vocals",22.61,7.898,7.249,8.786,7.742,7.816
+"oracle","Oracle-IRM","Bobby Nobody - Stitch Up","PASS","PASS",221.25,51.8,2.998,48.8,0.0135,4,"bass+drums+other+vocals",23.63,7.83,10.16,7.584,6.745,6.833
+"oracle","Oracle-IRM","Buitraker - Revo X","PASS","PASS",275.83,54.3,3.874,50.43,0.014,4,"bass+drums+other+vocals",34.51,8.855,9.282,12.132,7.584,6.424
+"oracle","Oracle-IRM","Carlos Gonzalez - A Place For Us","PASS","PASS",250.22,55.9,3.217,52.68,0.0129,4,"bass+drums+other+vocals",26.43,6.832,9.599,7.338,2.095,8.296
+"oracle","Oracle-IRM","Cristina Vane - So Easy","PASS","PASS",254.13,55.4,3.551,51.85,0.014,4,"bass+drums+other+vocals",30.43,8.383,10.88,11.322,5.461,5.871
+"oracle","Oracle-IRM","Detsky Sad - Walkie Talkie","PASS","PASS",190.48,45.2,2.41,42.79,0.0127,4,"bass+drums+other+vocals",18.6,9.381,13.241,12.15,5.013,7.119
+"oracle","Oracle-IRM","Enda Reilly - Cur An Long Ag Seol","PASS","PASS",187.0,38.0,2.494,35.51,0.0133,4,"bass+drums+other+vocals",19.51,9.898,10.856,12.167,8.329,8.238
+"oracle","Oracle-IRM","Forkupines - Semantics","PASS","PASS",273.58,54.9,3.897,51.0,0.0142,4,"bass+drums+other+vocals",28.84,9.221,9.649,12.468,6.7,8.066
+"oracle","Oracle-IRM","Georgia Wonder - Siren","PASS","PASS",430.38,92.5,6.845,85.66,0.0159,4,"bass+drums+other+vocals",53.79,8.28,8.185,8.922,8.079,7.932
+"oracle","Oracle-IRM","Girls Under Glass - We Feel Alright","PASS","PASS",317.28,56.2,4.046,52.15,0.0128,4,"bass+drums+other+vocals",38.28,8.081,7.821,9.376,6.417,8.71
+"oracle","Oracle-IRM","Hollow Ground - Ill Fate","PASS","PASS",141.67,32.3,1.808,30.49,0.0128,4,"bass+drums+other+vocals",16.85,6.674,9.497,5.807,3.894,7.498
+"oracle","Oracle-IRM","James Elder & Mark M Thompson - The English Actor","PASS","PASS",205.47,48.6,2.766,45.83,0.0135,4,"bass+drums+other+vocals",20.76,8.924,9.887,10.705,6.256,8.849
+"oracle","Oracle-IRM","Juliet's Rescue - Heartbeats","PASS","PASS",267.65,55.1,3.475,51.62,0.013,4,"bass+drums+other+vocals",29.76,9.877,10.722,15.52,4.225,9.039
+"oracle","Oracle-IRM","Little Chicago's Finest - My Own","PASS","PASS",281.61,57.3,3.938,53.36,0.014,4,"bass+drums+other+vocals",29.17,11.272,15.131,13.617,8.366,7.973
+"oracle","Oracle-IRM","Louis Cressy Band - Good Time","PASS","PASS",292.82,54.2,3.713,50.49,0.0127,4,"bass+drums+other+vocals",27.71,10.124,11.906,10.815,7.877,9.9
+"oracle","Oracle-IRM","Lyndsey Ollard - Catching Up","PASS","PASS",227.43,50.8,2.787,48.01,0.0123,4,"bass+drums+other+vocals",20.84,10.092,15.649,8.045,8.081,8.593
+"oracle","Oracle-IRM","M.E.R.C. Music - Knockout","PASS","PASS",270.0,52.0,3.35,48.65,0.0124,4,"bass+drums+other+vocals",30.86,8.745,11.348,7.939,7.279,8.416
+"oracle","Oracle-IRM","Moosmusic - Big Dummy Shake","PASS","PASS",198.86,47.7,2.762,44.94,0.0139,4,"bass+drums+other+vocals",22.61,9.422,12.628,11.759,5.942,7.359
+"oracle","Oracle-IRM","Motor Tapes - Shore","PASS","PASS",246.72,52.5,3.573,48.93,0.0145,4,"bass+drums+other+vocals",22.35,9.64,8.937,6.328,9.175,14.12
+"oracle","Oracle-IRM","Mu - Too Bright","PASS","PASS",272.17,53.0,4.048,48.95,0.0149,4,"bass+drums+other+vocals",26.11,10.803,11.899,15.018,7.206,9.088
+"oracle","Oracle-IRM","Nerve 9 - Pray For The Rain","PASS","PASS",343.71,63.5,5.222,58.28,0.0152,4,"bass+drums+other+vocals",33.0,9.429,10.858,10.287,7.327,9.244
+"oracle","Oracle-IRM","PR - Happy Daze","PASS","PASS",162.7,34.9,2.006,32.89,0.0123,4,"bass+drums+other+vocals",14.64,14.018,1.657,24.316,17.571,12.53
+"oracle","Oracle-IRM","Punkdisco - Oral Hygiene","PASS","PASS",221.6,48.9,3.079,45.82,0.0139,4,"bass+drums+other+vocals",23.76,11.03,11.999,12.415,11.569,8.138
+"oracle","Oracle-IRM","Raft Monk - Tiring","PASS","PASS",212.25,49.2,2.811,46.39,0.0132,4,"bass+drums+other+vocals",26.64,7.005,7.297,6.647,7.306,6.77
+"oracle","Oracle-IRM","Sambasevam Shanmugam - Kaathaadi","PASS","PASS",317.88,57.4,4.366,53.03,0.0137,4,"bass+drums+other+vocals",25.83,12.449,15.857,9.864,12.419,11.655
+"oracle","Oracle-IRM","Secretariat - Borderline","PASS","PASS",286.85,56.3,4.235,52.06,0.0148,4,"bass+drums+other+vocals",32.86,7.248,7.727,6.172,5.657,9.437
+"oracle","Oracle-IRM","Secretariat - Over The Top","PASS","PASS",251.1,52.1,2.996,49.1,0.0119,4,"bass+drums+other+vocals",27.07,9.922,9.917,7.793,11.852,10.128
+"oracle","Oracle-IRM","Side Effects Project - Sing With Me","PASS","PASS",243.68,51.2,3.242,47.96,0.0133,4,"bass+drums+other+vocals",26.37,11.05,15.39,14.809,8.097,5.905
+"oracle","Oracle-IRM","Signe Jakobsen - What Have You Done To Me","PASS","PASS",177.4,36.7,2.319,34.38,0.0131,4,"bass+drums+other+vocals",20.42,7.785,12.976,5.547,4.591,8.026
+"oracle","Oracle-IRM","Skelpolu - Resurrection","PASS","PASS",395.66,86.5,6.105,80.39,0.0154,4,"bass+drums+other+vocals",43.91,8.317,6.328,7.209,10.982,8.751
+"oracle","Oracle-IRM","Speak Softly - Broken Man","PASS","PASS",253.16,52.1,3.265,48.84,0.0129,4,"bass+drums+other+vocals",24.1,9.741,7.322,9.136,12.496,10.011
+"oracle","Oracle-IRM","Speak Softly - Like Horses","PASS","PASS",312.67,57.7,4.504,53.2,0.0144,4,"bass+drums+other+vocals",31.28,11.372,10.653,8.32,17.03,9.485
+"oracle","Oracle-IRM","The Doppler Shift - Atrophy","PASS","PASS",331.44,62.8,5.018,57.78,0.0151,4,"bass+drums+other+vocals",37.74,8.008,9.5,10.026,3.766,8.742
+"oracle","Oracle-IRM","The Easton Ellises (Baumi) - SDRNR","PASS","PASS",234.68,50.4,2.689,47.71,0.0115,4,"bass+drums+other+vocals",26.17,9.547,9.12,13.013,8.212,7.845
+"oracle","Oracle-IRM","The Easton Ellises - Falcon 69","PASS","PASS",246.99,52.7,2.962,49.74,0.012,4,"bass+drums+other+vocals",29.05,8.787,9.523,10.024,8.059,7.542
+"oracle","Oracle-IRM","The Long Wait - Dark Horses","PASS","PASS",305.72,56.8,4.077,52.72,0.0133,4,"bass+drums+other+vocals",33.63,7.841,9.68,6.978,7.604,7.103
+"oracle","Oracle-IRM","The Mountaineering Club - Mallory","PASS","PASS",244.46,49.8,2.999,46.8,0.0123,4,"bass+drums+other+vocals",20.4,9.093,12.41,7.441,8.495,8.027
+"oracle","Oracle-IRM","The Sunshine Garcia Band - For I Am The Moon","PASS","PASS",320.3,59.0,5.124,53.88,0.016,4,"bass+drums+other+vocals",37.16,10.896,15.208,10.661,9.533,8.181
+"oracle","Oracle-IRM","Timboz - Pony","PASS","PASS",253.05,54.6,3.225,51.38,0.0127,4,"bass+drums+other+vocals",29.31,6.91,7.718,6.499,3.681,9.741
+"oracle","Oracle-IRM","Tom McKenzie - Directions","PASS","PASS",175.85,35.2,2.268,32.93,0.0129,4,"bass+drums+other+vocals",16.04,9.994,11.49,14.46,7.681,6.346
+"oracle","Oracle-IRM","Triviul feat. The Fiend - Widow","PASS","PASS",235.11,50.2,3.36,46.84,0.0143,4,"bass+drums+other+vocals",30.73,10.338,13.127,7.251,11.846,9.126
+"oracle","Oracle-IRM","We Fell From The Sky - Not You","PASS","PASS",207.9,49.8,2.798,47.0,0.0135,4,"bass+drums+other+vocals",23.36,8.941,9.711,12.412,3.822,9.818
+"oracle","Oracle-IRM","Zeno - Signs","PASS","PASS",234.38,51.5,3.319,48.18,0.0142,4,"bass+drums+other+vocals",30.1,7.915,9.901,9.529,4.17,8.062
+"demucs","Demucs","PR - Oh No","PASS","PASS",76.19,15.7,2.309,13.39,0.0303,4,"bass+drums+other+vocals",17.18,2.689,0.566,8.822,0.227,1.143
+"demucs","Demucs","AM Contra - Heart Peripheral","PASS","PASS",210.11,31.6,6.311,25.29,0.03,4,"bass+drums+other+vocals",62.73,3.926,11.511,7.57,-3.856,0.481
+"demucs","Demucs","Al James - Schoolboy Facination","PASS","PASS",200.53,55.7,6.548,49.15,0.0327,4,"bass+drums+other+vocals",63.1,8.348,9.87,7.607,12.179,3.734
+"demucs","Demucs","Angels In Amplifiers - I'm Alright","PASS","PASS",179.59,40.2,5.811,34.39,0.0324,4,"bass+drums+other+vocals",54.68,9.474,10.841,8.677,10.879,7.498
+"demucs","Demucs","Arise - Run Run Run","PASS","PASS",219.39,56.0,6.906,49.09,0.0315,4,"bass+drums+other+vocals",54.6,4.86,10.521,-4.086,12.221,0.783
+"demucs","Demucs","BKS - Bulldozer","PASS","PASS",337.04,67.9,10.697,57.2,0.0317,4,"bass+drums+other+vocals",91.91,8.527,3.777,13.487,10.296,6.548
+"demucs","Demucs","BKS - Too Much","PASS","PASS",220.12,56.3,6.973,49.33,0.0317,4,"bass+drums+other+vocals",59.53,11.3,12.635,11.324,14.929,6.313
+"demucs","Demucs","Ben Carrigan - We'll Talk About It All Tonight","PASS","PASS",254.91,56.5,8.014,48.49,0.0314,4,"bass+drums+other+vocals",53.03,9.515,6.13,10.07,13.429,8.433
+"demucs","Demucs","Bobby Nobody - Stitch Up","PASS","PASS",221.25,57.1,7.266,49.83,0.0328,4,"bass+drums+other+vocals",57.93,8.009,10.122,7.215,8.737,5.964
+"demucs","Demucs","Buitraker - Revo X","PASS","PASS",275.83,61.3,8.977,52.32,0.0325,4,"bass+drums+other+vocals",78.31,10.137,6.95,15.477,12.365,5.755
+"demucs","Demucs","Carlos Gonzalez - A Place For Us","PASS","PASS",250.22,58.5,8.0,50.5,0.032,4,"bass+drums+other+vocals",58.8,5.269,8.159,6.379,-0.345,6.881
+"demucs","Demucs","Cristina Vane - So Easy","PASS","PASS",254.13,58.4,8.035,50.36,0.0316,4,"bass+drums+other+vocals",66.06,9.355,11.058,14.013,6.621,5.727
+"demucs","Demucs","Detsky Sad - Walkie Talkie","PASS","PASS",190.48,52.9,6.085,46.81,0.0319,4,"bass+drums+other+vocals",52.89,6.597,10.442,8.733,4.268,2.946
+"demucs","Demucs","Enda Reilly - Cur An Long Ag Seol","PASS","PASS",187.0,41.8,6.233,35.57,0.0333,4,"bass+drums+other+vocals",46.52,12.319,11.982,16.08,12.083,9.132
+"demucs","Demucs","Forkupines - Semantics","PASS","PASS",273.58,59.7,8.535,51.17,0.0312,4,"bass+drums+other+vocals",71.89,8.811,7.665,12.798,8.472,6.308
+"demucs","Demucs","Georgia Wonder - Siren","PASS","PASS",430.38,96.4,13.426,82.97,0.0312,4,"bass+drums+other+vocals",133.24,9.653,7.02,11.356,12.809,7.426
+"demucs","Demucs","Girls Under Glass - We Feel Alright","PASS","PASS",317.28,63.0,9.779,53.22,0.0308,4,"bass+drums+other+vocals",95.29,7.015,6.057,9.794,6.033,6.175
+"demucs","Demucs","Hollow Ground - Ill Fate","PASS","PASS",141.67,35.6,4.566,31.03,0.0322,4,"bass+drums+other+vocals",38.8,5.575,7.376,6.712,2.692,5.521
+"demucs","Demucs","James Elder & Mark M Thompson - The English Actor","PASS","PASS",205.47,52.7,6.542,46.16,0.0318,4,"bass+drums+other+vocals",49.99,9.464,8.099,13.273,8.395,8.089
+"demucs","Demucs","Juliet's Rescue - Heartbeats","PASS","PASS",267.65,58.4,8.273,50.13,0.0309,4,"bass+drums+other+vocals",72.29,8.619,8.853,18.776,0.338,6.51
+"demucs","Demucs","Little Chicago's Finest - My Own","PASS","PASS",281.61,61.6,8.855,52.75,0.0314,4,"bass+drums+other+vocals",82.35,7.052,11.067,8.751,8.392,-0.001
+"demucs","Demucs","Louis Cressy Band - Good Time","PASS","PASS",292.82,61.8,9.187,52.61,0.0314,4,"bass+drums+other+vocals",76.53,11.053,11.21,11.343,12.815,8.842
+"demucs","Demucs","Lyndsey Ollard - Catching Up","PASS","PASS",227.43,56.1,7.337,48.76,0.0323,4,"bass+drums+other+vocals",45.02,10.674,14.024,8.808,11.418,8.446
+"demucs","Demucs","M.E.R.C. Music - Knockout","PASS","PASS",270.0,58.5,8.412,50.09,0.0312,4,"bass+drums+other+vocals",76.37,11.244,10.139,13.06,14.259,7.516
+"demucs","Demucs","Moosmusic - Big Dummy Shake","PASS","PASS",198.86,52.2,6.441,45.76,0.0324,4,"bass+drums+other+vocals",54.37,10.31,11.471,13.289,9.278,7.202
+"demucs","Demucs","Motor Tapes - Shore","PASS","PASS",246.72,55.8,7.911,47.89,0.0321,4,"bass+drums+other+vocals",54.8,9.61,6.59,8.835,11.434,11.582
+"demucs","Demucs","Mu - Too Bright","PASS","PASS",272.17,58.4,8.482,49.92,0.0312,4,"bass+drums+other+vocals",69.92,11.726,10.66,16.793,12.342,7.107
+"demucs","Demucs","Nerve 9 - Pray For The Rain","PASS","PASS",343.71,66.1,10.711,55.39,0.0312,4,"bass+drums+other+vocals",79.87,10.356,8.574,14.705,8.689,9.455
+"demucs","Demucs","PR - Happy Daze","PASS","PASS",162.7,38.5,5.253,33.25,0.0323,4,"bass+drums+other+vocals",37.26,6.51,-11.692,19.265,9.731,8.734
+"demucs","Demucs","Punkdisco - Oral Hygiene","PASS","PASS",221.6,54.6,7.042,47.56,0.0318,4,"bass+drums+other+vocals",53.7,4.59,9.362,4.64,3.576,0.784
+"demucs","Demucs","Raft Monk - Tiring","PASS","PASS",212.25,52.7,6.853,45.85,0.0323,4,"bass+drums+other+vocals",58.93,7.249,6.094,8.41,9.37,5.122
+"demucs","Demucs","Sambasevam Shanmugam - Kaathaadi","PASS","PASS",317.88,63.1,9.965,53.14,0.0313,4,"bass+drums+other+vocals",66.99,12.045,14.797,9.55,13.336,10.496
+"demucs","Demucs","Secretariat - Borderline","PASS","PASS",286.85,61.1,8.919,52.18,0.0311,4,"bass+drums+other+vocals",73.04,7.617,7.822,7.101,6.484,9.062
+"demucs","Demucs","Secretariat - Over The Top","PASS","PASS",251.1,58.2,8.001,50.2,0.0319,4,"bass+drums+other+vocals",71.79,10.505,10.225,9.948,12.7,9.149
+"demucs","Demucs","Side Effects Project - Sing With Me","PASS","PASS",243.68,56.6,7.731,48.87,0.0317,4,"bass+drums+other+vocals",66.61,11.773,14.356,16.53,14.438,1.768
+"demucs","Demucs","Signe Jakobsen - What Have You Done To Me","PASS","PASS",177.4,41.1,5.594,35.51,0.0315,4,"bass+drums+other+vocals",46.64,6.812,11.695,5.744,3.53,6.281
+"demucs","Demucs","Skelpolu - Resurrection","PASS","PASS",395.66,93.0,12.332,80.67,0.0312,4,"bass+drums+other+vocals",113.97,10.155,1.441,14.59,17.218,7.373
+"demucs","Demucs","Speak Softly - Broken Man","PASS","PASS",253.16,56.6,8.001,48.6,0.0316,4,"bass+drums+other+vocals",63.66,11.886,7.182,10.901,19.354,10.109
+"demucs","Demucs","Speak Softly - Like Horses","PASS","PASS",312.67,64.1,9.813,54.29,0.0314,4,"bass+drums+other+vocals",77.85,12.315,9.402,8.721,22.343,8.794
+"demucs","Demucs","The Doppler Shift - Atrophy","PASS","PASS",331.44,67.1,10.228,56.87,0.0309,4,"bass+drums+other+vocals",86.88,6.023,6.684,9.108,0.82,7.48
+"demucs","Demucs","The Easton Ellises (Baumi) - SDRNR","PASS","PASS",234.68,55.3,7.238,48.06,0.0308,4,"bass+drums+other+vocals",66.16,6.981,4.416,12.915,7.023,3.57
+"demucs","Demucs","The Easton Ellises - Falcon 69","PASS","PASS",246.99,58.0,7.844,50.16,0.0318,4,"bass+drums+other+vocals",66.79,7.381,5.049,10.713,9.29,4.472
+"demucs","Demucs","The Long Wait - Dark Horses","PASS","PASS",305.72,63.9,9.609,54.29,0.0314,4,"bass+drums+other+vocals",71.29,9.2,9.368,9.249,10.429,7.753
+"demucs","Demucs","The Mountaineering Club - Mallory","PASS","PASS",244.46,57.3,7.787,49.51,0.0319,4,"bass+drums+other+vocals",51.81,11.442,13.581,13.908,11.877,6.402
+"demucs","Demucs","The Sunshine Garcia Band - For I Am The Moon","PASS","PASS",320.3,64.7,10.119,54.58,0.0316,4,"bass+drums+other+vocals",83.03,9.904,11.394,12.069,13.402,2.751
+"demucs","Demucs","Timboz - Pony","PASS","PASS",253.05,57.0,8.006,48.99,0.0316,4,"bass+drums+other+vocals",69.41,5.776,5.502,5.653,3.506,8.444
+"demucs","Demucs","Tom McKenzie - Directions","PASS","PASS",175.85,38.8,5.643,33.16,0.0321,4,"bass+drums+other+vocals",41.07,8.905,11.268,15.819,5.366,3.166
+"demucs","Demucs","Triviul feat. The Fiend - Widow","PASS","PASS",235.11,54.7,7.274,47.43,0.0309,4,"bass+drums+other+vocals",66.24,10.033,10.579,8.691,15.905,4.958
+"demucs","Demucs","We Fell From The Sky - Not You","PASS","PASS",207.9,53.1,6.607,46.49,0.0318,4,"bass+drums+other+vocals",56.23,8.433,7.299,12.796,5.05,8.587
+"demucs","Demucs","Zeno - Signs","PASS","PASS",234.38,57.5,7.549,49.95,0.0322,4,"bass+drums+other+vocals",65.46,7.722,9.072,10.452,3.859,7.506
+"bsrnn_simo","BSRNN-SIMO","The Easton Ellises - Falcon 69","PASS","PASS",246.99,103.6,77.275,26.32,0.3129,4,"bass+drums+other+vocals",53.15,8.798,8.308,11.251,9.274,6.36
+"bsrnn_simo","BSRNN-SIMO","AM Contra - Heart Peripheral","PASS","PASS",210.11,103.2,75.048,28.15,0.3572,4,"bass+drums+other+vocals",47.44,5.155,13.037,8.831,-1.795,0.549
+"bsrnn_simo","BSRNN-SIMO","Al James - Schoolboy Facination","PASS","PASS",200.53,148.9,86.019,62.88,0.429,4,"bass+drums+other+vocals",51.58,8.786,11.432,8.314,10.748,4.651
+"bsrnn_simo","BSRNN-SIMO","Angels In Amplifiers - I'm Alright","PASS","PASS",179.59,110.3,70.69,39.61,0.3936,4,"bass+drums+other+vocals",47.26,9.718,12.597,9.234,9.103,7.939
+"bsrnn_simo","BSRNN-SIMO","Arise - Run Run Run","PASS","PASS",219.39,141.9,86.03,55.87,0.3921,4,"bass+drums+other+vocals",40.39,6.51,14.42,6.152,3.446,2.02
+"bsrnn_simo","BSRNN-SIMO","BKS - Too Much","PASS","PASS",220.12,144.1,86.707,57.39,0.3939,4,"bass+drums+other+vocals",44.82,12.451,14.721,12.207,14.963,7.915
+"bsrnn_simo","BSRNN-SIMO","Ben Carrigan - We'll Talk About It All Tonight","PASS","PASS",254.91,152.8,97.963,54.84,0.3843,4,"bass+drums+other+vocals",43.35,9.768,8.136,10.591,11.541,8.802
+"bsrnn_simo","BSRNN-SIMO","Bobby Nobody - Stitch Up","PASS","PASS",221.25,145.1,91.592,53.51,0.414,4,"bass+drums+other+vocals",45.05,9.694,12.423,8.68,10.28,7.393
+"bsrnn_simo","BSRNN-SIMO","Buitraker - Revo X","PASS","PASS",275.83,165.4,106.871,58.53,0.3875,4,"bass+drums+other+vocals",68.69,10.956,8.928,15.963,12.168,6.764
+"bsrnn_simo","BSRNN-SIMO","Carlos Gonzalez - A Place For Us","PASS","PASS",250.22,161.4,103.118,58.28,0.4121,4,"bass+drums+other+vocals",45.99,6.477,9.957,7.259,0.0,8.691
+"bsrnn_simo","BSRNN-SIMO","Cristina Vane - So Easy","PASS","PASS",254.13,157.4,96.563,60.84,0.38,4,"bass+drums+other+vocals",55.33,10.655,14.61,13.891,7.245,6.872
+"bsrnn_simo","BSRNN-SIMO","Detsky Sad - Walkie Talkie","PASS","PASS",190.48,130.6,78.735,51.86,0.4133,4,"bass+drums+other+vocals",38.46,8.021,13.215,11.69,4.087,3.092
+"bsrnn_simo","BSRNN-SIMO","Enda Reilly - Cur An Long Ag Seol","PASS","PASS",187.0,116.4,75.326,41.07,0.4028,4,"bass+drums+other+vocals",38.61,14.343,16.695,15.161,12.562,12.956
+"bsrnn_simo","BSRNN-SIMO","Forkupines - Semantics","PASS","PASS",273.58,157.9,102.404,55.5,0.3743,4,"bass+drums+other+vocals",54.28,9.054,8.299,12.814,8.253,6.85
+"umx","Open-Unmix","AM Contra - Heart Peripheral","PASS","PASS",210.11,30.6,6.225,24.38,0.0296,4,"bass+drums+other+vocals",53.65,2.296,8.029,4.578,-3.796,0.372
+"umx","Open-Unmix","Al James - Schoolboy Facination","PASS","PASS",200.53,31.3,5.738,25.56,0.0286,4,"bass+drums+other+vocals",54.48,4.076,7.137,4.021,5.599,-0.453
+"umx","Open-Unmix","Angels In Amplifiers - I'm Alright","PASS","PASS",179.59,48.5,12.734,35.77,0.0709,4,"bass+drums+other+vocals",48.24,6.076,8.531,6.048,5.106,4.62
+"umx","Open-Unmix","Arise - Run Run Run","PASS","PASS",219.39,62.0,15.221,46.78,0.0694,4,"bass+drums+other+vocals",42.73,2.502,5.047,3.214,1.449,0.299
+"umx","Open-Unmix","BKS - Bulldozer","PASS","PASS",337.04,83.2,23.719,59.48,0.0704,4,"bass+drums+other+vocals",78.27,5.903,2.335,9.875,7.023,4.379
+"umx","Open-Unmix","BKS - Too Much","PASS","PASS",220.12,62.3,15.61,46.69,0.0709,4,"bass+drums+other+vocals",52.13,8.079,10.41,7.404,10.03,4.472
+"umx","Open-Unmix","Ben Carrigan - We'll Talk About It All Tonight","PASS","PASS",254.91,66.4,17.695,48.71,0.0694,4,"bass+drums+other+vocals",48.48,5.534,3.407,7.101,7.072,4.556
+"umx","Open-Unmix","Bobby Nobody - Stitch Up","PASS","PASS",221.25,63.2,15.641,47.56,0.0707,4,"bass+drums+other+vocals",49.56,5.082,8.033,5.122,4.077,3.095
+"umx","Open-Unmix","Buitraker - Revo X","PASS","PASS",275.83,71.1,18.328,52.77,0.0664,4,"bass+drums+other+vocals",66.24,6.192,3.884,10.453,7.212,3.218
+"umx","Open-Unmix","Carlos Gonzalez - A Place For Us","PASS","PASS",250.22,66.5,16.983,49.52,0.0679,4,"bass+drums+other+vocals",49.98,3.11,5.298,4.373,-1.323,4.093
+"umx","Open-Unmix","Cristina Vane - So Easy","PASS","PASS",254.13,67.4,17.434,49.97,0.0686,4,"bass+drums+other+vocals",54.44,6.603,8.686,9.908,4.342,3.478
+"umx","Open-Unmix","Detsky Sad - Walkie Talkie","PASS","PASS",190.48,57.9,13.445,44.45,0.0706,4,"bass+drums+other+vocals",45.39,3.094,5.889,6.011,0.006,0.47
+"umx","Open-Unmix","Enda Reilly - Cur An Long Ag Seol","PASS","PASS",187.0,47.9,13.23,34.67,0.0707,4,"bass+drums+other+vocals",40.75,5.31,9.445,3.098,2.886,5.812
+"umx","Open-Unmix","Forkupines - Semantics","PASS","PASS",273.58,67.5,18.519,48.98,0.0677,4,"bass+drums+other+vocals",58.76,6.093,5.599,10.257,3.94,4.576
+"umx","Open-Unmix","Georgia Wonder - Siren","PASS","PASS",430.38,111.0,28.954,82.05,0.0673,4,"bass+drums+other+vocals",114.14,6.0,4.483,6.714,7.723,5.08
+"umx","Open-Unmix","Girls Under Glass - We Feel Alright","PASS","PASS",317.28,73.3,20.382,52.92,0.0642,4,"bass+drums+other+vocals",75.29,4.88,4.826,7.332,3.188,4.175
+"umx","Open-Unmix","Hollow Ground - Ill Fate","PASS","PASS",141.67,40.9,9.819,31.08,0.0693,4,"bass+drums+other+vocals",32.15,3.19,7.152,4.753,-1.042,1.896
+"umx","Open-Unmix","James Elder & Mark M Thompson - The English Actor","PASS","PASS",205.47,59.6,14.474,45.13,0.0704,4,"bass+drums+other+vocals",40.09,6.461,6.135,8.734,5.243,5.732
+"umx","Open-Unmix","Juliet's Rescue - Heartbeats","PASS","PASS",267.65,67.0,17.348,49.65,0.0648,4,"bass+drums+other+vocals",62.28,6.189,7.356,10.493,2.3,4.605
+"umx","Open-Unmix","Little Chicago's Finest - My Own","PASS","PASS",281.61,69.6,18.812,50.79,0.0668,4,"bass+drums+other+vocals",70.46,5.293,8.867,6.448,9.493,-3.637
+"umx","Open-Unmix","Louis Cressy Band - Good Time","PASS","PASS",292.82,70.4,19.282,51.12,0.0659,4,"bass+drums+other+vocals",67.34,7.18,8.087,8.518,6.546,5.57
+"umx","Open-Unmix","Lyndsey Ollard - Catching Up","PASS","PASS",227.43,64.2,15.176,49.02,0.0667,4,"bass+drums+other+vocals",38.69,6.913,11.9,5.266,4.488,5.998
+"umx","Open-Unmix","M.E.R.C. Music - Knockout","PASS","PASS",270.0,67.5,18.259,49.24,0.0676,4,"bass+drums+other+vocals",68.27,5.945,7.861,5.042,5.994,4.883
+"umx","Open-Unmix","Moosmusic - Big Dummy Shake","PASS","PASS",198.86,58.1,13.417,44.68,0.0675,4,"bass+drums+other+vocals",48.38,6.639,8.518,9.003,4.557,4.477
+"umx","Open-Unmix","Motor Tapes - Shore","PASS","PASS",246.72,64.9,16.444,48.46,0.0666,4,"bass+drums+other+vocals",43.89,6.864,3.45,6.196,9.473,8.337
+"umx","Open-Unmix","Mu - Too Bright","PASS","PASS",272.17,67.4,18.296,49.1,0.0672,4,"bass+drums+other+vocals",59.61,8.13,8.096,12.571,7.439,4.413
+"umx","Open-Unmix","Nerve 9 - Pray For The Rain","PASS","PASS",343.71,80.7,23.842,56.86,0.0694,4,"bass+drums+other+vocals",65.96,6.952,7.148,9.408,5.285,5.967
+"umx","Open-Unmix","PR - Happy Daze","PASS","PASS",162.7,44.6,11.594,33.01,0.0713,4,"bass+drums+other+vocals",31.35,-0.029,-11.254,10.875,0.263,-0.0
+"umx","Open-Unmix","PR - Oh No","PASS","PASS",76.19,27.7,5.639,22.06,0.074,4,"bass+drums+other+vocals",14.72,0.456,-6.301,6.728,1.294,0.102
+"umx","Open-Unmix","Punkdisco - Oral Hygiene","PASS","PASS",221.6,61.0,14.988,46.01,0.0676,4,"bass+drums+other+vocals",45.18,5.356,4.134,7.123,7.482,2.686
+"umx","Open-Unmix","Raft Monk - Tiring","PASS","PASS",212.25,59.8,14.01,45.79,0.066,4,"bass+drums+other+vocals",48.61,4.51,4.362,5.049,5.508,3.119
+"umx","Open-Unmix","Sambasevam Shanmugam - Kaathaadi","PASS","PASS",317.88,72.1,20.931,51.17,0.0658,4,"bass+drums+other+vocals",54.66,7.052,10.101,4.053,8.606,5.449
+"umx","Open-Unmix","Secretariat - Borderline","PASS","PASS",286.85,71.0,19.691,51.31,0.0686,4,"bass+drums+other+vocals",65.19,5.109,5.718,4.072,3.794,6.854
+"umx","Open-Unmix","Secretariat - Over The Top","PASS","PASS",251.1,63.9,16.807,47.09,0.0669,4,"bass+drums+other+vocals",64.99,7.8,7.738,6.029,10.363,7.07
+"umx","Open-Unmix","Side Effects Project - Sing With Me","PASS","PASS",243.68,66.3,17.603,48.7,0.0722,4,"bass+drums+other+vocals",55.73,7.627,10.484,11.68,7.757,0.589
+"umx","Open-Unmix","Signe Jakobsen - What Have You Done To Me","PASS","PASS",177.4,47.0,12.6,34.4,0.071,4,"bass+drums+other+vocals",39.4,4.446,9.103,2.936,1.512,4.232
+"umx","Open-Unmix","Skelpolu - Resurrection","PASS","PASS",395.66,104.9,26.821,78.08,0.0678,4,"bass+drums+other+vocals",99.48,5.402,0.0,6.45,10.716,4.444
+"umx","Open-Unmix","Speak Softly - Broken Man","PASS","PASS",253.16,64.5,16.976,47.52,0.0671,4,"bass+drums+other+vocals",54.33,6.07,3.209,5.356,10.213,5.502
+"umx","Open-Unmix","Speak Softly - Like Horses","PASS","PASS",312.67,74.1,20.986,53.11,0.0671,4,"bass+drums+other+vocals",65.7,8.012,7.091,4.648,14.627,5.683
+"umx","Open-Unmix","The Doppler Shift - Atrophy","PASS","PASS",331.44,78.2,22.492,55.71,0.0679,4,"bass+drums+other+vocals",73.72,4.635,5.722,7.039,0.269,5.509
+"umx","Open-Unmix","The Easton Ellises (Baumi) - SDRNR","PASS","PASS",234.68,62.4,15.749,46.65,0.0671,4,"bass+drums+other+vocals",55.57,3.601,2.54,7.505,3.909,0.449
+"umx","Open-Unmix","The Easton Ellises - Falcon 69","PASS","PASS",246.99,65.2,16.609,48.59,0.0672,4,"bass+drums+other+vocals",55.5,4.535,2.681,7.59,6.469,1.401
+"umx","Open-Unmix","The Long Wait - Dark Horses","PASS","PASS",305.72,73.4,19.924,53.48,0.0652,4,"bass+drums+other+vocals",60.84,5.275,7.472,4.833,4.833,3.963
+"umx","Open-Unmix","The Mountaineering Club - Mallory","PASS","PASS",244.46,63.5,16.207,47.29,0.0663,4,"bass+drums+other+vocals",42.36,6.781,10.054,5.318,7.67,4.082
+"umx","Open-Unmix","The Sunshine Garcia Band - For I Am The Moon","PASS","PASS",320.3,77.2,21.514,55.69,0.0672,4,"bass+drums+other+vocals",68.2,3.343,9.584,0.876,0.589,2.324
+"umx","Open-Unmix","Timboz - Pony","PASS","PASS",253.05,67.9,17.714,50.19,0.07,4,"bass+drums+other+vocals",62.03,4.159,4.295,3.384,1.952,7.004
+"umx","Open-Unmix","Tom McKenzie - Directions","PASS","PASS",175.85,55.5,12.671,42.83,0.0721,4,"bass+drums+other+vocals",36.7,6.774,9.041,12.151,4.256,1.649
+"umx","Open-Unmix","Triviul feat. The Fiend - Widow","PASS","PASS",235.11,64.6,16.188,48.41,0.0689,4,"bass+drums+other+vocals",55.19,5.768,7.337,3.987,10.042,1.704
+"umx","Open-Unmix","We Fell From The Sky - Not You","PASS","PASS",207.9,58.9,13.909,44.99,0.0669,4,"bass+drums+other+vocals",48.21,5.446,5.772,9.674,0.845,5.494
+"umx","Open-Unmix","Zeno - Signs","PASS","PASS",234.38,66.1,16.616,49.48,0.0709,4,"bass+drums+other+vocals",55.23,5.087,7.075,7.375,0.956,4.942
+"mdx","MDX-Net","AM Contra - Heart Peripheral","PASS","PASS",210.11,39.9,12.114,27.79,0.0577,4,"bass+drums+other+vocals",61.31,7.127,11.981,10.49,0.537,5.5
+"mdx","MDX-Net","Al James - Schoolboy Facination","PASS","PASS",200.53,38.3,11.353,26.95,0.0566,4,"bass+drums+other+vocals",64.37,9.133,10.356,7.384,14.463,4.327
+"mdx","MDX-Net","Angels In Amplifiers - I'm Alright","PASS","PASS",179.59,52.5,11.505,40.99,0.0641,4,"bass+drums+other+vocals",56.21,10.003,11.114,9.06,11.659,8.179
+"mdx","MDX-Net","Arise - Run Run Run","PASS","PASS",219.39,65.5,13.734,51.77,0.0626,4,"bass+drums+other+vocals",53.15,13.075,11.326,12.049,14.982,13.942
+"mdx","MDX-Net","BKS - Bulldozer","PASS","PASS",337.04,81.9,20.786,61.11,0.0617,4,"bass+drums+other+vocals",91.24,8.895,4.462,13.517,10.512,7.09
+"mdx","MDX-Net","BKS - Too Much","PASS","PASS",220.12,65.9,13.858,52.04,0.063,4,"bass+drums+other+vocals",59.54,11.588,12.736,11.419,15.416,6.78
+"mdx","MDX-Net","Ben Carrigan - We'll Talk About It All Tonight","PASS","PASS",254.91,68.9,16.347,52.55,0.0641,4,"bass+drums+other+vocals",55.61,9.625,6.632,10.039,13.225,8.604
+"mdx","MDX-Net","Bobby Nobody - Stitch Up","PASS","PASS",221.25,66.8,13.874,52.93,0.0627,4,"bass+drums+other+vocals",57.62,9.271,10.548,8.863,10.246,7.427
+"mdx","MDX-Net","Buitraker - Revo X","PASS","PASS",275.83,74.0,17.364,56.64,0.063,4,"bass+drums+other+vocals",79.51,10.871,7.836,16.124,12.993,6.533
+"mdx","MDX-Net","Carlos Gonzalez - A Place For Us","PASS","PASS",250.22,72.6,15.98,56.62,0.0639,4,"bass+drums+other+vocals",60.71,5.156,8.806,5.066,-0.408,7.159
+"mdx","MDX-Net","Cristina Vane - So Easy","PASS","PASS",254.13,70.6,16.239,54.36,0.0639,4,"bass+drums+other+vocals",66.25,9.844,11.512,14.051,7.389,6.422
+"mdx","MDX-Net","Detsky Sad - Walkie Talkie","PASS","PASS",190.48,61.3,12.455,48.84,0.0654,4,"bass+drums+other+vocals",51.35,7.093,11.987,6.938,5.046,4.403
+"mdx","MDX-Net","Enda Reilly - Cur An Long Ag Seol","PASS","PASS",187.0,53.6,12.544,41.06,0.0671,4,"bass+drums+other+vocals",47.63,13.08,12.996,16.674,12.587,10.064
+"mdx","MDX-Net","Forkupines - Semantics","PASS","PASS",273.58,72.9,17.038,55.86,0.0623,4,"bass+drums+other+vocals",73.14,9.095,7.617,12.719,9.33,6.713
+"mdx","MDX-Net","Georgia Wonder - Siren","PASS","PASS",430.38,112.9,26.69,86.21,0.062,4,"bass+drums+other+vocals",133.41,10.818,7.794,11.838,15.097,8.544
+"mdx","MDX-Net","Girls Under Glass - We Feel Alright","PASS","PASS",317.28,75.8,19.498,56.3,0.0615,4,"bass+drums+other+vocals",94.03,9.602,6.46,13.69,9.568,8.689
+"mdx","MDX-Net","Hollow Ground - Ill Fate","PASS","PASS",141.67,44.8,9.675,35.12,0.0683,4,"bass+drums+other+vocals",38.55,6.436,7.594,7.778,3.733,6.641
+"mdx","MDX-Net","James Elder & Mark M Thompson - The English Actor","PASS","PASS",205.47,63.4,13.539,49.86,0.0659,4,"bass+drums+other+vocals",50.18,9.874,8.549,13.071,8.98,8.897
+"mdx","MDX-Net","Juliet's Rescue - Heartbeats","PASS","PASS",267.65,70.9,16.713,54.19,0.0624,4,"bass+drums+other+vocals",72.93,10.845,9.469,17.945,5.965,10.0
+"mdx","MDX-Net","Little Chicago's Finest - My Own","PASS","PASS",281.61,73.0,17.69,55.31,0.0628,4,"bass+drums+other+vocals",79.3,13.303,14.904,14.58,17.135,6.591
+"mdx","MDX-Net","Louis Cressy Band - Good Time","PASS","PASS",292.82,74.1,17.814,56.29,0.0608,4,"bass+drums+other+vocals",75.95,11.607,11.548,11.807,13.006,10.065
+"mdx","MDX-Net","Lyndsey Ollard - Catching Up","PASS","PASS",227.43,65.0,14.343,50.66,0.0631,4,"bass+drums+other+vocals",45.15,11.427,15.722,8.885,11.999,9.103
+"mdx","MDX-Net","M.E.R.C. Music - Knockout","PASS","PASS",270.0,70.4,17.143,53.26,0.0635,4,"bass+drums+other+vocals",77.2,11.91,10.552,13.113,15.624,8.352
+"mdx","MDX-Net","Moosmusic - Big Dummy Shake","PASS","PASS",198.86,63.1,12.887,50.21,0.0648,4,"bass+drums+other+vocals",55.57,10.651,12.037,12.317,10.379,7.872
+"mdx","MDX-Net","Motor Tapes - Shore","PASS","PASS",246.72,69.0,15.628,53.37,0.0633,4,"bass+drums+other+vocals",57.02,8.586,7.204,2.665,12.203,12.272
+"mdx","MDX-Net","Mu - Too Bright","PASS","PASS",272.17,68.9,16.76,52.14,0.0616,4,"bass+drums+other+vocals",69.43,12.697,11.463,16.542,13.27,9.515
+"mdx","MDX-Net","Nerve 9 - Pray For The Rain","PASS","PASS",343.71,82.7,21.319,61.38,0.062,4,"bass+drums+other+vocals",81.54,10.883,9.215,14.094,9.88,10.341
+"mdx","MDX-Net","PR - Happy Daze","PASS","PASS",162.7,47.0,10.769,36.23,0.0662,4,"bass+drums+other+vocals",37.88,11.578,-10.987,24.333,20.779,12.187
+"mdx","MDX-Net","PR - Oh No","PASS","PASS",76.19,42.2,15.772,26.43,0.207,4,"bass+drums+other+vocals",17.67,6.597,2.095,10.364,8.486,5.442
+"mdx","MDX-Net","Punkdisco - Oral Hygiene","PASS","PASS",221.6,63.0,14.253,48.75,0.0643,4,"bass+drums+other+vocals",55.55,6.928,9.639,3.288,12.648,2.138
+"mdx","MDX-Net","Raft Monk - Tiring","PASS","PASS",212.25,64.2,13.697,50.5,0.0645,4,"bass+drums+other+vocals",60.15,8.007,6.578,9.013,9.891,6.545
+"mdx","MDX-Net","Sambasevam Shanmugam - Kaathaadi","PASS","PASS",317.88,77.4,20.021,57.38,0.063,4,"bass+drums+other+vocals",67.53,13.845,15.265,12.133,16.097,11.883
+"mdx","MDX-Net","Secretariat - Borderline","PASS","PASS",286.85,74.4,17.828,56.57,0.0622,4,"bass+drums+other+vocals",75.92,8.366,8.377,8.324,6.915,9.847
+"mdx","MDX-Net","Secretariat - Over The Top","PASS","PASS",251.1,70.8,16.206,54.59,0.0645,4,"bass+drums+other+vocals",72.3,11.646,10.613,10.779,14.571,10.622
+"mdx","MDX-Net","Side Effects Project - Sing With Me","PASS","PASS",243.68,69.6,15.715,53.88,0.0645,4,"bass+drums+other+vocals",66.22,11.336,15.129,12.363,14.69,3.162
+"mdx","MDX-Net","Signe Jakobsen - What Have You Done To Me","PASS","PASS",177.4,50.4,11.421,38.98,0.0644,4,"bass+drums+other+vocals",47.24,7.551,11.883,6.081,5.047,7.192
+"mdx","MDX-Net","Skelpolu - Resurrection","PASS","PASS",395.66,112.1,23.844,88.26,0.0603,4,"bass+drums+other+vocals",117.01,12.187,4.072,15.982,19.235,9.457
+"mdx","MDX-Net","Speak Softly - Broken Man","PASS","PASS",253.16,67.8,15.821,51.98,0.0625,4,"bass+drums+other+vocals",61.76,14.012,8.249,13.375,21.892,12.531
+"mdx","MDX-Net","Speak Softly - Like Horses","PASS","PASS",312.67,75.7,19.126,56.57,0.0612,4,"bass+drums+other+vocals",77.83,13.624,9.733,9.933,25.289,9.541
+"mdx","MDX-Net","The Doppler Shift - Atrophy","PASS","PASS",331.44,81.7,20.501,61.2,0.0619,4,"bass+drums+other+vocals",89.35,8.271,7.954,9.47,6.215,9.445
+"mdx","MDX-Net","The Easton Ellises (Baumi) - SDRNR","PASS","PASS",234.68,68.5,14.68,53.82,0.0626,4,"bass+drums+other+vocals",66.3,8.752,6.884,13.677,8.341,6.107
+"mdx","MDX-Net","The Easton Ellises - Falcon 69","PASS","PASS",246.99,68.5,15.422,53.08,0.0624,4,"bass+drums+other+vocals",68.09,8.559,6.841,11.627,10.163,5.605
+"mdx","MDX-Net","The Long Wait - Dark Horses","PASS","PASS",305.72,74.6,19.091,55.51,0.0624,4,"bass+drums+other+vocals",71.77,9.869,9.747,9.732,11.377,8.621
+"mdx","MDX-Net","The Mountaineering Club - Mallory","PASS","PASS",244.46,68.9,15.732,53.17,0.0644,4,"bass+drums+other+vocals",51.55,11.144,14.183,10.283,12.823,7.288
+"mdx","MDX-Net","The Sunshine Garcia Band - For I Am The Moon","PASS","PASS",320.3,80.1,20.471,59.63,0.0639,4,"bass+drums+other+vocals",81.8,12.1,13.026,13.88,15.049,6.445
+"mdx","MDX-Net","Timboz - Pony","PASS","PASS",253.05,71.5,15.987,55.51,0.0632,4,"bass+drums+other+vocals",71.54,6.605,5.818,6.627,4.978,8.998
+"mdx","MDX-Net","Tom McKenzie - Directions","PASS","PASS",175.85,48.4,11.267,37.13,0.0641,4,"bass+drums+other+vocals",40.75,8.905,11.955,11.176,8.003,4.487
+"mdx","MDX-Net","Triviul feat. The Fiend - Widow","PASS","PASS",235.11,67.3,15.175,52.12,0.0645,4,"bass+drums+other+vocals",69.1,10.162,11.505,6.926,16.286,5.929
+"mdx","MDX-Net","We Fell From The Sky - Not You","PASS","PASS",207.9,64.1,13.522,50.58,0.065,4,"bass+drums+other+vocals",56.65,8.563,7.76,10.494,6.368,9.632
+"mdx","MDX-Net","Zeno - Signs","PASS","PASS",234.38,68.0,14.708,53.29,0.0627,4,"bass+drums+other+vocals",67.09,7.892,9.771,9.908,4.17,7.719
+"convtasnet","Conv-TasNet","AM Contra - Heart Peripheral","PASS","PASS",210.11,57.7,33.027,24.67,0.1572,4,"bass+drums+other+vocals",67.97,2.158,7.65,5.125,-4.722,0.579
+"convtasnet","Conv-TasNet","Al James - Schoolboy Facination","PASS","PASS",200.53,54.5,31.341,23.16,0.1563,4,"bass+drums+other+vocals",68.41,5.593,7.933,5.131,7.819,1.491
+"convtasnet","Conv-TasNet","Angels In Amplifiers - I'm Alright","PASS","PASS",179.59,63.8,28.766,35.03,0.1602,4,"bass+drums+other+vocals",60.23,6.678,8.732,6.488,6.443,5.05
+"convtasnet","Conv-TasNet","Arise - Run Run Run","PASS","PASS",219.39,85.4,35.991,49.41,0.164,4,"bass+drums+other+vocals",62.46,2.877,6.255,-1.238,5.442,1.049
+"convtasnet","Conv-TasNet","BKS - Bulldozer","PASS","PASS",337.04,112.5,54.563,57.94,0.1619,4,"bass+drums+other+vocals",106.01,5.807,1.627,10.605,7.018,3.977
+"convtasnet","Conv-TasNet","BKS - Too Much","PASS","PASS",220.12,87.0,38.35,48.65,0.1742,4,"bass+drums+other+vocals",68.52,7.728,9.499,7.256,9.988,4.168
+"convtasnet","Conv-TasNet","Ben Carrigan - We'll Talk About It All Tonight","PASS","PASS",254.91,89.8,40.617,49.18,0.1593,4,"bass+drums+other+vocals",60.75,5.977,3.804,7.654,7.698,4.751
+"convtasnet","Conv-TasNet","Bobby Nobody - Stitch Up","PASS","PASS",221.25,85.2,36.476,48.72,0.1649,4,"bass+drums+other+vocals",63.99,5.137,7.94,5.432,3.861,3.316
+"convtasnet","Conv-TasNet","Buitraker - Revo X","PASS","PASS",275.83,98.6,44.77,53.83,0.1623,4,"bass+drums+other+vocals",86.59,6.088,5.243,9.83,6.16,3.118
+"convtasnet","Conv-TasNet","Carlos Gonzalez - A Place For Us","PASS","PASS",250.22,91.2,40.071,51.13,0.1601,4,"bass+drums+other+vocals",66.24,3.368,5.08,5.097,-0.367,3.662
+"convtasnet","Conv-TasNet","Cristina Vane - So Easy","PASS","PASS",254.13,90.2,40.883,49.32,0.1609,4,"bass+drums+other+vocals",73.65,5.393,8.007,8.099,2.823,2.643
+"convtasnet","Conv-TasNet","Detsky Sad - Walkie Talkie","PASS","PASS",190.48,74.6,30.607,43.99,0.1607,4,"bass+drums+other+vocals",56.38,3.851,7.758,6.749,0.267,0.629
+"convtasnet","Conv-TasNet","Enda Reilly - Cur An Long Ag Seol","PASS","PASS",187.0,66.6,30.083,36.52,0.1609,4,"bass+drums+other+vocals",54.03,3.706,8.823,0.618,-0.246,5.628
+"convtasnet","Conv-TasNet","Forkupines - Semantics","PASS","PASS",273.58,94.6,44.285,50.31,0.1619,4,"bass+drums+other+vocals",83.46,5.233,4.504,9.36,3.629,3.44
+"convtasnet","Conv-TasNet","Georgia Wonder - Siren","PASS","PASS",430.38,152.0,69.032,82.97,0.1604,4,"bass+drums+other+vocals",139.59,6.583,4.417,8.162,8.683,5.069
+"convtasnet","Conv-TasNet","Girls Under Glass - We Feel Alright","PASS","PASS",317.28,103.5,50.988,52.51,0.1607,4,"bass+drums+other+vocals",99.22,4.53,4.666,5.607,2.403,5.443
+"convtasnet","Conv-TasNet","Hollow Ground - Ill Fate","PASS","PASS",141.67,53.4,22.878,30.52,0.1615,4,"bass+drums+other+vocals",44.58,4.292,6.316,4.782,1.838,4.232
+"convtasnet","Conv-TasNet","James Elder & Mark M Thompson - The English Actor","PASS","PASS",205.47,79.2,32.943,46.26,0.1603,4,"bass+drums+other+vocals",56.08,5.953,5.087,8.891,4.235,5.6
+"convtasnet","Conv-TasNet","Juliet's Rescue - Heartbeats","PASS","PASS",267.65,92.1,42.768,49.33,0.1598,4,"bass+drums+other+vocals",82.03,6.724,6.547,12.929,2.225,5.196
+"convtasnet","Conv-TasNet","Little Chicago's Finest - My Own","PASS","PASS",281.61,102.7,45.797,56.9,0.1626,4,"bass+drums+other+vocals",86.52,4.748,8.107,3.033,5.622,2.23
+"convtasnet","Conv-TasNet","Louis Cressy Band - Good Time","PASS","PASS",292.82,105.5,51.683,53.82,0.1765,4,"bass+drums+other+vocals",87.06,7.684,7.333,8.933,8.055,6.413
+"convtasnet","Conv-TasNet","Lyndsey Ollard - Catching Up","PASS","PASS",227.43,86.2,37.551,48.65,0.1651,4,"bass+drums+other+vocals",49.99,6.531,11.92,5.638,3.221,5.346
+"convtasnet","Conv-TasNet","M.E.R.C. Music - Knockout","PASS","PASS",270.0,92.3,43.299,49.0,0.1604,4,"bass+drums+other+vocals",83.35,6.384,6.85,7.023,7.39,4.274
+"convtasnet","Conv-TasNet","Moosmusic - Big Dummy Shake","PASS","PASS",198.86,77.2,31.893,45.31,0.1604,4,"bass+drums+other+vocals",63.26,6.587,8.272,9.378,4.665,4.032
+"convtasnet","Conv-TasNet","Motor Tapes - Shore","PASS","PASS",246.72,87.8,39.313,48.49,0.1593,4,"bass+drums+other+vocals",62.56,5.593,3.045,3.94,7.1,8.288
+"convtasnet","Conv-TasNet","Mu - Too Bright","PASS","PASS",272.17,96.2,43.992,52.21,0.1616,4,"bass+drums+other+vocals",80.51,7.917,7.41,12.296,7.323,4.637
+"convtasnet","Conv-TasNet","Nerve 9 - Pray For The Rain","PASS","PASS",343.71,111.8,55.848,55.95,0.1625,4,"bass+drums+other+vocals",93.0,7.46,6.733,11.0,5.928,6.178
+"convtasnet","Conv-TasNet","PR - Happy Daze","PASS","PASS",162.7,61.0,27.606,33.39,0.1697,4,"bass+drums+other+vocals",35.0,0.234,-12.709,11.352,2.43,-0.139
+"convtasnet","Conv-TasNet","PR - Oh No","PASS","PASS",76.19,33.4,12.052,21.35,0.1582,4,"bass+drums+other+vocals",18.52,3.092,0.027,7.778,4.367,0.198
+"convtasnet","Conv-TasNet","Punkdisco - Oral Hygiene","PASS","PASS",221.6,82.6,35.984,46.62,0.1624,4,"bass+drums+other+vocals",57.94,4.293,5.185,5.344,4.703,1.94
+"convtasnet","Conv-TasNet","Raft Monk - Tiring","PASS","PASS",212.25,82.9,35.905,47.0,0.1692,4,"bass+drums+other+vocals",67.77,4.476,2.877,5.742,6.339,2.947
+"convtasnet","Conv-TasNet","Sambasevam Shanmugam - Kaathaadi","PASS","PASS",317.88,104.9,50.88,54.02,0.1601,4,"bass+drums+other+vocals",76.7,6.838,10.293,2.642,8.284,6.135
+"convtasnet","Conv-TasNet","Secretariat - Borderline","PASS","PASS",286.85,106.3,50.173,56.13,0.1749,4,"bass+drums+other+vocals",82.22,5.136,6.091,4.723,3.017,6.711
+"convtasnet","Conv-TasNet","Secretariat - Over The Top","PASS","PASS",251.1,88.9,40.096,48.8,0.1597,4,"bass+drums+other+vocals",80.95,7.114,8.302,5.227,8.503,6.422
+"convtasnet","Conv-TasNet","Side Effects Project - Sing With Me","PASS","PASS",243.68,87.5,39.063,48.44,0.1603,4,"bass+drums+other+vocals",72.16,7.688,11.762,11.809,6.404,0.778
+"convtasnet","Conv-TasNet","Signe Jakobsen - What Have You Done To Me","PASS","PASS",177.4,67.8,32.097,35.7,0.1809,4,"bass+drums+other+vocals",53.11,3.517,8.17,2.46,-0.078,3.516
+"convtasnet","Conv-TasNet","Skelpolu - Resurrection","PASS","PASS",395.66,145.0,63.622,81.38,0.1608,4,"bass+drums+other+vocals",123.26,7.317,1.495,9.842,13.789,4.143
+"convtasnet","Conv-TasNet","Speak Softly - Broken Man","PASS","PASS",253.16,89.3,40.659,48.64,0.1606,4,"bass+drums+other+vocals",68.83,7.659,4.285,6.509,12.835,7.007
+"convtasnet","Conv-TasNet","Speak Softly - Like Horses","PASS","PASS",312.67,101.6,50.287,51.31,0.1608,4,"bass+drums+other+vocals",86.55,7.516,6.723,4.007,13.465,5.871
+"convtasnet","Conv-TasNet","The Doppler Shift - Atrophy","PASS","PASS",331.44,111.8,53.651,58.15,0.1619,4,"bass+drums+other+vocals",96.45,2.922,3.642,5.28,-2.299,5.065
+"convtasnet","Conv-TasNet","The Easton Ellises (Baumi) - SDRNR","PASS","PASS",234.68,92.7,41.019,51.68,0.1748,4,"bass+drums+other+vocals",78.92,3.028,3.126,4.247,4.137,0.604
+"convtasnet","Conv-TasNet","The Easton Ellises - Falcon 69","PASS","PASS",246.99,88.8,39.654,49.15,0.1606,4,"bass+drums+other+vocals",81.68,4.96,3.329,7.713,6.394,2.402
+"convtasnet","Conv-TasNet","The Long Wait - Dark Horses","PASS","PASS",305.72,102.0,49.121,52.88,0.1607,4,"bass+drums+other+vocals",80.47,5.853,7.053,5.618,6.17,4.569
+"convtasnet","Conv-TasNet","The Mountaineering Club - Mallory","PASS","PASS",244.46,87.0,38.894,48.11,0.1591,4,"bass+drums+other+vocals",60.62,7.975,11.231,7.186,8.797,4.685
+"convtasnet","Conv-TasNet","The Sunshine Garcia Band - For I Am The Moon","PASS","PASS",320.3,104.9,50.913,53.99,0.159,4,"bass+drums+other+vocals",96.48,3.789,9.797,2.267,2.937,0.156
+"convtasnet","Conv-TasNet","Timboz - Pony","PASS","PASS",253.05,90.4,40.392,50.01,0.1596,4,"bass+drums+other+vocals",80.38,4.32,3.819,4.105,2.494,6.862
+"convtasnet","Conv-TasNet","Tom McKenzie - Directions","PASS","PASS",175.85,66.6,32.383,34.22,0.1842,4,"bass+drums+other+vocals",44.83,4.76,9.142,6.75,2.217,0.929
+"convtasnet","Conv-TasNet","Triviul feat. The Fiend - Widow","PASS","PASS",235.11,91.6,40.817,50.78,0.1736,4,"bass+drums+other+vocals",71.08,6.406,7.638,4.907,11.254,1.824
+"convtasnet","Conv-TasNet","We Fell From The Sky - Not You","PASS","PASS",207.9,77.5,33.067,44.43,0.1591,4,"bass+drums+other+vocals",63.74,6.046,4.47,10.61,2.383,6.723
+"convtasnet","Conv-TasNet","Zeno - Signs","PASS","PASS",234.38,93.0,40.595,52.41,0.1732,4,"bass+drums+other+vocals",74.28,4.977,6.811,7.393,1.005,4.7
+"mmdenselstm","MMDenseLSTM","AM Contra - Heart Peripheral","PASS","PASS",210.11,36.4,11.547,24.85,0.055,4,"bass+drums+other+vocals",53.03,2.846,9.398,5.077,-3.459,0.369
+"mmdenselstm","MMDenseLSTM","Al James - Schoolboy Facination","PASS","PASS",200.53,35.1,11.251,23.85,0.0561,4,"bass+drums+other+vocals",52.15,4.471,7.236,4.481,5.674,0.494
+"mmdenselstm","MMDenseLSTM","Angels In Amplifiers - I'm Alright","PASS","PASS",179.59,47.5,11.184,36.32,0.0623,4,"bass+drums+other+vocals",46.57,6.574,9.768,6.31,5.055,5.162
+"mmdenselstm","MMDenseLSTM","Arise - Run Run Run","PASS","PASS",219.39,66.1,14.522,51.58,0.0662,4,"bass+drums+other+vocals",42.5,2.448,6.268,-0.179,3.289,0.414
+"mmdenselstm","MMDenseLSTM","BKS - Bulldozer","PASS","PASS",337.04,79.2,21.203,58.0,0.0629,4,"bass+drums+other+vocals",77.76,6.255,2.753,10.44,7.258,4.568
+"mmdenselstm","MMDenseLSTM","BKS - Too Much","PASS","PASS",220.12,66.0,15.78,50.22,0.0717,4,"bass+drums+other+vocals",50.62,8.076,10.834,7.165,9.781,4.523
+"mmdenselstm","MMDenseLSTM","Ben Carrigan - We'll Talk About It All Tonight","PASS","PASS",254.91,64.8,15.658,49.14,0.0614,4,"bass+drums+other+vocals",47.36,5.654,3.703,6.814,7.13,4.971
+"mmdenselstm","MMDenseLSTM","Bobby Nobody - Stitch Up","PASS","PASS",221.25,63.4,15.958,47.44,0.0721,4,"bass+drums+other+vocals",48.71,4.778,8.124,5.368,2.615,3.005
+"mmdenselstm","MMDenseLSTM","Buitraker - Revo X","PASS","PASS",275.83,69.2,17.165,52.04,0.0622,4,"bass+drums+other+vocals",64.27,6.514,5.311,10.555,6.874,3.318
+"mmdenselstm","MMDenseLSTM","Carlos Gonzalez - A Place For Us","PASS","PASS",250.22,66.1,15.843,50.26,0.0633,4,"bass+drums+other+vocals",48.38,4.391,6.673,5.353,0.078,5.46
+"mmdenselstm","MMDenseLSTM","Cristina Vane - So Easy","PASS","PASS",254.13,65.3,15.856,49.44,0.0624,4,"bass+drums+other+vocals",54.21,6.841,9.081,10.445,4.314,3.524
+"mmdenselstm","MMDenseLSTM","Detsky Sad - Walkie Talkie","PASS","PASS",190.48,57.3,12.257,45.04,0.0643,4,"bass+drums+other+vocals",45.96,3.775,7.579,6.328,0.198,0.995
+"mmdenselstm","MMDenseLSTM","Enda Reilly - Cur An Long Ag Seol","PASS","PASS",187.0,47.0,11.899,35.1,0.0636,4,"bass+drums+other+vocals",40.42,4.131,9.487,0.507,-0.167,6.696
+"mmdenselstm","MMDenseLSTM","Forkupines - Semantics","PASS","PASS",273.58,67.1,16.779,50.32,0.0613,4,"bass+drums+other+vocals",60.32,6.151,5.581,10.081,4.436,4.504
+"mmdenselstm","MMDenseLSTM","Georgia Wonder - Siren","PASS","PASS",430.38,113.2,26.196,87.0,0.0609,4,"bass+drums+other+vocals",115.73,5.961,4.704,6.687,7.597,4.855
+"mmdenselstm","MMDenseLSTM","Girls Under Glass - We Feel Alright","PASS","PASS",317.28,73.7,19.402,54.3,0.0612,4,"bass+drums+other+vocals",74.04,4.513,5.196,5.929,2.327,4.599
+"mmdenselstm","MMDenseLSTM","Hollow Ground - Ill Fate","PASS","PASS",141.67,40.9,8.954,31.95,0.0632,4,"bass+drums+other+vocals",31.02,3.702,7.304,5.006,-0.101,2.597
+"mmdenselstm","MMDenseLSTM","James Elder & Mark M Thompson - The English Actor","PASS","PASS",205.47,59.6,12.564,47.04,0.0611,4,"bass+drums+other+vocals",40.11,6.437,5.953,9.272,4.701,5.82
+"mmdenselstm","MMDenseLSTM","Juliet's Rescue - Heartbeats","PASS","PASS",267.65,67.5,16.245,51.25,0.0607,4,"bass+drums+other+vocals",61.47,6.292,7.538,10.788,2.376,4.467
+"mmdenselstm","MMDenseLSTM","Little Chicago's Finest - My Own","PASS","PASS",281.61,76.1,19.299,56.8,0.0685,4,"bass+drums+other+vocals",75.55,2.405,9.846,3.478,1.958,-5.664
+"mmdenselstm","MMDenseLSTM","Louis Cressy Band - Good Time","PASS","PASS",292.82,74.1,20.017,54.08,0.0684,4,"bass+drums+other+vocals",64.0,8.016,9.26,9.183,7.319,6.303
+"mmdenselstm","MMDenseLSTM","Lyndsey Ollard - Catching Up","PASS","PASS",227.43,65.9,16.701,49.2,0.0734,4,"bass+drums+other+vocals",38.1,7.54,13.446,4.967,5.585,6.163
+"mmdenselstm","MMDenseLSTM","M.E.R.C. Music - Knockout","PASS","PASS",270.0,67.7,16.576,51.12,0.0614,4,"bass+drums+other+vocals",64.99,7.056,8.378,7.01,7.478,5.358
+"mmdenselstm","MMDenseLSTM","Moosmusic - Big Dummy Shake","PASS","PASS",198.86,59.4,12.529,46.87,0.063,4,"bass+drums+other+vocals",49.12,6.278,9.12,7.563,3.735,4.693
+"mmdenselstm","MMDenseLSTM","Motor Tapes - Shore","PASS","PASS",246.72,65.8,15.485,50.31,0.0628,4,"bass+drums+other+vocals",44.36,8.068,5.236,7.421,10.055,9.56
+"mmdenselstm","MMDenseLSTM","Mu - Too Bright","PASS","PASS",272.17,68.0,16.235,51.77,0.0597,4,"bass+drums+other+vocals",57.98,7.48,8.599,12.485,6.065,2.77
+"mmdenselstm","MMDenseLSTM","Nerve 9 - Pray For The Rain","PASS","PASS",343.71,84.6,23.537,61.06,0.0685,4,"bass+drums+other+vocals",66.54,7.389,7.96,10.158,5.178,6.259
+"mmdenselstm","MMDenseLSTM","PR - Happy Daze","PASS","PASS",162.7,46.6,12.062,34.54,0.0741,4,"bass+drums+other+vocals",31.96,-3.114,-20.733,7.65,0.066,0.561
+"mmdenselstm","MMDenseLSTM","PR - Oh No","PASS","PASS",76.19,33.1,9.403,23.7,0.1234,4,"bass+drums+other+vocals",13.4,2.213,-0.088,7.09,1.575,0.274
+"mmdenselstm","MMDenseLSTM","Punkdisco - Oral Hygiene","PASS","PASS",221.6,66.6,15.705,50.89,0.0709,4,"bass+drums+other+vocals",46.38,4.199,5.133,6.452,5.328,-0.118
+"mmdenselstm","MMDenseLSTM","Raft Monk - Tiring","PASS","PASS",212.25,60.5,12.853,47.65,0.0606,4,"bass+drums+other+vocals",49.43,4.53,5.014,5.055,5.073,2.978
+"mmdenselstm","MMDenseLSTM","Sambasevam Shanmugam - Kaathaadi","PASS","PASS",317.88,73.5,19.519,53.98,0.0614,4,"bass+drums+other+vocals",56.09,7.997,12.359,3.515,9.265,6.849
+"mmdenselstm","MMDenseLSTM","Secretariat - Borderline","PASS","PASS",286.85,73.6,20.252,53.35,0.0706,4,"bass+drums+other+vocals",63.42,5.398,6.208,4.606,3.853,6.924
+"mmdenselstm","MMDenseLSTM","Secretariat - Over The Top","PASS","PASS",251.1,65.4,15.706,49.69,0.0626,4,"bass+drums+other+vocals",64.11,7.622,8.146,5.723,9.835,6.783
+"mmdenselstm","MMDenseLSTM","Side Effects Project - Sing With Me","PASS","PASS",243.68,66.0,15.511,50.49,0.0637,4,"bass+drums+other+vocals",56.53,7.516,11.091,11.642,6.698,0.632
+"mmdenselstm","MMDenseLSTM","Signe Jakobsen - What Have You Done To Me","PASS","PASS",177.4,51.1,14.888,36.21,0.0839,4,"bass+drums+other+vocals",38.75,4.072,9.812,2.595,0.056,3.827
+"mmdenselstm","MMDenseLSTM","Skelpolu - Resurrection","PASS","PASS",395.66,106.5,23.997,82.5,0.0606,4,"bass+drums+other+vocals",106.38,5.639,0.075,6.723,11.009,4.748
+"mmdenselstm","MMDenseLSTM","Speak Softly - Broken Man","PASS","PASS",253.16,65.5,15.666,49.83,0.0619,4,"bass+drums+other+vocals",53.75,5.903,4.398,4.769,10.183,4.263
+"mmdenselstm","MMDenseLSTM","Speak Softly - Like Horses","PASS","PASS",312.67,75.4,19.203,56.2,0.0614,4,"bass+drums+other+vocals",64.66,7.72,7.106,3.583,13.861,6.331
+"mmdenselstm","MMDenseLSTM","The Doppler Shift - Atrophy","PASS","PASS",331.44,77.0,19.886,57.11,0.06,4,"bass+drums+other+vocals",67.59,4.715,6.129,6.725,-0.412,6.419
+"mmdenselstm","MMDenseLSTM","The Easton Ellises (Baumi) - SDRNR","PASS","PASS",234.68,69.8,17.65,52.15,0.0752,4,"bass+drums+other+vocals",57.82,4.42,3.529,8.056,4.348,1.746
+"mmdenselstm","MMDenseLSTM","The Easton Ellises - Falcon 69","PASS","PASS",246.99,64.0,15.374,48.63,0.0622,4,"bass+drums+other+vocals",58.46,5.508,4.682,7.999,6.33,3.019
+"mmdenselstm","MMDenseLSTM","The Long Wait - Dark Horses","PASS","PASS",305.72,74.3,19.109,55.19,0.0625,4,"bass+drums+other+vocals",61.26,5.068,7.963,4.591,4.458,3.259
+"mmdenselstm","MMDenseLSTM","The Mountaineering Club - Mallory","PASS","PASS",244.46,65.2,15.517,49.68,0.0635,4,"bass+drums+other+vocals",42.6,7.845,11.36,6.777,8.469,4.772
+"mmdenselstm","MMDenseLSTM","The Sunshine Garcia Band - For I Am The Moon","PASS","PASS",320.3,77.4,19.384,58.02,0.0605,4,"bass+drums+other+vocals",69.8,3.206,9.757,0.865,0.52,1.683
+"mmdenselstm","MMDenseLSTM","Timboz - Pony","PASS","PASS",253.05,67.4,15.632,51.77,0.0618,4,"bass+drums+other+vocals",60.82,3.861,4.433,2.531,1.561,6.919
+"mmdenselstm","MMDenseLSTM","Tom McKenzie - Directions","PASS","PASS",175.85,50.4,15.753,34.65,0.0896,4,"bass+drums+other+vocals",35.28,6.837,9.859,12.548,4.17,0.772
+"mmdenselstm","MMDenseLSTM","Triviul feat. The Fiend - Widow","PASS","PASS",235.11,68.9,17.788,51.11,0.0757,4,"bass+drums+other+vocals",56.04,6.363,8.19,4.415,10.252,2.594
+"mmdenselstm","MMDenseLSTM","We Fell From The Sky - Not You","PASS","PASS",207.9,58.8,12.401,46.4,0.0596,4,"bass+drums+other+vocals",44.95,5.529,5.094,9.955,1.026,6.04
+"mmdenselstm","MMDenseLSTM","Zeno - Signs","PASS","PASS",234.38,69.8,17.979,51.82,0.0767,4,"bass+drums+other+vocals",59.09,5.517,7.565,7.554,1.663,5.285
+"bsroformer_l12","BS-RoFormer-L12","AM Contra - Heart Peripheral","PASS","PASS",210.11,67.9,56.148,11.75,0.2672,1,"vocals",11.34,14.423,14.423,,,
+"bsroformer_l12","BS-RoFormer-L12","Al James - Schoolboy Facination","PASS","PASS",200.53,66.1,53.544,12.56,0.267,1,"vocals",15.81,12.443,12.443,,,
+"bsroformer_l12","BS-RoFormer-L12","Angels In Amplifiers - I'm Alright","PASS","PASS",179.59,63.2,46.854,16.35,0.2609,1,"vocals",11.06,14.071,14.071,,,
+"bsroformer_l12","BS-RoFormer-L12","Arise - Run Run Run","PASS","PASS",219.39,76.6,57.748,18.85,0.2632,1,"vocals",9.26,17.827,17.827,,,
+"bsroformer_l12","BS-RoFormer-L12","BKS - Bulldozer","PASS","PASS",337.04,109.5,88.648,20.85,0.263,1,"vocals",17.06,6.778,6.778,,,
+"bsroformer_l12","BS-RoFormer-L12","BKS - Too Much","PASS","PASS",220.12,76.9,58.59,18.31,0.2662,1,"vocals",9.49,16.072,16.072,,,
+"bsroformer_l12","BS-RoFormer-L12","Ben Carrigan - We'll Talk About It All Tonight","PASS","PASS",254.91,86.3,67.609,18.69,0.2652,1,"vocals",8.96,10.423,10.423,,,
+"bsroformer_l12","BS-RoFormer-L12","Bobby Nobody - Stitch Up","PASS","PASS",221.25,77.5,58.684,18.82,0.2652,1,"vocals",14.04,14.099,14.099,,,
+"bsroformer_l12","BS-RoFormer-L12","Buitraker - Revo X","PASS","PASS",275.83,92.1,72.23,19.87,0.2619,1,"vocals",17.05,10.734,10.734,,,
+"bsroformer_l12","BS-RoFormer-L12","Carlos Gonzalez - A Place For Us","PASS","PASS",250.22,85.3,66.717,18.58,0.2666,1,"vocals",14.88,10.896,10.896,,,
+"bsroformer_l12","BS-RoFormer-L12","Cristina Vane - So Easy","PASS","PASS",254.13,87.4,67.611,19.79,0.266,1,"vocals",15.72,16.192,16.192,,,
+"bsroformer_l12","BS-RoFormer-L12","Detsky Sad - Walkie Talkie","PASS","PASS",190.48,67.5,51.375,16.12,0.2697,1,"vocals",5.14,16.129,16.129,,,
+"bsroformer_l12","BS-RoFormer-L12","Enda Reilly - Cur An Long Ag Seol","PASS","PASS",187.0,63.8,48.732,15.07,0.2606,1,"vocals",8.41,18.686,18.686,,,
+"bsroformer_l12","BS-RoFormer-L12","Forkupines - Semantics","PASS","PASS",273.58,91.8,72.193,19.61,0.2639,1,"vocals",9.57,9.127,9.127,,,
+"bsroformer_l12","BS-RoFormer-L12","Georgia Wonder - Siren","PASS","PASS",430.38,140.8,113.09,27.71,0.2628,1,"vocals",23.54,9.582,9.582,,,
+"bsroformer_l12","BS-RoFormer-L12","Girls Under Glass - We Feel Alright","PASS","PASS",317.28,102.7,83.852,18.85,0.2643,1,"vocals",10.13,7.812,7.812,,,
+"bsroformer_l12","BS-RoFormer-L12","Hollow Ground - Ill Fate","PASS","PASS",141.67,52.4,38.66,13.74,0.2729,1,"vocals",6.16,8.519,8.519,,,
+"bsroformer_l12","BS-RoFormer-L12","James Elder & Mark M Thompson - The English Actor","PASS","PASS",205.47,73.1,54.94,18.16,0.2674,1,"vocals",11.23,11.045,11.045,,,
+"bsroformer_l12","BS-RoFormer-L12","Juliet's Rescue - Heartbeats","PASS","PASS",267.65,90.3,70.472,19.83,0.2633,1,"vocals",14.7,12.168,12.168,,,
+"bsroformer_l12","BS-RoFormer-L12","Little Chicago's Finest - My Own","PASS","PASS",281.61,94.4,74.127,20.27,0.2632,1,"vocals",20.16,19.66,19.66,,,
+"bsroformer_l12","BS-RoFormer-L12","Louis Cressy Band - Good Time","PASS","PASS",292.82,95.8,76.748,19.05,0.2621,1,"vocals",10.86,14.471,14.471,,,
+"bsroformer_l12","BS-RoFormer-L12","Lyndsey Ollard - Catching Up","PASS","PASS",227.43,78.3,59.382,18.92,0.2611,1,"vocals",12.64,19.029,19.029,,,
+"bsroformer_l12","BS-RoFormer-L12","M.E.R.C. Music - Knockout","PASS","PASS",270.0,91.3,71.278,20.02,0.264,1,"vocals",20.92,13.838,13.838,,,
+"bsroformer_l12","BS-RoFormer-L12","Moosmusic - Big Dummy Shake","PASS","PASS",198.86,71.6,53.262,18.34,0.2678,1,"vocals",10.85,15.47,15.47,,,
+"bsroformer_l12","BS-RoFormer-L12","Motor Tapes - Shore","PASS","PASS",246.72,82.9,64.108,18.79,0.2598,1,"vocals",8.69,11.093,11.093,,,
+"bsroformer_l12","BS-RoFormer-L12","Mu - Too Bright","PASS","PASS",272.17,92.0,72.215,19.78,0.2653,1,"vocals",16.16,16.07,16.07,,,
+"bsroformer_l12","BS-RoFormer-L12","Nerve 9 - Pray For The Rain","PASS","PASS",343.71,110.0,89.425,20.58,0.2602,1,"vocals",16.97,13.705,13.705,,,
+"bsroformer_l12","BS-RoFormer-L12","PR - Happy Daze","PASS","PASS",162.7,57.3,43.211,14.09,0.2656,1,"vocals",2.71,0.089,0.089,,,
+"bsroformer_l12","BS-RoFormer-L12","PR - Oh No","PASS","PASS",76.19,31.9,20.474,11.43,0.2687,1,"vocals",1.24,1.823,1.823,,,
+"bsroformer_l12","BS-RoFormer-L12","Punkdisco - Oral Hygiene","PASS","PASS",221.6,76.9,58.497,18.4,0.264,1,"vocals",6.61,14.079,14.079,,,
+"bsroformer_l12","BS-RoFormer-L12","Raft Monk - Tiring","PASS","PASS",212.25,75.5,56.742,18.76,0.2673,1,"vocals",13.38,9.335,9.335,,,
+"bsroformer_l12","BS-RoFormer-L12","Sambasevam Shanmugam - Kaathaadi","PASS","PASS",317.88,103.6,84.033,19.57,0.2644,1,"vocals",12.94,20.868,20.868,,,
+"bsroformer_l12","BS-RoFormer-L12","Secretariat - Borderline","PASS","PASS",286.85,94.5,74.937,19.56,0.2612,1,"vocals",12.67,12.18,12.18,,,
+"bsroformer_l12","BS-RoFormer-L12","Secretariat - Over The Top","PASS","PASS",251.1,85.6,66.7,18.9,0.2656,1,"vocals",10.59,13.648,13.648,,,
+"bsroformer_l12","BS-RoFormer-L12","Side Effects Project - Sing With Me","PASS","PASS",243.68,82.2,63.145,19.05,0.2591,1,"vocals",18.82,16.481,16.481,,,
+"bsroformer_l12","BS-RoFormer-L12","Signe Jakobsen - What Have You Done To Me","PASS","PASS",177.4,61.6,46.761,14.84,0.2636,1,"vocals",13.05,15.189,15.189,,,
+"bsroformer_l12","BS-RoFormer-L12","Skelpolu - Resurrection","PASS","PASS",395.66,128.0,103.042,24.96,0.2604,1,"vocals",4.16,0.641,0.641,,,
+"bsroformer_l12","BS-RoFormer-L12","Speak Softly - Broken Man","PASS","PASS",253.16,87.6,67.66,19.94,0.2673,1,"vocals",11.88,14.163,14.163,,,
+"bsroformer_l12","BS-RoFormer-L12","Speak Softly - Like Horses","PASS","PASS",312.67,103.8,83.05,20.75,0.2656,1,"vocals",16.94,12.725,12.725,,,
+"bsroformer_l12","BS-RoFormer-L12","The Doppler Shift - Atrophy","PASS","PASS",331.44,108.0,86.77,21.23,0.2618,1,"vocals",24.16,8.707,8.707,,,
+"bsroformer_l12","BS-RoFormer-L12","The Easton Ellises (Baumi) - SDRNR","PASS","PASS",234.68,80.9,61.267,19.63,0.2611,1,"vocals",13.87,7.545,7.545,,,
+"bsroformer_l12","BS-RoFormer-L12","The Easton Ellises - Falcon 69","PASS","PASS",246.99,83.5,64.121,19.38,0.2596,1,"vocals",14.62,9.639,9.639,,,
+"bsroformer_l12","BS-RoFormer-L12","The Long Wait - Dark Horses","PASS","PASS",305.72,99.5,79.418,20.08,0.2598,1,"vocals",15.92,13.458,13.458,,,
+"bsroformer_l12","BS-RoFormer-L12","The Mountaineering Club - Mallory","PASS","PASS",244.46,82.5,63.967,18.53,0.2617,1,"vocals",9.29,17.49,17.49,,,
+"bsroformer_l12","BS-RoFormer-L12","The Sunshine Garcia Band - For I Am The Moon","PASS","PASS",320.3,106.7,84.863,21.84,0.265,1,"vocals",22.29,16.51,16.51,,,
+"bsroformer_l12","BS-RoFormer-L12","Timboz - Pony","PASS","PASS",253.05,87.6,67.62,19.98,0.2672,1,"vocals",11.91,6.33,6.33,,,
+"bsroformer_l12","BS-RoFormer-L12","Tom McKenzie - Directions","PASS","PASS",175.85,61.3,45.982,15.32,0.2615,1,"vocals",7.8,15.736,15.736,,,
+"bsroformer_l12","BS-RoFormer-L12","Triviul feat. The Fiend - Widow","PASS","PASS",235.11,80.5,61.3,19.2,0.2607,1,"vocals",15.75,14.652,14.652,,,
+"bsroformer_l12","BS-RoFormer-L12","We Fell From The Sky - Not You","PASS","PASS",207.9,72.0,54.924,17.08,0.2642,1,"vocals",9.72,9.117,9.117,,,
+"bsroformer_l12","BS-RoFormer-L12","Zeno - Signs","PASS","PASS",234.38,79.8,61.211,18.59,0.2612,1,"vocals",14.36,12.791,12.791,,,
+"bsroformer_l6","BS-RoFormer-L6","AM Contra - Heart Peripheral","PASS","PASS",210.11,49.0,37.416,11.58,0.1781,1,"vocals+other",17.41,4.327,,,,
+"bsroformer_l6","BS-RoFormer-L6","Al James - Schoolboy Facination","PASS","PASS",200.53,46.3,35.139,11.16,0.1752,1,"vocals+other",19.98,10.328,,,,
+"bsroformer_l6","BS-RoFormer-L6","Angels In Amplifiers - I'm Alright","PASS","PASS",179.59,47.4,31.664,15.74,0.1763,1,"vocals+other",18.64,10.637,,,,
+"bsroformer_l6","BS-RoFormer-L6","Arise - Run Run Run","PASS","PASS",219.39,57.7,39.093,18.61,0.1782,1,"vocals+other",14.94,1.826,,,,
+"bsroformer_l6","BS-RoFormer-L6","BKS - Bulldozer","PASS","PASS",337.04,80.1,59.466,20.63,0.1764,1,"vocals+other",26.05,6.553,,,,
+"bsroformer_l6","BS-RoFormer-L6","BKS - Too Much","PASS","PASS",220.12,57.4,38.996,18.4,0.1772,1,"vocals+other",16.47,11.759,,,,
+"bsroformer_l6","BS-RoFormer-L6","Ben Carrigan - We'll Talk About It All Tonight","PASS","PASS",254.91,64.5,45.416,19.08,0.1782,1,"vocals+other",18.94,10.53,,,,
+"bsroformer_l6","BS-RoFormer-L6","Bobby Nobody - Stitch Up","PASS","PASS",221.25,58.4,39.316,19.08,0.1777,1,"vocals+other",18.5,8.978,,,,
+"bsroformer_l6","BS-RoFormer-L6","Buitraker - Revo X","PASS","PASS",275.83,69.0,48.957,20.04,0.1775,1,"vocals+other",26.19,8.649,,,,
+"bsroformer_l6","BS-RoFormer-L6","Carlos Gonzalez - A Place For Us","PASS","PASS",250.22,63.2,44.66,18.54,0.1785,1,"vocals+other",20.76,12.845,,,,
+"bsroformer_l6","BS-RoFormer-L6","Cristina Vane - So Easy","PASS","PASS",254.13,64.8,45.349,19.45,0.1784,1,"vocals+other",21.38,8.791,,,,
+"bsroformer_l6","BS-RoFormer-L6","Detsky Sad - Walkie Talkie","PASS","PASS",190.48,51.9,34.332,17.57,0.1802,1,"vocals+other",15.78,4.329,,,,
+"bsroformer_l6","BS-RoFormer-L6","Enda Reilly - Cur An Long Ag Seol","PASS","PASS",187.0,49.1,33.757,15.34,0.1805,1,"vocals+other",16.78,14.776,,,,
+"bsroformer_l6","BS-RoFormer-L6","Forkupines - Semantics","PASS","PASS",273.58,68.3,48.504,19.8,0.1773,1,"vocals+other",21.1,6.566,,,,
+"bsroformer_l6","BS-RoFormer-L6","Georgia Wonder - Siren","PASS","PASS",430.38,104.4,75.983,28.42,0.1766,1,"vocals+other",38.24,11.735,,,,
+"bsroformer_l6","BS-RoFormer-L6","Girls Under Glass - We Feel Alright","PASS","PASS",317.28,79.8,56.412,23.39,0.1778,1,"vocals+other",33.15,4.257,,,,
+"bsroformer_l6","BS-RoFormer-L6","Hollow Ground - Ill Fate","PASS","PASS",141.67,39.2,25.673,13.53,0.1812,1,"vocals+other",11.83,3.684,,,,
+"bsroformer_l6","BS-RoFormer-L6","James Elder & Mark M Thompson - The English Actor","PASS","PASS",205.47,54.9,36.821,18.08,0.1792,1,"vocals+other",16.21,13.675,,,,
+"bsroformer_l6","BS-RoFormer-L6","Juliet's Rescue - Heartbeats","PASS","PASS",267.65,67.1,47.474,19.63,0.1774,1,"vocals+other",20.65,8.038,,,,
+"bsroformer_l6","BS-RoFormer-L6","Little Chicago's Finest - My Own","PASS","PASS",281.61,68.8,49.682,19.12,0.1764,1,"vocals+other",26.6,13.606,,,,
+"bsroformer_l6","BS-RoFormer-L6","Louis Cressy Band - Good Time","PASS","PASS",292.82,70.8,51.524,19.28,0.176,1,"vocals+other",21.89,12.184,,,,
+"bsroformer_l6","BS-RoFormer-L6","Lyndsey Ollard - Catching Up","PASS","PASS",227.43,59.6,40.31,19.29,0.1772,1,"vocals+other",16.95,16.1,,,,
+"bsroformer_l6","BS-RoFormer-L6","M.E.R.C. Music - Knockout","PASS","PASS",270.0,64.8,47.899,16.9,0.1774,1,"vocals+other",25.34,13.914,,,,
+"bsroformer_l6","BS-RoFormer-L6","Moosmusic - Big Dummy Shake","PASS","PASS",198.86,52.7,35.503,17.2,0.1785,1,"vocals+other",15.28,11.128,,,,
+"bsroformer_l6","BS-RoFormer-L6","Motor Tapes - Shore","PASS","PASS",246.72,62.9,44.087,18.81,0.1787,1,"vocals+other",17.89,17.879,,,,
+"bsroformer_l6","BS-RoFormer-L6","Mu - Too Bright","PASS","PASS",272.17,67.9,48.103,19.8,0.1767,1,"vocals+other",20.6,10.504,,,,
+"bsroformer_l6","BS-RoFormer-L6","Nerve 9 - Pray For The Rain","PASS","PASS",343.71,82.0,60.65,21.35,0.1765,1,"vocals+other",28.67,13.954,,,,
+"bsroformer_l6","BS-RoFormer-L6","PR - Happy Daze","PASS","PASS",162.7,43.5,29.07,14.43,0.1787,1,"vocals+other",7.22,0.364,,,,
+"bsroformer_l6","BS-RoFormer-L6","PR - Oh No","PASS","PASS",76.19,24.0,13.696,10.3,0.1797,1,"vocals+other",3.83,-0.149,,,,
+"bsroformer_l6","BS-RoFormer-L6","Punkdisco - Oral Hygiene","PASS","PASS",221.6,57.8,39.286,18.51,0.1773,1,"vocals+other",15.79,7.923,,,,
+"bsroformer_l6","BS-RoFormer-L6","Raft Monk - Tiring","PASS","PASS",212.25,55.9,37.831,18.07,0.1782,1,"vocals+other",19.35,8.192,,,,
+"bsroformer_l6","BS-RoFormer-L6","Sambasevam Shanmugam - Kaathaadi","PASS","PASS",317.88,76.9,56.337,20.56,0.1772,1,"vocals+other",24.35,18.936,,,,
+"bsroformer_l6","BS-RoFormer-L6","Secretariat - Borderline","PASS","PASS",286.85,70.6,50.717,19.88,0.1768,1,"vocals+other",25.75,11.303,,,,
+"bsroformer_l6","BS-RoFormer-L6","Secretariat - Over The Top","PASS","PASS",251.1,64.0,44.836,19.16,0.1786,1,"vocals+other",21.04,10.418,,,,
+"bsroformer_l6","BS-RoFormer-L6","Side Effects Project - Sing With Me","PASS","PASS",243.68,62.3,43.617,18.68,0.179,1,"vocals+other",19.68,13.06,,,,
+"bsroformer_l6","BS-RoFormer-L6","Signe Jakobsen - What Have You Done To Me","PASS","PASS",177.4,45.6,31.427,14.17,0.1772,1,"vocals+other",15.87,10.925,,,,
+"bsroformer_l6","BS-RoFormer-L6","Skelpolu - Resurrection","PASS","PASS",395.66,101.3,69.779,31.52,0.1764,1,"vocals+other",43.65,8.127,,,,
+"bsroformer_l6","BS-RoFormer-L6","Speak Softly - Broken Man","PASS","PASS",253.16,64.1,45.028,19.07,0.1779,1,"vocals+other",16.51,13.31,,,,
+"bsroformer_l6","BS-RoFormer-L6","Speak Softly - Like Horses","PASS","PASS",312.67,76.0,55.621,20.38,0.1779,1,"vocals+other",20.1,17.276,,,,
+"bsroformer_l6","BS-RoFormer-L6","The Doppler Shift - Atrophy","PASS","PASS",331.44,79.7,58.749,20.95,0.1773,1,"vocals+other",30.71,12.082,,,,
+"bsroformer_l6","BS-RoFormer-L6","The Easton Ellises (Baumi) - SDRNR","PASS","PASS",234.68,59.9,41.377,18.52,0.1763,1,"vocals+other",18.3,7.676,,,,
+"bsroformer_l6","BS-RoFormer-L6","The Easton Ellises - Falcon 69","PASS","PASS",246.99,62.8,44.168,18.63,0.1788,1,"vocals+other",15.76,9.964,,,,
+"bsroformer_l6","BS-RoFormer-L6","The Long Wait - Dark Horses","PASS","PASS",305.72,74.9,54.357,20.54,0.1778,1,"vocals+other",25.35,9.654,,,,
+"bsroformer_l6","BS-RoFormer-L6","The Mountaineering Club - Mallory","PASS","PASS",244.46,62.7,43.607,19.09,0.1784,1,"vocals+other",18.19,7.833,,,,
+"bsroformer_l6","BS-RoFormer-L6","The Sunshine Garcia Band - For I Am The Moon","PASS","PASS",320.3,77.3,56.797,20.5,0.1773,1,"vocals+other",26.33,13.907,,,,
+"bsroformer_l6","BS-RoFormer-L6","Timboz - Pony","PASS","PASS",253.05,63.4,44.933,18.47,0.1776,1,"vocals+other",19.41,6.264,,,,
+"bsroformer_l6","BS-RoFormer-L6","Tom McKenzie - Directions","PASS","PASS",175.85,45.7,31.202,14.5,0.1774,1,"vocals+other",11.78,3.892,,,,
+"bsroformer_l6","BS-RoFormer-L6","Triviul feat. The Fiend - Widow","PASS","PASS",235.11,59.6,41.537,18.06,0.1767,1,"vocals+other",21.37,12.411,,,,
+"bsroformer_l6","BS-RoFormer-L6","We Fell From The Sky - Not You","PASS","PASS",207.9,55.5,37.047,18.45,0.1782,1,"vocals+other",18.23,9.274,,,,
+"bsroformer_l6","BS-RoFormer-L6","Zeno - Signs","PASS","PASS",234.38,60.8,41.436,19.36,0.1768,1,"vocals+other",19.1,10.927,,,,
+"bsrnn","BSRNN-opt","AM Contra - Heart Peripheral","PASS","PASS",210.11,37.6,26.621,10.98,0.1267,1,"vocals",11.41,12.082,12.082,,,
+"bsrnn","BSRNN-opt","Al James - Schoolboy Facination","PASS","PASS",200.53,32.6,21.913,10.69,0.1093,1,"vocals",15.49,10.153,10.153,,,
+"bsrnn","BSRNN-opt","Angels In Amplifiers - I'm Alright","PASS","PASS",179.59,42.0,26.464,15.54,0.1474,1,"vocals",10.74,11.89,11.89,,,
+"bsrnn","BSRNN-opt","Arise - Run Run Run","PASS","PASS",219.39,50.4,32.728,17.67,0.1492,1,"vocals",9.25,12.419,12.419,,,
+"bsrnn","BSRNN-opt","BKS - Bulldozer","PASS","PASS",337.04,66.6,46.946,19.65,0.1393,1,"vocals",15.92,5.104,5.104,,,
+"bsrnn","BSRNN-opt","BKS - Too Much","PASS","PASS",220.12,50.4,32.693,17.71,0.1485,1,"vocals",8.84,14.186,14.186,,,
+"bsrnn","BSRNN-opt","Ben Carrigan - We'll Talk About It All Tonight","PASS","PASS",254.91,55.6,36.62,18.98,0.1437,1,"vocals",8.6,7.012,7.012,,,
+"bsrnn","BSRNN-opt","Bobby Nobody - Stitch Up","PASS","PASS",221.25,60.0,40.887,19.11,0.1848,1,"vocals",13.87,11.784,11.784,,,
+"bsrnn","BSRNN-opt","Buitraker - Revo X","PASS","PASS",275.83,59.3,39.058,20.24,0.1416,1,"vocals",15.76,8.632,8.632,,,
+"bsrnn","BSRNN-opt","Carlos Gonzalez - A Place For Us","PASS","PASS",250.22,57.9,38.938,18.96,0.1556,1,"vocals",13.8,8.727,8.727,,,
+"bsrnn","BSRNN-opt","Cristina Vane - So Easy","PASS","PASS",254.13,54.7,35.776,18.92,0.1408,1,"vocals",15.68,12.904,12.904,,,
+"bsrnn","BSRNN-opt","Detsky Sad - Walkie Talkie","PASS","PASS",190.48,44.4,28.233,16.17,0.1482,1,"vocals",4.09,13.176,13.176,,,
+"bsrnn","BSRNN-opt","Enda Reilly - Cur An Long Ag Seol","PASS","PASS",187.0,43.3,28.668,14.63,0.1533,1,"vocals",7.95,15.362,15.362,,,
+"bsrnn","BSRNN-opt","Forkupines - Semantics","PASS","PASS",273.58,55.3,37.453,17.85,0.1369,1,"vocals",8.73,8.138,8.138,,,
+"bsrnn","BSRNN-opt","Georgia Wonder - Siren","PASS","PASS",430.38,90.9,61.855,29.05,0.1437,1,"vocals",22.0,7.935,7.935,,,
+"bsrnn","BSRNN-opt","Girls Under Glass - We Feel Alright","PASS","PASS",317.28,72.1,47.898,24.2,0.151,1,"vocals",7.65,6.583,6.583,,,
+"bsrnn","BSRNN-opt","Hollow Ground - Ill Fate","PASS","PASS",141.67,37.4,24.342,13.06,0.1718,1,"vocals",6.07,7.993,7.993,,,
+"bsrnn","BSRNN-opt","James Elder & Mark M Thompson - The English Actor","PASS","PASS",205.47,47.2,29.386,17.81,0.143,1,"vocals",10.22,7.404,7.404,,,
+"bsrnn","BSRNN-opt","Juliet's Rescue - Heartbeats","PASS","PASS",267.65,58.6,40.013,18.59,0.1495,1,"vocals",14.32,10.155,10.155,,,
+"bsrnn","BSRNN-opt","Little Chicago's Finest - My Own","PASS","PASS",281.61,61.6,41.829,19.77,0.1485,1,"vocals",19.7,15.265,15.265,,,
+"bsrnn","BSRNN-opt","Louis Cressy Band - Good Time","PASS","PASS",292.82,63.4,45.149,18.25,0.1542,1,"vocals",9.8,12.429,12.429,,,
+"bsrnn","BSRNN-opt","Lyndsey Ollard - Catching Up","PASS","PASS",227.43,51.2,32.492,18.71,0.1429,1,"vocals",11.88,15.369,15.369,,,
+"bsrnn","BSRNN-opt","M.E.R.C. Music - Knockout","PASS","PASS",270.0,60.1,40.406,19.69,0.1497,1,"vocals",20.06,11.239,11.239,,,
+"bsrnn","BSRNN-opt","Moosmusic - Big Dummy Shake","PASS","PASS",198.86,49.5,31.581,17.92,0.1588,1,"vocals",10.22,13.222,13.222,,,
+"bsrnn","BSRNN-opt","Motor Tapes - Shore","PASS","PASS",246.72,54.7,36.413,18.29,0.1476,1,"vocals",9.36,9.159,9.159,,,
+"bsrnn","BSRNN-opt","Mu - Too Bright","PASS","PASS",272.17,61.7,41.593,20.11,0.1528,1,"vocals",15.51,12.727,12.727,,,
+"bsrnn","BSRNN-opt","Nerve 9 - Pray For The Rain","PASS","PASS",343.71,72.5,52.533,19.97,0.1528,1,"vocals",15.76,9.86,9.86,,,
+"bsrnn","BSRNN-opt","PR - Happy Daze","PASS","PASS",162.7,40.7,26.816,13.88,0.1648,1,"vocals",1.34,0.001,0.001,,,
+"bsrnn","BSRNN-opt","PR - Oh No","PASS","PASS",76.19,22.5,12.258,10.24,0.1609,1,"vocals",1.11,0.813,0.813,,,
+"bsrnn","BSRNN-opt","Punkdisco - Oral Hygiene","PASS","PASS",221.6,52.5,35.779,16.72,0.1615,1,"vocals",6.61,11.963,11.963,,,
+"bsrnn","BSRNN-opt","Raft Monk - Tiring","PASS","PASS",212.25,48.7,30.501,18.2,0.1437,1,"vocals",12.58,6.494,6.494,,,
+"bsrnn","BSRNN-opt","Sambasevam Shanmugam - Kaathaadi","PASS","PASS",317.88,66.6,46.705,19.89,0.1469,1,"vocals",11.96,17.504,17.504,,,
+"bsrnn","BSRNN-opt","Secretariat - Borderline","PASS","PASS",286.85,57.6,39.486,18.11,0.1377,1,"vocals",12.32,9.333,9.333,,,
+"bsrnn","BSRNN-opt","Secretariat - Over The Top","PASS","PASS",251.1,52.7,34.757,17.94,0.1384,1,"vocals",10.08,11.824,11.824,,,
+"bsrnn","BSRNN-opt","Side Effects Project - Sing With Me","PASS","PASS",243.68,54.9,36.231,18.67,0.1487,1,"vocals",18.75,15.405,15.405,,,
+"bsrnn","BSRNN-opt","Signe Jakobsen - What Have You Done To Me","PASS","PASS",177.4,40.0,25.658,14.34,0.1446,1,"vocals",13.21,13.196,13.196,,,
+"bsrnn","BSRNN-opt","Skelpolu - Resurrection","PASS","PASS",395.66,81.9,55.399,26.5,0.14,1,"vocals",1.61,0.0,0.0,,,
+"bsrnn","BSRNN-opt","Speak Softly - Broken Man","PASS","PASS",253.16,53.9,35.43,18.47,0.14,1,"vocals",11.26,9.713,9.713,,,
+"bsrnn","BSRNN-opt","Speak Softly - Like Horses","PASS","PASS",312.67,64.0,44.37,19.63,0.1419,1,"vocals",16.28,10.411,10.411,,,
+"bsrnn","BSRNN-opt","The Doppler Shift - Atrophy","PASS","PASS",331.44,67.2,46.589,20.61,0.1406,1,"vocals",21.38,8.307,8.307,,,
+"bsrnn","BSRNN-opt","The Easton Ellises (Baumi) - SDRNR","PASS","PASS",234.68,56.3,37.637,18.66,0.1604,1,"vocals",10.93,3.989,3.989,,,
+"bsrnn","BSRNN-opt","The Easton Ellises - Falcon 69","PASS","PASS",246.99,55.8,36.71,19.09,0.1486,1,"vocals",12.75,7.838,7.838,,,
+"bsrnn","BSRNN-opt","The Long Wait - Dark Horses","PASS","PASS",305.72,61.9,41.985,19.91,0.1373,1,"vocals",15.4,10.419,10.419,,,
+"bsrnn","BSRNN-opt","The Mountaineering Club - Mallory","PASS","PASS",244.46,53.7,36.114,17.59,0.1477,1,"vocals",8.4,15.455,15.455,,,
+"bsrnn","BSRNN-opt","The Sunshine Garcia Band - For I Am The Moon","PASS","PASS",320.3,68.6,46.265,22.33,0.1444,1,"vocals",22.12,11.739,11.739,,,
+"bsrnn","BSRNN-opt","Timboz - Pony","PASS","PASS",253.05,56.2,37.498,18.7,0.1482,1,"vocals",11.56,5.853,5.853,,,
+"bsrnn","BSRNN-opt","Tom McKenzie - Directions","PASS","PASS",175.85,39.0,25.012,13.99,0.1422,1,"vocals",7.44,13.123,13.123,,,
+"bsrnn","BSRNN-opt","Triviul feat. The Fiend - Widow","PASS","PASS",235.11,50.7,32.795,17.91,0.1395,1,"vocals",15.5,12.374,12.374,,,
+"bsrnn","BSRNN-opt","We Fell From The Sky - Not You","PASS","PASS",207.9,47.5,31.091,16.41,0.1496,1,"vocals",9.68,8.153,8.153,,,
+"bsrnn","BSRNN-opt","Zeno - Signs","PASS","PASS",234.38,51.3,32.942,18.36,0.1405,1,"vocals",13.3,10.73,10.73,,,
+"bsrnn_large","BSRNN-large","AM Contra - Heart Peripheral","PASS","PASS",210.11,31.4,20.507,10.89,0.0976,1,"vocals",11.78,11.425,11.425,,,
+"bsrnn_large","BSRNN-large","Al James - Schoolboy Facination","PASS","PASS",200.53,26.5,16.14,10.36,0.0805,1,"vocals",15.84,10.096,10.096,,,
+"bsrnn_large","BSRNN-large","Angels In Amplifiers - I'm Alright","PASS","PASS",179.59,37.3,22.263,15.04,0.124,1,"vocals",11.27,11.665,11.665,,,
+"bsrnn_large","BSRNN-large","Arise - Run Run Run","PASS","PASS",219.39,44.2,26.695,17.51,0.1217,1,"vocals",9.54,11.461,11.461,,,
+"bsrnn_large","BSRNN-large","BKS - Bulldozer","PASS","PASS",337.04,59.1,37.487,21.61,0.1112,1,"vocals",16.14,4.628,4.628,,,
+"bsrnn_large","BSRNN-large","BKS - Too Much","PASS","PASS",220.12,45.1,27.888,17.21,0.1267,1,"vocals",9.37,13.796,13.796,,,
+"bsrnn_large","BSRNN-large","Ben Carrigan - We'll Talk About It All Tonight","PASS","PASS",254.91,46.3,29.262,17.04,0.1148,1,"vocals",8.73,6.977,6.977,,,
+"bsrnn_large","BSRNN-large","Bobby Nobody - Stitch Up","PASS","PASS",221.25,45.4,28.03,17.37,0.1267,1,"vocals",14.11,11.297,11.297,,,
+"bsrnn_large","BSRNN-large","Buitraker - Revo X","PASS","PASS",275.83,51.6,33.253,18.35,0.1206,1,"vocals",16.52,7.993,7.993,,,
+"bsrnn_large","BSRNN-large","Carlos Gonzalez - A Place For Us","PASS","PASS",250.22,48.6,31.108,17.49,0.1243,1,"vocals",14.23,8.076,8.076,,,
+"bsrnn_large","BSRNN-large","Cristina Vane - So Easy","PASS","PASS",254.13,47.2,28.797,18.4,0.1133,1,"vocals",16.06,12.459,12.459,,,
+"bsrnn_large","BSRNN-large","Detsky Sad - Walkie Talkie","PASS","PASS",190.48,36.9,21.874,15.03,0.1148,1,"vocals",4.91,11.435,11.435,,,
+"bsrnn_large","BSRNN-large","Enda Reilly - Cur An Long Ag Seol","PASS","PASS",187.0,37.7,23.15,14.55,0.1238,1,"vocals",8.19,14.645,14.645,,,
+"bsrnn_large","BSRNN-large","Forkupines - Semantics","PASS","PASS",273.58,47.8,30.627,17.17,0.1119,1,"vocals",9.1,7.656,7.656,,,
+"bsrnn_large","BSRNN-large","Georgia Wonder - Siren","PASS","PASS",430.38,78.3,52.06,26.24,0.121,1,"vocals",22.71,7.839,7.839,,,
+"bsrnn_large","BSRNN-large","Girls Under Glass - We Feel Alright","PASS","PASS",317.28,57.7,38.6,19.1,0.1217,1,"vocals",10.09,6.374,6.374,,,
+"bsrnn_large","BSRNN-large","Hollow Ground - Ill Fate","PASS","PASS",141.67,32.8,20.272,12.53,0.1431,1,"vocals",6.46,7.67,7.67,,,
+"bsrnn_large","BSRNN-large","James Elder & Mark M Thompson - The English Actor","PASS","PASS",205.47,41.5,24.17,17.33,0.1176,1,"vocals",10.63,7.395,7.395,,,
+"bsrnn_large","BSRNN-large","Juliet's Rescue - Heartbeats","PASS","PASS",267.65,50.9,32.475,18.42,0.1213,1,"vocals",14.43,10.009,10.009,,,
+"bsrnn_large","BSRNN-large","Little Chicago's Finest - My Own","PASS","PASS",281.61,54.1,34.977,19.12,0.1242,1,"vocals",19.93,13.829,13.829,,,
+"bsrnn_large","BSRNN-large","Louis Cressy Band - Good Time","PASS","PASS",292.82,54.0,35.868,18.13,0.1225,1,"vocals",10.47,11.405,11.405,,,
+"bsrnn_large","BSRNN-large","Lyndsey Ollard - Catching Up","PASS","PASS",227.43,44.7,26.611,18.09,0.117,1,"vocals",12.31,14.754,14.754,,,
+"bsrnn_large","BSRNN-large","M.E.R.C. Music - Knockout","PASS","PASS",270.0,52.8,33.792,19.01,0.1252,1,"vocals",21.01,10.839,10.839,,,
+"bsrnn_large","BSRNN-large","Moosmusic - Big Dummy Shake","PASS","PASS",198.86,43.2,26.342,16.86,0.1325,1,"vocals",10.58,12.424,12.424,,,
+"bsrnn_large","BSRNN-large","Motor Tapes - Shore","PASS","PASS",246.72,48.1,30.083,18.02,0.1219,1,"vocals",8.92,8.571,8.571,,,
+"bsrnn_large","BSRNN-large","Mu - Too Bright","PASS","PASS",272.17,51.8,33.261,18.54,0.1222,1,"vocals",15.67,12.241,12.241,,,
+"bsrnn_large","BSRNN-large","Nerve 9 - Pray For The Rain","PASS","PASS",343.71,60.2,41.366,18.83,0.1204,1,"vocals",15.7,8.208,8.208,,,
+"bsrnn_large","BSRNN-large","PR - Happy Daze","PASS","PASS",162.7,35.5,21.753,13.75,0.1337,1,"vocals",1.81,0.004,0.004,,,
+"bsrnn_large","BSRNN-large","PR - Oh No","PASS","PASS",76.19,19.5,9.302,10.2,0.1221,1,"vocals",1.44,1.05,1.05,,,
+"bsrnn_large","BSRNN-large","Punkdisco - Oral Hygiene","PASS","PASS",221.6,45.2,27.888,17.31,0.1259,1,"vocals",7.18,11.443,11.443,,,
+"bsrnn_large","BSRNN-large","Raft Monk - Tiring","PASS","PASS",212.25,42.8,25.061,17.74,0.1181,1,"vocals",12.85,6.342,6.342,,,
+"bsrnn_large","BSRNN-large","Sambasevam Shanmugam - Kaathaadi","PASS","PASS",317.88,56.3,37.853,18.45,0.1191,1,"vocals",12.15,15.983,15.983,,,
+"bsrnn_large","BSRNN-large","Secretariat - Borderline","PASS","PASS",286.85,51.1,32.795,18.3,0.1143,1,"vocals",12.69,9.108,9.108,,,
+"bsrnn_large","BSRNN-large","Secretariat - Over The Top","PASS","PASS",251.1,46.5,28.978,17.52,0.1154,1,"vocals",10.27,11.585,11.585,,,
+"bsrnn_large","BSRNN-large","Side Effects Project - Sing With Me","PASS","PASS",243.68,46.4,27.913,18.49,0.1145,1,"vocals",18.98,14.529,14.529,,,
+"bsrnn_large","BSRNN-large","Signe Jakobsen - What Have You Done To Me","PASS","PASS",177.4,35.0,21.149,13.85,0.1192,1,"vocals",13.33,12.628,12.628,,,
+"bsrnn_large","BSRNN-large","Skelpolu - Resurrection","PASS","PASS",395.66,68.7,44.218,24.48,0.1118,1,"vocals",2.95,0.001,0.001,,,
+"bsrnn_large","BSRNN-large","Speak Softly - Broken Man","PASS","PASS",253.16,47.7,28.994,18.71,0.1145,1,"vocals",11.74,8.578,8.578,,,
+"bsrnn_large","BSRNN-large","Speak Softly - Like Horses","PASS","PASS",312.67,54.9,35.082,19.82,0.1122,1,"vocals",17.49,10.187,10.187,,,
+"bsrnn_large","BSRNN-large","The Doppler Shift - Atrophy","PASS","PASS",331.44,56.9,36.207,20.69,0.1092,1,"vocals",21.77,8.415,8.415,,,
+"bsrnn_large","BSRNN-large","The Easton Ellises (Baumi) - SDRNR","PASS","PASS",234.68,46.9,29.533,17.37,0.1258,1,"vocals",11.86,4.817,4.817,,,
+"bsrnn_large","BSRNN-large","The Easton Ellises - Falcon 69","PASS","PASS",246.99,48.8,30.228,18.57,0.1224,1,"vocals",13.43,6.352,6.352,,,
+"bsrnn_large","BSRNN-large","The Long Wait - Dark Horses","PASS","PASS",305.72,54.7,35.444,19.26,0.1159,1,"vocals",15.84,10.436,10.436,,,
+"bsrnn_large","BSRNN-large","The Mountaineering Club - Mallory","PASS","PASS",244.46,45.9,28.168,17.73,0.1152,1,"vocals",8.76,15.294,15.294,,,
+"bsrnn_large","BSRNN-large","The Sunshine Garcia Band - For I Am The Moon","PASS","PASS",320.3,58.4,38.576,19.82,0.1204,1,"vocals",22.61,11.828,11.828,,,
+"bsrnn_large","BSRNN-large","Timboz - Pony","PASS","PASS",253.05,47.3,28.899,18.4,0.1142,1,"vocals",10.16,5.118,5.118,,,
+"bsrnn_large","BSRNN-large","Tom McKenzie - Directions","PASS","PASS",175.85,33.5,20.641,12.86,0.1174,1,"vocals",7.41,12.57,12.57,,,
+"bsrnn_large","BSRNN-large","Triviul feat. The Fiend - Widow","PASS","PASS",235.11,43.6,26.459,17.14,0.1125,1,"vocals",15.58,11.588,11.588,,,
+"bsrnn_large","BSRNN-large","We Fell From The Sky - Not You","PASS","PASS",207.9,41.0,25.354,15.65,0.122,1,"vocals",10.24,8.027,8.027,,,
+"bsrnn_large","BSRNN-large","Zeno - Signs","PASS","PASS",234.38,43.9,26.035,17.86,0.1111,1,"vocals",13.43,10.059,10.059,,,
+"dprnn","DPRNN","AM Contra - Heart Peripheral","PASS","FAIL",210.11,6.8,2.784,4.02,0.0133,4,"bass+drums+other+vocals",20.48,-3.409,-2.065,-2.002,-8.947,-0.622
+"dprnn","DPRNN","Al James - Schoolboy Facination","PASS","PASS",200.53,50.5,3.922,46.58,0.0196,4,"bass+drums+other+vocals",20.43,-2.147,-1.924,-2.398,-0.023,-4.245
+"dprnn","DPRNN","Angels In Amplifiers - I'm Alright","PASS","PASS",179.59,36.7,3.378,33.32,0.0188,4,"bass+drums+other+vocals",18.35,-1.506,-3.023,-1.545,-2.272,0.817
+"dprnn","DPRNN","Arise - Run Run Run","PASS","PASS",219.39,50.8,3.989,46.81,0.0182,4,"bass+drums+other+vocals",21.04,-2.549,-1.059,-6.789,-3.125,0.777
+"dprnn","DPRNN","BKS - Bulldozer","PASS","PASS",337.04,62.6,6.097,56.5,0.0181,4,"bass+drums+other+vocals",32.05,-1.245,-2.619,-0.661,-0.178,-1.522
+"dprnn","DPRNN","BKS - Too Much","PASS","PASS",220.12,50.2,4.032,46.17,0.0183,4,"bass+drums+other+vocals",21.3,-1.024,-2.409,0.353,-0.932,-1.11
+"dprnn","DPRNN","Ben Carrigan - We'll Talk About It All Tonight","PASS","PASS",254.91,50.2,4.76,45.44,0.0187,4,"bass+drums+other+vocals",20.82,-0.853,-0.201,-1.155,-1.177,-0.88
+"dprnn","DPRNN","Bobby Nobody - Stitch Up","PASS","PASS",221.25,51.5,4.131,47.37,0.0187,4,"bass+drums+other+vocals",21.26,-1.157,-0.783,-1.753,-2.0,-0.092
+"dprnn","DPRNN","Buitraker - Revo X","PASS","PASS",275.83,54.5,4.976,49.52,0.018,4,"bass+drums+other+vocals",27.54,-0.691,1.089,0.957,-2.492,-2.316
+"dprnn","DPRNN","Carlos Gonzalez - A Place For Us","PASS","PASS",250.22,52.8,4.66,48.14,0.0186,4,"bass+drums+other+vocals",22.87,-2.409,-2.182,-0.98,-5.606,-0.869
+"dprnn","DPRNN","Cristina Vane - So Easy","PASS","PASS",254.13,55.5,4.775,50.73,0.0188,4,"bass+drums+other+vocals",24.32,-1.454,-0.974,-0.637,-2.566,-1.637
+"dprnn","DPRNN","Detsky Sad - Walkie Talkie","PASS","PASS",190.48,47.1,3.89,43.21,0.0204,4,"bass+drums+other+vocals",19.86,-1.663,-3.01,-0.497,0.828,-3.975
+"dprnn","DPRNN","Enda Reilly - Cur An Long Ag Seol","PASS","PASS",187.0,38.1,3.448,34.65,0.0184,4,"bass+drums+other+vocals",17.47,-1.989,-2.776,0.528,-5.956,0.247
+"dprnn","DPRNN","Forkupines - Semantics","PASS","PASS",273.58,53.2,5.168,48.03,0.0189,4,"bass+drums+other+vocals",28.12,-1.087,-0.894,-0.667,-2.303,-0.484
+"dprnn","DPRNN","Georgia Wonder - Siren","PASS","PASS",430.38,87.5,7.296,80.2,0.017,4,"bass+drums+other+vocals",42.36,-0.874,-2.105,-0.124,-0.724,-0.544
+"dprnn","DPRNN","Girls Under Glass - We Feel Alright","PASS","PASS",317.28,56.5,5.721,50.78,0.018,4,"bass+drums+other+vocals",35.11,-0.883,-3.189,-2.951,0.919,1.688
+"dprnn","DPRNN","Hollow Ground - Ill Fate","PASS","PASS",141.67,32.8,2.699,30.1,0.019,4,"bass+drums+other+vocals",14.84,-2.266,-1.87,-3.858,-5.418,2.081
+"dprnn","DPRNN","James Elder & Mark M Thompson - The English Actor","PASS","PASS",205.47,47.4,3.652,43.75,0.0178,4,"bass+drums+other+vocals",19.4,-1.932,-3.375,-1.525,-3.491,0.663
+"dprnn","DPRNN","Juliet's Rescue - Heartbeats","PASS","PASS",267.65,53.5,4.79,48.71,0.0179,4,"bass+drums+other+vocals",25.54,-1.29,-2.179,-1.366,-2.622,1.006
+"dprnn","DPRNN","Little Chicago's Finest - My Own","PASS","PASS",281.61,54.5,5.095,49.41,0.0181,4,"bass+drums+other+vocals",24.5,-2.186,-2.167,0.238,-2.693,-4.121
+"dprnn","DPRNN","Louis Cressy Band - Good Time","PASS","PASS",292.82,53.8,5.176,48.62,0.0177,4,"bass+drums+other+vocals",27.74,-0.913,-1.818,-1.047,-1.421,0.634
+"dprnn","DPRNN","Lyndsey Ollard - Catching Up","PASS","PASS",227.43,51.0,4.325,46.67,0.019,4,"bass+drums+other+vocals",19.05,-1.662,-1.811,-2.063,-2.194,-0.58
+"dprnn","DPRNN","M.E.R.C. Music - Knockout","PASS","PASS",270.0,53.1,4.969,48.13,0.0184,4,"bass+drums+other+vocals",25.38,-1.513,-2.822,0.002,-3.494,0.263
+"dprnn","DPRNN","Moosmusic - Big Dummy Shake","PASS","PASS",198.86,47.8,3.522,44.28,0.0177,4,"bass+drums+other+vocals",21.26,-1.365,-2.983,-1.375,-0.781,-0.321
+"dprnn","DPRNN","Motor Tapes - Shore","PASS","PASS",246.72,50.9,4.463,46.44,0.0181,4,"bass+drums+other+vocals",22.89,-1.678,-4.8,-2.706,-0.97,1.762
+"dprnn","DPRNN","Mu - Too Bright","PASS","PASS",272.17,63.5,6.092,57.41,0.0224,4,"bass+drums+other+vocals",26.02,-1.267,-1.541,-0.89,-1.244,-1.392
+"dprnn","DPRNN","Nerve 9 - Pray For The Rain","PASS","PASS",343.71,57.3,5.976,51.32,0.0174,4,"bass+drums+other+vocals",32.73,-1.243,-2.505,-1.523,-0.982,0.039
+"dprnn","DPRNN","PR - Happy Daze","PASS","PASS",162.7,34.8,3.185,31.61,0.0196,4,"bass+drums+other+vocals",14.65,-7.833,-29.603,-2.037,0.636,-0.328
+"dprnn","DPRNN","PR - Oh No","PASS","PASS",76.19,22.1,1.537,20.56,0.0202,4,"bass+drums+other+vocals",6.77,-4.584,-19.859,1.856,1.382,-1.714
+"dprnn","DPRNN","Punkdisco - Oral Hygiene","PASS","PASS",221.6,48.9,4.111,44.79,0.0186,4,"bass+drums+other+vocals",20.39,-1.964,-3.105,0.66,0.745,-6.157
+"dprnn","DPRNN","Raft Monk - Tiring","PASS","PASS",212.25,49.3,4.161,45.14,0.0196,4,"bass+drums+other+vocals",21.33,-0.935,1.748,-2.159,-1.846,-1.485
+"dprnn","DPRNN","Sambasevam Shanmugam - Kaathaadi","PASS","PASS",317.88,54.5,5.235,49.27,0.0165,4,"bass+drums+other+vocals",27.74,-0.771,-1.882,-0.053,-0.908,-0.24
+"dprnn","DPRNN","Secretariat - Borderline","PASS","PASS",286.85,53.9,5.13,48.77,0.0179,4,"bass+drums+other+vocals",27.74,-1.661,-3.197,-1.651,-4.12,2.326
+"dprnn","DPRNN","Secretariat - Over The Top","PASS","PASS",251.1,50.8,4.621,46.18,0.0184,4,"bass+drums+other+vocals",26.22,-0.792,-2.835,-1.251,-0.099,1.015
+"dprnn","DPRNN","Side Effects Project - Sing With Me","PASS","PASS",243.68,51.7,4.264,47.44,0.0175,4,"bass+drums+other+vocals",23.06,-2.629,-2.042,0.048,-1.622,-6.9
+"dprnn","DPRNN","Signe Jakobsen - What Have You Done To Me","PASS","PASS",177.4,36.3,3.34,32.96,0.0188,4,"bass+drums+other+vocals",17.46,-2.438,-1.93,-1.65,-6.126,-0.046
+"dprnn","DPRNN","Skelpolu - Resurrection","PASS","PASS",395.66,80.2,6.749,73.45,0.0171,4,"bass+drums+other+vocals",40.13,-0.782,-1.225,-1.958,0.819,-0.762
+"dprnn","DPRNN","Speak Softly - Broken Man","PASS","PASS",253.16,52.6,4.421,48.18,0.0175,4,"bass+drums+other+vocals",23.74,-0.879,-2.263,-0.246,0.055,-1.063
+"dprnn","DPRNN","Speak Softly - Like Horses","PASS","PASS",312.67,56.7,5.45,51.25,0.0174,4,"bass+drums+other+vocals",29.61,-1.31,-2.6,-0.093,-0.137,-2.409
+"dprnn","DPRNN","The Doppler Shift - Atrophy","PASS","PASS",331.44,59.2,5.688,53.51,0.0172,4,"bass+drums+other+vocals",32.76,-2.586,-2.622,-1.135,-6.642,0.057
+"dprnn","DPRNN","The Easton Ellises (Baumi) - SDRNR","PASS","PASS",234.68,53.2,4.379,48.82,0.0187,4,"bass+drums+other+vocals",23.96,-1.527,-2.887,-1.627,-0.554,-1.039
+"dprnn","DPRNN","The Easton Ellises - Falcon 69","PASS","PASS",246.99,51.0,4.605,46.39,0.0186,4,"bass+drums+other+vocals",26.47,-1.358,-2.656,-1.13,-0.644,-1.003
+"dprnn","DPRNN","The Long Wait - Dark Horses","PASS","PASS",305.72,56.8,5.58,51.22,0.0183,4,"bass+drums+other+vocals",26.87,-0.822,0.431,-2.424,-0.327,-0.966
+"dprnn","DPRNN","The Mountaineering Club - Mallory","PASS","PASS",244.46,50.6,4.479,46.12,0.0183,4,"bass+drums+other+vocals",22.14,-0.638,-1.886,0.846,-0.458,-1.054
+"dprnn","DPRNN","The Sunshine Garcia Band - For I Am The Moon","PASS","PASS",320.3,59.5,5.954,53.55,0.0186,4,"bass+drums+other+vocals",30.4,-2.808,-0.759,1.243,-4.811,-6.904
+"dprnn","DPRNN","Timboz - Pony","PASS","PASS",253.05,52.3,4.695,47.6,0.0186,4,"bass+drums+other+vocals",26.05,-1.805,-2.961,-1.751,-4.946,2.437
+"dprnn","DPRNN","Tom McKenzie - Directions","PASS","PASS",175.85,34.7,3.377,31.32,0.0192,4,"bass+drums+other+vocals",15.51,-0.834,-1.652,0.522,1.513,-3.72
+"dprnn","DPRNN","Triviul feat. The Fiend - Widow","PASS","PASS",235.11,51.1,4.29,46.81,0.0182,4,"bass+drums+other+vocals",23.22,-2.461,-1.951,-2.723,-0.28,-4.888
+"dprnn","DPRNN","We Fell From The Sky - Not You","PASS","PASS",207.9,48.2,3.776,44.42,0.0182,4,"bass+drums+other+vocals",21.61,-1.848,-0.615,-1.628,-6.257,1.106
+"dprnn","DPRNN","Zeno - Signs","PASS","PASS",234.38,51.3,4.447,46.85,0.019,4,"bass+drums+other+vocals",24.1,-1.834,-3.968,-2.088,-2.401,1.12
