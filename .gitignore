@@ -13,9 +13,15 @@
 01_models/_weights/
 01_models/_third_party/
 
-# ---- 逐模型文件夹里的权重链接（硬链接 / 目录联接，指向上面两处） ----
-# 必须显式忽略：git 会把目录联接当普通目录递归进去，把 15 GB 再抄一遍
+# ---- 逐模型文件夹里的代码联接（目录联接，指向 _third_party） ----
+# 2026-09-23 起模型按板块分类：01_models/<separation|denoising>/<模型>/code/
+# 必须显式忽略：git 会把目录联接当普通目录递归进去，把 2 GB 第三方仓库再抄一遍
+01_models/*/*/code/
+# 旧扁平布局的残留（若迁移未彻底）
+01_models/*/code/
 01_models/*/weights/
+# 各模型目录下的其它内容一律不追踪（里面只剩联接；说明文档在 <板块>/README.md）
+01_models/*/*/
 
 # ---- 推理产物（21 GB，各模型 test/ 下为 564 个组合的分离音频） ----
 03_outputs/
@@ -29,6 +35,8 @@ tools/_logs/
 
 # ---- 保持追踪（体积小、是交付物） ----
 !01_models/
+!01_models/README.md
 !01_models/MODEL_REGISTRY.md
+!01_models/*/README.md
 !04_reports/
 !tools/

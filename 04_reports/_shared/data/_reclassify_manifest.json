@@ -1,0 +1,422 @@
+{
+ "when": "2026-09-23",
+ "board_of": {
+  "BS-RoFormer-L12": "separation",
+  "BS-RoFormer-L6": "separation",
+  "BSRNN-opt": "separation",
+  "BSRNN-large": "separation",
+  "BSRNN-SIMO": "separation",
+  "Demucs": "separation",
+  "MDX-Net": "separation",
+  "Open-Unmix": "separation",
+  "Conv-TasNet": "separation",
+  "MMDenseLSTM": "separation",
+  "DPRNN": "separation",
+  "RPCA": "separation",
+  "Oracle-IRM": "separation",
+  "denoiser-dns48": "denoising",
+  "denoiser-dns64": "denoising",
+  "denoiser-master64": "denoising",
+  "Mel-RoFormer-Denoise": "denoising",
+  "Mel-RoFormer-Dereverb": "denoising",
+  "Mel-RoFormer-Dereverb-Echo": "denoising"
+ },
+ "archive": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23",
+ "ops": [
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L12\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\BS-RoFormer-L12.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L6\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\BS-RoFormer-L6.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\BSRNN-large\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\BSRNN-large.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\BSRNN-opt\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\BSRNN-opt.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\BSRNN-SIMO\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\BSRNN-SIMO.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Conv-TasNet\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\Conv-TasNet.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Demucs\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\Demucs.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\denoiser-dns48\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\denoiser-dns48.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\denoiser-dns64\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\denoiser-dns64.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\denoiser-master64\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\denoiser-master64.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\DPRNN\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\DPRNN.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\MDX-Net\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\MDX-Net.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Denoise\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\Mel-RoFormer-Denoise.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\Mel-RoFormer-Dereverb.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb-Echo\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\Mel-RoFormer-Dereverb-Echo.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\MMDenseLSTM\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\MMDenseLSTM.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Open-Unmix\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\Open-Unmix.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Oracle-IRM\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\Oracle-IRM.md"
+  },
+  {
+   "kind": "archive-card",
+   "src": "E:\\FYP_HKBU\\01_models\\RPCA\\README.md",
+   "dst": "E:\\FYP_HKBU\\tools\\_scratch\\_archive_model_cards_2026-09-23\\RPCA.md"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation"
+  },
+  {
+   "kind": "mkdir",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoising"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L12\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L12\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L12",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\BS-RoFormer-L12"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L6\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L6\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\BS-RoFormer-L6",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\BS-RoFormer-L6"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\BSRNN-large\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\BSRNN-large\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\BSRNN-large",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\BSRNN-large"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\BSRNN-opt\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\BSRNN-opt\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\BSRNN-opt",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\BSRNN-opt"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\BSRNN-SIMO\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\BSRNN-SIMO\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\BSRNN-SIMO",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\BSRNN-SIMO"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Conv-TasNet\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\Conv-TasNet\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\Conv-TasNet",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\Conv-TasNet"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Demucs\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\Demucs\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\Demucs",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\Demucs"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\denoiser-dns48\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\denoiser-dns48\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\denoiser-dns48",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoising\\denoiser-dns48"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\denoiser-dns64\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\denoiser-dns64\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\denoiser-dns64",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoising\\denoiser-dns64"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\denoiser-master64\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\denoiser-master64\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\denoiser-master64",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoising\\denoiser-master64"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\DPRNN\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\DPRNN\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\DPRNN",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\DPRNN"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\MDX-Net\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\MDX-Net\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\MDX-Net",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\MDX-Net"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Denoise\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Denoise\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Denoise",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoising\\Mel-RoFormer-Denoise"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoising\\Mel-RoFormer-Dereverb"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb-Echo\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb-Echo\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\Mel-RoFormer-Dereverb-Echo",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoising\\Mel-RoFormer-Dereverb-Echo"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\MMDenseLSTM\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\MMDenseLSTM\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\MMDenseLSTM",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\MMDenseLSTM"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Open-Unmix\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "delete-weights-links",
+   "src": "E:\\FYP_HKBU\\01_models\\Open-Unmix\\weights",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\Open-Unmix",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\Open-Unmix"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\Oracle-IRM\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\Oracle-IRM",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\Oracle-IRM"
+  },
+  {
+   "kind": "delete-card",
+   "src": "E:\\FYP_HKBU\\01_models\\RPCA\\README.md",
+   "dst": ""
+  },
+  {
+   "kind": "move",
+   "src": "E:\\FYP_HKBU\\01_models\\RPCA",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\RPCA"
+  },
+  {
+   "kind": "write-index",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\separation\\README.md"
+  },
+  {
+   "kind": "write-index",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\denoising\\README.md"
+  },
+  {
+   "kind": "write-readme",
+   "src": "",
+   "dst": "E:\\FYP_HKBU\\01_models\\README.md"
+  }
+ ]
+}

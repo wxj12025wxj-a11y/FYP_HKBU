@@ -4,6 +4,13 @@
 > 对应产物：`03_outputs/<模型名>/` ｜ 指标数据：`04_reports/separation/data/comparison/`
 > 统一基准工具：`tools/benchmark_model_universal.py`（每次实测自动更新 `model_runs.json`）
 
+> 🔄 **目录布局变更（2026-09-23 第三次重组）**：模型已按板块分类 ——
+> `01_models/separation/<模型>/`（板 1，13 个）与 `01_models/denoising/<模型>/`（板 2，6 个），
+> 每个模型目录内**只保留 `code/`**（指向 `_third_party` 的目录联接）。
+> 逐模型说明（论文出处 / 代码落点 / 权重真实路径 / 画像）见**板块索引**：
+> `01_models/separation/README.md`、`01_models/denoising/README.md`。
+> 下文中出现的 `01_models/<模型>/` 仅为历史表述，实际路径请按板块加一层。
+
 ---
 
 ## 0. 一句话结论
@@ -87,7 +94,7 @@
 | BSRNN（3 变体）| `01_models/_third_party/bsrnn` | `01_models/_weights/BSRNN/{bsrnn-opt,bsrnn-large,simo-bsrnn-opt}` | `03_outputs/BSRNN-{opt,large,SIMO}/` | `--model bsrnn_all,bsrnn_large_all,bsrnn_simo` |
 | MDX-Net | `01_models/_third_party/mdx-net` + `mdx-net-submission*` | `01_models/_weights/MDX-Net/mdx_extra/` | `03_outputs/MDX-Net/` | `--model mdx` |
 | IRM/IBM Oracle | `01_models/_third_party/sigsep-mus-oracle` + 自研 | — | `03_outputs/Oracle-IRM/` | `--model oracle` |
-| Demucs | `01_models/_third_party/demucs` | `05_misc/scratch/.cache/torch/hub/checkpoints/` | `03_outputs/Demucs/` | `--model demucs`（基准）／`tools/run_demucs_deepdive.py`（深入分析） |
+| Demucs | `01_models/_third_party/demucs` | `01_models/_weights/Demucs/955717e8-8726e21a.th`（torch.hub 缓存 `tools/_scratch/.cache/torch/hub/checkpoints/` 的同源硬链接） | `03_outputs/Demucs/` | `--model demucs`（基准）／`tools/run_demucs_deepdive.py`（深入分析） |
 
 ### 2.2 ⛔ 受阻（2 个，均无公开代码）
 

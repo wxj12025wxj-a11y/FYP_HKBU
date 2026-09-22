@@ -1,0 +1,553 @@
+{
+ "models": [
+  {
+   "model": "BS-RoFormer-L12",
+   "board": "separation",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "BS-RoFormer",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\BS-RoFormer",
+     "files": 42,
+     "in_official_store": true,
+     "has_git": true
+    },
+    {
+     "link": "Music-Source-Separation-Training",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\Music-Source-Separation-Training",
+     "files": 219,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "BS-RoFormer-L6",
+   "board": "separation",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "BS-RoFormer",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\BS-RoFormer",
+     "files": 42,
+     "in_official_store": true,
+     "has_git": true
+    },
+    {
+     "link": "Music-Source-Separation-Training",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\Music-Source-Separation-Training",
+     "files": 219,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "BSRNN-large",
+   "board": "separation",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "bsrnn",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\bsrnn",
+     "files": 94,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "BSRNN-opt",
+   "board": "separation",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "bsrnn",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\bsrnn",
+     "files": 94,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "BSRNN-SIMO",
+   "board": "separation",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "bsrnn",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\bsrnn",
+     "files": 94,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "Conv-TasNet",
+   "board": "separation",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "Conv-TasNet",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\Conv-TasNet",
+     "files": 57,
+     "in_official_store": true,
+     "has_git": true
+    },
+    {
+     "link": "DNN-based_source_separation",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\DNN-based_source_separation",
+     "files": 764,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "Demucs",
+   "board": "separation",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "demucs",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\demucs",
+     "files": 129,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "DPRNN",
+   "board": "separation",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "Dual-Path-RNN-Pytorch",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\Dual-Path-RNN-Pytorch",
+     "files": 69,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "MDX-Net",
+   "board": "separation",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "mdx-net",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\mdx-net",
+     "files": 108,
+     "in_official_store": true,
+     "has_git": true
+    },
+    {
+     "link": "mdx-net-submission",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\mdx-net-submission",
+     "files": 87,
+     "in_official_store": true,
+     "has_git": true
+    },
+    {
+     "link": "mdx-net-submission-leaderboard_A",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\mdx-net-submission-leaderboard_A",
+     "files": 58,
+     "in_official_store": true,
+     "has_git": true
+    },
+    {
+     "link": "mdx-net-submission-leaderboard_B",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\mdx-net-submission-leaderboard_B",
+     "files": 78,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "MMDenseLSTM",
+   "board": "separation",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "DNN-based_source_separation",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\DNN-based_source_separation",
+     "files": 764,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "Open-Unmix",
+   "board": "separation",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "open-unmix-pytorch",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\open-unmix-pytorch",
+     "files": 89,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "Oracle-IRM",
+   "board": "separation",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "_selfimpl",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_selfimpl",
+     "files": 1,
+     "in_official_store": true,
+     "has_git": false
+    },
+    {
+     "link": "sigsep-mus-oracle",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\sigsep-mus-oracle",
+     "files": 105,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "RPCA",
+   "board": "separation",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "_selfimpl",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_selfimpl",
+     "files": 1,
+     "in_official_store": true,
+     "has_git": false
+    }
+   ]
+  },
+  {
+   "model": "denoiser-dns48",
+   "board": "denoising",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "denoiser",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\denoiser",
+     "files": 84,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "denoiser-dns64",
+   "board": "denoising",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "denoiser",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\denoiser",
+     "files": 84,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "denoiser-master64",
+   "board": "denoising",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "denoiser",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\denoiser",
+     "files": 84,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "Mel-RoFormer-Denoise",
+   "board": "denoising",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "Music-Source-Separation-Training",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\Music-Source-Separation-Training",
+     "files": 219,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "Mel-RoFormer-Dereverb",
+   "board": "denoising",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "Music-Source-Separation-Training",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\Music-Source-Separation-Training",
+     "files": 219,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  },
+  {
+   "model": "Mel-RoFormer-Dereverb-Echo",
+   "board": "denoising",
+   "status": "PASS",
+   "residue": [],
+   "code": [
+    {
+     "link": "Music-Source-Separation-Training",
+     "kind": "junction",
+     "ok": true,
+     "target": "\\\\?\\E:\\FYP_HKBU\\01_models\\_third_party\\Music-Source-Separation-Training",
+     "files": 219,
+     "in_official_store": true,
+     "has_git": true
+    }
+   ]
+  }
+ ],
+ "repos": [
+  {
+   "repo": "BS-RoFormer",
+   "git": true,
+   "shallow": "false",
+   "commits": 86,
+   "remote": "https://github.com/lucidrains/BS-RoFormer.git",
+   "head": "84f2b25",
+   "git_mb": 0.3,
+   "ok": true
+  },
+  {
+   "repo": "bsrnn",
+   "git": true,
+   "shallow": "false",
+   "commits": 74,
+   "remote": "https://github.com/magronp/bsrnn.git",
+   "head": "41e9ce4",
+   "git_mb": 932.3,
+   "ok": true
+  },
+  {
+   "repo": "Conv-TasNet",
+   "git": true,
+   "shallow": "false",
+   "commits": 32,
+   "remote": "https://github.com/kaituoxu/Conv-TasNet.git",
+   "head": "0d9d9dc",
+   "git_mb": 1.4,
+   "ok": true
+  },
+  {
+   "repo": "demucs",
+   "git": true,
+   "shallow": "false",
+   "commits": 318,
+   "remote": "https://github.com/facebookresearch/demucs.git",
+   "head": "e976d93",
+   "git_mb": 80.6,
+   "ok": true
+  },
+  {
+   "repo": "denoiser",
+   "git": true,
+   "shallow": "false",
+   "commits": 73,
+   "remote": "https://github.com/facebookresearch/denoiser.git",
+   "head": "8afd7c1",
+   "git_mb": 2.0,
+   "ok": true
+  },
+  {
+   "repo": "DNN-based_source_separation",
+   "git": true,
+   "shallow": "false",
+   "commits": 2937,
+   "remote": "https://github.com/tky823/DNN-based_source_separation.git",
+   "head": "8663d6fc",
+   "git_mb": 321.2,
+   "ok": true
+  },
+  {
+   "repo": "Dual-Path-RNN-Pytorch",
+   "git": true,
+   "shallow": "false",
+   "commits": 46,
+   "remote": "https://github.com/JusperLee/Dual-Path-RNN-Pytorch.git",
+   "head": "87b6301",
+   "git_mb": 0.2,
+   "ok": true
+  },
+  {
+   "repo": "mdx-net",
+   "git": true,
+   "shallow": "false",
+   "commits": 101,
+   "remote": "https://github.com/kuielab/mdx-net.git",
+   "head": "bbd46db",
+   "git_mb": 13.8,
+   "ok": true
+  },
+  {
+   "repo": "mdx-net-submission",
+   "git": true,
+   "shallow": "false",
+   "commits": 50,
+   "remote": "https://github.com/kuielab/mdx-net-submission.git",
+   "head": "68b969d",
+   "git_mb": 130.4,
+   "ok": true
+  },
+  {
+   "repo": "mdx-net-submission-leaderboard_A",
+   "git": true,
+   "shallow": "false",
+   "commits": 62,
+   "remote": "https://github.com/kuielab/mdx-net-submission.git",
+   "head": "13c98c0",
+   "git_mb": 7.0,
+   "ok": true
+  },
+  {
+   "repo": "mdx-net-submission-leaderboard_B",
+   "git": true,
+   "shallow": "false",
+   "commits": 57,
+   "remote": "https://github.com/kuielab/mdx-net-submission.git",
+   "head": "18014d7",
+   "git_mb": 122.6,
+   "ok": true
+  },
+  {
+   "repo": "Music-Source-Separation-Training",
+   "git": true,
+   "shallow": "false",
+   "commits": 626,
+   "remote": "https://github.com/ZFTurbo/Music-Source-Separation-Training.git",
+   "head": "050cae7",
+   "git_mb": 1.7,
+   "ok": true
+  },
+  {
+   "repo": "open-unmix-pytorch",
+   "git": true,
+   "shallow": "false",
+   "commits": 495,
+   "remote": "https://github.com/sigsep/open-unmix-pytorch.git",
+   "head": "814f144",
+   "git_mb": 5.3,
+   "ok": true
+  },
+  {
+   "repo": "sigsep-mus-oracle",
+   "git": true,
+   "shallow": "false",
+   "commits": 18,
+   "remote": "https://github.com/sigsep/sigsep-mus-oracle.git",
+   "head": "1590b09",
+   "git_mb": 0.1,
+   "ok": true
+  }
+ ],
+ "board_summary": {
+  "separation": 13,
+  "denoising": 6
+ },
+ "blocked_upstream": {
+  "RPCA+DRNN": "Lai & Wang 2022 (EURASIP JASMP 2022:4) 未公开任何代码或权重；且口径为单声道 2 源，与 MUSDB18 4-stem 不可横比",
+  "Pac-HuBERT-SEP": "MERL 项目页未放出代码与权重"
+ },
+ "summary": {
+  "layout": "01_models/<separation|denoising>/<model>/code/",
+  "n_models": 19,
+  "n_pass": 19,
+  "n_repos": 14,
+  "n_repos_full": 14,
+  "_weights_files": 51,
+  "_weights_unique_gb": 11.38,
+  "_weights_naive_gb": 11.38,
+  "_weights_internal_dup_mb": 0.0,
+  "n_fails": 0
+ },
+ "fails": []
+}

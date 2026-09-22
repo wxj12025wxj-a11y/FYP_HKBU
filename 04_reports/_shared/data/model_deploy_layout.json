@@ -1,0 +1,301 @@
+{
+ "models_dir": "E:\\FYP_HKBU\\01_models",
+ "third_party": "E:\\FYP_HKBU\\01_models\\_third_party",
+ "n_models": 19,
+ "created": [
+  "BS-RoFormer-L12/code/Music-Source-Separation-Training",
+  "BS-RoFormer-L12/code/BS-RoFormer",
+  "BS-RoFormer-L6/code/Music-Source-Separation-Training",
+  "BS-RoFormer-L6/code/BS-RoFormer",
+  "BSRNN-opt/code/bsrnn",
+  "BSRNN-large/code/bsrnn",
+  "BSRNN-SIMO/code/bsrnn",
+  "Demucs/code/demucs",
+  "MDX-Net/code/mdx-net",
+  "MDX-Net/code/mdx-net-submission",
+  "MDX-Net/code/mdx-net-submission-leaderboard_A",
+  "MDX-Net/code/mdx-net-submission-leaderboard_B",
+  "Open-Unmix/code/open-unmix-pytorch",
+  "Conv-TasNet/code/Conv-TasNet",
+  "Conv-TasNet/code/DNN-based_source_separation",
+  "MMDenseLSTM/code/DNN-based_source_separation",
+  "DPRNN/code/Dual-Path-RNN-Pytorch",
+  "RPCA/code/_selfimpl",
+  "Oracle-IRM/code/sigsep-mus-oracle",
+  "Oracle-IRM/code/_selfimpl",
+  "denoiser-dns48/code/denoiser",
+  "denoiser-dns64/code/denoiser",
+  "denoiser-master64/code/denoiser",
+  "Mel-RoFormer-Denoise/code/Music-Source-Separation-Training",
+  "Mel-RoFormer-Dereverb/code/Music-Source-Separation-Training",
+  "Mel-RoFormer-Dereverb-Echo/code/Music-Source-Separation-Training"
+ ],
+ "kept": [],
+ "rebuilt": [],
+ "failed": [],
+ "models": [
+  {
+   "model": "BS-RoFormer-L12",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "Music-Source-Separation-Training",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\Music-Source-Separation-Training"
+    },
+    {
+     "repo": "BS-RoFormer",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\BS-RoFormer"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "BS-RoFormer-L6",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "Music-Source-Separation-Training",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\Music-Source-Separation-Training"
+    },
+    {
+     "repo": "BS-RoFormer",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\BS-RoFormer"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "BSRNN-opt",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "bsrnn",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\bsrnn"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "BSRNN-large",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "bsrnn",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\bsrnn"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "BSRNN-SIMO",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "bsrnn",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\bsrnn"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "Demucs",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "demucs",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\demucs"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "MDX-Net",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "mdx-net",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\mdx-net"
+    },
+    {
+     "repo": "mdx-net-submission",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\mdx-net-submission"
+    },
+    {
+     "repo": "mdx-net-submission-leaderboard_A",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\mdx-net-submission-leaderboard_A"
+    },
+    {
+     "repo": "mdx-net-submission-leaderboard_B",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\mdx-net-submission-leaderboard_B"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "Open-Unmix",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "open-unmix-pytorch",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\open-unmix-pytorch"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "Conv-TasNet",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "Conv-TasNet",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\Conv-TasNet"
+    },
+    {
+     "repo": "DNN-based_source_separation",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\DNN-based_source_separation"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "MMDenseLSTM",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "DNN-based_source_separation",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\DNN-based_source_separation"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "DPRNN",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "Dual-Path-RNN-Pytorch",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\Dual-Path-RNN-Pytorch"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "RPCA",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "_selfimpl",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_selfimpl"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "Oracle-IRM",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "sigsep-mus-oracle",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\sigsep-mus-oracle"
+    },
+    {
+     "repo": "_selfimpl",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_selfimpl"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "denoiser-dns48",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "denoiser",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\denoiser"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "denoiser-dns64",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "denoiser",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\denoiser"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "denoiser-master64",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "denoiser",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\denoiser"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "Mel-RoFormer-Denoise",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "Music-Source-Separation-Training",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\Music-Source-Separation-Training"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "Mel-RoFormer-Dereverb",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "Music-Source-Separation-Training",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\Music-Source-Separation-Training"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "model": "Mel-RoFormer-Dereverb-Echo",
+   "dir_exists": true,
+   "code": [
+    {
+     "repo": "Music-Source-Separation-Training",
+     "status": "created",
+     "target": "E:\\FYP_HKBU\\01_models\\_third_party\\Music-Source-Separation-Training"
+    }
+   ],
+   "status": "PASS"
+  }
+ ]
+}

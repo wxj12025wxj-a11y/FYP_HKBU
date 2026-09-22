@@ -11,9 +11,10 @@ FYP_HKBU 路径中枢（single source of truth）。
    迁移中途中断也不会把脚本弄崩。
 3. 提供 `setup_env()` 统一设置 `TORCH_HOME` / `HF_HOME`。
 
-五大模块（2026-09-23 第二次重组）
+五大模块（2026-09-23 第三次重组）
 --------------------------------
-    01_models/      ① 模型：**每个模型一个独立文件夹**（模型卡 + weights 链接）
+    01_models/      ① 模型：**按板块 separation / denoising 分组**；
+                    每个模型目录下**只保留 `code/`**（指向 _third_party 的目录联接）
                     + 共享层 _third_party / _weights / _selfimpl
     02_databases/   ② 数据：MUSDB18-HQ、DNS-Challenge、Valentini
     03_outputs/     ③ 产物：**每个模型一个独立文件夹**（test/ + stage0_gate/）
@@ -21,24 +22,28 @@ FYP_HKBU 路径中枢（single source of truth）。
                     每个板块下再分 docs / figures / data / html
     tools/          ⑤ 工具：脚本 + _logs + _scratch(含 torch·hf 缓存) + _bat
 
-本次重组（相对 2026-09-16 版）的三处变化
----------------------------------------
-* `05_misc/` 撤销：`logs/` -> `tools/_logs/`，`scratch/` -> `tools/_scratch/`，
-  批处理启动器 -> `tools/_bat/`；**无关子项目 lyrics-game 与历史归档已移出项目**，
-  落在 `E:\\FYP_HKBU_evicted\\`（未删除，见 `04_reports/_shared/docs/RESTRUCTURE_2026-09-23.md`）。
-* `04_reports/` 由「按文件类型」改为「按板块」：板 1 = `separation/`，板 2 = `denoiser/`，
-  级联 = `cascade/`，跨板块 = `_shared/`。
-  **为兼容既有脚本，下面 `DOCS / HTML / FIGURES / DATA` 四个旧常量一律指向板 1（separation）**
-  —— 现有脚本的产物本来就全属板 1。板 2 请用 `DEN_*`，共用资产用 `SHR_*`。
-* `03_outputs/_test_run/<模型>/` -> `03_outputs/<模型>/test/`，
-  `03_outputs/_stage0_gate/<模型>/` -> `03_outputs/<模型>/stage0_gate/`。
+历次重组
+--------
+* 2026-09-16：`05_misc/` 撤销 → `tools/_logs` `tools/_scratch` `tools/_bat`；
+  无关子项目 lyrics-game 与历史归档移出到 `E:\\FYP_HKBU_evicted\\`。
+* 2026-09-23（第二次）：`04_reports/` 由「按文件类型」改为「按板块」
+  （板 1 `separation/`、板 2 `denoiser/`、级联 `cascade/`、跨板 `_shared/`）；
+  `03_outputs/_test_run/<模型>/` → `03_outputs/<模型>/test/`。
+* 2026-09-23（第三次，本次）：`01_models/<模型>/` → `01_models/<板块>/<模型>/`
+  （板块 = `separation` / `denoising`）。同时**移除两个冗余层**：
+  - `<模型>/weights/`（只是 `_weights/` 的目录联接/硬链接，脚本从不读它）——权重统一在 `WEIGHTS`；
+  - `<模型>/README.md` 模型卡——内容并入 `01_models/<板块>/README.md` 与
+    `04_reports/_shared/data/model_analysis/model_profile.csv`，
+    原文归档在 `tools/_scratch/_archive_model_cards_2026-09-23/`。
 
 用法
 ----
     import sys; sys.path.insert(0, str(Path(__file__).resolve().parent))
     from paths import PROJECT_ROOT, WEIGHTS, MUSDB18_ROOT, OUTPUTS, REPORTS, setup_env
 
-    _paths.model_dir("BS-RoFormer-L12")     # 01_models/BS-RoFormer-L12
+    _paths.model_dir("BS-RoFormer-L12")     # 01_models/separation/BS-RoFormer-L12
+    _paths.model_code_dir("Demucs")         # 01_models/separation/Demucs/code
+    _paths.board_of_model("Demucs")         # "separation"
     _paths.out_dir("BS-RoFormer-L12")       # 03_outputs/BS-RoFormer-L12
     _paths.board_dir("denoiser")            # 04_reports/denoiser
 """
@@ -57,6 +62,43 @@ MODELS = PROJECT_ROOT / "01_models"
 THIRD_PARTY = MODELS / "_third_party"
 WEIGHTS = MODELS / "_weights"          # 权重的**唯一物理落点**
 SELF_IMPL = MODELS / "_selfimpl"
+
+# 模型按板块分组（2026-09-23 第三次重组）。
+# 目录名：separation = 板 1 分离；denoising = 板 2 降噪 / 去混响 / 去回声。
+SEP_MODELS = MODELS / "separation"
+DEN_MODELS = MODELS / "denoising"
+
+MODEL_BOARD: dict[str, str] = {
+    # ---- 板 1 · 分离（13） ----
+    "BS-RoFormer-L12": "separation",
+    "BS-RoFormer-L6": "separation",
+    "BSRNN-opt": "separation",
+    "BSRNN-large": "separation",
+    "BSRNN-SIMO": "separation",
+    "Demucs": "separation",
+    "MDX-Net": "separation",
+    "Open-Unmix": "separation",
+    "Conv-TasNet": "separation",
+    "MMDenseLSTM": "separation",
+    "DPRNN": "separation",
+    "RPCA": "separation",
+    "Oracle-IRM": "separation",
+    # ---- 板 2 · 降噪 / 去混响 / 去回声（6） ----
+    "denoiser-dns48": "denoising",
+    "denoiser-dns64": "denoising",
+    "denoiser-master64": "denoising",
+    "Mel-RoFormer-Denoise": "denoising",
+    "Mel-RoFormer-Dereverb": "denoising",
+    "Mel-RoFormer-Dereverb-Echo": "denoising",
+}
+
+# 板块名 -> 目录（模型侧；板名别名见 _MODEL_BOARD_ALIAS）
+MODEL_BOARDS = {"separation": SEP_MODELS, "denoising": DEN_MODELS}
+_MODEL_BOARD_ALIAS = {
+    "separation": "separation", "sep": "separation", "board1": "separation", "board-1": "separation",
+    "denoising": "denoising", "denoise": "denoising", "denoiser": "denoising",
+    "board2": "denoising", "board-2": "denoising",
+}
 
 # ---------------------------------------------------------------- ② 数据集
 DATABASES = PROJECT_ROOT / "02_databases"
@@ -105,6 +147,9 @@ SHR_HTML = SHARED / "html"
 MODEL_ANALYSIS = SHR_DATA / "model_analysis"
 MODEL_ARCH_FIGURES = SHR_FIGURES / "model_arch"
 
+# 模型卡原文归档（2026-09-23 精简时从各模型目录移除）
+MODEL_CARDS_ARCHIVE = PROJECT_ROOT / "tools" / "_scratch" / "_archive_model_cards_2026-09-23"
+
 # ---------------------------------------------------------------- ⑤ 工具与运行支撑
 TOOLS = PROJECT_ROOT / "tools"
 LOGS = TOOLS / "_logs"
@@ -137,7 +182,7 @@ DENOISE_REGISTRY = TOOLS / "_denoise_registry.py"
 
 # ---------------------------------------------------------------- 便捷函数
 def board_dir(board: str) -> Path:
-    """取板块目录。board ∈ {separation, denoiser, cascade, _shared}。"""
+    """取报告板块目录。board ∈ {separation, denoiser, cascade, _shared}。"""
     b = str(board).strip().lower().lstrip("_")
     m = {"separation": SEPARATION, "sep": SEPARATION,
          "denoiser": DENOISER, "denoise": DENOISER,
@@ -154,14 +199,42 @@ def board_sub(board: str, sub: str) -> Path:
     return board_dir(board) / sub
 
 
+def board_of_model(name: str) -> str:
+    """模型所属板块：`separation` 或 `denoising`。未登记的模型一律归 separation。"""
+    return MODEL_BOARD.get(str(name), "separation")
+
+
+def model_board_dir(board: str) -> Path:
+    """模型侧板块目录：01_models/<separation|denoising>。"""
+    b = _MODEL_BOARD_ALIAS.get(str(board).strip().lower())
+    if b is None:
+        raise KeyError("unknown model board %r; expected separation / denoising" % (board,))
+    return MODEL_BOARDS[b]
+
+
 def model_dir(name: str) -> Path:
-    """模型文件夹：01_models/<name>（含 README.md 模型卡与 weights/ 链接）。"""
-    return MODELS / str(name)
+    """模型文件夹：`01_models/<板块>/<name>`（目录内只含 `code/` 联接）。
+
+    兼容回退：迁移期若旧扁平路径 `01_models/<name>/` 仍存在且新路径不存在，
+    返回旧路径，保证半迁移状态下脚本仍能跑。
+    """
+    name = str(name)
+    new = MODEL_BOARDS[board_of_model(name)] / name
+    if new.is_dir():
+        return new
+    flat = MODELS / name
+    if flat.is_dir():
+        return flat
+    return new                      # 都不存在 -> 返回「将要创建」的新路径
 
 
-def model_weights(name: str) -> Path:
-    """模型文件夹内的权重入口（硬链接 / 目录联接，物理落点仍是 _weights/）。"""
-    return MODELS / str(name) / "weights"
+def model_code_dir(name: str) -> Path:
+    """模型文件夹内的代码入口：`<模型目录>/code`（一组指向 _third_party 的目录联接）。
+
+    2026-09-23 起，模型目录**不再**有 `weights/` 与 `README.md`：
+    权重统一取 `WEIGHTS`，模型说明见 `01_models/<板块>/README.md`。
+    """
+    return model_dir(name) / "code"
 
 
 def out_dir(name: str) -> Path:
@@ -218,7 +291,7 @@ def test_run_dir() -> Path:
 
 
 def ensure_dirs() -> None:
-    for d in (MODELS, THIRD_PARTY, WEIGHTS, SELF_IMPL,
+    for d in (MODELS, THIRD_PARTY, WEIGHTS, SELF_IMPL, SEP_MODELS, DEN_MODELS,
               DATABASES, MUSDB18_ROOT, DNS_ROOT, VALENTINI_ROOT,
               OUTPUTS, REPORTS, SLIDES,
               SEPARATION, DENOISER, CASCADE, SHARED,
@@ -251,16 +324,26 @@ if __name__ == "__main__":
     for b in BOARD_NAMES:
         p = board_dir(b)
         print("     %s%-12s %s" % ("OK " if p.is_dir() else "缺 ", b, p))
+    print("  -- 01_models 板块（2026-09-23 起模型按板分类） --")
+    for b, root in MODEL_BOARDS.items():
+        n = len([x for x in root.iterdir() if x.is_dir() and not x.name.startswith("_")]) \
+            if root.is_dir() else 0
+        print("     %s%-12s %-46s %d 个模型" % ("OK " if root.is_dir() else "缺 ", b, root, n))
+    for label, p in [("_third_party", THIRD_PARTY), ("_weights", WEIGHTS),
+                     ("_selfimpl", SELF_IMPL), ("MODEL_REGISTRY.md", MODELS / "MODEL_REGISTRY.md")]:
+        print("     %s%-16s %s" % ("OK " if p.exists() else "缺 ", label, p))
     print("  -- 运行支撑 --")
     for label, p in [("tools/_logs", LOGS), ("tools/_scratch", SCRATCH),
                      ("tools/_bat", BAT_DIR), ("cache(torch)", TORCH_CACHE)]:
         print("     %s%-14s %s" % ("OK " if p.is_dir() else "缺 ", label, p))
-    print("  -- 模型文件夹抽样 --")
+    print("  -- 模型文件夹抽样（目录内应只有 code/） --")
     for name in ("BS-RoFormer-L12", "BS-RoFormer-L6", "denoiser-master64"):
         d = model_dir(name)
-        w = model_weights(name)
-        n = len(list(w.iterdir())) if w.is_dir() else 0
-        print("     %s%-22s weights=%d 项" % ("OK " if d.is_dir() else "缺 ", name, n))
+        c = model_code_dir(name)
+        n = len(list(c.iterdir())) if c.is_dir() else 0
+        inner = sorted(x.name for x in d.iterdir()) if d.is_dir() else []
+        print("     %s%-24s %-46s 内含 %s  code=%d 联接" % (
+            "OK " if d.is_dir() else "缺 ", name, d.relative_to(PROJECT_ROOT), inner, n))
     print("  -> comparison_dir() = %s" % comparison_dir())
     print("  -> musdb_root()      = %s" % musdb_root())
     print("  -> demucs_out()      = %s" % demucs_out())

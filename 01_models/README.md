@@ -1,41 +1,89 @@
 # ① 模型模块
 
-每个模型一个独立文件夹。**权重不做拷贝**：`<模型>/weights/` 是指向 `01_models/_weights/` 同一份物理文件的硬链接 / 目录联接，零额外占用。
+顶层只分**两块板**，模型按板归类；每一块板下每个模型一个目录：
 
-## 板 1 · 分离模型
+```
+01_models/
+  separation/     板 1 · 分离        （13 个模型）
+  denoising/      板 2 · 降噪/去混响  （6 个模型）
+  _third_party/   代码唯一物理落点（14 个仓库）
+  _weights/       权重唯一物理落点（51 个文件 / 11 GB）
+  _selfimpl/      自研算法索引
+```
 
-| 文件夹 | 条目 key | 输出轨数 | 参数 | FLOPs | 时延(10 s) | 权重 |
-|---|---|---|---|---|---|---|
-| [`BS-RoFormer-L12/`](BS-RoFormer-L12/) | `bsroformer_l12` | 1 | 159.758 M | 43480.878 G | 4.5208 s | 有（2 项） |
-| [`BS-RoFormer-L6/`](BS-RoFormer-L6/) | `bsroformer_l6` | 1 | 98.195 M | 14975.185 G | 2.1702 s | 有（2 项） |
-| [`BSRNN-opt/`](BSRNN-opt/) | `bsrnn`, `bsrnn_all` | 1/4 | 164.119/40.777 M | 3891.294/955.494 G | 1.0814/5.7328 s | 有（1 项） |
-| [`BSRNN-large/`](BSRNN-large/) | `bsrnn_large`, `bsrnn_large_all` | 1/4 | 146.656/36.417 M | 1126.935/276.819 G | 0.6294/2.9494 s | 有（1 项） |
-| [`BSRNN-SIMO/`](BSRNN-SIMO/) | `bsrnn_simo` | 4 | 108.728 M | 1540.109 G | 1.2105 s | 有（1 项） |
-| [`Demucs/`](Demucs/) | `demucs` | 4 | 41.984 M | 508.127 G | 0.2749 s | 有（1 项） |
-| [`MDX-Net/`](MDX-Net/) | `mdx` | 4 | 334.544 M | 777.218 G | 0.7373 s | 有（2 项） |
-| [`Open-Unmix/`](Open-Unmix/) | `umx` | 4 | 35.577 M | 14.292 G | 0.2 s | 有（4 项） |
-| [`Conv-TasNet/`](Conv-TasNet/) | `convtasnet` | 4 | 13.395 M | 1171.744 G | 1.5221 s | 有（1 项） |
-| [`MMDenseLSTM/`](MMDenseLSTM/) | `mmdenselstm` | 4 | 5.487 M | 294.469 G | 0.3331 s | 有（1 项） |
-| [`DPRNN/`](DPRNN/) | `dprnn` | 4 | 3.686 M | 30.573 G | 0.103 s | 有（1 项） |
-| [`RPCA/`](RPCA/) | `rpca` | 1 | 0.0 M | 0.0 G | 82.5301 s | 无（解析） |
-| [`Oracle-IRM/`](Oracle-IRM/) | `oracle` | - | 0.0 M | 0.0 G | 0.0 s | 无（解析） |
+## 模型目录里有什么
 
-## 板 2 · 降噪 / 去混响模型
+每个 `<板块>/<模型>/` 下**只有 `code/`** —— 指向 `01_models/_third_party/<repo>` 的
+**目录联接（junction）**，零额外占用。
 
-| 文件夹 | 条目 key | 参数 | FLOPs | 时延(10 s) | 原生率 |
-|---|---|---|---|---|---|
-| [`denoiser-dns48/`](denoiser-dns48/) | `denoiser_dns48` | 18.868 M | 39.135 G | 0.0845 s | 16000 Hz |
-| [`denoiser-dns64/`](denoiser-dns64/) | `denoiser_dns64` | 33.534 M | 69.032 G | 0.1263 s | 16000 Hz |
-| [`denoiser-master64/`](denoiser-master64/) | `denoiser_master64` | 33.534 M | 69.032 G | 0.1269 s | 16000 Hz |
-| [`Mel-RoFormer-Denoise/`](Mel-RoFormer-Denoise/) | `mel_roformer_denoise`, `mel_roformer_denoise_aggr` | 228.203 M | 4030.469 G | 0.9732/0.9802 s | 44100 Hz |
-| [`Mel-RoFormer-Dereverb/`](Mel-RoFormer-Dereverb/) | `mel_roformer_dereverb` | 228.203 M | 4030.469 G | 0.9809 s | 44100 Hz |
-| [`Mel-RoFormer-Dereverb-Echo/`](Mel-RoFormer-Dereverb-Echo/) | `mel_roformer_dereverb_echo` | 208.88 M | 3447.121 G | 1.0182 s | 44100 Hz |
+```
+separation/Demucs/
+  code/
+    demucs -> 01_models/_third_party/demucs
+```
 
-## 共享层
+## 为什么没有「模型卡 + weights/ 联接」了（2026-09-23 精简）
 
-| 目录 | 内容 |
+原先每个模型目录是「`README.md` 模型卡 + `code/` + `weights/` 联接」三件套。后两项被证明冗余：
+
+| 被删除的层 | 为什么冗余 | 现在从哪里取 |
+|---|---|---|
+| `<模型>/weights/` | 只是 `01_models/_weights/**` 的目录联接/硬链接，且**所有脚本都直接读 `_weights/`**（`tools/paths.py::WEIGHTS`），从不走这个别名 | `01_models/_weights/` |
+| `<模型>/README.md` | 内容（论文出处 / 代码落点 / 权重真实路径 / 画像）可从 `model_profile.csv` + 板块索引完全还原 | `<板块>/README.md` |
+
+> 删除前已逐个文件核验 `weights/` 里每个 inode 都存在于 `_weights/`（无一独有），
+> 并把 19 张模型卡原文归档到 `tools/_scratch/_archive_model_cards_2026-09-23/`。
+
+## 两块板
+
+### 板 1 · 分离（separation）
+
+| 模型 | 条目 key |
 |---|---|
-| `_weights/` | **权重的唯一物理落点**（15 GB）。不能删，各模型文件夹的 `weights/` 都指向它 |
-| `_third_party/` | 13 个官方/社区仓库（743 MB）。同一仓库被多个模型复用 |
-| `_selfimpl/` | 自研算法索引（RPCA / NMF / ICA / HPSS / Oracle 掩码） |
-| `MODEL_REGISTRY.md` | 全部模型在位状态 / 可运行性 / 精度总表 |
+| [`BS-RoFormer-L12/`](separation/BS-RoFormer-L12/) | `bsroformer_l12` |
+| [`BS-RoFormer-L6/`](separation/BS-RoFormer-L6/) | `bsroformer_l6` |
+| [`BSRNN-large/`](separation/BSRNN-large/) | `bsrnn_large`, `bsrnn_large_all` |
+| [`BSRNN-opt/`](separation/BSRNN-opt/) | `bsrnn`, `bsrnn_all` |
+| [`BSRNN-SIMO/`](separation/BSRNN-SIMO/) | `bsrnn_simo` |
+| [`Conv-TasNet/`](separation/Conv-TasNet/) | `convtasnet` |
+| [`Demucs/`](separation/Demucs/) | `demucs` |
+| [`DPRNN/`](separation/DPRNN/) | `dprnn` |
+| [`MDX-Net/`](separation/MDX-Net/) | `mdx` |
+| [`MMDenseLSTM/`](separation/MMDenseLSTM/) | `mmdenselstm` |
+| [`Open-Unmix/`](separation/Open-Unmix/) | `umx` |
+| [`Oracle-IRM/`](separation/Oracle-IRM/) | `oracle` |
+| [`RPCA/`](separation/RPCA/) | `rpca` |
+
+索引与逐模型明细：`01_models/separation/README.md`
+
+### 板 2 · 降噪 / 去混响 / 去回声（denoising）
+
+| 模型 | 条目 key |
+|---|---|
+| [`denoiser-dns48/`](denoising/denoiser-dns48/) | `denoiser_dns48` |
+| [`denoiser-dns64/`](denoising/denoiser-dns64/) | `denoiser_dns64` |
+| [`denoiser-master64/`](denoising/denoiser-master64/) | `denoiser_master64` |
+| [`Mel-RoFormer-Denoise/`](denoising/Mel-RoFormer-Denoise/) | `mel_roformer_denoise`, `mel_roformer_denoise_aggr` |
+| [`Mel-RoFormer-Dereverb/`](denoising/Mel-RoFormer-Dereverb/) | `mel_roformer_dereverb` |
+| [`Mel-RoFormer-Dereverb-Echo/`](denoising/Mel-RoFormer-Dereverb-Echo/) | `mel_roformer_dereverb_echo` |
+
+索引与逐模型明细：`01_models/denoising/README.md`
+
+## 自检
+
+```bash
+PY="C:\Users\jerry\.workbuddy\binaries\python\envs\fyp_audio\Scripts\python.exe"
+
+# 1) 重建 / 补齐每个模型目录的 code/ 联接（幂等）
+$PY tools/_model_deploy_layout.py
+
+# 2) 核验：模型目录 + 代码联接 + 权重真源
+$PY tools/_verify_model_deployment.py --json 04_reports/_shared/data/model_deployment_audit.json
+```
+
+**环境依赖**：项目根 `requirements-frozen-2026-09-23.txt`（pip freeze 快照）。
+⚠️ 该快照**不含** PESQ（conda-forge 手工解包）与 CUDA 版 torch/torchaudio（须走
+`--index-url https://download.pytorch.org/whl/cu126`），文件头已注明。
+
+> 版 3（2026-09-23）：按板块分类 `separation/` + `denoising/`，
+> 移除模型卡与 `weights/` 联接层；详见 `04_reports/_shared/docs/MODEL_DEPLOYMENT_2026-09-23.md`。
